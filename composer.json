@@ -1,0 +1,30 @@
+{
+    "name" : "quiqqer/template-businesspro",
+    "type" : "quiqqer-template",
+    "description" : "",
+    "version" : "dev-master",
+    "license" : "",
+
+    "authors" : [{
+        "name": "Michael Danielczok",
+        "email": "support@pcsg.de",
+        "homepage": "http://www.pcsg.de",
+        "role": "Developer"
+    }],
+
+    "support" : {
+        "email": "support@pcsg.de",
+        "url": "http://www.pcsg.de"
+    },
+
+    "require": {
+        "php" : ">=5.3",
+        "quiqqer/quiqqer" : "*@dev"
+    },
+
+    "autoload": {
+        "psr-0" : {
+            "QUI" : "src/"
+        }
+    }
+}
