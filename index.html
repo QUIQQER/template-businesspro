@@ -1,0 +1,621 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="{$Project->getAttribute('lang')}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="{$Project->getAttribute('lang')}"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+    {$Template->getHeader()}
+
+    <!-- font family settings -->
+    {if $mainFontFamily}
+    <link href='{$mainFontFamily}' rel='stylesheet' type='text/css'>
+    {/if}
+    {*if $secondaryFontFamily}
+    <link href='{$secondaryFontFamily}https://fonts.googleapis.com/css?family=Raleway:400,700,300,500' rel='stylesheet' type='text/css'>
+    {/if*}
+
+    {assign var=layoutType value=$Template->getLayoutType()}
+    {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+    {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/unsemantic/ie.css" />
+    <![endif]-->
+
+    <!-- [begin] css combine -->
+        {fontawesome}
+        {unsemantic}
+        <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="{$URL_TPL_DIR}bin/css/bricks-controls/navigation.css" rel="stylesheet" type="text/css" />
+
+        {if $quiTplType && $quiTplType == 'rightSidebar'}
+            <link href="{$URL_TPL_DIR}bin/types/rightSidebar.css" rel="stylesheet" type="text/css" />
+        {/if}
+
+        {if $quiTplType && $quiTplType == 'leftSidebar'}
+            <link href="{$URL_TPL_DIR}bin/types/leftSidebar.css" rel="stylesheet" type="text/css" />
+        {/if}
+    <!-- [end] css combine -->
+
+    <style>
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12pt;
+        }
+
+
+        /**
+         * Farbeinstellungen
+         */
+
+        .content-switcher-content h2,
+        .quiqqer-fa-levels-icon:hover,
+        .quiqqer-navigation-level-1 a:hover,
+        a.quiqqer-navigation-home:hover {
+            color: {$colorMain};
+        }
+
+        .quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
+            color: {$colorMain};
+        }
+
+        /*.quiqqer-navigation-level-1 a:hover,
+        a.quiqqer-navigation-home:hover
+        {
+            color: {$colorMain};
+        }*/
+
+
+        #page input[type='checkbox']:checked  + label::before,
+        #page input[type='radio']:checked  + label::before {
+            background-color: {$colorMain};
+        }
+
+        input[type='submit'],
+        input[type='reset'],
+        input[type='button'],
+        button,
+        .button,
+        .page-content .button,
+        button:disabled,
+        button:disabled:hover {
+            background-color: {$colorMain};
+            color: {$buttonFontColor};
+            border: 2px solid {$colorMain};
+        }
+
+        #page .button.special {
+            background: none !important;
+            color: {$colorMainContentFont};
+        }
+        #page .button.special:hover {
+            border: 3px solid {$colorMain};
+        }
+
+        body {
+            background: {$colorBackground};
+            color: {$colorMainContentFont} !important;
+        }
+
+        textarea:hover,
+        textarea:focus,
+        input:hover,
+        input:focus,
+        select:hover,
+        select:focus {
+            outline-color: {$colorMain};
+        }
+
+
+        .main-content-color-bg {
+            background-color: {$colorMainContentBg};
+        }
+
+        a,
+        .fa-navicon:hover {
+            color: {$colorMain};
+        }
+
+        a:hover {
+            background: {$colorMain};
+            box-shadow: 0 0 0 5px {$colorMain};
+            color: {$colorMain};
+        }
+
+
+        .page-header-navigation-sub-entry-link:hover{
+            background: {$colorMain};
+        }
+
+        input[type='submit']:hover,
+        input[type='reset']:hover,
+        input[type='button']:hover,
+        button:hover,
+        .button-active,
+        .button:active,
+        .button:hover {
+            background: none !important;
+            color: {$colorMain} !important;
+        }
+
+        .page-footer button {
+            background: {$colorMain};
+            color: #ffffff;
+        }
+
+        .page-footer {
+            background: {$colorFooterBackground};
+            color: {$colorFooterFont} !important;
+        }
+
+        .page-footer header,
+        .page-footer header a {
+            color: #ffffff;
+        }
+
+        .page-footer h2,
+        .page-footer h3,
+        .page-footer h4 {
+            color: {$colorFooterFont};
+        }
+
+        footer a {
+            color: {$colorFooterLinks};
+        }
+
+        footer a:hover {
+            color: {$colorFooterLinks};
+        }
+
+        .quiqqer-sheets-desktop a:hover {
+            border: 1px solid {$colorMain} !important;
+        }
+
+        .control-background-active {
+            background: {$colorMain} !important;
+            color: #FFFFFF !important;
+        }
+
+
+        /**
+         * Position des Menüs
+         */
+
+        {if $navPos == 'scroll'}
+            .header-bar {
+                position: relative !important;
+            }
+
+        {/if}
+
+
+        /**
+         * Hintergrundbild
+         */
+
+        {if $Background}
+        body {
+            background-image : url('{$Background->getSizeCacheUrl()}') !important;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        {/if}
+
+
+        /**
+         * Seitenbreite
+         */
+
+        {if $fullsize == false}
+            .main-body {
+                display: block !important;
+
+                max-width: {$pageMaxWidth}px;
+                margin: 0 auto;
+            }
+            .header-bar {
+                max-width: {$pageMaxWidth}px;
+            }
+
+            .grid-container {
+                max-width: {$pageMaxWidth}px;
+            }
+
+            .page-box-prefix-suffix {
+                padding: 30px 0;
+            }
+
+            /* Damit es kein Scrollbar angezeigt wird, wenn Browser kleiner als max-width */
+
+            {if $fullsize == false && $navPos == 'fix'}
+                .header-bar {
+                    width: 100%;
+                }
+            {/if}
+
+        {else}
+            .header-bar {
+                width: 100%;
+            }
+        {/if}
+
+
+        /**
+         * Schatten anzeigen
+         */
+
+        {if $shadow == 'display'}
+            .main-body {
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3) !important;
+            }
+        {/if}
+
+        {if $menuShadow == 'hide'}
+            .header-bar {
+                box-shadow: none !important;
+            }
+        {/if}
+
+
+        {if $bgColorSwitcherPrefix == 'display'}
+        .brick-even-prefix {
+            background: #f5f5f5;
+        }
+
+        .brick-odd-prefix {
+            background: #e5e5e5;
+        }
+
+        {else}
+        .brick-even-prefix,
+        .brick-odd-prefix {
+            background: #ffffff;
+        }
+        {/if}
+
+        {if $bgColorSwitcherSuffix == 'display'}
+        .brick-even-suffix {
+            background: #f5f5f5;
+        }
+
+        .brick-odd-suffix {
+            background: #e5e5e5;
+        }
+
+        {else}
+        .brick-even-suffix,
+        .brick-odd-suffix {
+            background: #ffffff;
+        }
+        {/if}
+
+
+        {if $noHeader}
+        .header-img {
+            display: none;
+        }
+        .page-header {
+            display: none;
+        }
+        {/if}
+
+        {if $headerHeight}
+        .page-header {
+            display: flex;
+            height: {$headerHeightValue}px;
+            overflow: hidden;
+        }
+
+        .header-img {
+            align-self: {$headerImagePosition};
+        }
+        {/if}
+
+        .page-header-logo-img {
+            max-height: {$logoHeight}px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="main-body">
+
+
+    <div class="header-bar grid-content">
+        <div class="grid-container header-bar-inner">
+
+            <div class="header-bar-inner-logo grid-50 {if $logoSmall}hide-on-mobile{/if}">
+                {if $logo}
+                <a href="{url id=1}" class="page-header-logo">
+                    {image src=$logo width=700 class="page-header-logo-img"}
+                </a>
+                {else}
+                <h1>
+                    <a href="{url id=1}" class="page-header-textlogo-link">
+                    {$Site->getAttribute( 'title' )}
+                    </a>
+                </h1>
+                {/if}
+            </div>
+            {if $logoSmall}
+            <div class="header-bar-inner-logo grid-50 hide-on-desktop">
+                {if $logo}
+                <a href="{url id=1}" class="page-header-logo">
+                    {image src=$logoSmall width=700 class="page-header-logo-img"}
+                </a>
+                {else}
+                <h1>
+                    <a href="{url id=1}" class="page-header-textlogo-link">
+                    {$Site->getAttribute( 'title' )}
+                    </a>
+                </h1>
+                {/if}
+            </div>
+            {/if}
+
+            <nav class="nav-box grid-50">
+                <i class="fa fa-navicon"></i>
+            </nav>
+
+            <div class="header-bar-inner-nav grid-50" id="navigation">
+
+                {assign var=FirstChild value=$Project->firstChild()}
+                {assign var=children value=$FirstChild->getNavigation()}
+                {if count($children)}
+                <nav class="page-header-navigation">
+
+                    <ul>
+                        {if $Site->getId() != 1 && !$FirstChild->getAttribute('nav_hide')}
+                        <li>
+                            <i class="fa fa-fw fa-home fa-home-mobile"></i>
+                            <a href="{url site=$FirstChild}"
+                               class="page-header-navigation-entry-link">
+                                <i class="fa fa-fw fa-home fa-home-desktop"></i>
+                                {$FirstChild->getAttribute('title')}
+                            </a>
+                        </li>
+                        {/if}
+                        {foreach from=$children item=Child}
+                        <li class="page-header-navigation-entry">
+
+                            {assign var=subnavigation value=$Child->getNavigation()}
+
+                             <i class="fa fa-fw fa-chevron-down fa-chevron-down-mobile"
+                                style="{if !count( $subnavigation )}opacity: 0; color: rgba(0;0;0;0); cursor: default;{/if}">
+                             </i>
+
+
+                            <a href="{url site=$Child}"
+                               class="page-header-navigation-entry-link">
+
+                                {$Child->getAttribute('title')}
+
+
+
+                                {assign var=subnavigation value=$Child->getNavigation()}
+
+                                {if count( $subnavigation )}
+                                <i class="fa fa-fw fa-chevron-down fa-chevron-down-desktop"></i>
+                                {/if}
+
+                            </a>
+
+                            <!-- submenu -->
+                            {if count( $subnavigation )}
+                            <div class="page-header-navigation-sub smooth">
+                                <ul class="page-header-navigation-sub-list">
+                                    {foreach from=$subnavigation item=subChild}
+                                    <li class="page-header-navigation-sub-entry">
+                                        <a href="{url site=$subChild}"
+                                           class="page-header-navigation-sub-entry-link"
+                                                >
+                                            {$subChild->getAttribute('title')}
+                                        </a>
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                            {/if}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </nav>
+
+
+
+                {/if}
+            </div>
+        </div>
+    </div>
+
+    {if $navPos == 'fix'}
+    <div class="header-bar-2 grid-content">
+        <div class="grid-container header-bar-inner">
+
+            <div class="header-bar-inner-logo grid-50">
+                {if $logo}
+                <div class="page-header-logo">
+                    {image src=$logo width=700 class="page-header-logo-img"}
+                </div>
+                {else}
+                <h1>
+                    {$Site->getAttribute( 'title' )}
+                </h1>
+                {/if}
+            </div>
+        </div>
+    </div>
+    {/if}
+
+    <!-- page -->
+    <div class="body-container {if $noHeader}body-container-padding{/if}">
+
+        <!-- header -->
+        {strip}
+        <header class="grid-100 mobile-grid-100 grid-parent page-header" >
+            {if $Site->getAttribute('image_emotion')}
+                {image src=$Site->getAttribute('image_emotion') class="header-img"}
+            {/if}
+        </header>
+        {/strip}
+
+        <!-- header suffix -->
+        {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+        {foreach $headerSuffix as $Brick}
+
+        {if $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
+        $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
+        $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+
+            {if $fullsize}
+                <div class="full-size {cycle values="brick-even-prefix,brick-odd-prefix"}">
+            {else}
+                <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
+            {/if}
+                <section class="clearfix">
+                    {$Brick->create()}
+                </section>
+            {if $fullsize}
+                </div>
+            {else}
+                </div>
+            {/if}
+
+        {else}
+
+            {if $fullsize}
+                <div class="full-size {cycle values="brick-even-prefix,brick-odd-prefix"}">
+                <div class="grid-container">
+            {else}
+                <div class="grid-container {cycle values="brick-even-prefix,brick-odd-prefix"}">
+            {/if}
+                <section class="mobile-grid-100 grid-100 page-content grid-parent page-box-prefix-suffix">
+                    {if !$Brick->hasCSSClass('grid*')}
+                        {$Brick->addCSSClass('grid-100')}
+                    {/if}
+                    {$Brick->create()}
+                </section>
+            {if $fullsize}
+                </div>
+                </div>
+            {else}
+                </div>
+            {/if}
+
+        {/if}
+        {/foreach}
+
+
+        <!-- content -->
+        {if $fullsize}
+            <div class="main-content-color-bg full-size {cycle values="" reset=true}">
+            <div class="grid-container">
+        {else}
+            <div class="main-content-color-bg grid-container">
+        {/if}
+
+            <div id="page">
+                {$Template->getLayout()}
+            </div>
+
+        {if $fullsize}
+            </div>
+            </div>
+        {else}
+            </div>
+        {/if}
+
+
+
+        <!-- footer prefix-->
+        {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
+        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+        {foreach $footerPrefix as $Brick}
+
+        <!-- Wenn google map, dann volle Breite -->
+        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+
+            {if $fullsize}
+                <div class="full-size {cycle values="brick-even-suffix,brick-odd-suffix"}">
+            {else}
+                <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
+            {/if}
+                <section class="clearfix">
+                    {$Brick->create()}
+                </section>
+            {if $fullsize}
+                </div>
+            {else}
+                </div>
+            {/if}
+
+        {else}
+
+            {if $fullsize}
+                <div class="full-size {cycle values="brick-even-suffix,brick-odd-suffix"}">
+                <div class="grid-container">
+            {else}
+                <div class="grid-container {cycle values="brick-even-suffix,brick-odd-suffix"}">
+            {/if}
+
+                <div class="page-content">
+                    <section class="mobile-grid-100 grid-100 grid-parent page-box-prefix-suffix">
+                        {if !$Brick->hasCSSClass('grid*')}
+                        {$Brick->addCSSClass('grid-100')}
+                        {/if}
+                        {$Brick->create()}
+                    </section>
+                </div>
+
+            {if $fullsize}
+                </div>
+                </div>
+            {else}
+                </div>
+            {/if}
+        {/if}
+        {/foreach}
+
+
+        <!-- footer -->
+        <footer class="page-footer">
+            <div class="grid-container">
+                {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+                {if !empty($footer)}
+                <section class="grid-100 mobile-grid-100 grid-parent">
+                    {foreach from=$footer item=Brick}
+                        {$Brick->addCSSClass('page-footer-brick')}
+                        {if !$Brick->hasCSSClass('grid*')}
+                        {$Brick->addCSSClass('grid-100')}
+                        {/if}
+                        {$Brick->create()}
+                    {/foreach}
+                </section>
+                {/if}
+                <div class="grid-100 mobile-grid-100 page-footer-copyright">
+                    <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-left">
+                        {locale group="quiqqer/template-businessprop" var="copyright.text" year=$smarty.now|date_format:"%Y"}
+                    </div>
+
+                    <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-right">
+                        {locale group="quiqqer/template-businessprop" var="copyright.link"}
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+    <!-- [begin] js combine -->
+    <script src="{$URL_OPT_DIR}bin/require.js"></script>
+    <script src="{$URL_TPL_DIR}bin/init.js"></script>
+    <!-- [end] js combine -->
+
+</body>
+</html>

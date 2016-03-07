@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <layouts>
+        <layout type="layout/startpage">
+            <title>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.startpage.desc" />
+            </description>
+        </layout>
+
+        <layout type="layout/noSidebar">
+            <title>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.noSidebar" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.noSidebar.desc" />
+            </description>
+        </layout>
+
+        <layout type="layout/leftSidebar">
+            <title>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.leftSidebar" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.leftSidebar.desc" />
+            </description>
+        </layout>
+
+        <layout type="layout/rightSidebar">
+            <title>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.rightSidebar" />
+            </title>
+            <description>
+                <locale group="quiqqer/template-businesspro" var="admin.layout.rightSidebar.desc" />
+            </description>
+        </layout>
+    </layouts>
+
+</site>

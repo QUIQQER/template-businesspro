@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <project>
+
+        <settings>
+            <config>
+                <section name="templateBusinessPro.settings">
+                    <conf name="logo">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="logoSmall">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="logoHeight">
+                        <type><![CDATA[integer]]></type>
+                        <defaultvalue>100</defaultvalue>
+                    </conf>
+
+                    <conf name="pageBackground">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="pageMaxWidth">
+                        <type><![CDATA[integer]]></type>
+                    </conf>
+                    <conf name="headerHeight">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>false</defaultvalue>
+                    </conf>
+                    <conf name="headerImagePosition">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>center</defaultvalue>
+                    </conf>
+
+                    <conf name="headerHeightValue">
+                        <type><![CDATA[integer]]></type>
+                        <defaultvalue>300</defaultvalue>
+                    </conf>
+                    <conf name="navPos">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>fix</defaultvalue>
+                    </conf>
+                    <conf name="shadow">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>hide</defaultvalue>
+                    </conf>
+                    <conf name="menuShadow">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>show</defaultvalue>
+                    </conf>
+                    <conf name="bgColorSwitcherPrefix">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>hide</defaultvalue>
+                    </conf>
+                    <conf name="bgColorSwitcherSuffix">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>hide</defaultvalue>
+                    </conf>
+
+
+                    <!-- font family -->
+                    <conf name="mainFontFamily">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>https://fonts.googleapis.com/css?family=Raleway:400,700,300</defaultvalue>
+                    </conf>
+                    <conf name="mainFontFamilyArt">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+
+                    <conf name="noHeaderNoSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="noHeaderLeftSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+                    <conf name="noHeaderRightSidebar">
+                        <type><![CDATA[bool]]></type>
+                    </conf>
+
+
+
+                    <conf name="colorMain">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#DD151B</defaultvalue>
+                    </conf>
+                    <conf name="buttonFontColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+
+                    <conf name="colorFooterBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#414141</defaultvalue>
+                    </conf>
+                    <conf name="colorFooterFont">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#D1D1D1</defaultvalue>
+                    </conf>
+                    <conf name="colorFooterLinks">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#E6E6E6</defaultvalue>
+                    </conf>
+                    <conf name="colorBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#F7F7F7</defaultvalue>
+                    </conf>
+                    <conf name="colorMainContentBg">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+                    <conf name="colorMainContentFont">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#5d5d5d</defaultvalue>
+                    </conf>
+                </section>
+            </config>
+
+            <window>
+                <categories>
+                    <category name="templateBusinessPro">
+                        <text>
+                            <locale group="quiqqer/template-businesspro"
+                                    var="templateBusinessPro.settings.menu.title"
+                                    />
+                        </text>
+                        <icon>URL_BIN_DIR/22x22/quiqqer.png</icon>
+
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.settings.general">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.general.title"
+                                        />
+                            </title>
+
+                            <!-- Logo -->
+                            <input conf="templateBusinessPro.settings.logo" class="media-image">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.logo"
+                                            />
+                                </text>
+                            </input>
+
+                            <!-- Logo small -->
+                            <input conf="templateBusinessPro.settings.logoSmall" class="media-image">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.logoSmall"
+                                            />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.logoSmall.description"
+                                    />
+                                </description>
+
+                            </input>
+
+                            <!-- Logo Height -->
+                            <input conf="templateBusinessPro.settings.logoHeight" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.logoHeight"
+                                    />
+                                </text>
+                            </input>
+
+                            <!-- Hintergrund -->
+                            <input conf="templateBusinessPro.settings.pageBackground" class="media-image">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.pageBackground"
+                                            />
+                                </text>
+                            </input>
+
+                            <!-- maximale Breite -->
+                            <input conf="templateBusinessPro.settings.pageMaxWidth" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.pageMaxWidth"
+                                            />
+                                </text>
+                            </input>
+
+                            <!-- Menüposition -->
+
+                            <select conf="templateBusinessPro.settings.navPos">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.text"
+                                            />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.description"
+                                            />
+                                </description>
+
+                                <option value="fix">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.fix"
+                                            />
+                                </option>
+                                <option value="scroll">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.scroll"
+                                            />
+                                </option>
+
+
+                            </select>
+
+
+                            <!-- Page / box shadow -->
+
+                            <select conf="templateBusinessPro.settings.shadow">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.shadow.text"
+                                            />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.shadow.description"
+                                            />
+                                </description>
+
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.shadow.hide"
+                                            />
+                                </option>
+                                <option value="display">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.shadow.display"
+                                            />
+                                </option>
+                            </select>
+
+
+                            <!-- Menu shadow-->
+
+                            <select conf="templateBusinessPro.settings.menuShadow">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.menuShadow.text"
+                                            />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.menuShadow.description"
+                                            />
+                                </description>
+
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.menuShadow.hide"
+                                            />
+                                </option>
+                                <option value="display">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.menuShadow.display"
+                                            />
+                                </option>
+                            </select>
+
+                            <!-- Background Color Switcher Prefix-->
+
+                            <select conf="templateBusinessPro.settings.bgColorSwitcherPrefix">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcherPrefix.text"
+                                            />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcherPrefix.description"
+                                            />
+                                </description>
+
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcher.hide"
+                                            />
+                                </option>
+                                <option value="display">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcher.display"
+                                            />
+                                </option>
+                            </select>
+
+                            <!-- Background Color Switcher Suffix-->
+
+                            <select conf="templateBusinessPro.settings.bgColorSwitcherSuffix">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcherSuffix.text"
+                                    />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcherSuffix.description"
+                                    />
+                                </description>
+
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcher.hide"
+                                    />
+                                </option>
+                                <option value="display">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.bgColorSwitcher.display"
+                                    />
+                                </option>
+                            </select>
+
+                        </settings>
+
+
+                        <settings title="templateBusinessPro.fonts"
+                                  name="templateBusinessPro.fonts">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.fonts.text"
+                                />
+                            </title>
+                            <input conf="templateBusinessPro.settings.mainFontFamily">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.fonts.mainFontFamily.text"
+                                    />
+                                </text>
+                            </input>
+                            <select conf="templateBusinessPro.settings.mainFontFamilyArt">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.fonts.mainFontFamilyArt.text"
+                                    />
+                                </text>
+                                <option value="flex-start">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.fonts.mainFontFamilyArt.serif"
+                                    />
+                                </option>
+                                <option value="center">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.fonts.mainFontFamilyArt.nonSerif"
+                                    />
+                                </option>ś
+                            </select>
+                        </settings>
+
+                        <!-- Header Größe und Wert -->
+
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.header.settings.height">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.header.settings.height.text"
+                                />
+                            </title>
+
+                            <input conf="templateBusinessPro.settings.headerHeight" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.header.settings.height.enable.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.headerHeightValue" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.header.settings.height.value.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <select conf="templateBusinessPro.settings.headerImagePosition">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.text"
+                                    />
+                                </text>
+<!--
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.description"
+                                    />
+                                </description>
+-->
+                                <option value="flex-start">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.start"
+                                    />
+                                </option>
+                                <option value="center">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.center"
+                                    />
+                                </option>
+                                <option value="flex-end">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.end"
+                                    />
+                                </option>
+                            </select>
+                        </settings>
+
+                        <!-- Header: Anzeigen oder verstecken -->
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.header.settings.show">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.header.settings.show.text"
+                                        />
+                            </title>
+
+                            <input conf="templateBusinessPro.settings.noHeaderNoSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="noHeaderNoSidebar.text"
+                                            />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.noHeaderLeftSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="noHeaderLeftSidebar.text"
+                                            />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.noHeaderRightSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="noHeaderRightSidebar.text"
+                                            />
+                                </text>
+                            </input>
+                        </settings>
+
+                        <!-- Colors -->
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.settings.color">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.color.title"
+                                        />
+                            </title>
+
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.generalColor.text"
+                                />
+                            </text>
+                            <input conf="templateBusinessPro.settings.colorMain"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorMain.text"
+                                            />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorMain.description"
+                                            />
+                                </description>
+                            </input>
+
+                            <input conf="templateBusinessPro.settings.buttonFontColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.buttonFontColor.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <input conf="templateBusinessPro.settings.colorBackground"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorBackground.text"
+                                            />
+                                </text>
+                            </input>
+
+
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.footerColor.text"
+                                />
+                            </text>
+                            <input conf="templateBusinessPro.settings.colorFooterBackground"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorFooterBackground.text"
+                                            />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.colorFooterFont"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorFooterFont.text"
+                                            />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.colorFooterLinks"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorFooterLinks.text"
+                                            />
+                                </text>
+                            </input>
+
+
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.contentColor.text"
+                                />
+                            </text>
+
+                            <input conf="templateBusinessPro.settings.colorMainContentBg"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorMainContentBackground.text"
+                                            />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.colorMainContentFont"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.colorMainContentFont.text"
+                                            />
+                                </text>
+                            </input>
+
+
+                        </settings>
+
+                    </category>
+                </categories>
+
+            </window>
+        </settings>
+
+        <wysiwyg class="page-content">
+            <css src="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic"/>
+            <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/style.css"/>
+        </wysiwyg>
+
+    </project>
+</quiqqer>
