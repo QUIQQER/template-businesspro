@@ -35,14 +35,6 @@
                         <type><![CDATA[integer]]></type>
                         <defaultvalue>300</defaultvalue>
                     </conf>
-                    <conf name="navPos">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>fix</defaultvalue>
-                    </conf>
-                    <conf name="shadow">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>hide</defaultvalue>
-                    </conf>
                     <conf name="menuShadow">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>show</defaultvalue>
@@ -56,31 +48,27 @@
                         <defaultvalue>hide</defaultvalue>
                     </conf>
 
-
-                    <!-- font family -->
-                    <conf name="mainFontFamily">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>https://fonts.googleapis.com/css?family=Raleway:400,700,300</defaultvalue>
+                    <!-- no header? -->
+                    <conf name="noHeaderStartPage">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="mainFontFamilyArt">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-
                     <conf name="noHeaderNoSidebar">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="noHeaderLeftSidebar">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
                     <conf name="noHeaderRightSidebar">
                         <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
                     </conf>
-
-
 
                     <conf name="colorMain">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#DD151B</defaultvalue>
+                        <defaultvalue>#2D4D88</defaultvalue>
                     </conf>
                     <conf name="buttonFontColor">
                         <type><![CDATA[string]]></type>
@@ -183,64 +171,6 @@
                                 </text>
                             </input>
 
-                            <!-- Menüposition -->
-
-                            <select conf="templateBusinessPro.settings.navPos">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navPos.text"
-                                            />
-                                </text>
-
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navPos.description"
-                                            />
-                                </description>
-
-                                <option value="fix">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navPos.fix"
-                                            />
-                                </option>
-                                <option value="scroll">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navPos.scroll"
-                                            />
-                                </option>
-
-
-                            </select>
-
-
-                            <!-- Page / box shadow -->
-
-                            <select conf="templateBusinessPro.settings.shadow">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.shadow.text"
-                                            />
-                                </text>
-
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.shadow.description"
-                                            />
-                                </description>
-
-                                <option value="hide">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.shadow.hide"
-                                            />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.shadow.display"
-                                            />
-                                </option>
-                            </select>
-
-
                             <!-- Menu shadow-->
 
                             <select conf="templateBusinessPro.settings.menuShadow">
@@ -324,40 +254,6 @@
 
                         </settings>
 
-
-                        <settings title="templateBusinessPro.fonts"
-                                  name="templateBusinessPro.fonts">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.fonts.text"
-                                />
-                            </title>
-                            <input conf="templateBusinessPro.settings.mainFontFamily">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.fonts.mainFontFamily.text"
-                                    />
-                                </text>
-                            </input>
-                            <select conf="templateBusinessPro.settings.mainFontFamilyArt">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.fonts.mainFontFamilyArt.text"
-                                    />
-                                </text>
-                                <option value="flex-start">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.fonts.mainFontFamilyArt.serif"
-                                    />
-                                </option>
-                                <option value="center">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.fonts.mainFontFamilyArt.nonSerif"
-                                    />
-                                </option>ś
-                            </select>
-                        </settings>
-
                         <!-- Header Größe und Wert -->
 
                         <settings title="templateBusinessPro.settings"
@@ -389,13 +285,7 @@
                                             var="templateBusinessPro.settings.headerImagePosition.text"
                                     />
                                 </text>
-<!--
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.headerImagePosition.description"
-                                    />
-                                </description>
--->
+
                                 <option value="flex-start">
                                     <locale group="quiqqer/template-businesspro"
                                             var="templateBusinessPro.settings.headerImagePosition.start"
@@ -414,7 +304,7 @@
                             </select>
                         </settings>
 
-                        <!-- Header: Anzeigen oder verstecken -->
+                        <!-- no header? -->
                         <settings title="templateBusinessPro.settings"
                                   name="templateBusinessPro.header.settings.show">
                             <title>
@@ -423,6 +313,14 @@
                                         />
                             </title>
 
+                            <input conf="templateBusinessPro.settings.noHeaderStartPage"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="noHeaderStartPage.text"
+                                    />
+                                </text>
+                            </input>
                             <input conf="templateBusinessPro.settings.noHeaderNoSidebar"
                                    type="checkbox">
                                 <text>

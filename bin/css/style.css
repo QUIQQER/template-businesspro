@@ -15,6 +15,8 @@ html, body {
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
     color: #5d5d5d;
     line-height: 1.75em;
 }
@@ -375,6 +377,7 @@ ul.basic-company-preview-ul > span {
  * ========================================================== */
 
 .page-header-logo-img {
+    display: block;
     max-width: 100%;
 }
 
@@ -382,7 +385,7 @@ ul.basic-company-preview-ul > span {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 8px 10px -5px rgba(0,0,0,0.16);
     padding: 1em 0;
-    position: fixed;
+    position: relative;
     min-height: 70px;
     z-index: 100;
 }
@@ -407,11 +410,11 @@ ul.basic-company-preview-ul > span {
     align-items: center;
 }
 
-.header-bar-inner-nav {
+/*.header-bar-inner-nav {
     display: flex;
-    /*width: 100%;*/
+    !*width: 100%;*!
     justify-content: flex-end;
-}
+}*/
 
 .page-header-logo-mobile {
     display: none;
@@ -442,7 +445,7 @@ ul.basic-company-preview-ul > span {
 .page-header-navigation a {
     color: #a5a5a5;
     font-size: 0.85em;
-    padding: 0 1.2em;
+    padding: 0 0.6em;
     text-decoration: none;
     white-space: nowrap;
 }

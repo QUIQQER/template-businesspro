@@ -9,13 +9,7 @@
 
     {$Template->getHeader()}
 
-    <!-- font family settings -->
-    {if $mainFontFamily}
-    <link href='{$mainFontFamily}' rel='stylesheet' type='text/css'>
-    {/if}
-    {*if $secondaryFontFamily}
-    <link href='{$secondaryFontFamily}https://fonts.googleapis.com/css?family=Raleway:400,700,300,500' rel='stylesheet' type='text/css'>
-    {/if*}
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300' rel='stylesheet' type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -42,15 +36,13 @@
 
     <style>
 
-        body {
-            font-family: 'Raleway', sans-serif;
-            font-size: 12pt;
-        }
-
-
         /**
          * Farbeinstellungen
          */
+
+        a.page-header-navigation-entry-link {
+            color: #fff;
+        }
 
         .content-switcher-content h2,
         .quiqqer-fa-levels-icon:hover,
@@ -122,7 +114,7 @@
 
         a:hover {
             background: {$colorMain};
-            box-shadow: 0 0 0 5px {$colorMain};
+            box-shadow: 0 0 0 0px {$colorMain};
             color: {$colorMain};
         }
 
@@ -180,19 +172,6 @@
             color: #FFFFFF !important;
         }
 
-
-        /**
-         * Position des Menüs
-         */
-
-        {if $navPos == 'scroll'}
-            .header-bar {
-                position: relative !important;
-            }
-
-        {/if}
-
-
         /**
          * Hintergrundbild
          */
@@ -205,7 +184,6 @@
             background-size: cover;
         }
         {/if}
-
 
         /**
          * Seitenbreite
@@ -246,14 +224,8 @@
 
 
         /**
-         * Schatten anzeigen
+         * Menü schatten anzeigen
          */
-
-        {if $shadow == 'display'}
-            .main-body {
-                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3) !important;
-            }
-        {/if}
 
         {if $menuShadow == 'hide'}
             .header-bar {
@@ -321,16 +293,13 @@
         }
     </style>
 
-
 </head>
 <body>
 <div class="main-body">
-
-
-    <div class="header-bar grid-content">
+    <div class="header-bar grid-content" style="background-color: {$colorMain};">
         <div class="grid-container header-bar-inner">
 
-            <div class="header-bar-inner-logo grid-50 {if $logoSmall}hide-on-mobile{/if}">
+            <div class="header-bar-inner-logo grid-10 {if $logoSmall}hide-on-mobile{/if}">
                 {if $logo}
                 <a href="{url id=1}" class="page-header-logo">
                     {image src=$logo width=700 class="page-header-logo-img"}
@@ -359,11 +328,12 @@
             </div>
             {/if}
 
+            <!-- mobile nav -->
             <nav class="nav-box grid-50">
                 <i class="fa fa-navicon"></i>
             </nav>
 
-            <div class="header-bar-inner-nav grid-50" id="navigation">
+            <div class="header-bar-inner-nav" id="navigation">
 
                 {assign var=FirstChild value=$Project->firstChild()}
                 {assign var=children value=$FirstChild->getNavigation()}
@@ -371,16 +341,6 @@
                 <nav class="page-header-navigation">
 
                     <ul>
-                        {if $Site->getId() != 1 && !$FirstChild->getAttribute('nav_hide')}
-                        <li>
-                            <i class="fa fa-fw fa-home fa-home-mobile"></i>
-                            <a href="{url site=$FirstChild}"
-                               class="page-header-navigation-entry-link">
-                                <i class="fa fa-fw fa-home fa-home-desktop"></i>
-                                {$FirstChild->getAttribute('title')}
-                            </a>
-                        </li>
-                        {/if}
                         {foreach from=$children item=Child}
                         <li class="page-header-navigation-entry">
 
@@ -391,19 +351,8 @@
                              </i>
 
 
-                            <a href="{url site=$Child}"
-                               class="page-header-navigation-entry-link">
-
+                            <a href="{url site=$Child}" class="page-header-navigation-entry-link">
                                 {$Child->getAttribute('title')}
-
-
-
-                                {assign var=subnavigation value=$Child->getNavigation()}
-
-                                {if count( $subnavigation )}
-                                <i class="fa fa-fw fa-chevron-down fa-chevron-down-desktop"></i>
-                                {/if}
-
                             </a>
 
                             <!-- submenu -->
@@ -434,27 +383,8 @@
         </div>
     </div>
 
-    {if $navPos == 'fix'}
-    <div class="header-bar-2 grid-content">
-        <div class="grid-container header-bar-inner">
-
-            <div class="header-bar-inner-logo grid-50">
-                {if $logo}
-                <div class="page-header-logo">
-                    {image src=$logo width=700 class="page-header-logo-img"}
-                </div>
-                {else}
-                <h1>
-                    {$Site->getAttribute( 'title' )}
-                </h1>
-                {/if}
-            </div>
-        </div>
-    </div>
-    {/if}
-
     <!-- page -->
-    <div class="body-container {if $noHeader}body-container-padding{/if}">
+    <div class="body-container">
 
         <!-- header -->
         {strip}

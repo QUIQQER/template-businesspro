@@ -2,7 +2,7 @@
 <site>
 
     <layouts>
-        <layout type="layout/startpage">
+        <layout type="layout/startPage">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
             </title>

@@ -1,4 +1,4 @@
-f<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
         <!-- areas -->
@@ -146,8 +146,8 @@ f<?xml version="1.0" encoding="UTF-8"?>
         
         <!-- settings -->
         <locale name="templateBusinessPro.settings.menu.title">
-            <de><![CDATA[Template Einstellungen]]></de>
-            <en><![CDATA[Template settings]]></en>
+            <de><![CDATA[Template Einstellungen: Business Pro]]></de>
+            <en><![CDATA[Template settings: Business Pro]]></en>
         </locale>
 
         <!-- general settings -->
@@ -190,44 +190,6 @@ f<?xml version="1.0" encoding="UTF-8"?>
                 <de><![CDATA[Maximale Seitenbreite]]></de>
                 <en><![CDATA[Max page width]]></en>
             </locale>
-
-            <!-- Menüposition -->
-            <locale name="templateBusinessPro.settings.navPos.text">
-                <de><![CDATA[Menüposition]]></de>
-                <en><![CDATA[Menu position]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.description">
-                <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
-                             an gleicher Stelle auf der Seite befinden soll.]]></de>
-                <en><![CDATA[Set the menu position]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.fix">
-                <de><![CDATA[fix]]></de>
-                <en><![CDATA[fixed]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.scroll">
-                <de><![CDATA[scrollbar]]></de>
-                <en><![CDATA[scroll]]></en>
-            </locale>
-
-            <!-- Page shadow -->
-            <locale name="templateBusinessPro.settings.shadow.text">
-                <de><![CDATA[Seitenschatten]]></de>
-                <en><![CDATA[Page shadow]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.shadow.description">
-                <de><![CDATA[Setzt den Schatten um die Seite, wenn eine bestimmte Seitenbreiten festgelegt ist]]></de>
-                <en><![CDATA[Set the page shadow]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.shadow.display">
-                <de><![CDATA[Schatten anzeigen]]></de>
-                <en><![CDATA[Display the shadow]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.shadow.hide">
-                <de><![CDATA[Keinen Schatten anzeigen]]></de>
-                <en><![CDATA[Hide the shadow]]></en>
-            </locale>
-
 
             <!-- Menu shadow -->
             <locale name="templateBusinessPro.settings.menuShadow.text">
@@ -276,12 +238,15 @@ f<?xml version="1.0" encoding="UTF-8"?>
                 <en><![CDATA[(...)]]></en>
             </locale>
 
-
-
         <!-- header settings -->
         <locale name="templateBusinessPro.header.settings.show.text">
             <de><![CDATA[Header anzeigen oder verstecken.]]></de>
             <en><![CDATA[Display or hide the header.]]></en>
+        </locale>
+
+        <locale name="noHeaderStartPage.text">
+            <de><![CDATA[Startpage: Header verstecken]]></de>
+            <en><![CDATA[Start page: hide the header]]></en>
         </locale>
 
         <locale name="noHeaderNoSidebar.text">

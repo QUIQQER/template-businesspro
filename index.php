@@ -55,6 +55,14 @@ if (QUI\Projects\Media\Utils::isMediaUrl($configLogoSmall)) {
 $noHeader = false;
 
 switch ($Template->getLayoutType()) {
+    case 'layout/startPage':
+        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderStartPage');
+        break;
+
+    case 'layout/noSidebar':
+        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderNoSidebar');
+        break;
+
     case 'layout/rightSidebar':
         $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderRightSidebar');
         break;
@@ -62,11 +70,6 @@ switch ($Template->getLayoutType()) {
     case 'layout/leftSidebar':
         $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderLeftSidebar');
         break;
-
-    case 'layout/noSidebar':
-        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderNoSidebar');
-        break;
-
 }
 
 /**
@@ -120,7 +123,10 @@ if ($Project->getConfig('templateBusinessPro.settings.colorMainContentFont')) {
  */
 
 $mainFontFamily = $Project->getConfig('templateBusinessPro.settings.mainFontFamily');
-
+/*$string1 = strstr($mainFontFamily, '=', 0);
+$string1 = strstr($string1, ':', 1);
+$string1 = substr($string1, 1);
+echo $string1;*/
 
 $Engine->assign(array(
     'colorFooterBackground' => $colorFooterBackground,
@@ -131,14 +137,12 @@ $Engine->assign(array(
     'colorFooterLinks'      => $colorFooterLinks,
     'colorMainContentBg'    => $colorMainContentBg,
     'colorMainContentFont'  => $colorMainContentFont,
-    'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos'),
     'pageMaxWidth'          => $Project->getConfig('templateBusinessPro.settings.pageMaxWidth'),
     'headerHeight'          => $Project->getConfig('templateBusinessPro.settings.headerHeight'),
     'headerHeightValue'     => $Project->getConfig('templateBusinessPro.settings.headerHeightValue'),
     'Background'            => $Background,
     'bgColorSwitcherPrefix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherPrefix'),
     'bgColorSwitcherSuffix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherSuffix'),
-    'shadow'                => $Project->getConfig('templateBusinessPro.settings.shadow'),
     'menuShadow'            => $Project->getConfig('templateBusinessPro.settings.menuShadow'),
     'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
     'logoHeight'            => $Project->getConfig('templateBusinessPro.settings.logoHeight'),
