@@ -31,6 +31,16 @@
                         <defaultvalue>center</defaultvalue>
                     </conf>
 
+                    <!-- search -->
+                    <conf name="search">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="searchSite">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>center</defaultvalue>
+                    </conf>
+
                     <conf name="headerHeightValue">
                         <type><![CDATA[integer]]></type>
                         <defaultvalue>300</defaultvalue>
@@ -346,6 +356,26 @@
                                 </text>
                             </input>
                         </settings>
+
+                        <!-- search -->
+                        <settings title="templateBusinessPro.header.search"
+                                  name="templateBusinessPro.header.search">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.header.search.text"
+                                />
+                            </title>
+
+                            <input conf="templateBusinessPro.header.searchLink"
+                                   type="text" class="project-site">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="header.searchLink.text"
+                                    />
+                                </text>
+                            </input>
+                        </settings>
+
 
                         <!-- Colors -->
                         <settings title="templateBusinessPro.settings"
