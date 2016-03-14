@@ -5,49 +5,16 @@
         <settings>
             <config>
                 <section name="templateBusinessPro.settings">
+
+                    <!-- general settings -->
                     <conf name="logo">
                         <type><![CDATA[string]]></type>
                     </conf>
                     <conf name="logoSmall">
                         <type><![CDATA[string]]></type>
                     </conf>
-                    <conf name="logoHeight">
-                        <type><![CDATA[integer]]></type>
-                        <defaultvalue>100</defaultvalue>
-                    </conf>
-
                     <conf name="pageBackground">
                         <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="pageMaxWidth">
-                        <type><![CDATA[integer]]></type>
-                    </conf>
-                    <conf name="headerHeight">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>false</defaultvalue>
-                    </conf>
-                    <conf name="headerImagePosition">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>center</defaultvalue>
-                    </conf>
-
-                    <!-- search -->
-                    <conf name="search">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-                    <conf name="searchSite">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>center</defaultvalue>
-                    </conf>
-
-                    <conf name="headerHeightValue">
-                        <type><![CDATA[integer]]></type>
-                        <defaultvalue>300</defaultvalue>
-                    </conf>
-                    <conf name="menuShadow">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>show</defaultvalue>
                     </conf>
                     <conf name="bgColorSwitcherPrefix">
                         <type><![CDATA[string]]></type>
@@ -56,6 +23,28 @@
                     <conf name="bgColorSwitcherSuffix">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>hide</defaultvalue>
+                    </conf>
+
+                    <!-- nav bar -->
+                    <conf name="navBarHeight">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>show</defaultvalue>
+                    </conf>
+                    <conf name="navBarMainColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue></defaultvalue>
+                    </conf>
+                    <conf name="navBarHoverColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#2D4D88</defaultvalue>
+                    </conf>
+                    <conf name="navBarFontColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#2D4D88</defaultvalue>
+                    </conf>
+                    <conf name="navBarShadow">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>show</defaultvalue>
                     </conf>
 
                     <!-- no header? -->
@@ -76,6 +65,32 @@
                         <defaultvalue>1</defaultvalue>
                     </conf>
 
+                    <!-- header img height and value  -->
+                    <conf name="headerHeight">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>false</defaultvalue>
+                    </conf>
+                    <conf name="headerHeightValue">
+                        <type><![CDATA[integer]]></type>
+                        <defaultvalue>300</defaultvalue>
+                    </conf>
+                    <conf name="headerImagePosition">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>center</defaultvalue>
+                    </conf>
+
+                    <!-- search
+                    TO DO -->
+                    <conf name="search">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>1</defaultvalue>
+                    </conf>
+                    <conf name="searchSite">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue></defaultvalue>
+                    </conf>
+
+                    <!-- colors -->
                     <conf name="colorMain">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#2D4D88</defaultvalue>
@@ -84,7 +99,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#ffffff</defaultvalue>
                     </conf>
-
                     <conf name="colorFooterBackground">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#414141</defaultvalue>
@@ -122,6 +136,8 @@
                         </text>
                         <icon>URL_BIN_DIR/22x22/quiqqer.png</icon>
 
+
+                        <!-- general settings -->
                         <settings title="templateBusinessPro.settings"
                                   name="templateBusinessPro.settings.general">
                             <title>
@@ -154,62 +170,7 @@
 
                             </input>
 
-                            <!-- Logo Height -->
-                            <input conf="templateBusinessPro.settings.logoHeight" type="number">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.logoHeight"
-                                    />
-                                </text>
-                            </input>
-
-                            <!-- Hintergrund -->
-                            <input conf="templateBusinessPro.settings.pageBackground" class="media-image">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.pageBackground"
-                                            />
-                                </text>
-                            </input>
-
-                            <!-- maximale Breite -->
-                            <input conf="templateBusinessPro.settings.pageMaxWidth" type="number">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.pageMaxWidth"
-                                            />
-                                </text>
-                            </input>
-
-                            <!-- Menu shadow-->
-
-                            <select conf="templateBusinessPro.settings.menuShadow">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.menuShadow.text"
-                                            />
-                                </text>
-
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.menuShadow.description"
-                                            />
-                                </description>
-
-                                <option value="hide">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.menuShadow.hide"
-                                            />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.menuShadow.display"
-                                            />
-                                </option>
-                            </select>
-
                             <!-- Background Color Switcher Prefix-->
-
                             <select conf="templateBusinessPro.settings.bgColorSwitcherPrefix">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
@@ -236,7 +197,6 @@
                             </select>
 
                             <!-- Background Color Switcher Suffix-->
-
                             <select conf="templateBusinessPro.settings.bgColorSwitcherSuffix">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
@@ -264,55 +224,6 @@
 
                         </settings>
 
-                        <!-- Header Größe und Wert -->
-
-                        <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.header.settings.height">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.header.settings.height.text"
-                                />
-                            </title>
-
-                            <input conf="templateBusinessPro.settings.headerHeight" type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.header.settings.height.enable.text"
-                                    />
-                                </text>
-                            </input>
-                            <input conf="templateBusinessPro.settings.headerHeightValue" type="number">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.header.settings.height.value.text"
-                                    />
-                                </text>
-                            </input>
-
-                            <select conf="templateBusinessPro.settings.headerImagePosition">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.headerImagePosition.text"
-                                    />
-                                </text>
-
-                                <option value="flex-start">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.headerImagePosition.start"
-                                    />
-                                </option>
-                                <option value="center">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.headerImagePosition.center"
-                                    />
-                                </option>
-                                <option value="flex-end">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.headerImagePosition.end"
-                                    />
-                                </option>
-                            </select>
-                        </settings>
 
                         <!-- no header? -->
                         <settings title="templateBusinessPro.settings"
@@ -357,6 +268,149 @@
                             </input>
                         </settings>
 
+
+                        <!-- header height and value -->
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.header.settings.height">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.header.settings.height.text"
+                                />
+                            </title>
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.header.settings.heightInfo.text"
+                                />
+                            </text>
+
+                            <input conf="templateBusinessPro.settings.headerHeight" type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.header.settings.height.enable.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.headerHeightValue" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.header.settings.height.value.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <select conf="templateBusinessPro.settings.headerImagePosition">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.text"
+                                    />
+                                </text>
+
+                                <option value="flex-start">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.start"
+                                    />
+                                </option>
+                                <option value="center">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.center"
+                                    />
+                                </option>
+                                <option value="flex-end">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.headerImagePosition.end"
+                                    />
+                                </option>
+                            </select>
+                        </settings>
+
+
+                        <!-- nav bar -->
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.settings.navBar">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.settings.navBar.title"
+                                />
+                            </title>
+
+                            <!-- nav bar height -->
+                            <input conf="templateBusinessPro.settings.navBarHeight" type="number">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navBarHeight.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <!-- nav bar colors -->
+                            <input conf="templateBusinessPro.settings.navBarMainColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarMainColor.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarMainColor.description"
+                                    />
+                                </description>
+                            </input>
+                            <input conf="templateBusinessPro.settings.navBarHoverColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarHoverColor.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarHoverColor.description"
+                                    />
+                                </description>
+                            </input>
+                            <input conf="templateBusinessPro.settings.navBarFontColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarFontColor.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.navBarFontColor.description"
+                                    />
+                                </description>
+                            </input>
+
+                            <!-- Menu shadow-->
+                            <select conf="templateBusinessPro.settings.navBarShadow">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navBarShadow.text"
+                                    />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navBarShadow.description"
+                                    />
+                                </description>
+
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navBarShadow.hide"
+                                    />
+                                </option>
+                                <option value="display">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navBarShadow.display"
+                                    />
+                                </option>
+                            </select>
+                        </settings>
+
+
                         <!-- search -->
                         <settings title="templateBusinessPro.header.search"
                                   name="templateBusinessPro.header.search">
@@ -365,6 +419,15 @@
                                         var="templateBusinessPro.header.search.text"
                                 />
                             </title>
+
+                            <input conf="templateBusinessPro.header.search"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="header.search.text"
+                                    />
+                                </text>
+                            </input>
 
                             <input conf="templateBusinessPro.header.searchLink"
                                    type="text" class="project-site">
@@ -423,7 +486,6 @@
                                 </text>
                             </input>
 
-
                             <text>
                                 <locale group="quiqqer/template-businesspro"
                                         var="templateBusinessPro.settings.footerColor.text"
@@ -454,7 +516,6 @@
                                 </text>
                             </input>
 
-
                             <text>
                                 <locale group="quiqqer/template-businesspro"
                                         var="templateBusinessPro.settings.contentColor.text"
@@ -477,7 +538,6 @@
                                             />
                                 </text>
                             </input>
-
 
                         </settings>
 

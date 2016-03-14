@@ -147,7 +147,9 @@ $Engine->assign(array(
     'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
     'logoHeight'            => $Project->getConfig('templateBusinessPro.settings.logoHeight'),
     'mainFontFamily'        => $mainFontFamily,
-    'mainFontFamilyArt'     => $Project->getConfig('templateBusinessPro.settings.mainFontFamilyArt')
+    'mainFontFamilyArt'     => $Project->getConfig('templateBusinessPro.settings.mainFontFamilyArt'),
+    'search'          => $Project->getConfig('templateBusinessPro.settings.search'),
+    'searchLink'          => $Project->getConfig('templateBusinessPro.settings.searchLink')
 ));
 
 

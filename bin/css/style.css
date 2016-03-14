@@ -380,15 +380,13 @@ ul.basic-company-preview-ul > span {
 .page-header-logo-img {
     display: block;
     max-width: 100%;
-    margin: 1.5em 0;
+    margin: 0 1em;
 }
 
 .header-bar {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 8px 10px -5px rgba(0,0,0,0.16);
-    /*padding: 1.5em 0;*/
     position: relative;
-    /*min-height: 70px;*/
     z-index: 100;
 }
 
@@ -438,7 +436,7 @@ ul.basic-company-preview-ul > span {
     display: inline-block;
     list-style-type: none;
     margin: 0;
-    padding: 1.5em 0.5em;
+    padding: 0em 0.5em;
 }
 
 .page-header-navigation a {
@@ -451,6 +449,15 @@ ul.basic-company-preview-ul > span {
 
 .page-header-navigation a:hover {
     box-shadow: none;
+}
+
+li.page-header-navigation-entry {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.page-header-navigation-entry-link {
+    display: block;
 }
 
 .page-header-navigation-entry-link:hover {
@@ -471,11 +478,13 @@ ul.basic-company-preview-ul > span {
         top: 100%;
         display: none;
         z-index: 10;
+        transition: all 0.4s;
     }
 
     .page-header-navigation-sub li {
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         padding: 0;
+        transition: all 0.4s;
     }
 
     .page-header-navigation-sub li:last-child {
@@ -518,6 +527,7 @@ ul.basic-company-preview-ul > span {
         height: auto;
         opacity: 1;
         display: block;
+        top: 100%;
     }
 
 

@@ -301,8 +301,20 @@
         }
         {/if}
 
-        .page-header-logo-img {
+        /*.page-header-logo-img {
             max-height: {$logoHeight}px;
+        }*/
+
+        /* HEIGHT */
+
+        .page-header-logo-img {
+            max-height: 80px;
+        }
+
+        .header-bar,
+        .header-bar-inner-nav,
+        .page-header-navigation-entry{
+            height: 80px;
         }
     </style>
 
@@ -357,18 +369,13 @@
                         {foreach from=$children item=Child}
                         <li class="page-header-navigation-entry">
 
+                            <!-- menu (level 1) -->
                             {assign var=subnavigation value=$Child->getNavigation()}
-
-                             <i class="fa fa-fw fa-chevron-down fa-chevron-down-mobile"
-                                style="{if !count( $subnavigation )}opacity: 0; color: rgba(0;0;0;0); cursor: default;{/if}">
-                             </i>
-
-
                             <a href="{url site=$Child}" class="page-header-navigation-entry-link">
                                 {$Child->getAttribute('title')}
                             </a>
 
-                            <!-- submenu -->
+                            <!-- submenu (level 2) -->
                             {if count( $subnavigation )}
                             <div class="page-header-navigation-sub smooth">
                                 <ul class="page-header-navigation-sub-list">
