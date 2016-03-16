@@ -27,24 +27,24 @@
 
                     <!-- nav bar -->
                     <conf name="navBarHeight">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>show</defaultvalue>
+                        <type><![CDATA[integer]]></type>
+                        <defaultvalue>80</defaultvalue>
                     </conf>
                     <conf name="navBarMainColor">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
+                        <defaultvalue>#2d4d88</defaultvalue>
                     </conf>
                     <conf name="navBarHoverColor">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#2D4D88</defaultvalue>
+                        <defaultvalue>#4d6d97</defaultvalue>
                     </conf>
                     <conf name="navBarFontColor">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#2D4D88</defaultvalue>
+                        <defaultvalue>#ffffff</defaultvalue>
                     </conf>
                     <conf name="navBarShadow">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>show</defaultvalue>
+                        <defaultvalue>hide</defaultvalue>
                     </conf>
 
                     <!-- no header? -->
@@ -81,11 +81,11 @@
 
                     <!-- search
                     TO DO -->
-                    <conf name="search">
+                    <conf name="searchShow">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
-                    <conf name="searchSite">
+                    <conf name="searchLink">
                         <type><![CDATA[string]]></type>
                         <defaultvalue></defaultvalue>
                     </conf>
@@ -412,28 +412,28 @@
 
 
                         <!-- search -->
-                        <settings title="templateBusinessPro.header.search"
-                                  name="templateBusinessPro.header.search">
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.settings.search">
                             <title>
                                 <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.header.search.text"
+                                        var="settings.search.title"
                                 />
                             </title>
 
-                            <input conf="templateBusinessPro.header.search"
+                            <input conf="templateBusinessPro.settings.searchShow"
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="header.search.text"
+                                            var="settings.searchShow.text"
                                     />
                                 </text>
                             </input>
 
-                            <input conf="templateBusinessPro.header.searchLink"
+                            <input conf="templateBusinessPro.settings.searchLink"
                                    type="text" class="project-site">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="header.searchLink.text"
+                                            var="settings.searchLink.text"
                                     />
                                 </text>
                             </input>

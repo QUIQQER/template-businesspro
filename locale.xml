@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
+        <!-- template -->
+        <locale name="navbar.search.text">
+            <de><![CDATA[Suchen]]></de>
+            <en><![CDATA[Search]]></en>
+            <pl><![CDATA[Szukaj]]></pl>
+        </locale>
+
         <!-- areas -->
         <locale name="area.footer.title">
             <de><![CDATA[Footer Bausteinzone]]></de>

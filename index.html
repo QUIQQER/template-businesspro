@@ -40,11 +40,16 @@
          * Farbeinstellungen
          */
 
-        /* navi */
 
+        /* nav bar */
+        .header-bar {
+            background: {$navBarMainColor};
+        }
+        
         .page-header-navigation-sub-list,
-        .page-header-navigation li:hover {
-            background: #4d6d97;
+        .page-header-navigation li:hover,
+        .header-bar-search:hover {
+            background: {$navBarHoverColor};
         }
 
         .header-bar,
@@ -53,9 +58,27 @@
         .header-bar-inner a:active,
         .header-bar-inner a:visited,
         .header-bar-inner a:hover {
-            color: #fff;
+            color: {$navBarFontColor};
         }
 
+        .page-header-logo-img {
+            max-height: calc({$navBarHeight}px - 20px);
+        }
+
+        .header-bar,
+        .header-bar-inner-nav,
+        .page-header-navigation-entry,
+        .header-bar-search,
+        .header-bar-search:before,
+        .page-header-navigation-entry:before {
+            height: {$navBarHeight}px;
+        }
+
+        .header-bar-search,
+        .page-header-navigation-entry {
+            line-height: {$navBarHeight}px;
+        }
+        /***************/
 
         .content-switcher-content h2,
         .quiqqer-fa-levels-icon:hover,
@@ -67,6 +90,11 @@
         .quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
             color: {$colorMain};
         }
+
+        .firstColor {
+            color: {$colorMain};
+        }
+
 
         /*.quiqqer-navigation-level-1 a:hover,
         a.quiqqer-navigation-home:hover
@@ -240,7 +268,7 @@
          * Menü schatten anzeigen
          */
 
-        {if $menuShadow == 'hide'}
+        {if $navBarShadow == 'hide'}
             .header-bar {
                 box-shadow: none !important;
             }
@@ -301,27 +329,13 @@
         }
         {/if}
 
-        /*.page-header-logo-img {
-            max-height: {$logoHeight}px;
-        }*/
 
-        /* HEIGHT */
-
-        .page-header-logo-img {
-            max-height: 80px;
-        }
-
-        .header-bar,
-        .header-bar-inner-nav,
-        .page-header-navigation-entry{
-            height: 80px;
-        }
     </style>
 
 </head>
 <body>
 <div class="main-body">
-    <div class="header-bar grid-content" style="background-color: {$colorMain};">
+    <div class="header-bar grid-content">
         <div class="grid-container header-bar-inner">
 
             <div class="header-bar-inner-logo grid-10 {if $logoSmall}hide-on-mobile{/if}">
@@ -330,11 +344,12 @@
                     {image src=$logo width=700 class="page-header-logo-img"}
                 </a>
                 {else}
-                <h1>
+                <h1>Logo</h1>
+                {*<h1>
                     <a href="{url id=1}" class="page-header-textlogo-link">
                     {$Site->getAttribute( 'title' )}
                     </a>
-                </h1>
+                </h1>*}
                 {/if}
             </div>
             {if $logoSmall}
@@ -344,11 +359,12 @@
                     {image src=$logoSmall width=700 class="page-header-logo-img"}
                 </a>
                 {else}
-                <h1>
+                <h1>Logo</h1>
+                {*<h1>
                     <a href="{url id=1}" class="page-header-textlogo-link">
                     {$Site->getAttribute( 'title' )}
                     </a>
-                </h1>
+                </h1>*}
                 {/if}
             </div>
             {/if}
@@ -397,9 +413,17 @@
                 </nav>
                 {/if}
             </div>
-            <div class="nav-search grid-10">
-                <i class="fa fa-search nav-search-icon"></i><a class="nav-search-link">Suchen</a>
+            <!-- search -->
+            {if $searchShow}
+            <div class="header-bar-search grid-10">
+                {strip}
+                <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
+                    <i class="fa fa-search header-bar-search-icon"></i>
+                    {locale group="quiqqer/template-businesspro" var="navbar.search.text"}
+                </a>
+                {/strip}
             </div>
+            {/if}
         </div>
     </div>
 
@@ -550,11 +574,11 @@
                 {/if}
                 <div class="grid-100 mobile-grid-100 page-footer-copyright">
                     <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-left">
-                        {locale group="quiqqer/template-businessprop" var="copyright.text" year=$smarty.now|date_format:"%Y"}
+                        {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:"%Y"}
                     </div>
 
                     <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-right">
-                        {locale group="quiqqer/template-businessprop" var="copyright.link"}
+                        {locale group="quiqqer/template-businesspro" var="copyright.link"}
                     </div>
                 </div>
             </div>
