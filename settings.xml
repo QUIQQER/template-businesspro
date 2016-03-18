@@ -47,22 +47,24 @@
                         <defaultvalue>hide</defaultvalue>
                     </conf>
 
+
+                    <!-- header settings -->
                     <!-- no header? -->
                     <conf name="noHeaderStartPage">
                         <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
+                        <defaultvalue>0</defaultvalue>
                     </conf>
                     <conf name="noHeaderNoSidebar">
                         <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
+                        <defaultvalue>0</defaultvalue>
                     </conf>
                     <conf name="noHeaderLeftSidebar">
                         <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
+                        <defaultvalue>0</defaultvalue>
                     </conf>
                     <conf name="noHeaderRightSidebar">
                         <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
+                        <defaultvalue>0</defaultvalue>
                     </conf>
 
                     <!-- header img height and value  -->
@@ -79,8 +81,7 @@
                         <defaultvalue>center</defaultvalue>
                     </conf>
 
-                    <!-- search
-                    TO DO -->
+                    <!-- search -->
                     <conf name="searchShow">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
@@ -110,10 +111,6 @@
                     <conf name="colorFooterLinks">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#E6E6E6</defaultvalue>
-                    </conf>
-                    <conf name="colorBackground">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#F7F7F7</defaultvalue>
                     </conf>
                     <conf name="colorMainContentBg">
                         <type><![CDATA[string]]></type>
@@ -225,15 +222,20 @@
                         </settings>
 
 
-                        <!-- no header? -->
+                        <!-- header settings -->
                         <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.header.settings.show">
+                                  name="templateBusinessPro.header.settings">
                             <title>
                                 <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.header.settings.show.text"
+                                        var="templateBusinessPro.header.settings.title"
                                         />
                             </title>
 
+                            <!-- no header? -->
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="noHeader.text" />
+                            </text>
                             <input conf="templateBusinessPro.settings.noHeaderStartPage"
                                    type="checkbox">
                                 <text>
@@ -266,20 +268,11 @@
                                             />
                                 </text>
                             </input>
-                        </settings>
 
-
-                        <!-- header height and value -->
-                        <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.header.settings.height">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.header.settings.height.text"
-                                />
-                            </title>
+                            <!-- header height and value -->
                             <text>
                                 <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.header.settings.heightInfo.text"
+                                        var="templateBusinessPro.header.settings.height.text"
                                 />
                             </text>
 
@@ -474,15 +467,6 @@
                                     <locale group="quiqqer/template-businesspro"
                                             var="template.settings.buttonFontColor.text"
                                     />
-                                </text>
-                            </input>
-
-                            <input conf="templateBusinessPro.settings.colorBackground"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.colorBackground.text"
-                                            />
                                 </text>
                             </input>
 

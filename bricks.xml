@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiqqer>
     <bricks>
+        <!-- for all bricks -->
+        <brick control="*">
+            <settings>
+                <setting name="brickFullWidth">
+                    <locale group="quiqqer/template-businesspro"
+                            var="headerSuffix.fullWidth"/>
+                </setting>
+            </settings>
+        </brick>
 
         <!-- defined areas in the template -->
         <templateAreas>

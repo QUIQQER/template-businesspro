@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
 
+    <!-- global attributes -->
+    <attributes>
+        <attribute>templateBusinessPro.settings.headerPrefixFullSize</attribute>
+    </attributes>
+
+    <settings>
+        <category name="businesspro-headerPrefixFullSize">
+            <settings>
+                <title>
+                    <locale group="quiqqer/template-businesspro" var="headerPrefixFullSize.title"/>
+                </title>
+
+                <input conf="templateBusinessPro.settings.headerPrefixFullSize" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/template-businesspro" var="headerPrefixFullSize.text"/>
+                    </text>
+                </input>
+            </settings>
+        </category>
+    </settings>
+
+    <!-- layouts -->
     <layouts>
         <layout type="layout/startPage">
             <title>

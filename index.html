@@ -130,7 +130,6 @@
         }
 
         body {
-            background: {$colorBackground};
             color: {$colorMainContentFont} !important;
         }
 
@@ -213,56 +212,6 @@
             color: #FFFFFF !important;
         }
 
-        /**
-         * Hintergrundbild
-         */
-
-        {if $Background}
-        body {
-            background-image : url('{$Background->getSizeCacheUrl()}') !important;
-            background-attachment: fixed;
-            -webkit-background-size: cover;
-            background-size: cover;
-        }
-        {/if}
-
-        /**
-         * Seitenbreite
-         */
-
-        {if $fullsize == false}
-            .main-body {
-                display: block !important;
-
-                max-width: {$pageMaxWidth}px;
-                margin: 0 auto;
-            }
-            .header-bar {
-                max-width: {$pageMaxWidth}px;
-            }
-
-            .grid-container {
-                max-width: {$pageMaxWidth}px;
-            }
-
-            .page-box-prefix-suffix {
-                padding: 30px 0;
-            }
-
-            /* Damit es kein Scrollbar angezeigt wird, wenn Browser kleiner als max-width */
-
-            {if $fullsize == false && $navPos == 'fix'}
-                .header-bar {
-                    width: 100%;
-                }
-            {/if}
-
-        {else}
-            .header-bar {
-                width: 100%;
-            }
-        {/if}
-
 
         /**
          * Menü schatten anzeigen
@@ -312,7 +261,7 @@
         .header-img {
             display: none;
         }
-        .page-header {
+        header.page-header {
             display: none;
         }
         {/if}
@@ -329,6 +278,10 @@
         }
         {/if}
 
+        /* header prefix full size */
+        .headerPrefixFullSize {
+            line-height: 1;
+        }
 
     </style>
 
@@ -443,68 +396,53 @@
         {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
         {foreach $headerSuffix as $Brick}
 
-        {if $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
-        $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
-        $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+        {*if $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
+            $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
+            $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
 
-            {if $fullsize}
-                <div class="full-size {cycle values="brick-even-prefix,brick-odd-prefix"}">
-            {else}
-                <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
-            {/if}
-                <section class="clearfix">
-                    {$Brick->create()}
+            <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
+            <section>
+                {$Brick->create()}
+            </section>
+            </div>
+
+        {else*}
+
+            {if $headerPrefixFullSize && (
+                $Brick->getType() == 'QUI\Bricks\Controls\Image' ||
+                $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
+                $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
+                $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
+                <section class="headerPrefixFullSize clear-fix">
+                {$Brick->create()}
                 </section>
-            {if $fullsize}
-                </div>
             {else}
-                </div>
-            {/if}
-
-        {else}
-
-            {if $fullsize}
-                <div class="full-size {cycle values="brick-even-prefix,brick-odd-prefix"}">
                 <div class="grid-container">
-            {else}
-                <div class="grid-container {cycle values="brick-even-prefix,brick-odd-prefix"}">
-            {/if}
-                <section class="mobile-grid-100 grid-100 page-content grid-parent page-box-prefix-suffix">
-                    {if !$Brick->hasCSSClass('grid*')}
-                        {$Brick->addCSSClass('grid-100')}
-                    {/if}
-                    {$Brick->create()}
-                </section>
-            {if $fullsize}
-                </div>
-                </div>
-            {else}
+                    <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
+                    <section class="mobile-grid-100 grid-100 page-content grid-parent page-box-prefix-suffix">
+                        {if !$Brick->hasCSSClass('grid*')}
+                            {$Brick->addCSSClass('grid-100')}
+                        {/if}
+                        {$Brick->create()}
+                        {$Brick->getType()}
+                    </section>
+                    </div>
                 </div>
             {/if}
-
-        {/if}
+        {*/if*}
         {/foreach}
 
 
         <!-- content -->
-        {if $fullsize}
-            <div class="main-content-color-bg full-size {cycle values="" reset=true}">
+            <div class="main-content-color-bg {cycle values="" reset=true}">
             <div class="grid-container">
-        {else}
-            <div class="main-content-color-bg grid-container">
-        {/if}
 
-            <div id="page">
-                {$Template->getLayout()}
-            </div>
+                <div id="page">
+                    {$Template->getLayout()}
+                </div>
 
-        {if $fullsize}
             </div>
             </div>
-        {else}
-            </div>
-        {/if}
-
 
 
         <!-- footer prefix-->
@@ -515,44 +453,26 @@
         <!-- Wenn google map, dann volle Breite -->
         {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
 
-            {if $fullsize}
-                <div class="full-size {cycle values="brick-even-suffix,brick-odd-suffix"}">
-            {else}
-                <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
-            {/if}
-                <section class="clearfix">
+            <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
+                <section>
                     {$Brick->create()}
                 </section>
-            {if $fullsize}
-                </div>
-            {else}
-                </div>
-            {/if}
+            </div>
 
         {else}
 
-            {if $fullsize}
-                <div class="full-size {cycle values="brick-even-suffix,brick-odd-suffix"}">
+            <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
                 <div class="grid-container">
-            {else}
-                <div class="grid-container {cycle values="brick-even-suffix,brick-odd-suffix"}">
-            {/if}
-
-                <div class="page-content">
-                    <section class="mobile-grid-100 grid-100 grid-parent page-box-prefix-suffix">
-                        {if !$Brick->hasCSSClass('grid*')}
-                        {$Brick->addCSSClass('grid-100')}
-                        {/if}
-                        {$Brick->create()}
-                    </section>
+                    <div class="page-content">
+                        <section class="mobile-grid-100 grid-100 grid-parent page-box-prefix-suffix">
+                            {if !$Brick->hasCSSClass('grid*')}
+                            {$Brick->addCSSClass('grid-100')}
+                            {/if}
+                            {$Brick->create()}
+                        </section>
+                    </div>
                 </div>
-
-            {if $fullsize}
-                </div>
-                </div>
-            {else}
-                </div>
-            {/if}
+            </div>
         {/if}
         {/foreach}
 

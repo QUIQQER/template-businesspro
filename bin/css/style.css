@@ -597,9 +597,9 @@ li.page-header-navigation-entry {
     outline: 2px solid lightslategray;
 }*/
 
-.full-size {
+/*.full-size {
     width: 100%;
-}
+}*/
 
 .page-content {
     font-size: 11pt;
@@ -737,12 +737,6 @@ li.page-header-navigation-entry {
     background: none;
     transition: all 0.2s;
 }
-
-/*
-.quiqqer-navigation-entry:hover a.quiqqer-navigation-link {
-    transition: all 0.3s;
-}
-*/
 
 #page .quiqqer-navigation-entry {
     cursor: pointer;
@@ -1390,4 +1384,11 @@ input[type='radio'] {
 #page .qui-sitetypes-sitemap-block ol {
     padding-left: 30px;
     padding-top: 10px;
+}
+
+.clear-fix:after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
 }

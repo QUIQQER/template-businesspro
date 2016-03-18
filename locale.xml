@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
+
+        <!-- global settings -->
+        <locale name="headerPrefixFullSize.title">
+            <de><![CDATA[Header Suffix]]></de>
+            <en><![CDATA[Header suffix]]></en>
+            <pl><![CDATA[Suffix nagłówka]]></pl>
+        </locale>
+        <locale name="headerPrefixFullSize.text">
+            <de><![CDATA[Volle Breite für bestimmte Bausteine]]></de>
+            <en><![CDATA[Full size for some bricks]]></en>
+            <pl><![CDATA[Pełna szerokość dla niektórych pluginów]]></pl>
+        </locale>
+
         <!-- template -->
         <locale name="navbar.search.text">
             <de><![CDATA[Suchen]]></de>
@@ -246,44 +259,59 @@
             </locale>
 
         <!-- header settings -->
-        <locale name="templateBusinessPro.header.settings.show.text">
-            <de><![CDATA[Header anzeigen oder verstecken.]]></de>
-            <en><![CDATA[Display or hide the header.]]></en>
+        <locale name="templateBusinessPro.header.settings.title">
+            <de><![CDATA[Header Einstellungen]]></de>
+            <en><![CDATA[Header settings]]></en>
+            <pl><![CDATA[Ustawienia nagłówka]]></pl>
+        </locale>
+
+        <!-- show header? -->
+        <locale name="noHeader.text">
+            <de><![CDATA[Header anzeigen?]]></de>
+            <en><![CDATA[Display header?]]></en>
+            <pl><![CDATA[Pokazać nagłówek (header wraz z obrazkiem)?]]></pl>
         </locale>
 
         <locale name="noHeaderStartPage.text">
-            <de><![CDATA[Startpage: Header verstecken]]></de>
-            <en><![CDATA[Start page: hide the header]]></en>
+            <de><![CDATA[Layout: Startpage]]></de>
+            <en><![CDATA[Layout: Start page]]></en>
+            <pl><![CDATA[Layout: układ bez kolumn (strona startowa)]]></pl>
         </locale>
 
         <locale name="noHeaderNoSidebar.text">
-            <de><![CDATA[Keine Sidebar: Header verstecken]]></de>
-            <en><![CDATA[No sidebar: hide the header]]></en>
+            <de><![CDATA[Layout: kein Sidebar]]></de>
+            <en><![CDATA[Layout: no sidebar]]></en>
+            <pl><![CDATA[Layout: układ bez kolumn]]></pl>
         </locale>
 
         <locale name="noHeaderLeftSidebar.text">
-            <de><![CDATA[Linke Sidebar: Header verstecken]]></de>
-            <en><![CDATA[Left sidebar: hide the header]]></en>
+            <de><![CDATA[Layout: linke Sidebar]]></de>
+            <en><![CDATA[Layout: left sidebar]]></en>
+            <pl><![CDATA[Layout: układ z lewą kolumną]]></pl>
         </locale>
 
         <locale name="noHeaderRightSidebar.text">
-            <de><![CDATA[Rechte Sidebar: Header verstecken]]></de>
-            <en><![CDATA[Right sidebar: hide the header]]></en>
+            <de><![CDATA[Layout: rechte Sidebar]]></de>
+            <en><![CDATA[Layout: right sidebar]]></en>
+            <pl><![CDATA[Layout: układ z prawą kolumną]]></pl>
         </locale>
 
         <!-- Header Größe-->
         <locale name="templateBusinessPro.header.settings.height.text">
-            <de><![CDATA[Höhe des Headers bestimmen]]></de>
-            <en><![CDATA[Set a fixed size of header]]></en>
+            <de><![CDATA[Höhe des Headerbildes einstellen]]></de>
+            <en><![CDATA[Header image size settings]]></en>
+            <pl><![CDATA[Ustawienia wysokość obrazka nagłówka]]></pl>
         </locale>
 
         <locale name="templateBusinessPro.header.settings.height.enable.text">
-            <de><![CDATA[Feste Höhe des Headers setzen?]]></de>
-            <en><![CDATA[Choose if you wont to set the fixed size of the header]]></en>
+            <de><![CDATA[Feste Höhe des Headers]]></de>
+            <en><![CDATA[Fixed size of the header]]></en>
+            <pl><![CDATA[Stała wysokość nagłówka (header)]]></pl>
         </locale>
         <locale name="templateBusinessPro.header.settings.height.value.text">
-            <de><![CDATA[Setzen Sie den Wert (in Pixel)]]></de>
-            <en><![CDATA[Set the size (in Pixel)]]></en>
+            <de><![CDATA[Höhe (in Pixel)]]></de>
+            <en><![CDATA[Height (in pixel)]]></en>
+            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
         </locale>
 
         <!-- Position des Bildes im Header-->
@@ -349,10 +377,6 @@
         <locale name="template.settings.colorMain.description">
             <de><![CDATA[Farbeinstellung für Links, Linksefekte, anklickbaren Schaltflächen, usw.]]></de>
             <en><![CDATA[Set the color of links, buttons, etc.]]></en>
-        </locale>
-        <locale name="template.settings.colorBackground.text">
-            <de><![CDATA[Hintergrundfarbe]]></de>
-            <en><![CDATA[Background color]]></en>
         </locale>
         <locale name="template.settings.colorMainContentBackground.text">
             <de><![CDATA[Hintergrundfarbe des Seiteninhaltes]]></de>

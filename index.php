@@ -7,29 +7,14 @@
 \QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
 
-/**
- * Background
- */
 
-$Background = false;
-
-if ($Project->getConfig('templateBusinessPro.settings.pageBackground')) {
-    try {
-        $Background = QUI\Projects\Media\Utils::getImageByUrl(
-            $Project->getConfig('templateBusinessPro.settings.pageBackground')
-        );
-
-    } catch (QUI\Exception $Exception) {
-        \QUI\System\Log::writeRecursive($Exception->getMessage());
-    }
-}
 
 
 /**
  * Project Logo
  */
 
-$logo = false;
+$logo       = false;
 $configLogo = $Project->getConfig('templateBusinessPro.settings.logo');
 
 if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
@@ -40,7 +25,7 @@ if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
  * Project Logo Small
  */
 
-$logoSmall = false;
+$logoSmall       = false;
 $configLogoSmall = $Project->getConfig('templateBusinessPro.settings.logoSmall');
 
 if (QUI\Projects\Media\Utils::isMediaUrl($configLogoSmall)) {
@@ -75,9 +60,9 @@ switch ($Template->getLayoutType()) {
  * nav bar colors
  */
 
-$navBarMainColor = '#2d4d88';
+$navBarMainColor  = '#2d4d88';
 $navBarHoverColor = '#4d6d97';
-$navBarFontColor = '#ffffff';
+$navBarFontColor  = '#ffffff';
 
 if ($Project->getConfig('templateBusinessPro.settings.navBarMainColor')) {
     $navBarMainColor = $Project->getConfig('templateBusinessPro.settings.navBarMainColor');
@@ -96,13 +81,12 @@ if ($Project->getConfig('templateBusinessPro.settings.navBarFontColor')) {
  */
 
 $colorFooterBackground = '#414141';
-$colorFooterFont = '#D1D1D1';
-$colorMain = '#dd151b';
-$buttonFontColor = '#ffffff';
-$colorBackground = '#F7F7F7';
-$colorFooterLinks = '#E6E6E6';
-$colorMainContentBg = '#ffffff';
-$colorMainContentFont = '#5d5d5d';
+$colorFooterFont       = '#D1D1D1';
+$colorMain             = '#dd151b';
+$buttonFontColor       = '#ffffff';
+$colorFooterLinks      = '#E6E6E6';
+$colorMainContentBg    = '#ffffff';
+$colorMainContentFont  = '#5d5d5d';
 
 if ($Project->getConfig('templateBusinessPro.settings.colorFooterBackground')) {
     $colorFooterBackground = $Project->getConfig('templateBusinessPro.settings.colorFooterBackground');
@@ -118,10 +102,6 @@ if ($Project->getConfig('templateBusinessPro.settings.colorMain')) {
 
 if ($Project->getConfig('templateBusinessPro.settings.buttonFontColor')) {
     $buttonFontColor = $Project->getConfig('templateBusinessPro.settings.buttonFontColor');
-}
-
-if ($Project->getConfig('templateBusinessPro.settings.colorBackground')) {
-    $colorBackground = $Project->getConfig('templateBusinessPro.settings.colorBackground');
 }
 
 if ($Project->getConfig('templateBusinessPro.settings.colorFooterLinks')) {
@@ -141,36 +121,24 @@ $Engine->assign(array(
     'colorFooterFont'       => $colorFooterFont,
     'colorMain'             => $colorMain,
     'buttonFontColor'       => $buttonFontColor,
-    'colorBackground'       => $colorBackground,
     'colorFooterLinks'      => $colorFooterLinks,
     'colorMainContentBg'    => $colorMainContentBg,
     'colorMainContentFont'  => $colorMainContentFont,
     'navBarMainColor'       => $navBarMainColor,
     'navBarHoverColor'      => $navBarHoverColor,
     'navBarFontColor'       => $navBarFontColor,
-    'navBarHeight'          => $Project->getConfig('templateBusinessPro.settings.navBarHeight'),
+    'navBarHeight'          => (int)$Project->getConfig('templateBusinessPro.settings.navBarHeight'),
     'pageMaxWidth'          => $Project->getConfig('templateBusinessPro.settings.pageMaxWidth'),
     'headerHeight'          => $Project->getConfig('templateBusinessPro.settings.headerHeight'),
-    'headerHeightValue'     => $Project->getConfig('templateBusinessPro.settings.headerHeightValue'),
-    'Background'            => $Background,
+    'headerHeightValue'     => (int)$Project->getConfig('templateBusinessPro.settings.headerHeightValue'),
     'bgColorSwitcherPrefix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherPrefix'),
     'bgColorSwitcherSuffix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherSuffix'),
     'navBarShadow'          => $Project->getConfig('templateBusinessPro.settings.navBarShadow'),
     'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
     'searchShow'            => $Project->getConfig('templateBusinessPro.settings.searchShow'),
-    'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink')
+    'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink'),
+    'headerPrefixFullSize'  => $Site->getAttribute('templateBusinessPro.settings.headerPrefixFullSize')
 ));
-
-/**
- * full size
- */
-
-$fullsize = false;
-$pageMaxWidth = (int)$Project->getConfig('templateBusinessPro.settings.pageMaxWidth');
-
-if (!$pageMaxWidth){
-    $fullsize = true;
-}
 
 
 /**
@@ -180,11 +148,10 @@ if (!$pageMaxWidth){
 $Engine->assign(array(
     'logo'          => $logo,
     'logoSmall'     => $logoSmall,
-    'fullsize'      => $fullsize,
     'ownSideType'   =>
         strpos($Site->getAttribute('type'), 'quiqqer/template-businessprof:') !== false
             ? 1 : 0,
     'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
     'BricksManager' => \QUI\Bricks\Manager::init(),
-    'noHeader'     => $noHeader
+    'noHeader'      => $noHeader
 ));
