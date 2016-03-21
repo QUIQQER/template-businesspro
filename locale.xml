@@ -11,7 +11,7 @@
         <locale name="headerPrefixFullSize.text">
             <de><![CDATA[Volle Breite für bestimmte Bausteine]]></de>
             <en><![CDATA[Full size for some bricks]]></en>
-            <pl><![CDATA[Pełna szerokość dla niektórych pluginów]]></pl>
+            <pl><![CDATA[Ustaw pełną szerokość dla niektórych pluginów]]></pl>
         </locale>
 
         <!-- template -->
@@ -25,37 +25,45 @@
         <locale name="area.footer.title">
             <de><![CDATA[Footer Bausteinzone]]></de>
             <en><![CDATA[Footer brickarea]]></en>
+            <pl><![CDATA[Stopka]]></pl>
         </locale>
         <locale name="area.footer.description">
             <de><![CDATA[Bausteinzone des Footer]]></de>
-            <en><![CDATA[Brickarea of the footer]]></en>
+            <en><![CDATA[Brick area of the footer]]></en>
+            <pl><![CDATA[Miejsce na umieszczenie pluginów w stopce.]]></pl>
         </locale>
 
         <locale name="area.startpageContent.title">
             <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
             <en><![CDATA[Content area (Landingpage)]]></en>
+            <pl><![CDATA[Główna zawartość strony (układ bez kolumn - strona główna)]]></pl>
         </locale>
         <locale name="area.startpageContent.description">
             <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
-            <en><![CDATA[Brickarea of a landingpage layout]]></en>
+            <en><![CDATA[Brick area of a landingpage layout]]></en>
+            <pl><![CDATA[Dodatkowe miejsce na pluginy w głównej części strony w przypadku układu bez kolumn.]]></pl>
         </locale>
 
         <locale name="area.sidebar.left.title">
             <de><![CDATA[Linke Bausteinzone]]></de>
             <en><![CDATA[Left brickarea]]></en>
+            <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.left.description">
             <de><![CDATA[Bausteinzone links neben dem Inhalt]]></de>
-            <en><![CDATA[Brickarea to the left of the content]]></en>
+            <en><![CDATA[Brick area to the left of the content]]></en>
+            <pl><![CDATA[Układ strony z kolumną po lewej stronie.]]></pl>
         </locale>
 
         <locale name="area.sidebar.right.title">
             <de><![CDATA[Rechte Bausteinzone]]></de>
             <en><![CDATA[Right brickarea]]></en>
+            <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.right.description">
             <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
             <en><![CDATA[Brickarea to the right of the content]]></en>
+            <en><![CDATA[Układ strony z kolumną po prawej stronie.]]></en>
         </locale>
 
         <locale name="area.noSidebar.title">
@@ -65,6 +73,7 @@
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
             <en><![CDATA[Content area of no sidebar layout]]></en>
+            <en><![CDATA[Układ bez kolumn]]></en>
         </locale>
 
         <locale name="area.sidebar.prefix.content.title">
@@ -168,65 +177,54 @@
         <locale name="templateBusinessPro.settings.menu.title">
             <de><![CDATA[Template Einstellungen: Business Pro]]></de>
             <en><![CDATA[Template settings: Business Pro]]></en>
+            <pl><![CDATA[Ustawienia szablonu: Business Pro]]></pl>
         </locale>
 
         <!-- general settings -->
         <locale name="templateBusinessPro.settings.general.title">
             <de><![CDATA[Allgemeine Einstellungen]]></de>
             <en><![CDATA[General settings]]></en>
+            <pl><![CDATA[Ustawienia ogólne]]></pl>
         </locale>
 
             <!-- logo settings -->
             <locale name="templateBusinessPro.settings.logo">
                 <de><![CDATA[Logo hochladen]]></de>
-                <en><![CDATA[Logo upload]]></en>>
+                <en><![CDATA[Logo upload]]></en>
+                <pl><![CDATA[Wgranie loga]]></pl>
             </locale>
 
             <!-- logo small settings -->
             <locale name="templateBusinessPro.settings.logoSmall">
                 <de><![CDATA[Kleines Logo hochladen]]></de>
-                <en><![CDATA[Small logo upload]]></en>>
+                <en><![CDATA[Small logo upload]]></en>
+                <pl><![CDATA[Wgranie małego loga]]></pl>
             </locale>
             <locale name="templateBusinessPro.settings.logoSmall.description">
                 <de><![CDATA[Ein zusätzliches Logo für mobilen Ansicht.<br />
                              Wenn nicht gesetzt, wird das Hauptlogo angezeigt.]]>
                 </de>
-                <en><![CDATA[Small logo for mobile.]]></en>>
-            </locale>
-            <locale name="templateBusinessPro.settings.logoHeight">
-                <de><![CDATA[Maximale Höhe des Logos (in Pixel)]]></de>
-                <en><![CDATA[Max height of the logo image (in pixel)]]></en>>
+                <en><![CDATA[Small logo for mobile.]]></en>
+                <pl><![CDATA[Jeśli małe logo jest dostępne, zostanie ono wyświetlone
+                             zamiast standardowego na smartfonach oraz tabletach.]]></pl>
             </locale>
 
-
-            <!-- background image settings -->
-            <locale name="templateBusinessPro.settings.pageBackground">
-                <de><![CDATA[Hintergrundbild hochladen]]></de>
-                <en><![CDATA[Background picture]]></en>>
-            </locale>
-
-            <!-- Seitenbreite -->
-            <locale name="templateBusinessPro.settings.pageMaxWidth">
-                <de><![CDATA[Maximale Seitenbreite]]></de>
-                <en><![CDATA[Max page width]]></en>
-            </locale>
 
             <!-- Menu shadow -->
-            <locale name="templateBusinessPro.settings.menuShadow.text">
+            <locale name="templateBusinessPro.settings.navBarShadow.text">
                 <de><![CDATA[Menüschatten]]></de>
                 <en><![CDATA[Menu shadow]]></en>
+                <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
             </locale>
-            <locale name="templateBusinessPro.settings.menuShadow.description">
-                <de><![CDATA[Zeigt Menüschatten]]></de>
-                <en><![CDATA[Display menu shadow]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.menuShadow.display">
+            <locale name="templateBusinessPro.settings.navBarShadow.displaz">
                 <de><![CDATA[Schatten anzeigen]]></de>
                 <en><![CDATA[Display the shadow]]></en>
+                <pl><![CDATA[Pokaż]]></pl>
             </locale>
-            <locale name="templateBusinessPro.settings.menuShadow.hide">
+            <locale name="templateBusinessPro.settings.navBarShadow.hide">
                 <de><![CDATA[Schatten verbergen]]></de>
                 <en><![CDATA[Hide the shadow]]></en>
+                <pl><![CDATA[Ukryj]]></pl>
             </locale>
 
 
@@ -234,10 +232,12 @@
             <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
                 <de><![CDATA[Aktivieren]]></de>
                 <en><![CDATA[ON]]></en>
+                <pl><![CDATA[Pokaż]]></pl>
             </locale>
             <locale name="templateBusinessPro.settings.bgColorSwitcher.hide">
                 <de><![CDATA[Deaktivieren]]></de>
                 <en><![CDATA[OFF]]></en>
+                <pl><![CDATA[Ukryj]]></pl>
             </locale>
             <!-- Background Color Switcher Prefix -->
             <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
@@ -273,27 +273,27 @@
         </locale>
 
         <locale name="noHeaderStartPage.text">
-            <de><![CDATA[Layout: Startpage]]></de>
-            <en><![CDATA[Layout: Start page]]></en>
-            <pl><![CDATA[Layout: układ bez kolumn (strona startowa)]]></pl>
+            <de><![CDATA[Startpage]]></de>
+            <en><![CDATA[Start page]]></en>
+            <pl><![CDATA[Układ bez kolumn (strona startowa)]]></pl>
         </locale>
 
         <locale name="noHeaderNoSidebar.text">
-            <de><![CDATA[Layout: kein Sidebar]]></de>
-            <en><![CDATA[Layout: no sidebar]]></en>
-            <pl><![CDATA[Layout: układ bez kolumn]]></pl>
+            <de><![CDATA[Kein Sidebar]]></de>
+            <en><![CDATA[No sidebar]]></en>
+            <pl><![CDATA[Układ bez kolumn]]></pl>
         </locale>
 
         <locale name="noHeaderLeftSidebar.text">
-            <de><![CDATA[Layout: linke Sidebar]]></de>
-            <en><![CDATA[Layout: left sidebar]]></en>
-            <pl><![CDATA[Layout: układ z lewą kolumną]]></pl>
+            <de><![CDATA[Linke Sidebar]]></de>
+            <en><![CDATA[Left sidebar]]></en>
+            <pl><![CDATA[układ z lewą kolumną]]></pl>
         </locale>
 
         <locale name="noHeaderRightSidebar.text">
-            <de><![CDATA[Layout: rechte Sidebar]]></de>
-            <en><![CDATA[Layout: right sidebar]]></en>
-            <pl><![CDATA[Layout: układ z prawą kolumną]]></pl>
+            <de><![CDATA[Rrechte Sidebar]]></de>
+            <en><![CDATA[Rright sidebar]]></en>
+            <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
 
         <!-- Header Größe-->
