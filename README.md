@@ -1,4 +1,3 @@
-
 Header
 ========
 
@@ -6,7 +5,7 @@ Header
 
 Paketname:
 
-    quiqqer/*
+    quiqqer/template-businesspro
 
 
 Features (Funktionen)
@@ -16,7 +15,7 @@ Features (Funktionen)
 Installation
 ------------
 
-Der Paketname ist: quiqqer/*
+Der Paketname ist: quiqqer/template-businesspro
 
 
 Mitwirken
