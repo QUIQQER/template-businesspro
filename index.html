@@ -257,7 +257,7 @@
         {/if}
 
 
-        {if $noHeader}
+        {if !$noHeader}
         .header-img {
             display: none;
         }
@@ -410,11 +410,16 @@
 
             {if $headerPrefixFullSize && (
                 $Brick->getType() == 'QUI\Bricks\Controls\Image' ||
+                $Brick->getType() == 'QUI\Bricks\Controls\ContentSwitcher' ||
                 $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
                 $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
                 $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
-                <section class="headerPrefixFullSize clear-fix">
+                <section class="headerPrefixFullSize clear-fix page-content">
                 {$Brick->create()}
+
+                    {if $Brick->getSetting( 'brickFullWidth' )}
+                    <div class="title">$Brick->getSetting( 'brickFullWidth' )</div>
+                    {/if}
                 </section>
             {else}
                 <div class="grid-container">
@@ -424,7 +429,8 @@
                             {$Brick->addCSSClass('grid-100')}
                         {/if}
                         {$Brick->create()}
-                        {$Brick->getType()}
+
+
                     </section>
                     </div>
                 </div>
@@ -451,7 +457,12 @@
         {foreach $footerPrefix as $Brick}
 
         <!-- Wenn google map, dann volle Breite -->
-        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+        {if $headerPrefixFullSize && (
+        $Brick->getType() == 'QUI\Bricks\Controls\Image' ||
+        $Brick->getType() == 'QUI\Bricks\Controls\ContentSwitcher' ||
+        $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
+        $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
+        $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
 
             <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
                 <section>

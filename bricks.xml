@@ -2,6 +2,8 @@
 <quiqqer>
     <bricks>
         <!-- for all bricks -->
+
+        <!-- for all bricks -->
         <brick control="*">
             <settings>
                 <setting name="brickFullWidth">
