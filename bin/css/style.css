@@ -1110,20 +1110,6 @@ footer:hover a {
     .page-header-navigation-sub{
         height: auto;
     }
-    /*.page-header-navigation-sub {
-        min-height: 0;
-        left: 0;
-        min-width: 200px;
-        opacity: 0;
-        overflow: auto;
-        position: relative;
-        top: 0;
-        display: block;
-
-        transition: max-height 1.3s;
-        transition: all 0.5s;
-
-    }*/
 
     .page-header-navigation-sub:before {
         border: none;
@@ -1391,4 +1377,27 @@ input[type='radio'] {
     display: block;
     clear: both;
     float: none;
+}
+
+/*********************************************************************************/
+/* content switcher
+/*********************************************************************************/
+
+.content-switcher .content-switcher-content {
+    width: 580px;
+    padding-left: 50px;
+}
+
+.content-switcher-image {
+    background-position: left;
+}
+
+.push-custom {
+    background-position: right;
+}
+
+.content-switcher .pull-custom {
+    left: -580px;
+    padding-right: 50px;
+    padding-left: 0;
 }

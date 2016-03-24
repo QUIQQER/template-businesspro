@@ -23,7 +23,6 @@
         {fontawesome}
         {unsemantic}
         <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css" />
-        <link href="{$URL_TPL_DIR}bin/css/bricks-controls/navigation.css" rel="stylesheet" type="text/css" />
 
         {if $quiTplType && $quiTplType == 'rightSidebar'}
             <link href="{$URL_TPL_DIR}bin/types/rightSidebar.css" rel="stylesheet" type="text/css" />
@@ -368,7 +367,7 @@
             </div>
             <!-- search -->
             {if $searchShow}
-            <div class="header-bar-search grid-10">
+            <div class="header-bar-search grid-10 hide-on-mobile">
                 {strip}
                 <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
                     <i class="fa fa-search header-bar-search-icon"></i>
