@@ -413,7 +413,7 @@
                 $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
                 $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
                 $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
-                <section class="headerPrefixFullSize clear-fix page-content">
+                <section class="headerPrefixFullSize prefix-suffix-full-width clear-fix page-content">
                 {$Brick->create()}
 
                     {if $Brick->getSetting( 'brickFullWidth' )}
@@ -464,7 +464,7 @@
         $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
 
             <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
-                <section>
+                <section class="prefix-suffix-full-width">
                     {$Brick->create()}
                 </section>
             </div>
