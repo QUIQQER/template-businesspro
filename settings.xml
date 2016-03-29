@@ -30,6 +30,10 @@
                         <type><![CDATA[integer]]></type>
                         <defaultvalue>80</defaultvalue>
                     </conf>
+                    <conf name="navPos">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>scroll</defaultvalue>
+                    </conf>
                     <conf name="navBarMainColor">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#2d4d88</defaultvalue>
@@ -118,7 +122,7 @@
                     </conf>
                     <conf name="colorMainContentFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#5d5d5d</defaultvalue>
+                        <defaultvalue>#1e1e1e</defaultvalue>
                     </conf>
                 </section>
             </config>
@@ -334,6 +338,35 @@
                                     />
                                 </text>
                             </input>
+
+                            <!-- Menüposition -->
+
+                            <select conf="templateBusinessPro.settings.navPos">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.text"
+                                    />
+                                </text>
+
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.description"
+                                    />
+                                </description>
+
+                                <option value="fix">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.fix"
+                                    />
+                                </option>
+                                <option value="scroll">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.navPos.scroll"
+                                    />
+                                </option>
+
+
+                            </select>
 
                             <!-- nav bar colors -->
                             <input conf="templateBusinessPro.settings.navBarMainColor"

@@ -228,6 +228,25 @@
             </locale>
 
 
+            <!-- Menüposition -->
+            <locale name="templateBusinessPro.settings.navPos.text">
+                <de><![CDATA[Menüposition]]></de>
+                <en><![CDATA[Menu position]]></en>
+            </locale>
+            <locale name="templateBusinessPro.settings.navPos.description">
+                <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
+                                 an gleicher Stelle auf der Seite befinden soll.]]></de>
+                <en><![CDATA[Set the menu position]]></en>
+            </locale>
+            <locale name="templateBusinessPro.settings.navPos.fix">
+                <de><![CDATA[fix]]></de>
+                <en><![CDATA[fixed]]></en>
+            </locale>
+            <locale name="templateBusinessPro.settings.navPos.scroll">
+                <de><![CDATA[scrollbar]]></de>
+                <en><![CDATA[scroll]]></en>
+            </locale>
+
             <!-- Background Color Switcher-->
             <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
                 <de><![CDATA[Aktivieren]]></de>

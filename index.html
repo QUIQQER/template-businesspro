@@ -65,6 +65,7 @@
         }
 
         .header-bar,
+        .header-bar-2,
         .header-bar-inner-nav,
         .page-header-navigation-entry,
         .header-bar-search,
@@ -282,6 +283,17 @@
             line-height: 1;
         }
 
+        /**
+         * Position des Menüs
+         */
+
+        {if $navPos == 'scroll'}
+        .header-bar {
+            position: relative !important;
+        }
+
+        {/if}
+
     </style>
 
 </head>
@@ -378,6 +390,25 @@
             {/if}
         </div>
     </div>
+
+    {if $navPos == 'fix'}
+    <div class="header-bar-2 grid-content">
+        <div class="grid-container header-bar-inner">
+
+            <div class="header-bar-inner-logo grid-50">
+                {if $logo}
+                <div class="page-header-logo">
+                    {image src=$logo width=700 class="page-header-logo-img"}
+                </div>
+                {else}
+                <h1>
+                    {$Site->getAttribute( 'title' )}
+                </h1>
+                {/if}
+            </div>
+        </div>
+    </div>
+    {/if}
 
     <!-- page -->
     <div class="body-container">
