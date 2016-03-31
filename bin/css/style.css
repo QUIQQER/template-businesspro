@@ -41,6 +41,10 @@ img {
     max-width: 100%;
     padding:0;
     margin:0
+    &::before {
+    position: relative;
+    
+}
 }
 
 fieldset {
@@ -485,7 +489,6 @@ li.page-header-navigation-entry {
     }
 
     .page-header-navigation-sub li {
-        border-bottom: 1px solid rgba(0,0,0,0.1);
         padding: 0;
         transition: all 0.4s;
     }
@@ -524,7 +527,7 @@ li.page-header-navigation-entry {
     }
     
     li.page-header-navigation-sub-entry:hover {
-        background: rgba(255,255,255,0.1) !important;
+        background: rgba(255,255,255,0.15) !important;
     }
 
     .page-header-navigation-entry:hover .page-header-navigation-sub {
