@@ -47,20 +47,17 @@ fieldset {
     border: none;
 }
 
-a {
+.page-content a {
     max-width: 100%;
-    text-decoration: underline;
+    text-decoration: none;
 }
+
 
 a:hover {
     border-radius: 0;
     position: relative;
     text-decoration: none;
     z-index: 1;
-}
-
-.page-content a:hover {
-    color: #fff;
 }
 
 .page-content .templateQUI-startpage-intro-entry a:hover {
@@ -516,12 +513,7 @@ li.page-header-navigation-entry {
 
     a.page-header-navigation-sub-entry-link:hover {
         background: none;
-        opacity: 0.8;
     }
-
-    /*.page-header-navigation-sub-entry-link:hover {
-        color: #fff !important;
-    }*/
 
     li.page-header-navigation-sub-entry {
         clear: both;
@@ -529,6 +521,10 @@ li.page-header-navigation-entry {
         line-height: 1.7em;
         margin: 0;
         width: 100%;
+    }
+    
+    li.page-header-navigation-sub-entry:hover {
+        background: rgba(255,255,255,0.1) !important;
     }
 
     .page-header-navigation-entry:hover .page-header-navigation-sub {
@@ -681,13 +677,6 @@ li.page-header-navigation-entry {
     margin: 0;
 }
 
-.page-content a {
-    text-decoration: underline;
-}
-
-.page-content:hover a {
-    text-decoration: none;
-}
 
 .page-content:hover .qui-button,
 .page-content:hover .button,
@@ -1459,4 +1448,34 @@ input[type='radio'] {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
+}
+
+/*********************************************************************************/
+/* site type: quiqqer/tags:types/tag-search
+/*********************************************************************************/
+
+a.quiqqer-tags-search-result-entry-link:hover,
+.quiqqer-tags-list-result-entry a:hover {
+    background: none;
+    box-shadow: none;
+}
+
+a.quiqqer-tags-search-result-entry-link div,
+a.quiqqer-tags-search-result-entry-link:hover div,
+.quiqqer-tags-list-result-entry a div,
+.quiqqer-tags-list-result-entry a:hover div{
+    color: black;
+}
+
+a.quiqqer-tags-search-result-entry-link:hover h4,
+.quiqqer-tags-list-result-entry a:hover h3 {
+    text-decoration: underline;
+}
+
+/*********************************************************************************/
+/* site type: quiqqer/tags:types/tag-search
+/*********************************************************************************/
+
+.quiqqer-sheets-desktop-limits a:hover {
+    background: none;
 }
