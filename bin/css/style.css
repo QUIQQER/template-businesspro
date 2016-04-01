@@ -40,11 +40,7 @@ textarea {
 img {
     max-width: 100%;
     padding:0;
-    margin:0
-    &::before {
-    position: relative;
-    
-}
+    margin:0;
 }
 
 fieldset {
@@ -1481,4 +1477,5 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 
 .quiqqer-sheets-desktop-limits a:hover {
     background: none;
+    box-shadow: none;
 }
