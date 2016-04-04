@@ -6,7 +6,7 @@
         <!-- for all bricks -->
         <brick control="*">
             <settings>
-                <setting name="brickFullWidth">
+                <setting name="brickFullWidth" type="checkbox">
                     <locale group="quiqqer/template-businesspro"
                             var="headerSuffix.fullWidth"/>
                 </setting>

@@ -447,18 +447,9 @@
 
         {else*}
 
-            {if $headerPrefixFullSize && (
-                $Brick->getType() == 'QUI\Bricks\Controls\Image' ||
-                $Brick->getType() == 'QUI\Bricks\Controls\ContentSwitcher' ||
-                $Brick->getType() == 'QUI\Gallery\Controls\Slider' ||
-                $Brick->getType() == 'QUI\Slider\Controls\SliderNivo' ||
-                $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps')}
+            {if $Brick->getSetting( 'brickFullWidth' )}
                 <section class="headerPrefixFullSize prefix-suffix-full-width clear-fix page-content">
                 {$Brick->create()}
-
-                    {if $Brick->getSetting( 'brickFullWidth' )}
-                    <div class="title">$Brick->getSetting( 'brickFullWidth' )</div>
-                    {/if}
                 </section>
             {else}
                 <div class="grid-container">
@@ -468,8 +459,6 @@
                             {$Brick->addCSSClass('grid-100')}
                         {/if}
                         {$Brick->create()}
-
-
                     </section>
                     </div>
                 </div>
