@@ -137,8 +137,7 @@ $Engine->assign(array(
     'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
     'searchShow'            => $Project->getConfig('templateBusinessPro.settings.searchShow'),
     'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink'),
-    'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos'),
-    'headerPrefixFullSize'  => $Site->getAttribute('templateBusinessPro.settings.headerPrefixFullSize')
+    'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos')
 ));
 
 

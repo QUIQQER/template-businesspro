@@ -2,18 +2,6 @@
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
 
-        <!-- global settings -->
-        <locale name="headerPrefixFullSize.title">
-            <de><![CDATA[Header Suffix]]></de>
-            <en><![CDATA[Header suffix]]></en>
-            <pl><![CDATA[Suffix nagłówka]]></pl>
-        </locale>
-        <locale name="headerPrefixFullSize.text">
-            <de><![CDATA[Volle Breite für bestimmte Bausteine]]></de>
-            <en><![CDATA[Full size for some bricks]]></en>
-            <pl><![CDATA[Ustaw pełną szerokość dla niektórych pluginów]]></pl>
-        </locale>
-
         <!-- template -->
         <locale name="navbar.search.text">
             <de><![CDATA[Suchen]]></de>

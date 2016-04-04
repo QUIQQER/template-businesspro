@@ -336,6 +336,10 @@ ul.alt {
 }
 
 
+.prefix-suffix-full-width {
+    line-height: 1em;
+}
+
 
 /** page header
  * ========================================================== */
@@ -555,6 +559,7 @@ li.page-header-navigation-entry {
     a.header-bar-search-link:hover {
         background: none;
         line-height:1em;
+        box-shadow: none;
     }
 
     .header-bar-search-icon {
