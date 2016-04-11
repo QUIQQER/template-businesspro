@@ -9,7 +9,7 @@
 
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -101,13 +101,6 @@
         }
 
 
-        /*.quiqqer-navigation-level-1 a:hover,
-        a.quiqqer-navigation-home:hover
-        {
-            color: {$colorMain};
-        }*/
-
-
         #page input[type='checkbox']:checked  + label::before,
         #page input[type='radio']:checked  + label::before {
             background-color: {$colorMain};
@@ -157,10 +150,8 @@
             color: {$colorMain};
         }
 
-        a:hover {
-            background: {$colorMain};
-            box-shadow: 0 0 0 3px {$colorMain};
-            color: {$buttonFontColor};
+        .quiqqer-content a:hover:after {
+            color: {$colorMain};
         }
 
 

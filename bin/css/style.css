@@ -47,13 +47,22 @@ fieldset {
     border: none;
 }
 
-.page-content a {
+.quiqqer-content a {
     max-width: 100%;
     text-decoration: none;
+    position: relative;
+    font-weight: 500;
 }
 
+.quiqqer-content a:after {
+    content: ' \f08e  ';
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #ccc;
+    transition: 0.3s;
 
-a:hover {
+}
+
+.quiqqer-content a:hover {
     border-radius: 0;
     position: relative;
     text-decoration: none;
