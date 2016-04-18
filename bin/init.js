@@ -1,6 +1,10 @@
 window.addEvent("domready", function () {
     "use strict";
 
+    document.getElements('a img').each(function(Elm) {
+        Elm.getParent('a').addClass('image-link');
+    });
+
     require(['Locale'].append(QUIQQER_LOCALE), function (QUILocale) {
         QUILocale.setCurrent(QUIQQER_PROJECT.lang);
 
