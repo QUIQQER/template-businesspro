@@ -1261,7 +1261,7 @@ footer:hover a {
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 760px){
 
     .page-box-prefix-suffix {
         padding: 20px 0 !important;
@@ -1391,8 +1391,43 @@ input[type='radio'] {
 #page .qui-sitetypes-sitemap ol,
 #page .qui-sitetypes-sitemap-block ul,
 #page .qui-sitetypes-sitemap-block ol {
-    padding-left: 30px;
+    padding-left: 0px;
     padding-top: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+#page .qui-sitetypes-sitemap ul a,
+#page .qui-sitetypes-sitemap ol a,
+#page .qui-sitetypes-sitemap-block ul a,
+#page .qui-sitetypes-sitemap-block ol a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#page .qui-sitetypes-sitemap ul a:hover,
+#page .qui-sitetypes-sitemap ol a:hover,
+#page .qui-sitetypes-sitemap-block ul a:hover,
+#page .qui-sitetypes-sitemap-block ol a:hover,
+.qui-sitetypes-sitemap-block th a:hover {
+    text-decoration: underline;
+}
+
+#page .qui-sitetypes-sitemap ul li,
+#page .qui-sitetypes-sitemap ol li,
+#page .qui-sitetypes-sitemap-block ul li,
+#page .qui-sitetypes-sitemap-block ol li {
+    padding-left: 20px;
+}
+
+.qui-sitetypes-sitemap-block th {
+    padding-left: 20px;
+}
+
+.qui-sitetypes-sitemap-block-category .control-background a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .clear-fix:after {
@@ -1400,6 +1435,16 @@ input[type='radio'] {
     display: block;
     clear: both;
     float: none;
+}
+
+#page .qui-sitetypes-sitemap ul:first-child a:hover {
+    text-decoration: underline;
+}
+
+@media all and (max-width: 760px) {
+    .qui-sitetypes-sitemap-block-category {
+        width: 100%;
+    }
 }
 
 /*********************************************************************************/
@@ -1436,7 +1481,7 @@ input[type='radio'] {
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 760px){
 
     .content-switcher .content-switcher-content {
         padding-left: 0;
