@@ -713,8 +713,9 @@ li.page-header-navigation-entry {
     display: block;
 }
 
-/** page breadcrumb
- * ========================================================== */
+/*********************************************************************************/
+/* breadcrumb
+/*********************************************************************************/
 
 .page-breadcrumb {
     background: #fff;
@@ -731,7 +732,7 @@ li.page-header-navigation-entry {
 .quiqqer-breadcrumb-container ul {
     clear: none;
     list-style: none;
-    list-style-type: none;
+    margin-left: 30px;
 }
 
 .quiqqer-breadcrumb-container ul li {
@@ -1563,4 +1564,15 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .quiqqer-sheets-desktop-limits a:hover {
     background: none;
     box-shadow: none;
+}
+
+/*********************************************************************************/
+/* content message
+/*********************************************************************************/
+
+.content-message-information,
+.content-message-attention,
+.content-message-error,
+.content-message-success {
+    margin: 1em 0;
 }
