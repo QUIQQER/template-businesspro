@@ -149,7 +149,7 @@ $Engine->assign(array(
     'logo'          => $logo,
     'logoSmall'     => $logoSmall,
     'ownSideType'   =>
-        strpos($Site->getAttribute('type'), 'quiqqer/template-businessprof:') !== false
+        strpos($Site->getAttribute('type'), 'quiqqer/template-businesspro:') !== false
             ? 1 : 0,
     'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
     'BricksManager' => \QUI\Bricks\Manager::init(),
