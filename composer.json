@@ -19,7 +19,10 @@
 
     "require": {
         "php" : ">=5.3",
-        "quiqqer/quiqqer" : "*@dev"
+        "quiqqer/quiqqer" : "*@dev",
+        "quiqqer/fontawesome": "dev-master",
+        "quiqqer/menu" : "dev-dev",
+        "quiqqer/unsemantic" : "dev-master"
     },
 
     "autoload": {

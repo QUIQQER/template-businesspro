@@ -137,6 +137,10 @@ $Engine->assign(array(
     'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
     'searchShow'            => $Project->getConfig('templateBusinessPro.settings.searchShow'),
     'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink'),
+    'shareShow'             => $Project->getConfig('templateBusinessPro.settings.shareShow'),
+    'shareFacebook'         => $Project->getConfig('templateBusinessPro.settings.shareFacebook'),
+    'shareTwitter'          => $Project->getConfig('templateBusinessPro.settings.shareTwitter'),
+    'shareGoogle'           => $Project->getConfig('templateBusinessPro.settings.shareGoogle'),
     'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos')
 ));
 

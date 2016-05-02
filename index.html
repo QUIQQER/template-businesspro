@@ -95,7 +95,8 @@
             color: {$colorMain};
         }
 
-        .firstColor {
+        .mainColor,
+        .breadcrumb-container .quiqqer-breadcrumb ul li:last-child a span:last-child {
             color: {$colorMain};
         }
 
@@ -376,6 +377,7 @@
                 </nav>
                 {/if}
             </div>
+
             <!-- search -->
             {if $searchShow}
             <div class="header-bar-search grid-10 hide-on-mobile">
@@ -430,13 +432,28 @@
                 <section class="prefix-suffix-full-width clear-fix page-content">
                     {$Brick->create()}
                 </section>
+
+            <!-- if breadcrumb -->
+            {else if $Brick->getType() == 'QUI\Controls\Breadcrumb'}
+                <div class="breadcrumb-container">
+                    <div class="grid-container">
+                        <section class="
+                                        {if $shareShow}mobile-grid-80 grid-80
+                                        {else} mobile-grid-100 grid-100{/if}
+                                         page-content page-box-prefix-suffix">
+                            {$Brick->create()}
+                        </section>
+                        {if $shareShow}
+                        <section class="mobile-grid-20 grid-20 page-content share">
+                            <span>Diese Seite Teilen:</span>
+                        </section>
+                        {/if}
+                    </div>
+                </div>
             {else}
                 <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
                         <section class="mobile-grid-100 grid-100 page-content page-box-prefix-suffix">
-                            {*if !$Brick->hasCSSClass('grid*')}
-                                {$Brick->addCSSClass('grid-100')}
-                            {/if*}
                             {$Brick->create()}
                         </section>
                     </div>

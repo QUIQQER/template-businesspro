@@ -47,6 +47,10 @@ fieldset {
     border: none;
 }
 
+strong {
+    font-weight: bold;
+}
+
 /* Link effect */
 .quiqqer-content a {
     max-width: 100%;
@@ -1576,3 +1580,58 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .content-message-success {
     margin: 1em 0;
 }
+
+@media all and (max-width: 800px) {
+    .breadcrumb-container .quiqqer-breadcrumb {
+        background: red;
+    }
+}
+
+/*********************************************************************************/
+/* extra breadcrumb for this template
+/*********************************************************************************/
+
+.breadcrumb-container .page-box-prefix-suffix {
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.breadcrumb-container {
+    border-bottom: 1px solid #eee;
+    color: #8a8a8a;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb {
+    background: darkolivegreen;
+    font-size: 10pt;
+    font-weight: normal;
+    letter-spacing: normal;
+    word-spacing: 1pt;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb ul {
+    margin-bottom: 0;
+    margin-left: 4em;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb li {
+    padding-left: 0;
+    margin: 0 2px;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb a {
+    color: #8a8a8a;
+    padding: 0 2px;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb a:hover span:last-child {
+    text-decoration: underline;
+}
+
+.breadcrumb-container .quiqqer-breadcrumb li:first-child span:first-child {
+    display: none;
+}
+.breadcrumb-container .quiqqer-breadcrumb span:first-child {
+    margin-right: 2px;
+}
+
