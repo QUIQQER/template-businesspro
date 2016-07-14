@@ -7,9 +7,6 @@
 \QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
 
-
-
-
 /**
  * Project Logo
  */
@@ -144,7 +141,61 @@ $Engine->assign(array(
     'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos')
 ));
 
+//$countUrl = file_get_contents("https://graph.facebook.com/?id=http://www.google.com");
+//$count = json_decode($countUrl, true);
+//var_dump($count);
+//echo $count['shares'];
+//echo isset($count['shares'])?intval($count['shares']):0;
+//$Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
+//    'theme'     => 'flat',
+//    'showLabel' => true,
+//    'showIcon'  => true
+//));
+//
+//$Facebook1->setTheme('flat');
 
+
+
+$Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
+    'theme'     => 'flat',
+    'showLabel' => true,
+    'showIcon'  => true
+));
+
+//echo $Facebook1->create();
+//$Facebook1->setStyle('outline', '2px solid red');
+//$Facebook1->setStyles(array(
+//    'font-size' => '20px',
+//    'outline' => '2px solid black'
+//));
+
+$Engine->assign(array(
+    'Facebook'  => new QUI\Socialshare\Shares\Facebook(array(
+    )),
+    'Pinterest' => new QUI\Socialshare\Shares\Pinterest(array()),
+    'Twitter'   => new QUI\Socialshare\Shares\Twitter(array(
+
+    )),
+    'Google'    => new QUI\Socialshare\Shares\Google(array(
+    )),
+    'Mail'      => new QUI\Socialshare\Shares\Mail(array(
+
+    ))
+));
+
+//$Facebook1->setStyle('outline', '2px solid red !important');
+//$Facebook1->setStyle('border', '2px solid red');
+//echo $Facebook1->create();
+
+
+
+//$Facebook = new QUI\Socialshare\Shares\Facebook;
+//$Facebook->showLabel();
+//$Facebook->showIcon();
+//echo $Facebook->create();
+//$Facebook->setTheme('flat');
+//echo print_r(array_keys($Facebook->getAttributes()));
+//echo $Facebook->getAttribute('theme');
 /**
  * own site type?
  */

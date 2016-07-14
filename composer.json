@@ -20,6 +20,7 @@
     "require": {
         "php" : ">=5.3",
         "quiqqer/quiqqer" : "*@dev",
+        "quiqqer/bricks": "*@dev",
         "quiqqer/fontawesome": "dev-master",
         "quiqqer/menu" : "dev-dev",
         "quiqqer/unsemantic" : "dev-master"
