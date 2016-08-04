@@ -156,11 +156,11 @@ $Engine->assign(array(
 
 
 
-//$Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
-//    'theme'     => 'flat',
-//    'showLabel' => true,
-//    'showIcon'  => true
-//));
+$Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
+    'theme'     => 'flat',
+    'showLabel' => true,
+    'showIcon'  => true
+));
 
 //echo $Facebook1->create();
 //$Facebook1->setStyle('outline', '2px solid red');
@@ -169,19 +169,19 @@ $Engine->assign(array(
 //    'outline' => '2px solid black'
 //));
 
-//$Engine->assign(array(
-//    'Facebook'  => new QUI\Socialshare\Shares\Facebook(array(
-//    )),
-//    'Pinterest' => new QUI\Socialshare\Shares\Pinterest(array()),
-//    'Twitter'   => new QUI\Socialshare\Shares\Twitter(array(
-//
-//    )),
-//    'Google'    => new QUI\Socialshare\Shares\Google(array(
-//    )),
-//    'Mail'      => new QUI\Socialshare\Shares\Mail(array(
-//
-//    ))
-//));
+$Engine->assign(array(
+    'Facebook'  => new QUI\Socialshare\Shares\Facebook(array(
+    )),
+    'Pinterest' => new QUI\Socialshare\Shares\Pinterest(array()),
+    'Twitter'   => new QUI\Socialshare\Shares\Twitter(array(
+
+    )),
+    'Google'    => new QUI\Socialshare\Shares\Google(array(
+    )),
+    'Mail'      => new QUI\Socialshare\Shares\Mail(array(
+
+    ))
+));
 
 //$Facebook1->setStyle('outline', '2px solid red !important');
 //$Facebook1->setStyle('border', '2px solid red');

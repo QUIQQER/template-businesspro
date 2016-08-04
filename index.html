@@ -413,7 +413,16 @@
 
     <!-- page -->
     <div class="body-container">
+        {control control="QUI\Bricks\Controls\LanguageSwitches\Flags" Site=$Site}
+        {$Facebook->create()}
+        {$Pinterest->create()}
 
+        {$Twitter->create()}
+        {$Google->create()}
+
+        {assign var=test value=$Mail->setAttribute('showLabel', false)}
+
+        {$Mail->create()}
 
         <!-- header -->
         {strip}
