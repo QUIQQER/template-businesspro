@@ -19,18 +19,49 @@ body {
     font-size: 12pt;
     color: #5d5d5d;
     line-height: 1.65em;
+    letter-spacing: 1px !important;
     font-weight: 300;
 }
 
 input, textarea, select {
     background: rgba( 255, 255, 255, 0.05 );
     border: none;
-    color: #5d5d5d;
-    font: 12pt "Open Sans";
+    border-radius: 5px;
+    /*color: rgba( 0, 0, 0, 0.3 );*/
+    font-size: 12pt;
     line-height: 1.75em;
-    outline: 2px solid rgba( 0, 0, 0, 0.1 );
-    padding: 5px 10px;
+    letter-spacing: 1px;
+    /*outline: 2px solid rgba( 0, 0, 0, 0.1 );*/
+    padding: 10px 16px;
     margin: 6px 0;
+    box-shadow: 0 0 0 2px #ddd;
+}
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* select styling with arrow set als background */
+select {
+    background-color: #eee;
+    background-image: url("../img/arrow-select.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    background-size: 20px auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 60px;
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    box-shadow: none;
 }
 
 textarea {
@@ -87,20 +118,13 @@ ol {
     padding-left: 30px;
 }
 
-::-webkit-input-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 0.8em; }
-::-moz-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 0.8em; }
-:-ms-input-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 0.8em; }
+::-webkit-input-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 1em; }
+::-moz-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 1em; }
+:-ms-input-placeholder { color: rgba( 0, 0, 0, 0.5 ); font-size: 1em; }
 
 textarea:focus::-moz-placeholder,
 input:focus::-moz-placeholder {
     color: rgba( 0, 0, 0, 0 );
-}
-
-/* remove standard-styles of input */
-
-#page input {
-    border-radius: 3px;
-    font-size: 1em;
 }
 
 /** buttons
@@ -155,9 +179,9 @@ button,
     float: right;
 }
 
-input[type='submit']:hover,
+/*input[type='submit']:hover,
 input[type='reset']:hover,
-input[type='button']:hover,
+input[type='button']:hover,*/
 button:hover,
 .button-active,
 .button:active,
@@ -619,9 +643,12 @@ li.page-header-navigation-entry {
 
 .page-content {
     font-size: 11pt;
-    letter-spacing: 0.02rem;
     /*line-height: 1.5;*/
     /*overflow-x: auto;*/
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    /*outline: 1px solid green;*/
 }
 
 .page-content .content-template {
@@ -1371,7 +1398,7 @@ footer:hover a {
 
 .qui-formfield label {
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .qui-form input[type='checkbox'],

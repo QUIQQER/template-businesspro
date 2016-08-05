@@ -9,7 +9,7 @@
 
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,400italic' rel='stylesheet' type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -142,7 +142,7 @@
         input:focus,
         select:hover,
         select:focus {
-            outline-color: {$colorMain};
+            box-shadow: 0 0 0 2px {$colorMain};
         }
 
 
@@ -297,7 +297,7 @@
     </style>
 
 </head>
-<body>
+<body class="{$bodyClass} page-{$Site->getId()} {$typeClass}">
 <div class="main-body">
     <div class="header-bar grid-content">
         <div class="grid-container header-bar-inner">
@@ -392,6 +392,18 @@
         </div>
     </div>
 
+    {*
+    {$Facebook->create()}
+    {$Pinterest->create()}
+
+    {$Twitter->create()}
+    {$Google->create()}
+
+    {assign var=test value=$Mail->setAttribute('showLabel', false)}
+
+    {$Mail->create()}
+*}
+
     {if $navPos == 'fix'}
     <div class="header-bar-2 grid-content">
         <div class="grid-container header-bar-inner">
@@ -413,16 +425,6 @@
 
     <!-- page -->
     <div class="body-container">
-        {control control="QUI\Bricks\Controls\LanguageSwitches\Flags" Site=$Site}
-        {$Facebook->create()}
-        {$Pinterest->create()}
-
-        {$Twitter->create()}
-        {$Google->create()}
-
-        {assign var=test value=$Mail->setAttribute('showLabel', false)}
-
-        {$Mail->create()}
 
         <!-- header -->
         {strip}
@@ -450,11 +452,11 @@
                         <section class="
                                         {if $shareShow}mobile-grid-80 grid-80
                                         {else} mobile-grid-100 grid-100{/if}
-                                         page-content page-box-prefix-suffix">
+                                         page-box-prefix-suffix">
                             {$Brick->create()}
                         </section>
                         {if $shareShow}
-                        <section class="mobile-grid-20 grid-20 page-content share">
+                        <section class="mobile-grid-20 grid-20 share">
                             <span>Diese Seite Teilen:</span>
                         </section>
                         {/if}
