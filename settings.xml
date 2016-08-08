@@ -622,6 +622,55 @@
         <wysiwyg class="page-content">
             <css src="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic"/>
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/style.css"/>
+
+            <styles>
+                <!-- link effect 1: simple (grey) -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="linkSimpleGrey" />
+                    <attributes>
+                        <attribute name="class">link-simple-grey</attribute>
+                    </attributes>
+                </style>
+
+                <!-- link effect 2: simple (color) -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="linkSimpleColor" />
+                    <attributes>
+                        <attribute name="class">link-simple-color</attribute>
+                    </attributes>
+                </style>
+
+
+                <!-- link effect 3: slide up (grey) -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="LinkSlideUpGrey" />
+                    <attributes>
+                        <attribute name="class">link-slide-up-grey</attribute>
+                    </attributes>
+                </style>
+
+                <!-- link effect 4: slide up (color) -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="LinkSlideUpColor" />
+                    <attributes>
+                        <attribute name="class">link-slide-up-color</attribute>
+                    </attributes>
+                </style>
+
+                <!-- link effect 5: slide right (grey) -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="LinkSlideRightGrey" />
+                    <attributes>
+                        <attribute name="class">link-slide-right-grey</attribute>
+                    </attributes>
+                </style>
+
+            </styles>
         </wysiwyg>
 
     </project>

@@ -399,5 +399,27 @@
             <en><![CDATA[Sort]]></en>
         </locale>
 
+        <!-- extra buttons -->
+        <locale name="linkSimpleGrey">
+            <de><![CDATA[Link: simple (grau)]]></de>
+            <en><![CDATA[Link: simple (grey)]]></en>
+        </locale>
+        <locale name="linkSimpleColor">
+            <de><![CDATA[Link: simple (color)]]></de>
+            <en><![CDATA[Link: simple (color)]]></en>
+        </locale>
+        <locale name="LinkSlideUpGrey">
+            <de><![CDATA[Link: slide up (grau)]]></de>
+            <en><![CDATA[Link: slide up (grey)]]></en>
+        </locale>
+        <locale name="LinkSlideUpColor">
+            <de><![CDATA[Link: slide up (color)]]></de>
+            <en><![CDATA[Link: slide up (color)]]></en>
+        </locale>
+        <locale name="LinkSlideRightGrey">
+            <de><![CDATA[Link: slide right (grey)]]></de>
+            <en><![CDATA[Link: slide right (grey)]]></en>
+        </locale>
+
     </groups>
 </locales>

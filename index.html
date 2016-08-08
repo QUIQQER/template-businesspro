@@ -151,10 +151,16 @@
         }
 
         a,
-        .fa-navicon:hover {
+        .fa-navicon:hover,
+        a.link-simple-color,
+        a.slide-up-color {
             color: {$colorMain};
         }
 
+        a.link-slide-up-color::before {
+        background: {$colorMain};
+
+        }
         .quiqqer-content a:hover:after {
             color: {$colorMain};
         }
@@ -185,9 +191,6 @@
             color: {$colorFooterFont} !important;
         }
 
-
-
-        
         .page-footer header,
         .page-footer header a {
             color: #ffffff;
@@ -479,7 +482,7 @@
         <!-- content -->
         <div class="main-content-color-bg {cycle values="" reset=true}">
             <div class="grid-container">
-                <div id="page">
+                <div class="main-content">
                     {$Template->getLayout()}
                 </div>
             </div>
