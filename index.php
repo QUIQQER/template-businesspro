@@ -212,6 +212,10 @@ $Engine->assign(array(
 ));
 
 
+/**
+ * Body Class
+ */
+
 $bodyClass = '';
 
 switch ($Template->getLayoutType()) {
