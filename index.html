@@ -471,7 +471,7 @@
             {else}
                 <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
-                        <section class="mobile-grid-100 grid-100 page-content page-box-prefix-suffix">
+                        <section class="mobile-grid-100 grid-100 ch page-box-prefix-suffix">
                             {$Brick->create()}
                         </section>
                     </div>
@@ -522,14 +522,17 @@
                 <section class="grid-100 mobile-grid-100 grid-parent">
                     {foreach from=$footer item=Brick}
                         {$Brick->addCSSClass('page-footer-brick')}
-                        {if !$Brick->hasCSSClass('grid*')}
+                        {*if !$Brick->hasCSSClass('grid*')}
                         {$Brick->addCSSClass('grid-100')}
-                        {/if}
+                        {/if*}
                         {$Brick->create()}
                     {/foreach}
                 </section>
                 {/if}
-                <div class="grid-100 mobile-grid-100 page-footer-copyright">
+            </div>
+
+            <div class="grid-100 mobile-grid-100 page-footer-copyright">
+                <div class="grid-container">
                     <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-left">
                         {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:"%Y"}
                     </div>

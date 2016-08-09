@@ -124,15 +124,15 @@
                     </conf>
                     <conf name="colorFooterBackground">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#414141</defaultvalue>
+                        <defaultvalue>#eeeeee</defaultvalue>
                     </conf>
                     <conf name="colorFooterFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#D1D1D1</defaultvalue>
+                        <defaultvalue>#555555</defaultvalue>
                     </conf>
                     <conf name="colorFooterLinks">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#E6E6E6</defaultvalue>
+                        <defaultvalue>#555555</defaultvalue>
                     </conf>
                     <conf name="colorMainContentBg">
                         <type><![CDATA[string]]></type>

@@ -19,8 +19,8 @@ body {
     font-size: 12pt;
     color: #5d5d5d;
     line-height: 1.65em;
-    letter-spacing: 1px !important;
-    font-weight: 300;
+    /*letter-spacing: 1px !important;*/
+    font-weight: 400;
 }
 
 input, textarea, select {
@@ -632,13 +632,8 @@ li.page-header-navigation-entry {
 }*/
 
 .page-content {
-    font-size: 11pt;
-    /*line-height: 1.5;*/
-    /*overflow-x: auto;*/
     padding-top: 2em;
     padding-bottom: 2em;
-
-    /*outline: 1px solid green;*/
 }
 
 .page-content .content-template {
@@ -703,7 +698,7 @@ li.page-header-navigation-entry {
 .page-content h4 { font-size: 1.8em; }*/
 
 .page-content h1 { font-size: 48px; font-weight: bold; }
-.page-content h2 { font-size: 32px; font-weight: 300; }
+.page-content h2 { font-size: 32px; font-weight: 300; color: #555; }
 .page-content h3 { font-size: 26px; font-weight: normal;}
 .page-content h4 { font-size: 18px; }
 
@@ -894,10 +889,9 @@ h2.quiqqer-navigation-title-style {
 .page-footer {
     border-top: 1px solid #e2e2e2;
     clear: both;
-    /*float: left;*/
     font-size: 0.9em;
     line-height: 1.7em;
-    padding: 30px 0;
+    padding: 80px 0;
     width: 100%;
 }
 
@@ -1652,7 +1646,46 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 }
 
 
+/*********************************************************************************/
+/* infinite brick
+/*********************************************************************************/
 
+
+.quiqqer-bricks-children-infinite .button {
+    float: none;
+}
+
+.quiqqer-bricks-children-infinite  a,
+.quiqqer-bricks-children-infinite  a:hover,
+.quiqqer-bricks-children-infinite  a:active {
+    color: #333;
+    font-weight: normal;
+}
+.quiqqer-bricks-children-infinite-child-display {
+    overflow: hidden;
+}
+
+.quiqqer-bricks-children-infinite-child-display header {
+    left: 0;
+}
+.quiqqer-bricks-children-infinite-child-display > a img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.quiqqer-bricks-children-infinite-child-display > a img:hover {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
 /*********************************************************************************/
 /* template extra link effects
 /*********************************************************************************/
