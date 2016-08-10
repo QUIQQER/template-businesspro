@@ -733,14 +733,6 @@ li.page-header-navigation-entry {
 /* breadcrumb
 /*********************************************************************************/
 
-.page-breadcrumb {
-    background: #fff;
-    border-bottom: 1px solid #ccc;
-    font-size: 12px;
-    margin: 20px 0 0;
-    padding: 20px;
-}
-
 .quiqqer-breadcrumb {
     font-size: 12px;
 }
@@ -879,19 +871,12 @@ h2.quiqqer-navigation-title-style {
 /** page footer
  * ========================================================== */
 
-.page-footer-section:after {
-    clear: both;
-    content: '';
-    float: none;
-    display: block;
-}
-
 .page-footer {
     border-top: 1px solid #e2e2e2;
     clear: both;
     font-size: 0.9em;
     line-height: 1.7em;
-    padding: 80px 0;
+    padding: 80px 0 20px;
     width: 100%;
 }
 
@@ -935,7 +920,7 @@ h2.quiqqer-navigation-title-style {
 }
 
 .page-footer-copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #ddd;
     clear: both;
     float: left;
     padding-top: 20px;
@@ -1592,12 +1577,6 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
     margin: 1em 0;
 }
 
-@media all and (max-width: 800px) {
-    .breadcrumb-container .quiqqer-breadcrumb {
-
-    }
-}
-
 /*********************************************************************************/
 /* extra breadcrumb for this template
 /*********************************************************************************/
@@ -1619,32 +1598,41 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
     word-spacing: 1pt;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb ul {
+.quiqqer-breadcrumb ul {
     margin-bottom: 0;
     margin-left: 4em;
+    width: auto;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb li {
+.quiqqer-breadcrumb ul li {
+    margin: 0;
+}
+
+.quiqqer-breadcrumb li {
     padding-left: 0;
-    margin: 0 2px;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb a {
+.quiqqer-breadcrumb a {
     color: #8a8a8a;
     padding: 0 2px;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb a:hover span:last-child {
+.quiqqer-breadcrumb a:hover span:last-child {
     text-decoration: underline;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb li:first-child span:first-child {
+.b.quiqqer-breadcrumb li:first-child span:first-child {
     display: none;
 }
-.breadcrumb-container .quiqqer-breadcrumb span:first-child {
+
+.quiqqer-breadcrumb span:first-child {
     margin-right: 2px;
 }
-
+@media screen and (max-width: 1024px) {
+    .quiqqer-breadcrumb ul {
+        margin-left: 0;
+    }
+}
 
 /*********************************************************************************/
 /* infinite brick
