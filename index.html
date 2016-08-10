@@ -311,7 +311,7 @@
             <div class="header-bar-inner-logo grid-10 {if $logoSmall}hide-on-mobile{/if}">
                 {if $logo}
                 <a href="{url id=1}" class="page-header-logo">
-                    {image src=$logo width=700 class="page-header-logo-img"}
+                    {image image=$Project->getMedia()->getLogoImage() width=700 class="page-header-logo-img"}
                 </a>
                 {else}
                 <h1>Logo</h1>
