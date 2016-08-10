@@ -140,7 +140,7 @@
                     </conf>
                     <conf name="colorMainContentFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#1e1e1e</defaultvalue>
+                        <defaultvalue>#333333</defaultvalue>
                     </conf>
                 </section>
             </config>
