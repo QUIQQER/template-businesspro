@@ -36,6 +36,7 @@ input, textarea, select {
 
 textarea {
     font-family: 'Open Sans', sans-serif;
+    min-height: 10em;
 }
 
 /* select styling with arrow set als background */
@@ -61,9 +62,6 @@ input[type='radio'] {
     box-shadow: none;
 }
 
-textarea {
-    min-height: 10em;
-}
 
 img {
     max-width: 100%;
