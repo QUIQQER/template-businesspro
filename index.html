@@ -9,7 +9,7 @@
 
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -210,6 +210,7 @@
             color: {$colorFooterLinks};
         }
 
+        /* pagination */
         .quiqqer-sheets-desktop a:hover {
             border: 1px solid {$colorMain} !important;
         }
