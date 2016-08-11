@@ -168,102 +168,78 @@
             <pl><![CDATA[Ustawienia szablonu: Business Pro]]></pl>
         </locale>
 
-        <!-- general settings -->
-        <locale name="templateBusinessPro.settings.general.title">
-            <de><![CDATA[Allgemeine Einstellungen]]></de>
-            <en><![CDATA[General settings]]></en>
-            <pl><![CDATA[Ustawienia ogólne]]></pl>
+        <!-- Background Color Switcher-->
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.title">
+            <de><![CDATA[Prefix / Suffix Hintegrundfarbe wechseln]]></de>
+            <en><![CDATA[Change prefix / suffix background]]></en>
+            <pl><![CDATA[Naprzemienne tło przestrzeni prefix / suffix ]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
+            <de><![CDATA[Aktivieren]]></de>
+            <en><![CDATA[On]]></en>
+            <pl><![CDATA[Włącz]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.hide">
+            <de><![CDATA[Deaktivieren]]></de>
+            <en><![CDATA[Off]]></en>
+            <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
-            <!-- logo settings -->
-            <locale name="templateBusinessPro.settings.logo">
-                <de><![CDATA[Logo hochladen]]></de>
-                <en><![CDATA[Logo upload]]></en>
-                <pl><![CDATA[Wgranie loga]]></pl>
-            </locale>
-
-            <!-- logo small settings -->
-            <locale name="templateBusinessPro.settings.logoSmall">
-                <de><![CDATA[Kleines Logo hochladen]]></de>
-                <en><![CDATA[Small logo upload]]></en>
-                <pl><![CDATA[Wgranie małego loga]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.logoSmall.description">
-                <de><![CDATA[Ein zusätzliches Logo für mobilen Ansicht.<br />
-                             Wenn nicht gesetzt, wird das Hauptlogo angezeigt.]]>
-                </de>
-                <en><![CDATA[Small logo for mobile.]]></en>
-                <pl><![CDATA[Jeśli małe logo jest dostępne, zostanie ono wyświetlone
-                             zamiast standardowego na smartfonach oraz tabletach.]]></pl>
-            </locale>
+        <!-- Menu shadow -->
+        <locale name="templateBusinessPro.settings.navBarShadow.text">
+            <de><![CDATA[Menüschatten]]></de>
+            <en><![CDATA[Menu shadow]]></en>
+            <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBarShadow.displaz">
+            <de><![CDATA[Schatten anzeigen]]></de>
+            <en><![CDATA[Display the shadow]]></en>
+            <pl><![CDATA[Pokaż]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBarShadow.hide">
+            <de><![CDATA[Schatten verbergen]]></de>
+            <en><![CDATA[Hide the shadow]]></en>
+            <pl><![CDATA[Ukryj]]></pl>
+        </locale>
 
 
-            <!-- Menu shadow -->
-            <locale name="templateBusinessPro.settings.navBarShadow.text">
-                <de><![CDATA[Menüschatten]]></de>
-                <en><![CDATA[Menu shadow]]></en>
-                <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.navBarShadow.displaz">
-                <de><![CDATA[Schatten anzeigen]]></de>
-                <en><![CDATA[Display the shadow]]></en>
-                <pl><![CDATA[Pokaż]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.navBarShadow.hide">
-                <de><![CDATA[Schatten verbergen]]></de>
-                <en><![CDATA[Hide the shadow]]></en>
-                <pl><![CDATA[Ukryj]]></pl>
-            </locale>
+        <!-- Menüposition -->
+        <locale name="templateBusinessPro.settings.navPos.text">
+            <de><![CDATA[Menüposition]]></de>
+            <en><![CDATA[Menu position]]></en>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.description">
+            <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
+                             an gleicher Stelle auf der Seite befinden soll.]]></de>
+            <en><![CDATA[Set the menu position]]></en>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.fix">
+            <de><![CDATA[fix]]></de>
+            <en><![CDATA[fixed]]></en>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.scroll">
+            <de><![CDATA[scrollbar]]></de>
+            <en><![CDATA[scroll]]></en>
+        </locale>
 
-
-            <!-- Menüposition -->
-            <locale name="templateBusinessPro.settings.navPos.text">
-                <de><![CDATA[Menüposition]]></de>
-                <en><![CDATA[Menu position]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.description">
-                <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
-                                 an gleicher Stelle auf der Seite befinden soll.]]></de>
-                <en><![CDATA[Set the menu position]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.fix">
-                <de><![CDATA[fix]]></de>
-                <en><![CDATA[fixed]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.navPos.scroll">
-                <de><![CDATA[scrollbar]]></de>
-                <en><![CDATA[scroll]]></en>
-            </locale>
-
-            <!-- Background Color Switcher-->
-            <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
-                <de><![CDATA[Aktivieren]]></de>
-                <en><![CDATA[ON]]></en>
-                <pl><![CDATA[Pokaż]]></pl>
-            </locale>
-            <locale name="templateBusinessPro.settings.bgColorSwitcher.hide">
-                <de><![CDATA[Deaktivieren]]></de>
-                <en><![CDATA[OFF]]></en>
-                <pl><![CDATA[Ukryj]]></pl>
-            </locale>
-            <!-- Background Color Switcher Prefix -->
-            <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
-                <de><![CDATA[Prefix Hintergrundfarbe wechesln]]></de>
-                <en><![CDATA[Swich background color]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.description">
-                <de><![CDATA[(...)]]></de>
-                <en><![CDATA[(...)]]></en>
-            </locale>
-            <!-- Background Color Switcher Suffix -->
-            <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.text">
-                <de><![CDATA[Suffix Hintergrundfarbe wechesln]]></de>
-                <en><![CDATA[Swich background color]]></en>
-            </locale>
-            <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.description">
-                <de><![CDATA[(...)]]></de>
-                <en><![CDATA[(...)]]></en>
-            </locale>
+        <!-- Background Color Switcher Prefix -->
+        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
+            <de><![CDATA[Prefix Hintergrundfarbe wechesln]]></de>
+            <en><![CDATA[Swich background color]]></en>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.description">
+            <de><![CDATA[(...)]]></de>
+            <en><![CDATA[(...)]]></en>
+        </locale>
+        <!-- Background Color Switcher Suffix -->
+        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.text">
+            <de><![CDATA[Suffix Hintergrundfarbe wechesln]]></de>
+            <en><![CDATA[Swich background color]]></en>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.description">
+            <de><![CDATA[(...)]]></de>
+            <en><![CDATA[(...)]]></en>
+        </locale>
 
         <!-- header settings -->
         <locale name="templateBusinessPro.header.settings.title">

@@ -7,12 +7,6 @@
                 <section name="templateBusinessPro.settings">
 
                     <!-- general settings -->
-                    <conf name="logo">
-                        <type><![CDATA[string]]></type>
-                    </conf>
-                    <conf name="logoSmall">
-                        <type><![CDATA[string]]></type>
-                    </conf>
                     <conf name="pageBackground">
                         <type><![CDATA[string]]></type>
                     </conf>
@@ -156,40 +150,16 @@
                         <icon>URL_BIN_DIR/22x22/quiqqer.png</icon>
 
 
-                        <!-- general settings -->
+                        <!-- Background Color Switcher Prefix / Suffix -->
                         <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.settings.general">
+                                  name="templateBusinessPro.settings.bgColorSwitcher">
                             <title>
                                 <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.settings.general.title"
+                                        var="templateBusinessPro.settings.bgColorSwitcher.title"
                                         />
                             </title>
 
-                            <!-- Logo -->
-                            <input conf="templateBusinessPro.settings.logo" class="media-image">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.logo"
-                                            />
-                                </text>
-                            </input>
-
-                            <!-- Logo small -->
-                            <input conf="templateBusinessPro.settings.logoSmall" class="media-image">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.logoSmall"
-                                            />
-                                </text>
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.logoSmall.description"
-                                    />
-                                </description>
-
-                            </input>
-
-                            <!-- Background Color Switcher Prefix-->
+                            <!-- Background Color Switcher Prefix -->
                             <select conf="templateBusinessPro.settings.bgColorSwitcherPrefix">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
