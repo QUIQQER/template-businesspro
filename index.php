@@ -8,28 +8,6 @@
 
 
 /**
- * Project Logo
- */
-
-$logo       = false;
-$configLogo = $Project->getConfig('templateBusinessPro.settings.logo');
-
-if (QUI\Projects\Media\Utils::isMediaUrl($configLogo)) {
-    $logo = $configLogo;
-}
-
-/**
- * Project Logo Small
- */
-
-$logoSmall       = false;
-$configLogoSmall = $Project->getConfig('templateBusinessPro.settings.logoSmall');
-
-if (QUI\Projects\Media\Utils::isMediaUrl($configLogoSmall)) {
-    $logoSmall = $configLogoSmall;
-}
-
-/**
  * no header?
  */
 
@@ -201,8 +179,6 @@ $Engine->assign(array(
  */
 
 $Engine->assign(array(
-    'logo'          => $logo,
-    'logoSmall'     => $logoSmall,
     'ownSideType'   =>
         strpos($Site->getAttribute('type'), 'quiqqer/template-businesspro:') !== false
             ? 1 : 0,

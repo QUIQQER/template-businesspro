@@ -308,36 +308,19 @@
     <div class="header-bar grid-content">
         <div class="grid-container header-bar-inner">
 
-            <div class="header-bar-inner-logo grid-10 {if $logoSmall}hide-on-mobile{/if}">
-                {if $logo}
+            <div class="header-bar-inner-logo grid-10">
+                {if $Project->getMedia()->getLogoImage()}
                 <a href="{url id=1}" class="page-header-logo">
                     {image image=$Project->getMedia()->getLogoImage() width=700 class="page-header-logo-img"}
                 </a>
                 {else}
-                <h1>Logo</h1>
-                {*<h1>
+                <h1>
                     <a href="{url id=1}" class="page-header-textlogo-link">
                     {$Site->getAttribute( 'title' )}
                     </a>
-                </h1>*}
+                </h1>
                 {/if}
             </div>
-            {if $logoSmall}
-            <div class="header-bar-inner-logo grid-50 hide-on-desktop">
-                {if $logo}
-                <a href="{url id=1}" class="page-header-logo">
-                    {image src=$logoSmall width=700 class="page-header-logo-img"}
-                </a>
-                {else}
-                <h1>Logo</h1>
-                {*<h1>
-                    <a href="{url id=1}" class="page-header-textlogo-link">
-                    {$Site->getAttribute( 'title' )}
-                    </a>
-                </h1>*}
-                {/if}
-            </div>
-            {/if}
 
             <!-- mobile nav -->
             <nav class="nav-box grid-50">
@@ -415,13 +398,15 @@
         <div class="grid-container header-bar-inner">
 
             <div class="header-bar-inner-logo grid-50">
-                {if $logo}
-                <div class="page-header-logo">
-                    {image src=$logo width=700 class="page-header-logo-img"}
-                </div>
+                {if $Project->getMedia()->getLogoImage()}
+                <a href="{url id=1}" class="page-header-logo">
+                    {image image=$Project->getMedia()->getLogoImage() width=700 class="page-header-logo-img"}
+                </a>
                 {else}
                 <h1>
-                    {$Site->getAttribute( 'title' )}
+                    <a href="{url id=1}" class="page-header-textlogo-link">
+                        {$Site->getAttribute( 'title' )}
+                    </a>
                 </h1>
                 {/if}
             </div>
