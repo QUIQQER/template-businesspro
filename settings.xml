@@ -6,10 +6,6 @@
             <config>
                 <section name="templateBusinessPro.settings">
 
-                    <!-- general settings -->
-                    <conf name="pageBackground">
-                        <type><![CDATA[string]]></type>
-                    </conf>
                     <conf name="bgColorSwitcherPrefix">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>hide</defaultvalue>
