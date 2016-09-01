@@ -1274,6 +1274,15 @@ footer:hover a {
 
 @media screen and (max-width: 760px) {
 
+    .quiqqer-breadcrumb-title {
+        display: none;
+    }
+
+    div.quiqqer-breadcrumb-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .page-box-prefix-suffix {
         padding: 20px 0 !important;
     }
