@@ -383,6 +383,10 @@ ul.alt {
     line-height: 1em;
 }
 
+.prefix-suffix-full-width.page-content {
+    padding: 0;
+}
+
 /** page header
  * ========================================================== */
 
@@ -641,8 +645,8 @@ a.header-bar-search-link:hover {
 }*/
 
 .page-content {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 .page-content .content-template {
