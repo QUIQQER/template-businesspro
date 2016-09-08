@@ -1076,15 +1076,22 @@ footer:hover a {
         width: 20%;
     }
 
+    #navigation.header-bar-inner-nav {
+        height: auto;
+    }
+
     .header-bar-inner-nav {
-        justify-content: flex-start;
-        position: relative;
         width: 100%;
+        overflow: auto;
+        transition: all .15s;
+        transition-timing-function: ease-in-out;
+        position: absolute;
+        top: 0;
+        right: -100%;
     }
 
     .header-bar-inner {
         display: block;
-
     }
 
     .header-bar-inner-logo {
@@ -1099,24 +1106,16 @@ footer:hover a {
         position: relative;
         left: 0;
         top: 0;
-        background: #fff;
         width: 100%;
         display: block;
-        /*display: flex;*/
-        padding-bottom: 30px;
+        padding-bottom: 0;
         overflow: hidden;
-
-        /*border-top: 1px solid rgba(0, 0, 0, 0.15);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
-
         height: auto;
-        /*justify-content: center;*/
-
     }
 
     .page-header-navigation ul {
-        padding-left: 0;
+        padding: 0;
+        margin: 0;
     }
 
     .page-header-navigation li {
@@ -1128,13 +1127,14 @@ footer:hover a {
         margin: 0 0.2em;
     }
 
-    .page-header-navigation a {
+    .page-header-navigation a{
         color: #a5a5a5;
-        font-size: 0.85em;
+        font-size: 1em;
         display: inline-block;
-        padding: 0.6em 1.2em;
+        padding: 0;
         text-decoration: none;
         white-space: nowrap;
+        width: calc(100% - 80px);
     }
 
     .page-header-navigation a:hover {
@@ -1146,24 +1146,38 @@ footer:hover a {
     .page-header-navigation-entry {
         position: relative;
         color: #a5a5a5;
+        padding-left: 0;
+        height: auto;
+        border-bottom: 1px solid #3E5E99;
+    }
 
+    .page-header-navigation-sub-entry {
+        position: relative;
+        color: #a5a5a5;
+        padding-left: 0;
+        height: auto;
+    }
+
+    .page-header-navigation > ul > li {
+        margin: 0;
+        padding: 0;
+        height: auto;
     }
 
     .page-header-navigation-sub {
         height: auto;
     }
 
-    .page-header-navigation-sub:before {
-        border: none;
-        content: "";
-        display: none;
-        left: 15%;
-        margin-left: -10px;
-        position: absolute;
-        top: 0.6em;
-        opacity: 0.9;
+    li.page-header-navigation-sub-entry {
+        padding-left: 80px;
     }
 
+    a.page-header-navigation-sub-entry-link {
+        line-height: 3em;
+
+    }
+
+    /*
     .page-header-navigation-sub-list {
         background: none;
         border: none;
@@ -1175,9 +1189,9 @@ footer:hover a {
         padding-left: 0;
         text-align: left;
         opacity: 1;
-    }
+    }*/
 
-    .page-header-navigation-sub-entry-link {
+    /*.page-header-navigation-sub-entry-link {
         clear: both;
         float: left;
         color: #5a5a5a;
@@ -1190,9 +1204,9 @@ footer:hover a {
     .page-header-navigation-sub-entry-link:hover {
         color: #a5a5a5 !important;
         background: none !important;
-    }
+    }*/
 
-    .page-header-navigation-sub-entry {
+    /*.page-header-navigation-sub-entry {
         clear: both;
         margin: 0 !important;
         width: 100%;
@@ -1204,32 +1218,19 @@ footer:hover a {
 
     .page-header-navigation-sub-entry:last-child {
         margin: 0 !important;
-    }
-
-    #navigation {
-        max-height: 0;
-        overflow: auto;
-        opacity: 0;
-        transition: all .15s;
-        transition-timing-function: ease-in-out;
-    }
+    }*/
 
     .nav-toggle {
-        max-height: 100% !important;
-        opacity: 1 !important;
-        overflow: auto !important;
         transition: .5s !important;;
         transition-timing-function: ease-in-out;
+        right: 0 !important;
     }
 
     .page-header-navigation-sub {
         max-height: 0;
-        left: 0;
-        min-width: 200px;
         opacity: 0 !important;
         overflow: hidden;
         position: relative;
-        top: 0 !important;
         display: block;
 
         transition: all .2s;
@@ -1238,21 +1239,22 @@ footer:hover a {
     }
 
     .nav-toggle-sub {
-        max-height: 100% !important;
+        max-height: 500px !important;
         opacity: 1 !important;
-        overflow: hidden !important;
-
+        /*max-height: 500px;*/
         transition: all .5s;
         transition-timing-function: ease-in-out;
     }
 
     .fa-chevron-down-mobile {
         display: inline-block;
-        font-size: 0.8em;
+        font-size: 1.5em;
         font-weight: normal;
         cursor: pointer;
         transition: all 0.2s;
         transition-timing-function: ease-in-out;
+        width: 60px;
+        text-align: center;
     }
 
     .fa-chevron-down-rotate-mobile {

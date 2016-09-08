@@ -41,11 +41,11 @@
 
 
         /* nav bar */
-        .header-bar {
+        .header-bar,
+        .header-bar-inner-nav {
             background: {$navBarMainColor};
         }
-        
-        .page-header-navigation-sub-list,
+
         .page-header-navigation li:hover,
         .header-bar-search:hover {
             background: {$navBarHoverColor};
@@ -83,7 +83,8 @@
         }
 
         .header-bar-search,
-        .page-header-navigation-entry {
+        .page-header-navigation-entry,
+        .fa-chevron-down-mobile {
             line-height: {$navBarHeight}px;
         }
         /***************/
@@ -333,7 +334,7 @@
                 <i class="fa fa-navicon"></i>
             </nav>
 
-            <div class="header-bar-inner-nav grid-80" id="navigation">
+            <div class="header-bar-inner-nav desktop-grid-80" id="navigation">
 
                 {assign var=FirstChild value=$Project->firstChild()}
                 {assign var=children value=$FirstChild->getNavigation()}
@@ -346,6 +347,11 @@
 
                             <!-- menu (level 1) -->
                             {assign var=subnavigation value=$Child->getNavigation()}
+
+                            <i class="fa fa-fw fa-chevron-down fa-chevron-down-mobile"
+                               style="{if !count( $subnavigation )}opacity: 0; color: rgba(0;0;0;0); cursor: default;{/if}">
+                            </i>
+
                             <a href="{url site=$Child}" class="page-header-navigation-entry-link">
                                 {$Child->getAttribute('title')}
                             </a>

@@ -25,6 +25,10 @@ window.addEvent("domready", function () {
         var NavButton = document.getElement("nav.nav-box");
         var NavButtonDropDown = document.getElements(".fa-chevron-down");
 
+        var body = document.getElement("body");
+        //Nav.setStyle("height", body.getStyle('height').toInt());
+        //console.log(body.getStyle('height').toInt());
+
         NavButtonDropDown.addEvent("click", function () {
             var Li = this.getParent('li');
             var NavSub = Li.getElement(".page-header-navigation-sub");
@@ -40,11 +44,11 @@ window.addEvent("domready", function () {
         });
 
         NavButton.addEvent("click", function () {
-            if (Nav.getStyle("height").toInt() < 1) {
-                Nav.addClass("nav-toggle");
+            if (Nav.hasClass("nav-toggle")) {
+                Nav.removeClass("nav-toggle");
             }
             else {
-                Nav.removeClass("nav-toggle");
+                Nav.addClass("nav-toggle");
             }
 
         });
