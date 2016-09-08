@@ -12,6 +12,16 @@
             </settings>
         </brick>
 
+        <!-- promo slider wallpaper 2 content -->
+        <brick control="\QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content">
+            <settings>
+                <setting name="promosliderBackground" type="color">
+                    <locale group="quiqqer/template-businesspro"
+                            var="promosliderBackground"/>
+                </setting>
+            </settings>
+        </brick>
+
         <!-- defined areas in the template -->
         <templateAreas>
             <!-- global areas -->

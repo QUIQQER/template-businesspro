@@ -438,7 +438,10 @@
 
             <!-- if full size (bricks settings) -->
             {if $Brick->getSetting( 'brickFullWidth' )}
-                <section class="prefix-suffix-full-width clear-fix page-content">
+                <section class="prefix-suffix-full-width clear-fix page-content"
+                {if $Brick->getSetting('promosliderBackground')}
+                    style="background-color: {$Brick->getSetting('promosliderBackground')};"
+                {/if}>
                     {$Brick->create()}
                 </section>
 
