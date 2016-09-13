@@ -157,7 +157,6 @@
         }
 
         a,
-        .fa-navicon:hover,
         a.link-simple-color,
         a.slide-up-color {
             color: {$colorMain};
@@ -331,9 +330,9 @@
             </div>
 
             <!-- mobile nav -->
-            <nav class="nav-box grid-50">
+            <div class="nav-button-open grid-50">
                 <i class="fa fa-navicon"></i>
-            </nav>
+            </div>
 
             <div class="header-bar-inner-nav grid-80" id="navigation">
 
@@ -343,6 +342,11 @@
                 <nav class="page-header-navigation">
 
                     <ul>
+                        <li class="page-header-navigation-entry hide-on-desktop nav-button-close">
+                            <span class="nav-button-close-span">
+                                {locale group="quiqqer/template-businesspro" var="nav.button.close"}
+                            </span>
+                        </li>
                         {foreach from=$children item=Child}
                         <li class="page-header-navigation-entry">
 

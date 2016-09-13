@@ -166,6 +166,11 @@
             <de><![CDATA[Startseite]]></de>
             <en><![CDATA[Home]]></en>
         </locale>
+        <locale name="nav.button.close" html="true">
+            <de><![CDATA[Menü schließen]]></de>
+            <en><![CDATA[Close menu]]></en>
+            <pl><![CDATA[Schowaj menu]]></pl>
+        </locale>
         
         <!-- settings -->
         <locale name="templateBusinessPro.settings.menu.title">

@@ -22,7 +22,8 @@ window.addEvent("domready", function () {
          * open or close the sub nav
          */
         var Nav = document.id("navigation");
-        var NavButton = document.getElement("nav.nav-box");
+        var NavButtonOpen = document.getElement(".nav-button-open");
+        var NavButtonClose = document.getElement(".nav-button-close");
         var NavButtonDropDown = document.getElements(".fa-chevron-down");
 
         var body = document.getElement("body");
@@ -43,14 +44,16 @@ window.addEvent("domready", function () {
             }
         });
 
-        NavButton.addEvent("click", function () {
-            if (Nav.hasClass("nav-toggle")) {
-                Nav.removeClass("nav-toggle");
-            }
-            else {
+        NavButtonOpen.addEvent("click", function () {
+            if (!Nav.hasClass("nav-toggle")) {
                 Nav.addClass("nav-toggle");
             }
+        });
 
+        NavButtonClose.addEvent("click", function () {
+           if (Nav.hasClass("nav-toggle")) {
+               Nav.removeClass("nav-toggle");
+           }
         });
 
     });
