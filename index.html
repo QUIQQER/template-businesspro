@@ -46,6 +46,7 @@
             background: {$navBarMainColor};
         }
 
+        .page-header-navigation-sub-list,
         .page-header-navigation li:hover,
         .header-bar-search:hover {
             background: {$navBarHoverColor};
@@ -334,7 +335,7 @@
                 <i class="fa fa-navicon"></i>
             </nav>
 
-            <div class="header-bar-inner-nav desktop-grid-80" id="navigation">
+            <div class="header-bar-inner-nav grid-80" id="navigation">
 
                 {assign var=FirstChild value=$Project->firstChild()}
                 {assign var=children value=$FirstChild->getNavigation()}
