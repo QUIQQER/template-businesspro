@@ -386,7 +386,7 @@
 
             <!-- search -->
             {if $searchShow}
-            <div class="header-bar-search grid-10 hide-on-mobile">
+            <div class="header-bar-search grid-15 hide-on-mobile">
                 {strip}
                 <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
                     <i class="fa fa-search header-bar-search-icon"></i>
@@ -397,18 +397,6 @@
             {/if}
         </div>
     </div>
-
-    {*
-    {$Facebook->create()}
-    {$Pinterest->create()}
-
-    {$Twitter->create()}
-    {$Google->create()}
-
-    {assign var=test value=$Mail->setAttribute('showLabel', false)}
-
-    {$Mail->create()}
-*}
 
     {if $navPos == 'fix'}
     <div class="header-bar-2 grid-content">
@@ -430,6 +418,18 @@
         </div>
     </div>
     {/if}
+
+    {*
+    {$Facebook->create()}
+    {$Pinterest->create()}
+
+    {$Twitter->create()}
+    {$Google->create()}
+
+    {assign var=test value=$Mail->setAttribute('showLabel', false)}
+
+    {$Mail->create()}
+    *}
 
     <!-- page -->
     <div class="body-container">
@@ -521,12 +521,12 @@
 
         <!-- footer -->
         <footer class="page-footer grid-100">
-            <div class="grid-container">
+            <div class="page-footer-container grid-container">
                 {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
                 {if !empty($footer)}
                 <section class="grid-100 mobile-grid-100 grid-parent">
                     {foreach from=$footer item=Brick}
-                        {$Brick->addCSSClass('page-footer-brick')}
+                        {$Brick->addCSSClass('page-footer-brick clear-fix')}
                         {*if !$Brick->hasCSSClass('grid*')}
                         {$Brick->addCSSClass('grid-100')}
                         {/if*}

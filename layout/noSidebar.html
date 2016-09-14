@@ -16,19 +16,9 @@
     {/foreach}
     {/if}
 
-
-    {foreach from=$bricks item=Brick}
-    <section class="startpage-section">
-        {if !$Brick->hasCSSClass('grid*')}
-        {$Brick->addCSSClass('grid-100')}
-        {/if}
-        {$Brick->create()}
-    </section>
-    {/foreach}
-
     {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
     $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-    <div class="page-box page-content grid-100 mobile-grid-100">
+    <div class="page-box page-content grid-100 mobile-grid-100 content-header">
         {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
         <header>
             <h1 itemprop="name">{$Site->getAttribute('title')}</h1>

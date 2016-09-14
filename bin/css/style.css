@@ -224,17 +224,6 @@ input:hover {
     -o-transition: all 0.2s ease;
 }
 
-/* footer button (contact) */
-
-footer button {
-    padding: 0.5em 1em;
-    box-shadow: none;
-    margin: 1em 0 0 0;
-    float: right;
-    opacity: 0.8;
-    color: #363636
-}
-
 .sidebox-button {
     background: #414141;
     padding: 10px 20px;
@@ -261,6 +250,12 @@ blockquote {
     font-style: italic;
     margin: 0 0 2em;
     padding: 0.5em 0 0.5em 1.5em;
+}
+
+pre {
+    margin-bottom: 10px;
+    max-width: 100%;
+    overflow: auto;
 }
 
 pre code {
@@ -343,22 +338,9 @@ ul.alt {
     background: none;
 }
 
-/*.page-box img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto !important;
-}*/
-
 .page-box .image_site {
     max-height: 350px;
     overflow: hidden;
-}
-
-.page-box pre {
-    margin-bottom: 10px;
-    max-width: 100%;
-    overflow: auto;
 }
 
 .page-box-prefix-div {
@@ -594,6 +576,7 @@ li.page-header-navigation-sub-entry:hover {
 .header-bar-search {
     white-space: nowrap;
     overflow: hidden;
+    text-align: right;
 }
 
 a.header-bar-search-link {
@@ -647,14 +630,14 @@ a.header-bar-search-link:hover {
 
 .page-content {
     padding-top: 4em;
-    padding-bottom: 4em;
+    /*padding-bottom: 4em;*/
 }
 
 .page-content .content-template {
     margin-top: 20px;
 }
 
-.page-content hr {
+.content-body hr {
     border: none;
     border-top: 1px solid #ccc;
     clear: both;
@@ -746,6 +729,16 @@ h4 {
 
 .content-body a img {
     display: block;
+}
+
+
+/*left right sidebar*/
+.page-multible-left {
+    padding-left: 0;
+}
+
+.page-multible-right {
+    padding-right: 0;
 }
 
 /*********************************************************************************/
@@ -893,18 +886,8 @@ h2.quiqqer-navigation-title-style {
     clear: both;
     font-size: 0.9em;
     line-height: 1.7em;
-    padding: 80px 0 20px;
+    padding: 80px 0 0;
     width: 100%;
-}
-
-.page-footer-left {
-    float: left;
-    padding-right: 20px;
-}
-
-.page-footer-right {
-    float: left;
-    padding-left: 20px;
 }
 
 .page-footer-brick {
@@ -1297,25 +1280,13 @@ footer:hover a {
     }
 }
 
-/** qui design
- * ========================================================== */
+/*********************************************************************************/
+/* Design standard
+/*********************************************************************************/
 
-/*
-.qui-button {
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 0 2px #999;
-    cursor: pointer;
-    float: left;
-    font-size: 1.1em;
-    line-height: 30px;
-    margin: 0;
-    padding: 0.65em 1.5em !important;
-    position: relative;
-    text-decoration: none;
-    transition: all 0.2s ease 0s;
+.control-background {
+    background: #eee;
 }
-*/
 
 /*********************************************************************************/
 /* pagination
@@ -1440,6 +1411,8 @@ input[type='radio'] {
     display: block;
     clear: both;
     float: none;
+    font-size: 0;
+    line-height: 0;
 }
 
 .qui-sitetypes-sitemap ul:first-child a:hover {
@@ -1580,6 +1553,8 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .content-message-success {
     margin: 1em 0;
 }
+
+
 
 /*********************************************************************************/
 /* extra breadcrumb for this template
@@ -1855,4 +1830,11 @@ a.link-slide-right-grey:focus {
 a.link-slide-right-grey:hover::before,
 a.link-slide-right-grey:focus::before {
     transform: scaleY(0.718) translateX(0px);
+}
+
+
+/* extra grid class  */
+.grid-children-container {
+    left: -20px;
+    width: calc(100% + 40px);
 }
