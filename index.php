@@ -135,7 +135,6 @@ $Engine->assign(array(
 //$Facebook1->setTheme('flat');
 
 
-
 $Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
     'theme'     => 'flat',
     'showLabel' => true,
@@ -150,23 +149,16 @@ $Facebook1 = new QUI\Socialshare\Shares\Facebook(array(
 //));
 
 $Engine->assign(array(
-    'Facebook'  => new QUI\Socialshare\Shares\Facebook(array(
-    )),
+    'Facebook'  => new QUI\Socialshare\Shares\Facebook(array()),
     'Pinterest' => new QUI\Socialshare\Shares\Pinterest(array()),
-    'Twitter'   => new QUI\Socialshare\Shares\Twitter(array(
-
-    )),
-    'Google'    => new QUI\Socialshare\Shares\Google(array(
-    )),
-    'Mail'      => new QUI\Socialshare\Shares\Mail(array(
-
-    ))
+    'Twitter'   => new QUI\Socialshare\Shares\Twitter(array()),
+    'Google'    => new QUI\Socialshare\Shares\Google(array()),
+    'Mail'      => new QUI\Socialshare\Shares\Mail(array())
 ));
 
 //$Facebook1->setStyle('outline', '2px solid red !important');
 //$Facebook1->setStyle('border', '2px solid red');
 //echo $Facebook1->create();
-
 
 
 //$Facebook = new QUI\Socialshare\Shares\Facebook;
@@ -217,7 +209,7 @@ $Engine->assign('bodyClass', $bodyClass);
 
 $Engine->assign(
     'typeClass',
-    'type-'. str_replace(array('/',':'), '-', $Site->getAttribute('type'))
+    'type-' . str_replace(array('/', ':'), '-', $Site->getAttribute('type'))
 );
 
 /* Menu */
@@ -226,16 +218,16 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
 ));
 
 $MegaMenu->prependHTML('<div class="header-bar-inner-logo">
-        <a href="'. '#' .'" class="page-header-logo">
+        <a href="' . '#' . '" class="page-header-logo">
          <img src="' .
-            $Project->getMedia()->getLogo() .
-         '"/></a>
+    $Project->getMedia()->getLogo() .
+    '"/></a>
      </div>'
 );
 
 $MegaMenu->appendHTML('<div class="header-bar-search">
         <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') .
-        '" class="header-bar-search-link">
+    '" class="header-bar-search-link">
             <i class="fa fa-search header-bar-search-icon"></i>
         </a>    
     </div>
