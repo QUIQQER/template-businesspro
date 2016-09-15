@@ -48,7 +48,8 @@
 
         .page-header-navigation-sub-list,
         .page-header-navigation li:hover,
-        .header-bar-search:hover {
+        .header-bar-search:hover,
+        .quiqqer-menu-megaMenu-list-item-menu.control-background {
             background: {$navBarHoverColor};
         }
 
@@ -85,7 +86,8 @@
 
         .header-bar-search,
         .page-header-navigation-entry,
-        .fa-chevron-down-mobile {
+        .fa-chevron-down-mobile,
+        .quiqqer-menu-megaMenu-list-item {
             line-height: {$navBarHeight}px;
         }
         /***************/
@@ -334,8 +336,6 @@
                 <i class="fa fa-navicon"></i>
             </div>
 
-
-
             <div class="header-bar-inner-nav grid-80" id="navigation">
                 {control control="\QUI\Menu\MegaMenu" showStart=false}
 
@@ -389,7 +389,7 @@
 
             <!-- search -->
             {if $searchShow}
-            <div class="header-bar-search grid-15 hide-on-mobile">
+            <div class="header-bar-search hide-on-mobile">
                 {strip}
                 <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
                     <i class="fa fa-search header-bar-search-icon"></i>
@@ -439,7 +439,7 @@
 
         <!-- header -->
         {strip}
-        <header class="grid-100 mobile-grid-100 grid-parent page-header" >
+        <header class="grid-100 mobile-grid-100 grid-parent page-header">
             {if $Site->getAttribute('image_emotion')}
                 {image src=$Site->getAttribute('image_emotion') class="header-img"}
             {/if}
