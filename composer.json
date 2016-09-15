@@ -20,9 +20,9 @@
         "php": ">=5.3",
         "quiqqer\/quiqqer": "*@dev",
         "quiqqer\/bricks": "*@dev",
-        "quiqqer\/fontawesome": "dev-master",
+        "quiqqer\/fontawesome": "*@dev",
         "quiqqer\/menu": "dev-dev",
-        "quiqqer\/unsemantic": "dev-master"
+        "quiqqer\/unsemantic": "*@dev"
     },
 
     "autoload": {
