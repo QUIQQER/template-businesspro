@@ -225,8 +225,7 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
 ));
 
-$MegaMenu->prependHTML('
-    <div class="header-bar-inner-logo">
+$MegaMenu->prependHTML('<div class="header-bar-inner-logo">
         <a href="'. '#' .'" class="page-header-logo">
          <img src="' .
             $Project->getMedia()->getLogo() .
@@ -234,8 +233,7 @@ $MegaMenu->prependHTML('
      </div>'
 );
 
-$MegaMenu->appendHTML('
-    <div class="header-bar-search">
+$MegaMenu->appendHTML('<div class="header-bar-search">
         <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') .
         '" class="header-bar-search-link">
             <i class="fa fa-search header-bar-search-icon"></i>
