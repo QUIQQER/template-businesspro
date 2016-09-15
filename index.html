@@ -70,7 +70,7 @@
             background: {$colorMain};
         }
 
-        .page-header-logo-img {
+        .page-header-logo-img{
             max-height: calc({$navBarHeight}px - 20px);
         }
 
@@ -80,7 +80,8 @@
         .page-header-navigation-entry,
         .header-bar-search,
         .header-bar-search:before,
-        .page-header-navigation-entry:before {
+        .page-header-navigation-entry:before,
+        .header-bar-inner-logo{
             height: {$navBarHeight}px;
         }
 
@@ -317,6 +318,7 @@
     <div class="header-bar grid-content">
         <div class="grid-container header-bar-inner">
 
+            {*
             <div class="header-bar-inner-logo grid-10">
                 {if $Project->getMedia()->getLogoImage()}
                 <a href="{url id=1}" class="page-header-logo">
@@ -336,8 +338,17 @@
                 <i class="fa fa-navicon"></i>
             </div>
 
-            <div class="header-bar-inner-nav grid-80" id="navigation">
-                {control control="\QUI\Menu\MegaMenu" showStart=false}
+            *}
+            <div class="header-bar-inner-nav grid-100" id="navigation">
+                {*control control="\QUI\Menu\MegaMenu" showStart=false*}
+
+
+
+
+                {$MegaMenu->create()}
+
+
+
 
                 {*assign var=FirstChild value=$Project->firstChild()}
                 {assign var=children value=$FirstChild->getNavigation()}
@@ -388,7 +399,7 @@
             </div>
 
             <!-- search -->
-            {if $searchShow}
+            {*if $searchShow}
             <div class="header-bar-search hide-on-mobile">
                 {strip}
                 <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
@@ -397,7 +408,7 @@
                 </a>
                 {/strip}
             </div>
-            {/if}
+            {/if*}
         </div>
     </div>
 

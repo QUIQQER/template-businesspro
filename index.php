@@ -219,3 +219,31 @@ $Engine->assign(
     'typeClass',
     'type-'. str_replace(array('/',':'), '-', $Site->getAttribute('type'))
 );
+
+
+/* Menu */
+$MegaMenu = new QUI\Menu\MegaMenu(array(
+    'showStart' => false
+));
+
+$MegaMenu->prependHTML('
+    <div class="header-bar-inner-logo">
+        <a href="'. '#' .'" class="page-header-logo">
+         <img src="' .
+            $Project->getMedia()->getLogo() .
+         '"/></a>
+     </div>'
+);
+
+$MegaMenu->appendHTML('
+    <div class="header-bar-search">
+        <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') .
+        '" class="header-bar-search-link">
+            <i class="fa fa-search header-bar-search-icon"></i>
+        </a>    
+    </div>
+');
+
+$Engine->assign(array(
+    'MegaMenu' => $MegaMenu
+));
