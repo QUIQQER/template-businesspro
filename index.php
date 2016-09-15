@@ -220,7 +220,6 @@ $Engine->assign(
     'type-'. str_replace(array('/',':'), '-', $Site->getAttribute('type'))
 );
 
-
 /* Menu */
 $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
