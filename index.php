@@ -212,7 +212,10 @@ $Engine->assign(
     'type-' . str_replace(array('/', ':'), '-', $Site->getAttribute('type'))
 );
 
-/* Menu */
+/**
+ * Mega menu
+ */
+
 $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
 ));

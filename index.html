@@ -488,7 +488,7 @@
                     </div>
                 </div>
             {else}
-                <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
+                <div class="page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
                         <section class="mobile-grid-100 grid-100 ch page-box-prefix-suffix">
                             {$Brick->create()}
@@ -500,10 +500,8 @@
 
         <!-- content -->
         <div class="main-content-color-bg {cycle values="" reset=true}">
-            <div class="grid-container">
-                <div class="main-content">
-                    {$Template->getLayout()}
-                </div>
+            <div class="grid-container main-content">
+                {$Template->getLayout()}
             </div>
         </div>
 
@@ -520,9 +518,9 @@
                     </section>
                 </div>
             {else}
-                <div class="{cycle values="brick-even-suffix,brick-odd-suffix"}">
+                <div class="page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
-                        <section class="mobile-grid-100 grid-100 page-content page-box-prefix-suffix">
+                        <section class="mobile-grid-100 grid-100">
                             {*if !$Brick->hasCSSClass('grid*')}
                                 {$Brick->addCSSClass('grid-100')}
                             {/if*}

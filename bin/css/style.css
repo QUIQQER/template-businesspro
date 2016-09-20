@@ -330,26 +330,18 @@ ul.alt {
     padding-left: 0;
 }
 
-#main-content {
-    padding-top: 40px;
-}
-
-.page-box {
-    background: none;
-}
-
-.page-box .image_site {
+/*.page-box .image_site {
     max-height: 350px;
     overflow: hidden;
-}
+}*/
 
-.page-box-prefix-div {
+/*.page-box-prefix-div {
     padding: 30px 0 0 0;
 }
 
 .page-box-suffix-div {
     padding: 20px 0;
-}
+}*/
 
 .page-multible-content {
     margin: 0;
@@ -357,8 +349,8 @@ ul.alt {
 }
 
 .page-box-prefix-suffix {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
 }
 
 .prefix-suffix-full-width img {
@@ -649,8 +641,8 @@ a.header-bar-search-link:hover {
 }*/
 
 .page-content {
-    padding-top: 4em;
-    /*padding-bottom: 4em;*/
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .page-content .content-template {
@@ -906,6 +898,7 @@ h2.quiqqer-navigation-title-style {
     clear: both;
     font-size: 0.9em;
     line-height: 1.7em;
+    /*margin-top: 80px;*/
     padding: 80px 0 0;
     width: 100%;
 }
@@ -1066,6 +1059,7 @@ footer:hover a {
     .main-content {
         padding-top: 20px;
     }
+
 
     .body-container {
         padding-top: 0;
@@ -1260,9 +1254,9 @@ footer:hover a {
         padding-bottom: 0;
     }
 
-    .page-box-prefix-suffix {
+    /*.page-box-prefix-suffix {
         padding: 20px 0 !important;
-    }
+    }*/
 
     .page-content {
         font-size: 11.5pt;
