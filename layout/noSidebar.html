@@ -7,7 +7,7 @@
 
     {if !empty( $prefixContentBricks )}
     {foreach from=$prefixContentBricks item=Brick}
-    <div class="page-box page-content">
+    <div class="page-content">
         {if !$Brick->hasCSSClass('grid*')}
         {$Brick->addCSSClass('grid-100')}
         {/if}
@@ -18,7 +18,7 @@
 
     {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
     $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-    <div class="page-box page-content grid-100 mobile-grid-100 content-header">
+    <div class="page-content grid-100 mobile-grid-100 content-header">
         {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
         <header>
             <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
@@ -32,13 +32,13 @@
     </div>
     {/if}
 
-    <div class="mobile-grid-100 grid-100 page-content page-box">
+    <div class="mobile-grid-100 grid-100 page-content">
         {$Template->getBody()}
     </div>
 
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
-    <div class="page-box page-content">
+    <div class="page-content">
         {if !$Brick->hasCSSClass('grid*')}
         {$Brick->addCSSClass('grid-100')}
         {/if}
