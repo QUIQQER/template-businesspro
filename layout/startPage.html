@@ -6,9 +6,6 @@
 {if !empty( $prefixContentBricks )}
 {foreach from=$prefixContentBricks item=Brick}
 <section class="page-content">
-    {if !$Brick->hasCSSClass('grid*')}
-    {$Brick->addCSSClass('grid-100')}
-    {/if}
     {$Brick->create()}
 </section>
 {/foreach}
@@ -16,14 +13,14 @@
 
 
 {foreach from=$bricks item=Brick}
-<section class="startpage-section page-content grid-100 mobile-grid-100">
+<section class="startpage-section page-content">
     {$Brick->create()}
 </section>
 {/foreach}
 
 {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
 $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-<div class="page-content grid-100 mobile-grid-100">
+<div class="page-content">
     {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
     <header>
         <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
@@ -37,7 +34,7 @@ $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
 </div>
 {/if}
 
-<div class="mobile-grid-100 grid-100 page-content quiqqer-content">
+<div class="page-content quiqqer-content">
     {$Template->getBody()}
 </div>
 
@@ -45,9 +42,6 @@ $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
 <div class="page-content">
-    {if !$Brick->hasCSSClass('grid*')}
-    {$Brick->addCSSClass('grid-100')}
-    {/if}
     {$Brick->create()}
 </div>
 {/foreach}

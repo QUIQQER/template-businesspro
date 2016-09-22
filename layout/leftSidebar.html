@@ -3,67 +3,56 @@
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
-<div class="grid-100 mobile-grid-100 grid-parent">
 
-    <div class="page-multible-left grid-30 mobile-grid-100">
-        {if !empty( $leftSideBar )}
-        {foreach from=$leftSideBar item=Brick}
-        <div class="page-content">
-            {if !$Brick->hasCSSClass('grid*')}
-            {$Brick->addCSSClass('grid-100 grid-parent')}
-            {/if}
-            {$Brick->create()}
+<div class="page-multible-left grid-30 mobile-grid-100">
+    {if !empty( $leftSideBar )}
+    {foreach from=$leftSideBar item=Brick}
+    <div class="page-content">
+        {$Brick->create()}
+    </div>
+    {/foreach}
+    {else}
+        &nbsp
+    {/if}
+</div>
+
+<div class="page-multible-right grid-70 mobile-grid-100">
+
+    {if !empty( $prefixContentBricks )}
+    {foreach from=$prefixContentBricks item=Brick}
+    <div class="page-content">
+        {$Brick->create()}
+    </div>
+    {/foreach}
+    {/if}
+
+    {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
+    $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
+    <div class="page-content">
+        {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
+        <header>
+            <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
+        </header>
+        {/if}
+        {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
+        <div class="content-short" itemprop="description">
+            {$Site->getAttribute('short')|nl2br}
         </div>
-        {/foreach}
-        {else}
-            &nbsp
         {/if}
     </div>
+    {/if}
 
-    <div class="page-multible-right grid-70 mobile-grid-100">
-
-        {if !empty( $prefixContentBricks )}
-        {foreach from=$prefixContentBricks item=Brick}
-        <div class="page-content">
-            {if !$Brick->hasCSSClass('grid*')}
-            {$Brick->addCSSClass('grid-100 grid-parent')}
-            {/if}
-            {$Brick->create()}
-        </div>
-        {/foreach}
-        {/if}
-
-        {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
-        $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-        <div class="page-content grid-100 mobile-grid-100 grid-parent">
-            {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
-            <header>
-                <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
-            </header>
-            {/if}
-            {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-            <div class="content-short" itemprop="description">
-                {$Site->getAttribute('short')|nl2br}
-            </div>
-            {/if}
-        </div>
-        {/if}
-
-        <div role="main" class="page-content grid-100 mobile-grid-100">
-            {$Template->getBody()}
-        </div>
-
-        {if !empty( $suffixContentBricks )}
-        {foreach from=$suffixContentBricks item=Brick}
-        <div class="page-content">
-            {if !$Brick->hasCSSClass('grid*')}
-            {$Brick->addCSSClass('grid-100 grid-parent')}
-            {/if}
-            {$Brick->create()}
-        </div>
-        {/foreach}
-        {/if}
-
+    <div role="main" class="page-content">
+        {$Template->getBody()}
     </div>
+
+    {if !empty( $suffixContentBricks )}
+    {foreach from=$suffixContentBricks item=Brick}
+    <div class="page-content">
+        {$Brick->create()}
+    </div>
+    {/foreach}
+    {/if}
 
 </div>
+

@@ -402,6 +402,14 @@ ul.alt {
     text-decoration: none;
 }
 
+.page-multible-left {
+    padding-left: 0;
+}
+
+.page-multible-right {
+    padding-right: 0;
+}
+
 /** header bar
  * ========================================================== */
 
@@ -1062,176 +1070,10 @@ footer:hover a {
     /** Menü für mobile Geräte
     * ========================================================== */
 
-    .header-bar {
-        position: relative;
-    }
-
-    li.nav-button-close {
-        text-align: center;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        line-height: 50px;
-        height: 50px;
-    }
-
-    .nav-button-close-span {
-        text-transform: none;
-        letter-spacing: 1px;
-        background: rgba(0,0,0,0.1);
-        display: block;
-    }
-
-    .nav-button-open {
-        align-content: center;
-        cursor: pointer;
-        display: inline-flex;
-        font-size: 40px;
-        margin: 0.5em;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    #navigation.header-bar-inner-nav {
-        height: auto;
-        width: 100%;
-        overflow: auto;
-        transition: all .2s;
-        transition-timing-function: ease-in-out;
-        padding: 0;
-        position: absolute;
-        top: 0;
-        right: -100%;
-    }
 
 
-    .header-bar-inner-logo {
-        width: 100%;
-        display: inline-flex;
-        justify-content: center;
-    }
 
-    .page-header-navigation {
-        margin: auto 0;
-        text-align: left;
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-        display: block;
-        padding-bottom: 0;
-        overflow: hidden;
-        height: auto;
-    }
 
-    .page-header-navigation ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .page-header-navigation a{
-        color: #a5a5a5;
-        font-size: 1em;
-        display: inline-block;
-        padding: 0;
-        text-decoration: none;
-        white-space: nowrap;
-        width: calc(100% - 80px);
-    }
-
-    .page-header-navigation a:hover {
-        background: none;
-        box-shadow: none;
-        color: #a5a5a5;
-    }
-
-    .page-header-navigation-entry {
-        position: relative;
-        color: #a5a5a5;
-        padding-left: 0;
-        height: auto;
-        border-bottom: 1px solid #3E5E99;
-        list-style-type: none;
-    }
-
-    .page-header-navigation-sub-entry {
-        position: relative;
-        color: #a5a5a5;
-        padding-left: 0;
-        height: auto;
-    }
-
-    .page-header-navigation > ul > li {
-        margin: 0;
-        padding: 0;
-        height: auto;
-        display: block;
-    }
-
-    .page-header-navigation-sub {
-
-        height: auto;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        position: relative;
-        display: block;
-        transition: all .2s;
-        transition-timing-function: ease-in-out;
-    }
-
-    li.page-header-navigation-sub-entry {
-        padding-left: 80px;
-    }
-
-    .nav-button-close-span,
-    a.page-header-navigation-sub-entry-link {
-        line-height: 3em;
-    }
-
-    .page-header-navigation-sub-list {
-        background: none !important;
-    }
-
-    .page-header-navigation-sub-entry-link:hover {
-        background: none !important;
-    }
-
-    .nav-toggle {
-        transition: .5s !important;
-        transition-timing-function: ease-in-out;
-        right: 0 !important;
-    }
-
-    .nav-toggle-sub {
-        max-height: 1000px !important;
-        opacity: 1 !important;
-        transition: all .5s;
-        transition-timing-function: ease-in-out;
-    }
-
-    .fa-chevron-down-mobile {
-        display: inline-block;
-        font-size: 1.1em;
-        font-weight: normal;
-        cursor: pointer;
-        color: #ffffff;
-        transition: all 0.2s;
-        transition-timing-function: ease-in-out;
-        width: 60px;
-        text-align: center;
-    }
-
-    .fa-chevron-down-rotate-mobile {
-        transform: rotate(180deg);
-        transition: all 0.2s;
-        transition-timing-function: ease-in-out;
-    }
-
-    .fa-chevron-down-desktop {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 760px) {
@@ -1449,7 +1291,7 @@ input[type='radio'] {
 }
 
 .content-switcher .pull-custom {
-    left: -560px; /* -1x(page width : 2) */
+    left: -580px; /* -1x(page width : 2) */
     padding-right: 50px;
     padding-left: 0;
 }
