@@ -13,23 +13,23 @@ QUI\Utils\Site::setRecursivAttribute($Site, 'layout');
  * no header?
  */
 
-$noHeader = false;
+$showHeader = false;
 
 switch ($Template->getLayoutType()) {
     case 'layout/startPage':
-        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderStartPage');
+        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
         break;
 
     case 'layout/noSidebar':
-        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderNoSidebar');
+        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderNoSidebar');
         break;
 
     case 'layout/rightSidebar':
-        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderRightSidebar');
+        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
         break;
 
     case 'layout/leftSidebar':
-        $noHeader = $Project->getConfig('templateBusinessPro.settings.noHeaderLeftSidebar');
+        $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderLeftSidebar');
         break;
 }
 
@@ -178,7 +178,7 @@ $Engine->assign(array(
             ? 1 : 0,
     'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
     'BricksManager' => \QUI\Bricks\Manager::init(),
-    'noHeader'      => $noHeader
+    'showHeader'      => $showHeader
 ));
 
 

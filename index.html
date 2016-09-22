@@ -173,11 +173,6 @@
             color: {$colorMain};
         }
 
-
-        /*.page-header-navigation-sub-entry-link:hover{
-            background: {$colorMain};
-        }*/
-
         input[type='submit']:hover,
         input[type='reset']:hover,
         input[type='button']:hover,
@@ -277,16 +272,6 @@
         }
         {/if}
 
-
-        {if !$noHeader}
-        .header-img {
-            display: none;
-        }
-        header.page-header {
-            display: none;
-        }
-        {/if}
-
         {if $headerHeight}
         .page-header {
             display: flex;
@@ -303,9 +288,13 @@
          * Position des Menüs
          */
 
-        {if $navPos == 'scroll'}
+        {if $navPos == 'fix'}
         .header-bar {
-            position: relative !important;
+            position: fixed !important;
+        }
+
+        .body-container {
+            top: {$navBarHeight}px;
         }
 
         {/if}
@@ -315,123 +304,17 @@
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}">
 <div class="main-body">
-    <div class="header-bar grid-content">
+
+    <!-- menu -->
+    <div class="header-bar">
         <div class="grid-container header-bar-inner">
-
-            {*
-            <div class="header-bar-inner-logo grid-10">
-                {if $Project->getMedia()->getLogoImage()}
-                <a href="{url id=1}" class="page-header-logo">
-                    {image image=$Project->getMedia()->getLogoImage() width=700 class="page-header-logo-img"}
-                </a>
-                {else}
-                <h1>
-                    <a href="{url id=1}" class="page-header-textlogo-link">
-                    {$Site->getAttribute( 'title' )}
-                    </a>
-                </h1>
-                {/if}
-            </div>
-
-            <!-- mobile nav -->
-            <div class="nav-button-open grid-50">
-                <i class="fa fa-navicon"></i>
-            </div>
-
-            *}
-            <div class="header-bar-inner-nav grid-100" id="navigation">
-                {*control control="\QUI\Menu\MegaMenu" showStart=false*}
-
-
-
+            <div class="header-bar-inner-nav" id="navigation">
 
                 {$MegaMenu->create()}
 
-
-
-
-                {*assign var=FirstChild value=$Project->firstChild()}
-                {assign var=children value=$FirstChild->getNavigation()}
-                {if count($children)}
-                <nav class="page-header-navigation">
-
-                    <ul>
-                        <li class="page-header-navigation-entry hide-on-desktop nav-button-close">
-                            <span class="nav-button-close-span">
-                                {locale group="quiqqer/template-businesspro" var="nav.button.close"}
-                            </span>
-                        </li>
-                        {foreach from=$children item=Child}
-                        <li class="page-header-navigation-entry">
-
-                            <!-- menu (level 1) -->
-                            {assign var=subnavigation value=$Child->getNavigation()}
-
-                            <i class="fa fa-fw fa-chevron-down fa-chevron-down-mobile"
-                               style="{if !count( $subnavigation )}opacity: 0; color: rgba(0;0;0;0); cursor: default;{/if}">
-                            </i>
-
-                            <a href="{url site=$Child}" class="page-header-navigation-entry-link">
-                                {$Child->getAttribute('title')}
-                            </a>
-
-                            <!-- submenu (level 2) -->
-                            {if count( $subnavigation )}
-                            <div class="page-header-navigation-sub smooth">
-                                <ul class="page-header-navigation-sub-list">
-                                    {foreach from=$subnavigation item=subChild}
-                                    <li class="page-header-navigation-sub-entry">
-                                        <a href="{url site=$subChild}"
-                                           class="page-header-navigation-sub-entry-link"
-                                                >
-                                            {$subChild->getAttribute('title')}
-                                        </a>
-                                    </li>
-                                    {/foreach}
-                                </ul>
-                            </div>
-                            {/if}
-                        </li>
-                        {/foreach}
-                    </ul>
-                </nav>
-                {/if*}
-            </div>
-
-            <!-- search -->
-            {*if $searchShow}
-            <div class="header-bar-search hide-on-mobile">
-                {strip}
-                <a href="{if $searchLink}{$searchLink}{else}#{/if}" class="header-bar-search-link">
-                    <i class="fa fa-search header-bar-search-icon"></i>
-                    {locale group="quiqqer/template-businesspro" var="navbar.search.text"}
-                </a>
-                {/strip}
-            </div>
-            {/if*}
-        </div>
-    </div>
-
-    {if $navPos == 'fix'}
-    <div class="header-bar-2 grid-content">
-        <div class="grid-container header-bar-inner">
-
-            <div class="header-bar-inner-logo grid-50">
-                {if $Project->getMedia()->getLogoImage()}
-                <a href="{url id=1}" class="page-header-logo">
-                    {image image=$Project->getMedia()->getLogoImage() width=700 class="page-header-logo-img"}
-                </a>
-                {else}
-                <h1>
-                    <a href="{url id=1}" class="page-header-textlogo-link">
-                        {$Site->getAttribute( 'title' )}
-                    </a>
-                </h1>
-                {/if}
             </div>
         </div>
     </div>
-    {/if}
 
     {*
     {$Facebook->create()}
@@ -449,13 +332,15 @@
     <div class="body-container">
 
         <!-- header -->
+        {if $showHeader}
         {strip}
-        <header class="grid-100 mobile-grid-100 grid-parent page-header">
+        <header class="page-header">
             {if $Site->getAttribute('image_emotion')}
                 {image src=$Site->getAttribute('image_emotion') class="header-img"}
             {/if}
         </header>
         {/strip}
+        {/if}
 
         <!-- header suffix -->
         {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -469,33 +354,18 @@
                 {/if}>
                     {$Brick->create()}
                 </section>
-
-            <!-- if breadcrumb -->
-            {else if $Brick->getType() == 'QUI\Controls\Breadcrumb'}
-                <div class="breadcrumb-container">
-                    <div class="grid-container">
-                        <section class="
-                                        {if $shareShow}mobile-grid-80 grid-80
-                                        {else} mobile-grid-100 grid-100{/if}
-                                         page-box-prefix-suffix">
-                            {$Brick->create()}
-                        </section>
-                        {if $shareShow}
-                        <section class="mobile-grid-20 grid-20 share">
-                            <span>Diese Seite Teilen:</span>
-                        </section>
-                        {/if}
-                    </div>
-                </div>
             {else}
-                <div class="page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
+                <div class="
+                 {if $Brick->getType() == 'QUI\Controls\Breadcrumb'}breadcrumb-container{/if}
+                 page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
-                        <section class="mobile-grid-100 grid-100 ch page-box-prefix-suffix">
+                        <section>
                             {$Brick->create()}
                         </section>
                     </div>
                 </div>
             {/if}
+
         {/foreach}
 
         <!-- content -->
@@ -520,10 +390,7 @@
             {else}
                 <div class="page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
-                        <section class="mobile-grid-100 grid-100">
-                            {*if !$Brick->hasCSSClass('grid*')}
-                                {$Brick->addCSSClass('grid-100')}
-                            {/if*}
+                        <section>
                             {$Brick->create()}
                         </section>
                     </div>

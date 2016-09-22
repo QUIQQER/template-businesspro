@@ -260,31 +260,31 @@
         </locale>
 
         <!-- show header? -->
-        <locale name="noHeader.text">
+        <locale name="showHeader.text">
             <de><![CDATA[Header anzeigen?]]></de>
             <en><![CDATA[Display header?]]></en>
             <pl><![CDATA[Pokazać nagłówek (header wraz z obrazkiem)?]]></pl>
         </locale>
 
-        <locale name="noHeaderStartPage.text">
+        <locale name="showHeaderStartPage.text">
             <de><![CDATA[Startpage]]></de>
             <en><![CDATA[Start page]]></en>
             <pl><![CDATA[Układ bez kolumn (strona startowa)]]></pl>
         </locale>
 
-        <locale name="noHeaderNoSidebar.text">
+        <locale name="showHeaderNoSidebar.text">
             <de><![CDATA[Kein Sidebar]]></de>
             <en><![CDATA[No sidebar]]></en>
             <pl><![CDATA[Układ bez kolumn]]></pl>
         </locale>
 
-        <locale name="noHeaderLeftSidebar.text">
+        <locale name="showHeaderLeftSidebar.text">
             <de><![CDATA[Linke Sidebar]]></de>
             <en><![CDATA[Left sidebar]]></en>
             <pl><![CDATA[układ z lewą kolumną]]></pl>
         </locale>
 
-        <locale name="noHeaderRightSidebar.text">
+        <locale name="showHeaderRightSidebar.text">
             <de><![CDATA[Rrechte Sidebar]]></de>
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>

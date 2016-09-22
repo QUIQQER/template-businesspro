@@ -21,7 +21,7 @@ window.addEvent("domready", function () {
          * Mobile nav:
          * open or close the sub nav
          */
-        var Nav = document.id("navigation");
+        /*var Nav = document.id("navigation");
         var NavButtonOpen = document.getElement(".nav-button-open");
         var NavButtonClose = document.getElement(".nav-button-close");
         var NavButtonDropDown = document.getElements(".fa-chevron-down");
@@ -54,7 +54,7 @@ window.addEvent("domready", function () {
            if (Nav.hasClass("nav-toggle")) {
                Nav.removeClass("nav-toggle");
            }
-        });
+        });*/
 
     });
 

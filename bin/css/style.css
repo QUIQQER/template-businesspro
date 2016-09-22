@@ -137,6 +137,10 @@ input:focus::-moz-placeholder {
     color: rgba(0, 0, 0, 0);
 }
 
+.body-container {
+    position: relative;
+}
+
 /** buttons
  * ========================================================== */
 
@@ -348,10 +352,6 @@ ul.alt {
     padding: 0;
 }
 
-.page-box-prefix-suffix {
-    /*padding-top: 40px;*/
-    /*padding-bottom: 40px;*/
-}
 
 .prefix-suffix-full-width img {
     line-height: 1em;
@@ -414,7 +414,7 @@ ul.alt {
 .header-bar {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.16);
-    position: fixed;
+    position: relative;
     z-index: 100;
     width: 100%;
 }
@@ -460,8 +460,8 @@ ul.alt {
 /** page header navigation
  * ========================================================== */
 
-.nav-button-open {
-    display: none;
+.header-bar-inner-nav {
+    width: 100%;
 }
 
 
@@ -1105,6 +1105,7 @@ footer:hover a {
         right: -100%;
     }
 
+
     .header-bar-inner-logo {
         width: 100%;
         display: inline-flex;
@@ -1570,14 +1571,12 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 /* extra breadcrumb for this template
 /*********************************************************************************/
 
-.breadcrumb-container .page-box-prefix-suffix {
-    padding-bottom: 16px;
-    padding-top: 16px;
-}
 
-.breadcrumb-container {
+.breadcrumb-container.page-content {
     border-bottom: 1px solid #eee;
     color: #8a8a8a;
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 
 .breadcrumb-container .quiqqer-breadcrumb {
