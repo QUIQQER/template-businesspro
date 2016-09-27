@@ -301,6 +301,11 @@
 
         {/if}
 
+        .prefix-suffix-nofull-width .quiqqer-bricks-promoslider-wallpaper .grid-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
     </style>
 
 </head>
@@ -357,7 +362,7 @@
                     {$Brick->create()}
                 </section>
             {else}
-                <div class="
+                <div class="prefix-suffix-nofull-width
                  {if $Brick->getType() == 'QUI\Controls\Breadcrumb'}breadcrumb-container{/if}
                  page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
@@ -385,7 +390,11 @@
             <!-- if full size (bricks settings) -->
             {if $Brick->getSetting( 'brickFullWidth' )}
                 <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
-                    <section class="prefix-suffix-full-width clear-fix page-content">
+                    <section class="prefix-suffix-full-width clear-fix page-content"
+                             {if $Brick->getSetting('promosliderBackground')}
+                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
+                        {/if}>
+
                         {$Brick->create()}
                     </section>
                 </div>
