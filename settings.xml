@@ -36,10 +36,10 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#ffffff</defaultvalue>
                     </conf>
-                    <conf name="navBarShadow">
+                    <!--<conf name="navBarShadow">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>hide</defaultvalue>
-                    </conf>
+                    </conf>-->
 
                     <!-- show header -->
                     <conf name="showHeaderStartPage">
@@ -84,7 +84,7 @@
                     </conf>
 
                     <!-- share -->
-                    <conf name="shareShow">
+                    <!--<conf name="shareShow">
                         <type><![CDATA[bool]]></type>
                         <defaultvalue>1</defaultvalue>
                     </conf>
@@ -99,7 +99,7 @@
                     <conf name="shareGoogle">
                         <type><![CDATA[string]]></type>
                         <defaultvalue></defaultvalue>
-                    </conf>
+                    </conf>-->
 
                     <!-- colors -->
                     <conf name="colorMain">
@@ -313,10 +313,10 @@
                             </title>
 
                             <!-- nav bar height -->
-                            <input conf="templateBusinessPro.settings.navBarHeight" type="number">
+                            <input conf="templateBusinessPro.settings.navBar.Height" type="number">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarHeight.text"
+                                            var="templateBusinessPro.settings.navBar.Height.text"
                                     />
                                 </text>
                             </input>
@@ -355,44 +355,29 @@
                                    type="color">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarMainColor.text"
+                                            var="templateBusinessPro.settings.navBarMainColor.text"
                                     />
                                 </text>
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarMainColor.description"
-                                    />
-                                </description>
                             </input>
                             <input conf="templateBusinessPro.settings.navBarHoverColor"
                                    type="color">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarHoverColor.text"
+                                            var="templateBusinessPro.settings.navBarHoverColor.text"
                                     />
                                 </text>
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarHoverColor.description"
-                                    />
-                                </description>
                             </input>
                             <input conf="templateBusinessPro.settings.navBarFontColor"
                                    type="color">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarFontColor.text"
+                                            var="templateBusinessPro.settings.navBarFontColor.text"
                                     />
                                 </text>
-                                <description>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="template.settings.navBarFontColor.description"
-                                    />
-                                </description>
                             </input>
 
                             <!-- Menu shadow-->
-                            <select conf="templateBusinessPro.settings.navBarShadow">
+                            <!--<select conf="templateBusinessPro.settings.navBarShadow">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
                                             var="templateBusinessPro.settings.navBarShadow.text"
@@ -409,7 +394,7 @@
                                             var="templateBusinessPro.settings.navBarShadow.display"
                                     />
                                 </option>
-                            </select>
+                            </select>-->
                         </settings>
 
 
@@ -418,7 +403,7 @@
                                   name="templateBusinessPro.settings.search">
                             <title>
                                 <locale group="quiqqer/template-businesspro"
-                                        var="settings.search.title"
+                                        var="templateBusinessPro.settings.search.title"
                                 />
                             </title>
 
@@ -426,7 +411,7 @@
                                    type="checkbox">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="settings.searchShow.text"
+                                            var="templateBusinessPro.settings.searchShow.text"
                                     />
                                 </text>
                             </input>
@@ -435,14 +420,14 @@
                                    type="text" class="project-site">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="settings.searchLink.text"
+                                            var="templateBusinessPro.settings.searchLink.text"
                                     />
                                 </text>
                             </input>
                         </settings>
 
                         <!-- share -->
-                        <settings title="templateBusinessPro.settings"
+                        <!--<settings title="templateBusinessPro.settings"
                                   name="templateBusinessPro.settings.share">
                             <title>
                                 <locale group="quiqqer/template-businesspro"
@@ -483,7 +468,7 @@
                                     />
                                 </text>
                             </input>
-                        </settings>
+                        </settings>-->
 
                         <!-- Colors -->
                         <settings title="templateBusinessPro.settings"

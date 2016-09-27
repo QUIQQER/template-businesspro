@@ -197,7 +197,7 @@
         </locale>
 
         <!-- Menu shadow -->
-        <locale name="templateBusinessPro.settings.navBarShadow.text">
+        <!--<locale name="templateBusinessPro.settings.navBarShadow.text">
             <de><![CDATA[Menüschatten]]></de>
             <en><![CDATA[Menu shadow]]></en>
             <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
@@ -211,27 +211,8 @@
             <de><![CDATA[Schatten verbergen]]></de>
             <en><![CDATA[Hide the shadow]]></en>
             <pl><![CDATA[Ukryj]]></pl>
-        </locale>
+        </locale>-->
 
-
-        <!-- Menüposition -->
-        <locale name="templateBusinessPro.settings.navPos.text">
-            <de><![CDATA[Menüposition]]></de>
-            <en><![CDATA[Menu position]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.description">
-            <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
-                             an gleicher Stelle auf der Seite befinden soll.]]></de>
-            <en><![CDATA[Set the menu position]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.fix">
-            <de><![CDATA[fix]]></de>
-            <en><![CDATA[fixed]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.navPos.scroll">
-            <de><![CDATA[scrollbar]]></de>
-            <en><![CDATA[scroll]]></en>
-        </locale>
 
         <!-- Background Color Switcher Prefix -->
         <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
@@ -281,7 +262,7 @@
         <locale name="showHeaderLeftSidebar.text">
             <de><![CDATA[Linke Sidebar]]></de>
             <en><![CDATA[Left sidebar]]></en>
-            <pl><![CDATA[układ z lewą kolumną]]></pl>
+            <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
 
         <locale name="showHeaderRightSidebar.text">
@@ -289,6 +270,7 @@
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
+        
 
         <!-- Header Größe-->
         <locale name="templateBusinessPro.header.settings.height.text">
@@ -327,6 +309,81 @@
             <en><![CDATA[Bottom]]></en>
         </locale>
 
+
+        <!-- Navbar settings -->
+        <locale name="templateBusinessPro.settings.navBar.title">
+            <de><![CDATA[Navigationsbar Einstellungen]]></de>
+            <en><![CDATA[Nav bar settings]]></en>
+            <pl><![CDATA[Ustawienia paska nawigacyjnego]]></pl>
+        </locale>
+
+        <locale name="templateBusinessPro.settings.navBar.Height.text">
+            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
+            <en><![CDATA[Nav bar Height (in pixel)]]></en>
+            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBar.Height.text">
+            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
+            <en><![CDATA[Nav bar Height (in pixel)]]></en>
+            <pl><![CDATA[Wysokość (w pikselach)]]></pl>
+        </locale>
+        <!-- Menüposition -->
+        <locale name="templateBusinessPro.settings.navPos.text">
+            <de><![CDATA[Menüposition]]></de>
+            <en><![CDATA[Menu position]]></en>
+            <pl><![CDATA[Pasek nawigacyjny]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.description">
+            <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
+                             an gleicher Stelle auf der Seite befinden soll.]]></de>
+            <en><![CDATA[Set the menu position]]></en>
+            <pl><![CDATA[Ustawienie pozwala określić, czy pasek z menu będzie "przylepiony" na górze,
+                czy przewijany wraz ze stroną]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.fix">
+            <de><![CDATA[fix]]></de>
+            <en><![CDATA[fixed]]></en>
+            <pl><![CDATA[przylepiony]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.scroll">
+            <de><![CDATA[scrollbar]]></de>
+            <en><![CDATA[scroll]]></en>
+            <pl><![CDATA[przewijany]]></pl>
+        </locale>
+        <!-- Navbar colors -->
+        <locale name="templateBusinessPro.settings.navBarMainColor.text">
+            <de><![CDATA[Menü Hintergrundfarbe]]></de>
+            <en><![CDATA[Nav background color]]></en>
+            <pl><![CDATA[Kolor tła nawigacji]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBarHoverColor.text">
+            <de><![CDATA[Menü Mouse over color]]></de>
+            <en><![CDATA[Nav mouse over color]]></en>
+            <pl><![CDATA[Kolor tła po najechaniu myszką]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBarFontColor.text">
+            <de><![CDATA[Menü Schriftfarbe]]></de>
+            <en><![CDATA[Nav font color]]></en>
+            <pl><![CDATA[Kolor czcionki]]></pl>
+        </locale>
+
+
+        <!-- Share -->
+        <locale name="templateBusinessPro.settings.search.title">
+            <de><![CDATA[Suchen-Button]]></de>
+            <en><![CDATA[Search button]]></en>
+            <pl><![CDATA[Wyszukiwanie]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.searchShow.text">
+            <de><![CDATA[Suche in Navigationsmenü anzeigen]]></de>
+            <en><![CDATA[Show search button in nav bar]]></en>
+            <pl><![CDATA[Pokarz przycisk wyszukiwania]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.searchLink.text">
+            <de><![CDATA[Suchseite]]></de>
+            <en><![CDATA[Search page]]></en>
+            <pl><![CDATA[Strona z wyszukiwarką]]></pl>
+        </locale>
 
 
         <!-- Colors -->
