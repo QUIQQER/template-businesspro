@@ -619,6 +619,31 @@
                     </attributes>
                 </style>
 
+                <!-- Template Button Small -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="templateButton.small" />
+                    <attributes>
+                        <attribute name="class">template-button template-button-small</attribute>
+                    </attributes>
+                </style>
+                <!-- Template Button medium -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="templateButton.medium" />
+                    <attributes>
+                        <attribute name="class">template-button template-button-medium</attribute>
+                    </attributes>
+                </style>
+                <!-- Template Button Big -->
+                <style element="a">
+                    <locale group="quiqqer/template-businesspro"
+                            var="templateButton.big" />
+                    <attributes>
+                        <attribute name="class">template-button template-button-big</attribute>
+                    </attributes>
+                </style>
+
             </styles>
         </wysiwyg>
 

@@ -27,7 +27,7 @@ html, body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #6d6d6d;
     line-height: 1.65em;
@@ -461,16 +461,21 @@ ul.alt {
  * ========================================================== */
 
 .quiqqer-menu-megaMenu-list-item {
+    font-weight: bold;
     padding: 0 10px !important;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
 .quiqqer-menu-megaMenu {
     width: 100%;
 }
 
-.quiqqer-menu-megaMenu-list-item {
-    font-weight: bold;
+.quiqqer-menu-megaMenu .fa-angle-down {
+    font-size: 1.2em;
+    margin-left: 4px;
 }
+
 
 /** page header navigation
  * ========================================================== */
@@ -1689,6 +1694,28 @@ a.link-slide-right-grey:hover::before,
 a.link-slide-right-grey:focus::before {
     transform: scaleY(0.718) translateX(0px);
 }
+
+/* Template Button */
+
+a.template-button {
+    padding: 1em 2em;
+    background: #54ab5f;
+    font-weight: bold;
+    color: #fff;
+}
+
+a.template-button.template-button-small {
+    font-size: 1em;
+}
+
+a.template-button.template-button-medium {
+    font-size: 1.5em;
+}
+
+a.template-button.template-button-big {
+    font-size: 2em;
+}
+
 
 
 /* extra grid class  */
