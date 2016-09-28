@@ -178,7 +178,7 @@ $Engine->assign(array(
             ? 1 : 0,
     'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
     'BricksManager' => \QUI\Bricks\Manager::init(),
-    'showHeader'      => $showHeader
+    'showHeader'    => $showHeader
 ));
 
 
@@ -221,15 +221,17 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
 ));
 
 $MegaMenu->prependHTML('<div class="header-bar-inner-logo">
-        <a href="' . '#' . '" class="page-header-logo">
+        <a href="' . $Project->firstChild()->getUrl() . '" class="page-header-logo">
          <img src="' . $Project->getMedia()->getLogo() . '"/></a>
      </div>');
 
-$MegaMenu->appendHTML('<div class="header-bar-search">
+if ($Project->getConfig('templateBusinessPro.settings.searchShow')) {
+    $MegaMenu->appendHTML('<div class="header-bar-search">
         <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
             <i class="fa fa-search header-bar-search-icon"></i>
         </a>    
     </div>');
+}
 
 $Engine->assign(array(
     'MegaMenu' => $MegaMenu

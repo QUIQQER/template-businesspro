@@ -70,7 +70,7 @@
             <!-- specific type areas -->
             <layouts>
 
-                <layout layout="layout/startpage">
+                <layout layout="layout/startPage">
                     <area name="prefixContentBricks" inheritance="1">
                         <title>
                             <locale group="quiqqer/template-businesspro"
