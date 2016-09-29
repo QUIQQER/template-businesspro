@@ -16,21 +16,22 @@ use QUI;
  */
 class Utils
 {
+    /**
+     * @param array $params
+     * @return array
+     */
     public static function getConfig($params)
     {
+        try {
+            return QUI\Cache\Manager::get('quiqqer/templateBusinessPro');
+        } catch (QUI\Exception $Exception) {
+        }
+
+        $config = array();
+
         $Project  = $params['Project'];
         $Site     = $params['Site'];
         $Template = $params['Template'];
-        $Engine   = $params['Engine'];
-
-        /**
-         * Emotion
-         */
-
-        QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
-
-        QUI\Utils\Site::setRecursivAttribute($Site, 'layout');
-
 
         /**
          * no header?
@@ -111,9 +112,7 @@ class Utils
             $colorMainContentFont = $Project->getConfig('templateBusinessPro.settings.colorMainContentFont');
         }
 
-        $colorMainLighter = \QUI\Utils\Convert::colorBrightness($colorMain, 0.7);
-
-        $Engine->assign(array(
+        $config += array(
             'Convert'               => new \QUI\Utils\Convert(),
             'colorFooterBackground' => $colorFooterBackground,
             'colorFooterFont'       => $colorFooterFont,
@@ -139,20 +138,17 @@ class Utils
             'shareTwitter'          => $Project->getConfig('templateBusinessPro.settings.shareTwitter'),
             'shareGoogle'           => $Project->getConfig('templateBusinessPro.settings.shareGoogle'),
             'navPos'                => $Project->getConfig('templateBusinessPro.settings.navPos')
-        ));
+        );
 
         /**
          * own site type?
          */
 
-        $Engine->assign(array(
-            'ownSideType'   =>
-                strpos($Site->getAttribute('type'), 'quiqqer/template-businesspro:') !== false
-                    ? 1 : 0,
+        $config += array(
             'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
             'BricksManager' => \QUI\Bricks\Manager::init(),
             'showHeader'    => $showHeader
-        ));
+        );
 
 
         /**
@@ -163,7 +159,7 @@ class Utils
 
         switch ($Template->getLayoutType()) {
             case 'layout/startpage':
-                $bodyClass = 'homepage';
+                $bodyClass = 'startpage';
                 break;
 
             case 'layout/leftSidebar':
@@ -178,36 +174,38 @@ class Utils
                 $bodyClass = 'no-sidebar';
         }
 
-        $Engine->assign('bodyClass', $bodyClass);
-
-        $Engine->assign(
-            'typeClass',
-            'type-' . str_replace(array('/', ':'), '-', $Site->getAttribute('type'))
+        $config += array(
+            'typeClass' => 'type-' . str_replace(array('/', ':'), '-', $Site->getAttribute('type')),
+            'bodyClass' => $bodyClass
         );
 
         /**
          * Mega menu
          */
 
-        $MegaMenu = new QUI\Menu\MegaMenu(array(
-            'showStart' => false
-        ));
+        $MegaMenu = $params['MegaMenu'];
 
         $MegaMenu->prependHTML('<div class="header-bar-inner-logo">
-        <a href="' . $Project->firstChild()->getUrl() . '" class="page-header-logo">
+        <a href="' . '#' . '" class="page-header-logo">
          <img src="' . $Project->getMedia()->getLogo() . '"/></a>
-     </div>');
+    </div>');
 
-        if ($Project->getConfig('templateBusinessPro.settings.searchShow')) {
-            $MegaMenu->appendHTML('<div class="header-bar-search">
+        $MegaMenu->appendHTML('<div class="header-bar-search">
         <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
             <i class="fa fa-search header-bar-search-icon"></i>
         </a>    
     </div>');
-        }
 
-        $Engine->assign(array(
+        $config += array(
             'MegaMenu' => $MegaMenu
-        ));
+        );
+
+
+        QUI\Cache\Manager::set(
+            'quiqqer/templateBusinessPro',
+            $config
+        );
+
+        return $config;
     }
 }
