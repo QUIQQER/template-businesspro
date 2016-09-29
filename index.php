@@ -38,15 +38,10 @@ switch ($Template->getLayoutType()) {
  */
 
 $navBarMainColor  = '#2d4d88';
-$navBarHoverColor = '#4d6d97';
 $navBarFontColor  = '#ffffff';
 
 if ($Project->getConfig('templateBusinessPro.settings.navBarMainColor')) {
     $navBarMainColor = $Project->getConfig('templateBusinessPro.settings.navBarMainColor');
-}
-
-if ($Project->getConfig('templateBusinessPro.settings.navBarHoverColor')) {
-    $navBarHoverColor = $Project->getConfig('templateBusinessPro.settings.navBarHoverColor');
 }
 
 if ($Project->getConfig('templateBusinessPro.settings.navBarFontColor')) {
@@ -93,7 +88,10 @@ if ($Project->getConfig('templateBusinessPro.settings.colorMainContentFont')) {
     $colorMainContentFont = $Project->getConfig('templateBusinessPro.settings.colorMainContentFont');
 }
 
+$colorMainLighter = \QUI\Utils\Convert::colorBrightness($colorMain, 0.7);
+
 $Engine->assign(array(
+    'Convert'               => new \QUI\Utils\Convert(),
     'colorFooterBackground' => $colorFooterBackground,
     'colorFooterFont'       => $colorFooterFont,
     'colorMain'             => $colorMain,
@@ -102,7 +100,6 @@ $Engine->assign(array(
     'colorMainContentBg'    => $colorMainContentBg,
     'colorMainContentFont'  => $colorMainContentFont,
     'navBarMainColor'       => $navBarMainColor,
-    'navBarHoverColor'      => $navBarHoverColor,
     'navBarFontColor'       => $navBarFontColor,
     'navBarHeight'          => (int)$Project->getConfig('templateBusinessPro.settings.navBarHeight'),
     'pageMaxWidth'          => $Project->getConfig('templateBusinessPro.settings.pageMaxWidth'),

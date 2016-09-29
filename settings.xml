@@ -359,14 +359,6 @@
                                     />
                                 </text>
                             </input>
-                            <input conf="templateBusinessPro.settings.navBarHoverColor"
-                                   type="color">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarHoverColor.text"
-                                    />
-                                </text>
-                            </input>
                             <input conf="templateBusinessPro.settings.navBarFontColor"
                                    type="color">
                                 <text>

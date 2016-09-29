@@ -356,11 +356,6 @@
             <en><![CDATA[Nav background color]]></en>
             <pl><![CDATA[Kolor tła nawigacji]]></pl>
         </locale>
-        <locale name="templateBusinessPro.settings.navBarHoverColor.text">
-            <de><![CDATA[Menü Mouse over color]]></de>
-            <en><![CDATA[Nav mouse over color]]></en>
-            <pl><![CDATA[Kolor tła po najechaniu myszką]]></pl>
-        </locale>
         <locale name="templateBusinessPro.settings.navBarFontColor.text">
             <de><![CDATA[Menü Schriftfarbe]]></de>
             <en><![CDATA[Nav font color]]></en>

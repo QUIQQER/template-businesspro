@@ -39,7 +39,6 @@
          * Farbeinstellungen
          */
 
-
         /* nav bar */
         .header-bar,
         .header-bar-inner-nav {
@@ -51,7 +50,7 @@
         .header-bar-search:hover,
         .quiqqer-menu-megaMenu-list-item-menu.control-background,
         .quiqqer-menu-megaMenu-list-item:hover {
-            background: {$navBarHoverColor};
+            background: {$Convert->colorBrightness($navBarMainColor, 0.9)};
         }
 
         .header-bar,
@@ -93,7 +92,6 @@
         .hide-on-desktop .quiqqer-menu-megaMenu-mobile {
             line-height: {$navBarHeight}px;
         }
-        /***************/
 
         .content-switcher-content h2,
         .quiqqer-fa-levels-icon:hover,
@@ -129,10 +127,15 @@
         .button,
         .page-content .button,
         button:disabled,
-        button:disabled:hover {
+        button:disabled:hover,
+        a.template-button {
             background-color: {$colorMain};
             color: {$buttonFontColor};
             border: 2px solid {$colorMain};
+        }
+
+        a.template-button:hover {
+            background-color: {*$Convert->colorBrightness($colorMain, 0.7)*}
         }
 
         #page .button.special {

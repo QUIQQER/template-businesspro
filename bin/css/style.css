@@ -1699,9 +1699,10 @@ a.link-slide-right-grey:focus::before {
 
 a.template-button {
     padding: 1em 2em;
-    background: #54ab5f;
     font-weight: bold;
-    color: #fff;
+    position: relative;
+    margin: 6px 10px;
+    transition: all 0.2s;
 }
 
 a.template-button.template-button-small {
@@ -1714,6 +1715,10 @@ a.template-button.template-button-medium {
 
 a.template-button.template-button-big {
     font-size: 2em;
+}
+
+a.template-button.template-button-custom {
+
 }
 
 

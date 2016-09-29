@@ -22,12 +22,13 @@
         "quiqqer\/bricks": "*@dev",
         "quiqqer\/fontawesome": "*@dev",
         "quiqqer\/menu": "1.*",
-        "quiqqer\/unsemantic": "*@dev"
+        "quiqqer\/unsemantic": "*@dev",
+        "quiqqer\/utils": ">=1.7|dev-dev"
     },
 
     "autoload": {
-        "psr-0": {
-            "QUI": "src\/"
+        "psr-4": {
+            "QUI\\TemplateBusinessPro\\": "src/QUI/TemplateBusinessPro"
         }
     }
 }
