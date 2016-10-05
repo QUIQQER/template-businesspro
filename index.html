@@ -355,6 +355,9 @@
                  page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
                         <section>
+                            {if $Brick->getSetting( 'showBrickTitle' )}
+                            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                            {/if}
                             {$Brick->create()}
                         </section>
                     </div>
@@ -391,6 +394,9 @@
                 {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
                         <section>
+                            {if $Brick->getSetting( 'showBrickTitle' )}
+                            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                            {/if}
                             {$Brick->create()}
                         </section>
                     </div>

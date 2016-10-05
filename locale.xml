@@ -228,7 +228,7 @@
 
         <!-- Background Color Switcher Prefix -->
         <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
-            <de><![CDATA[Prefix Hintergrundfarbe wechesln]]></de>
+            <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
             <en><![CDATA[Swich background color]]></en>
         </locale>
         <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.description">
@@ -278,7 +278,7 @@
         </locale>
 
         <locale name="showHeaderRightSidebar.text">
-            <de><![CDATA[Rrechte Sidebar]]></de>
+            <de><![CDATA[Rechte Sidebar]]></de>
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>

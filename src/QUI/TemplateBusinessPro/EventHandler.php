@@ -17,12 +17,12 @@ class EventHandler
     /**
      * Clear system cache on project save
      *
-     * @return QUI\Cache\Manager | QUI\Exception
+     * @return void
      */
     public static function onProjectConfigSave()
     {
         try {
-            return QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
+            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
         } catch (QUI\Exception $Exception) {
         }
     }

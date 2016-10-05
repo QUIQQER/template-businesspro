@@ -6,6 +6,9 @@
 {if !empty( $prefixContentBricks )}
 {foreach from=$prefixContentBricks item=Brick}
 <div class="page-content">
+    {if $Brick->getSetting( 'showBrickTitle' )}
+    <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+    {/if}
     {$Brick->create()}
 </div>
 {/foreach}
@@ -34,6 +37,9 @@ $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
 <div class="page-content">
+    {if $Brick->getSetting( 'showBrickTitle' )}
+    <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+    {/if}
     {$Brick->create()}
 </div>
 {/foreach}
