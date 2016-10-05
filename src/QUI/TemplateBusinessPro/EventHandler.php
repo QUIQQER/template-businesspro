@@ -10,7 +10,7 @@ use QUI;
 /**
  * Event Class
  *
- *@author www.pcsg.de (Michael Danielczok)
+ * @author www.pcsg.de (Michael Danielczok)
  */
 class EventHandler
 {
