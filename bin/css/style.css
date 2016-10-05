@@ -709,7 +709,7 @@ h1, h2, h3, h4, h5 {
     color: #444;
     line-height: 1.15em;
     font-weight: 500;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.8em;
 }
 
 header > h1,
@@ -722,6 +722,10 @@ header > h4 {
 
 h1 {
     font-size: 48px;
+}
+
+h1.brick-title {
+    text-align: center;
 }
 
 h2 {

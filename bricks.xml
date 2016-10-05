@@ -7,7 +7,14 @@
             <settings>
                 <setting name="brickFullWidth" type="checkbox">
                     <locale group="quiqqer/template-businesspro"
-                            var="headerSuffix.fullWidth"/>
+                            var="brickFullWidth"/>
+                </setting>
+            </settings>
+
+            <settings>
+                <setting name="showBrickTitle">
+                    <locale group="quiqqer/template-businesspro"
+                            var="showBrickTitle"/>
                 </setting>
             </settings>
         </brick>

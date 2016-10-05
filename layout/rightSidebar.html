@@ -8,6 +8,9 @@
     {if !empty( $prefixContentBricks )}
     {foreach from=$prefixContentBricks item=Brick}
     <div class="page-content">
+        {if $Brick->getSetting( 'showBrickTitle' )}
+        <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+        {/if}
         {$Brick->create()}
     </div>
     {/foreach}
@@ -36,7 +39,10 @@
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
     <div class="page-content quiqqer-content">
-            {$Brick->create()}
+        {if $Brick->getSetting( 'showBrickTitle' )}
+        <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+        {/if}
+        {$Brick->create()}
     </div>
     {/foreach}
     {/if}
@@ -46,6 +52,9 @@
     {if !empty( $rightSideBar)}
         {foreach from=$rightSideBar item=Brick}
         <div class="page-content">
+            {if $Brick->getSetting( 'showBrickTitle' )}
+            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+            {/if}
             {$Brick->create()}
         </div>
         {/foreach}

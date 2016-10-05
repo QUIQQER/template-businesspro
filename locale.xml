@@ -2,7 +2,7 @@
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
 
-        <!-- template -->
+        <!-- template bricks -->
         <locale name="navbar.search.text">
             <de><![CDATA[Suchen]]></de>
             <en><![CDATA[Search]]></en>
@@ -13,6 +13,18 @@
             <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
             <en><![CDATA[Set the background color (only by full width)]]></en>
             <pl><![CDATA[Wybierz kolor tła (tylko przy pełnej szerokości)]]></pl>
+        </locale>
+
+        <locale name="showBrickTitle">
+            <de><![CDATA[Titel anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+            <pl><![CDATA[Pokaż tytuł]]></pl>
+        </locale>
+
+        <locale name="brickFullWidth">
+            <de><![CDATA[Volle Breite]]></de>
+            <en><![CDATA[Full width]]></en>
+            <pl><![CDATA[Pełna szerokość]]></pl>
         </locale>
 
         <!-- areas -->

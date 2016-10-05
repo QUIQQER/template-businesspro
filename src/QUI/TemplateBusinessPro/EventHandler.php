@@ -1,17 +1,24 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: michael
- * Date: 04.10.16
- * Time: 09:37
+ * This file contains \QUI\TemplateBusinessPro\EventHandler
  */
 
 namespace QUI\TemplateBusinessPro;
 
 use QUI;
 
+/**
+ * Event Class
+ *
+ *@author www.pcsg.de (Michael Danielczok)
+ */
 class EventHandler
 {
+    /**
+     * Clear system cache on project save
+     *
+     * @return QUI\Cache\Manager | QUI\Exception
+     */
     public static function onProjectConfigSave()
     {
         try {
