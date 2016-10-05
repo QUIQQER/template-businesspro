@@ -652,21 +652,17 @@ a.header-bar-search-link:hover {
 /** page content
  * ========================================================== */
 
-/*.grid-container {
-    outline: 2px solid lightslategray;
-}*/
-
-/*.full-size {
-    width: 100%;
-}*/
-
 .page-content {
     padding-top: 3em;
     padding-bottom: 3em;
 }
 
-.page-content .content-template {
-    margin-top: 20px;
+.content-body {
+    padding-bottom: 3em;
+}
+
+.page-content-site-title {
+    padding-bottom: 1em;
 }
 
 .content-body hr {
@@ -1395,6 +1391,10 @@ a.quiqqer-tags-search-result-entry-link:hover div,
 a.quiqqer-tags-search-result-entry-link:hover h4,
 .quiqqer-tags-list-result-entry a:hover h3 {
     text-decoration: underline;
+}
+
+.page-content a.news-entry-next {
+    float: right;
 }
 
 /*********************************************************************************/
