@@ -313,7 +313,7 @@
                             </title>
 
                             <!-- nav bar height -->
-                            <input conf="templateBusinessPro.settings.navBar.Height" type="number">
+                            <input conf="templateBusinessPro.settings.navBarHeight" type="number">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
                                             var="templateBusinessPro.settings.navBar.Height.text"
