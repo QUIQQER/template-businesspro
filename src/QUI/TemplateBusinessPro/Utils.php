@@ -29,6 +29,7 @@ class Utils
 
         $config = array();
 
+        /* @var $Project QUI\Projects\Project */
         $Project  = $params['Project'];
         $Site     = $params['Site'];
         $Template = $params['Template'];
@@ -185,16 +186,20 @@ class Utils
 
         $MegaMenu = $params['MegaMenu'];
 
-        $MegaMenu->prependHTML('<div class="header-bar-inner-logo">
-        <a href="' . '#' . '" class="page-header-logo">
-         <img src="' . $Project->getMedia()->getLogo() . '"/></a>
-    </div>');
+        $MegaMenu->prependHTML(
+            '<div class="header-bar-inner-logo">
+                <a href="' . URL_DIR . '" class="page-header-logo">
+                <img src="' . $Project->getMedia()->getLogo() . '"/></a>
+            </div>'
+        );
 
-        $MegaMenu->appendHTML('<div class="header-bar-search">
-        <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
-            <i class="fa fa-search header-bar-search-icon"></i>
-        </a>    
-    </div>');
+        $MegaMenu->appendHTML(
+            '<div class="header-bar-search">
+                <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
+                    <i class="fa fa-search header-bar-search-icon"></i>
+                </a>    
+            </div>'
+        );
 
         $config += array(
             'MegaMenu' => $MegaMenu
