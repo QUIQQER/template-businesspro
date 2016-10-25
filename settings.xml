@@ -116,11 +116,11 @@
                     </conf>
                     <conf name="colorFooterFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#555555</defaultvalue>
+                        <defaultvalue>#333333</defaultvalue>
                     </conf>
                     <conf name="colorFooterLinks">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#555555</defaultvalue>
+                        <defaultvalue>#333333</defaultvalue>
                     </conf>
                     <conf name="colorMainContentBg">
                         <type><![CDATA[string]]></type>
@@ -128,7 +128,7 @@
                     </conf>
                     <conf name="colorMainContentFont">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>#555555</defaultvalue>
+                        <defaultvalue>#333333</defaultvalue>
                     </conf>
                 </section>
             </config>

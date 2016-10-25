@@ -911,6 +911,7 @@ h2.quiqqer-navigation-title-style {
     /*margin-top: 80px;*/
     padding: 80px 0 0;
     width: 100%;
+    color: #555;
 }
 
 .page-footer-brick {
@@ -931,12 +932,12 @@ h2.quiqqer-navigation-title-style {
     padding: 0;
 }
 
-.page-footer h2,
+/*.page-footer h2,
 .page-footer h3,
 .page-footer h4 {
     font-size: 1.7em;
     margin: 0 0 1em;
-}
+}*/
 
 .page-footer label {
     font-size: 0.8em;
@@ -1123,11 +1124,11 @@ footer:hover a {
         font-size: 1.2em;
     }
 
-    .page-footer h2,
+    /*.page-footer h2,
     .page-footer h3,
     .page-footer h4 {
         margin: 0.8em 0 1em;
-    }
+    }*/
 
     .page-footer-left {
         padding-right: 0;

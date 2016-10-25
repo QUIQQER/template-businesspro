@@ -10,7 +10,7 @@
     {pace}
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,800,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,300italic' rel='stylesheet' type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
@@ -101,11 +101,13 @@
             color: {$colorMain};
         }
 
+
         .quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
             color: {$colorMain};
         }
 
         .mainColor,
+        .mainColorHover:hover,
         .breadcrumb-container .quiqqer-breadcrumb ul li:last-child a span:last-child {
             color: {$colorMain};
         }
@@ -147,7 +149,8 @@
             border: 3px solid {$colorMain};
         }
 
-        body {
+        body,
+        .mainFontColor {
             color: {$colorMainContentFont} !important;
         }
 
