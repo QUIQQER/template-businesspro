@@ -21,6 +21,7 @@
         "quiqqer\/quiqqer": "*@dev",
         "quiqqer\/bricks": "*@dev",
         "quiqqer\/fontawesome": "*@dev",
+        "quiqqer\/sitetypes": "*@dev",
         "quiqqer\/menu": "1.*",
         "quiqqer\/unsemantic": "*@dev",
         "quiqqer\/utils": ">=1.7|dev-dev",
