@@ -381,7 +381,8 @@ ul.alt {
 
 .header-img {
     display: block;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -474,6 +475,16 @@ ul.alt {
 .quiqqer-menu-megaMenu .fa-angle-down {
     font-size: 1.2em;
     margin-left: 4px;
+}
+
+.quiqqer-menu-megaMenu-children-image-entry-img {
+    background-size: auto !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.quiqqer-menu-megaMenu-children-image-entry a:hover .quiqqer-menu-megaMenu-children-image-entry-img {
+    box-shadow: 0 0 10px -1px #333;
+    text-shadow: 0 0 10px -5px #333;
 }
 
 

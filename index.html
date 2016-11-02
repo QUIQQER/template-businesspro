@@ -119,7 +119,8 @@
 
 
         #page input[type='checkbox']:checked  + label::before,
-        #page input[type='radio']:checked  + label::before {
+        #page input[type='radio']:checked  + label::before,
+        .pace .pace-progress {
             background-color: {$colorMain};
         }
 
@@ -329,9 +330,8 @@
 
     <!-- page -->
     <div class="body-container">
-
         <!-- header -->
-        {if $showHeader}
+        {if $showHeader && !$Site->getAttribute('templateBusinessPro.dontShowEmotion')}
         {strip}
         <header class="page-header">
             {if $Site->getAttribute('image_emotion')}

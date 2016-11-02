@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+    <!-- global attributes -->
+    <attributes>
+        <attribute>templateBusinessPro.dontShowEmotion</attribute>
+    </attributes>
+
+    <settings>
+        <category name="templateBusinessPro.siteSettings">
+            <settings>
+                <title>
+                    <locale group="quiqqer/template-businesspro"
+                            var="templateBusinessPro.siteSettings"/>
+                </title>
+
+                <input conf="templateBusinessPro.dontShowEmotion" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/template-businesspro"
+                                var="templateBusinessPro.siteSettings.dontShowEmotion"/>
+                    </text>
+                </input>
+            </settings>
+        </category>
+    </settings>
+
 
     <!-- layouts -->
     <layouts>

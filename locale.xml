@@ -118,7 +118,17 @@
             <en><![CDATA[Brickarea before the footer]]></en>
         </locale>
 
-
+        <!-- template site settings -->
+        <locale name="templateBusinessPro.siteSettings">
+            <de><![CDATA[Template Business Pro: Einstellungen]]></de>
+            <en><![CDATA[Template Business Pro: settings]]></en>
+            <pl><![CDATA[Template Business Pro: ustawienia]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.siteSettings.dontShowEmotion">
+            <de><![CDATA[Header Bild nicht anzeigen]]></de>
+            <en><![CDATA[Dont show header picture]]></en>
+            <pl><![CDATA[Nie pokazuj zdjęcia nagłówka]]></pl>
+        </locale>
 
 
         <locale name="package.title">
