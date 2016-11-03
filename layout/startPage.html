@@ -17,6 +17,7 @@
     {if $Brick->getSetting( 'showBrickTitle' )}
     <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
     {/if}
+    {*$Brick->setSetting('showBrickTitle', false)*}
     {$Brick->create()}
 </section>
 {/foreach}
