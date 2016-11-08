@@ -16,6 +16,7 @@
     {/foreach}
     {/if}
 
+    {if $Site->getAttribute('content')}
     <div role="main" class="page-content">
         {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
         $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
@@ -35,6 +36,7 @@
 
         {$Template->getBody()}
     </div>
+    {/if}
 
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
@@ -52,9 +54,7 @@
     {if !empty( $rightSideBar)}
         {foreach from=$rightSideBar item=Brick}
         <div class="page-content">
-            {if $Brick->getSetting( 'showBrickTitle' )}
-            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
-            {/if}
+            {assign var=brickTitle value=$Brick->setSetting('showTitle', true)}
             {$Brick->create()}
         </div>
         {/foreach}

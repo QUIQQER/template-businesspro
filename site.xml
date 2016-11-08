@@ -2,7 +2,7 @@
 <site>
     <!-- global attributes -->
     <attributes>
-        <attribute>templateBusinessPro.dontShowEmotion</attribute>
+        <attribute>templateBusinessPro.showEmotion</attribute>
     </attributes>
 
     <settings>
@@ -13,10 +13,10 @@
                             var="templateBusinessPro.siteSettings"/>
                 </title>
 
-                <input conf="templateBusinessPro.dontShowEmotion" type="checkbox">
+                <input conf="templateBusinessPro.showEmotion" type="checkbox">
                     <text>
                         <locale group="quiqqer/template-businesspro"
-                                var="templateBusinessPro.siteSettings.dontShowEmotion"/>
+                                var="templateBusinessPro.siteSettings.showEmotion"/>
                     </text>
                 </input>
             </settings>

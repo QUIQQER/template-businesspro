@@ -16,9 +16,9 @@
         </locale>
 
         <locale name="showBrickTitle">
-            <de><![CDATA[Titel anzeigen]]></de>
-            <en><![CDATA[Show title]]></en>
-            <pl><![CDATA[Pokaż tytuł]]></pl>
+            <de><![CDATA[Baustein Titel]]></de>
+            <en><![CDATA[Brick title]]></en>
+            <pl><![CDATA[Tytuł]]></pl>
         </locale>
 
         <locale name="brickFullWidth">
@@ -124,10 +124,10 @@
             <en><![CDATA[Template Business Pro: settings]]></en>
             <pl><![CDATA[Template Business Pro: ustawienia]]></pl>
         </locale>
-        <locale name="templateBusinessPro.siteSettings.dontShowEmotion">
-            <de><![CDATA[Header Bild nicht anzeigen]]></de>
-            <en><![CDATA[Dont show header picture]]></en>
-            <pl><![CDATA[Nie pokazuj zdjęcia nagłówka]]></pl>
+        <locale name="templateBusinessPro.siteSettings.showEmotion">
+            <de><![CDATA[Header Bild anzeigen]]></de>
+            <en><![CDATA[Show header picture]]></en>
+            <pl><![CDATA[Pokaż obrazek nagłówka]]></pl>
         </locale>
 
 

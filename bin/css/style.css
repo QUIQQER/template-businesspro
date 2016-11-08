@@ -383,8 +383,12 @@ ul.alt {
     z-index: 2;
 }*/
 
+
+
 .page-header {
     padding: 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
 }
 
 .header-img {
@@ -393,6 +397,27 @@ ul.alt {
     max-width: 100%;
     object-fit: cover;
 }
+
+.page-header-text-title span,
+.page-header-text-short span {
+    color: #fff;
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+h1.page-header-text-title {
+    padding: 0;
+}
+
+.page-header-container {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 20%;
+}
+
 
 .page-header-logo {
     align-items: center;
@@ -1513,8 +1538,8 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .breadcrumb-container.page-content {
     border-bottom: 1px solid #eee;
     color: #8a8a8a;
-    padding-bottom: 16px;
-    padding-top: 16px;
+    padding-bottom: 14px;
+    padding-top: 14px;
 }
 
 .breadcrumb-container .quiqqer-breadcrumb {
@@ -1538,9 +1563,9 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
     padding-left: 0;
 }
 
-.quiqqer-breadcrumb a {
+.template-breadcrumb .quiqqer-breadcrumb a {
     color: #8a8a8a;
-    padding: 0 2px;
+    padding: 0 10px;
 }
 
 .quiqqer-breadcrumb a:hover span:last-child {
@@ -1552,7 +1577,7 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 }
 
 .quiqqer-breadcrumb span:first-child {
-    margin-right: 2px;
+    margin-right: 6px;
 }
 
 @media screen and (max-width: 1024px) {

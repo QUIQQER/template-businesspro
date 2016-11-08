@@ -329,22 +329,41 @@
         </div>
     </div>
 
-
-
     <!-- page -->
     <div class="body-container">
         <!-- header -->
-        {if $showHeader && !$Site->getAttribute('templateBusinessPro.dontShowEmotion')}
+        {if $showHeader && $Site->getAttribute('templateBusinessPro.showEmotion')}
         {strip}
         <header class="page-header">
             {if $Site->getAttribute('image_emotion')}
                 {image src=$Site->getAttribute('image_emotion') class="header-img"}
             {/if}
+            <div class="page-header-container grid-container">
+                <h1 class="page-header-text-title">
+                    <span>{$Site->getAttribute('title')}</span>
+                </h1>
+
+                {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
+                <p class="page-header-text-short">
+                    <span>{$Site->getAttribute('short')}</span>
+                </p>
+                {/if}
+            </div>
         </header>
         {/strip}
         {/if}
 
         <!-- header suffix -->
+        <!-- breadcrumb -->
+        {if $showBreadcrumb}
+        <div class="prefix-suffix-nofull-width breadcrumb-container page-content">
+            <div class="grid-container">
+                <section class="template-breadcrumb">
+                    {$Breadcrumb->create()}
+                </section>
+            </div>
+        </div>
+        {/if}
         {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
         {foreach $headerSuffix as $Brick}
 

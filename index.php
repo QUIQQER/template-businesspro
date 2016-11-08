@@ -16,13 +16,19 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
 ));
 
 /**
+ * Breadcrumb
+ */
+$Breadcrumb = new QUI\Controls\Breadcrumb();
+
+/**
  * Template config
  */
 $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig(array(
-    'Project'  => $Project,
-    'Site'     => $Site,
-    'Template' => $Template,
-    'MegaMenu' => $MegaMenu
+    'Project'    => $Project,
+    'Site'       => $Site,
+    'Template'   => $Template,
+    'MegaMenu'   => $MegaMenu,
+    'Breadcrumb' => $Breadcrumb
 ));
 
 $Engine->assign($templateSettings);

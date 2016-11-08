@@ -59,6 +59,30 @@ class Utils
         }
 
         /**
+         * no breadcrumb?
+         */
+
+        $showBreadcrumb = false;
+
+        switch ($Template->getLayoutType()) {
+            case 'layout/startPage':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbStartPage');
+                break;
+
+            case 'layout/noSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbNoSidebar');
+                break;
+
+            case 'layout/rightSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbRightSidebar');
+                break;
+
+            case 'layout/leftSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbLeftSidebar');
+                break;
+        }
+
+        /**
          * nav bar colors
          */
 
@@ -148,7 +172,8 @@ class Utils
         $config += array(
             'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
             'BricksManager' => \QUI\Bricks\Manager::init(),
-            'showHeader'    => $showHeader
+            'showHeader'    => $showHeader,
+            'showBreadcrumb' => $showBreadcrumb
         );
 
 
@@ -205,6 +230,9 @@ class Utils
             'MegaMenu' => $MegaMenu
         );
 
+        $config += array(
+            'Breadcrumb' => $params['Breadcrumb']
+        );
 
         QUI\Cache\Manager::set(
             'quiqqer/templateBusinessPro',

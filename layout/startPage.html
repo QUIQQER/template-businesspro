@@ -22,6 +22,7 @@
 </section>
 {/foreach}
 
+{if $Site->getAttribute('content')}
 <div class="page-content quiqqer-content">
     {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
     $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
@@ -41,7 +42,7 @@
 
     {$Template->getBody()}
 </div>
-
+{/if}
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
