@@ -22,7 +22,6 @@
 </section>
 {/foreach}
 
-{if $Site->getAttribute('content')}
 <div class="page-content quiqqer-content">
     {if !$Site->getAttribute('templateBusinessPro.showEmotion') &&
     ($Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
@@ -43,7 +42,6 @@
 
     {$Template->getBody()}
 </div>
-{/if}
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}

@@ -30,7 +30,6 @@
     {/foreach}
     {/if}
 
-    {if $Site->getAttribute('content')}
     <div role="main" class="page-content">
 
         {if !$Site->getAttribute('templateBusinessPro.showEmotion') &&
@@ -52,7 +51,6 @@
 
         {$Template->getBody()}
     </div>
-    {/if}
 
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
