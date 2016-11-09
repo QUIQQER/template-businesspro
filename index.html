@@ -108,7 +108,7 @@
 
         .mainColor,
         .mainColorHover:hover,
-        .breadcrumb-container .quiqqer-breadcrumb ul li:last-child a span:last-child {
+        .template-breadcrumb .quiqqer-breadcrumb ul li:last-child a span:last-child {
             color: {$colorMain};
         }
 
@@ -340,13 +340,15 @@
             {/if}
             <div class="page-header-container grid-container">
                 <h1 class="page-header-text-title">
-                    <span>{$Site->getAttribute('title')}</span>
+                    {$Site->getAttribute('title')}
                 </h1>
 
                 {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-                <p class="page-header-text-short">
-                    <span>{$Site->getAttribute('short')}</span>
-                </p>
+                <div class="page-header-text-wrapper">
+                    <div class="page-header-text-wrapper-short">
+                        {$Site->getAttribute('short')}
+                    </div>
+                </div>
                 {/if}
             </div>
         </header>
@@ -356,9 +358,9 @@
         <!-- header suffix -->
         <!-- breadcrumb -->
         {if $showBreadcrumb}
-        <div class="prefix-suffix-nofull-width breadcrumb-container page-content">
+        <div class="template-breadcrumb">
             <div class="grid-container">
-                <section class="template-breadcrumb">
+                <section class="">
                     {$Breadcrumb->create()}
                 </section>
             </div>
@@ -369,7 +371,8 @@
 
             <!-- if full size (bricks settings) -->
             {if $Brick->getSetting( 'brickFullWidth' )}
-                <section class="prefix-suffix-full-width clear-fix page-content"
+                <section class="prefix-suffix-full-width clear-fix page-content
+                                {cycle values="brick-even-prefix,brick-odd-prefix"}"
                 {if $Brick->getSetting('promosliderBackground')}
                     style="background-color: {$Brick->getSetting('promosliderBackground')};"
                 {/if}>
@@ -377,7 +380,6 @@
                 </section>
             {else}
                 <div class="prefix-suffix-nofull-width
-                 {if $Brick->getType() == 'QUI\Controls\Breadcrumb'}breadcrumb-container{/if}
                  page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
                     <div class="grid-container">
                         <section>
@@ -393,7 +395,7 @@
         {/foreach}
 
         <!-- content -->
-        <div class="main-content-color-bg {cycle values="" reset=true}">
+        <div class="main-content-color-bg page-content {cycle values="" reset=true}">
             <div class="grid-container main-content">
                 {$Template->getLayout()}
             </div>
@@ -406,15 +408,14 @@
 
             <!-- if full size (bricks settings) -->
             {if $Brick->getSetting( 'brickFullWidth' )}
-                <div class="{cycle values="brick-even-prefix,brick-odd-prefix"}">
-                    <section class="prefix-suffix-full-width clear-fix page-content"
-                             {if $Brick->getSetting('promosliderBackground')}
-                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
-                        {/if}>
+                <section class="prefix-suffix-full-width clear-fix page-content
+                                {cycle values="brick-even-prefix,brick-odd-prefix"}"
+                         {if $Brick->getSetting('promosliderBackground')}
+                    style="background-color: {$Brick->getSetting('promosliderBackground')};"
+                    {/if}>
 
-                        {$Brick->create()}
-                    </section>
-                </div>
+                    {$Brick->create()}
+                </section>
             {else}
                 <div class="page-content prefix-suffix-nofull-width
                 {cycle values="brick-even-suffix,brick-odd-suffix"}">

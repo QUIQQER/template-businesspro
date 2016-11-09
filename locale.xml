@@ -292,6 +292,44 @@
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
+
+
+        <!-- breadcrumb settings -->
+        <locale name="templateBusinessPro.breadcrumb.settings.title">
+            <de><![CDATA[Brotkrumennavigation Einstellungen (breadcrumb)]]></de>
+            <en><![CDATA[Breadcrumb settings]]></en>
+            <pl><![CDATA[Nawigacja okruszkowa (breadcrumb)]]></pl>
+        </locale>
+        <!-- show breadcrumb? -->
+        <locale name="showBreadcrumb.text">
+            <de><![CDATA[Brotkrumennavigation anzeigen?]]></de>
+            <en><![CDATA[Display breadcrumb?]]></en>
+            <pl><![CDATA[Pokazać breadcrumb?]]></pl>
+        </locale>
+
+        <locale name="showBreadcrumbStartPage.text">
+            <de><![CDATA[Startpage]]></de>
+            <en><![CDATA[Start page]]></en>
+            <pl><![CDATA[Układ bez kolumn (strona startowa)]]></pl>
+        </locale>
+
+        <locale name="showBreadcrumbNoSidebar.text">
+            <de><![CDATA[Kein Sidebar]]></de>
+            <en><![CDATA[No sidebar]]></en>
+            <pl><![CDATA[Układ bez kolumn]]></pl>
+        </locale>
+
+        <locale name="showBreadcrumbLeftSidebar.text">
+            <de><![CDATA[Linke Sidebar]]></de>
+            <en><![CDATA[Left sidebar]]></en>
+            <pl><![CDATA[Układ z lewą kolumną]]></pl>
+        </locale>
+
+        <locale name="showBreadcrumbRightSidebar.text">
+            <de><![CDATA[Rechte Sidebar]]></de>
+            <en><![CDATA[Rright sidebar]]></en>
+            <pl><![CDATA[Układ z prawą kolumną]]></pl>
+        </locale>
         
 
         <!-- Header Größe-->

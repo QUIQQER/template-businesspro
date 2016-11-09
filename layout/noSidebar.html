@@ -14,10 +14,10 @@
 {/foreach}
 {/if}
 
-{if $Site->getAttribute('content')}
 <div class="page-content">
-    {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
-    $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
+    {if !$Site->getAttribute('templateBusinessPro.showEmotion') &&
+    ($Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
+    $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort'))}
     <div class="page-content-site-title">
         {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
         <header>
@@ -34,7 +34,6 @@
 
     {$Template->getBody()}
 </div>
-{/if}
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}

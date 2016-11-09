@@ -389,6 +389,7 @@ ul.alt {
     padding: 0;
     border-bottom: 1px solid #eee;
     position: relative;
+    overflow: hidden;
 }
 
 .header-img {
@@ -398,8 +399,16 @@ ul.alt {
     object-fit: cover;
 }
 
-.page-header-text-title span,
-.page-header-text-short span {
+
+.page-header-container {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 10%;
+}
+
+.page-header-text-title,
+.page-header-text-wrapper-short{
     color: #fff;
     display: inline-block;
     padding: 14px 20px;
@@ -408,14 +417,18 @@ ul.alt {
 }
 
 h1.page-header-text-title {
-    padding: 0;
+    float: left;
+    margin-bottom: 16px;
 }
 
-.page-header-container {
-    position: absolute;
-    left:0;
-    right: 0;
-    top: 20%;
+.page-header-text-title,
+.page-header-text-wrapper-short {
+    max-width: 50%;
+}
+
+.page-header-text-wrapper {
+    float: none;
+    clear: both;
 }
 
 
@@ -578,6 +591,14 @@ span.quiqqer-bricks-promoslider-wallpaper-dot-active:after {
 .quiqqer-porfolio-reference-windowShort span.quiqqer-bricks-promoslider-wallpaper-dot {
     height: 12px;
     width: 12px;
+}
+
+/* promo slider arrow */
+div.quiqqer-bricks-promoslider-wallpaper-next,
+div.quiqqer-bricks-promoslider-wallpaper-prev {
+    color: #ddd;
+    opacity: 0.9;
+    text-shadow: none;
 }
 
 
@@ -757,12 +778,22 @@ a.header-bar-search-link:hover {
  * ========================================================== */
 
 .page-content {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
+.content-header {
+    padding-bottom: 2em;
+}
 .content-body {
-    padding-bottom: 3em;
+    margin-bottom: 2em;
+}
+.content-template {
+    padding-bottom: 2em;
+}
+
+.content-short {
+    padding-bottom: 2em;
 }
 
 .page-content-site-title {
@@ -821,7 +852,7 @@ header > h4 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 44px;
 }
 
 h1.brick-title {
@@ -865,25 +896,6 @@ h4 {
 
 .content-body a img {
     display: block;
-}
-
-/*********************************************************************************/
-/* breadcrumb
-/*********************************************************************************/
-
-.quiqqer-breadcrumb {
-    font-size: 12px;
-}
-
-.quiqqer-breadcrumb-container ul {
-    clear: none;
-    list-style: none;
-    margin-left: 30px;
-}
-
-.quiqqer-breadcrumb-container ul li {
-    width: auto;
-    clear: none;
 }
 
 /*********************************************************************************/
@@ -931,6 +943,10 @@ h2.quiqqer-navigation-title-style {
 
 .quiqqer-sidebar-dropdown-navigation li.quiqqer-navigation-li {
     margin-bottom: 0 !important;
+}
+
+li.quiqqer-navigation-li {
+    margin-left: 0;
 }
 
 .quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-1,
@@ -1147,9 +1163,9 @@ footer:hover a {
 }
 
 @media screen and (max-width: 1024px) {
-    .header-img {
+    /*.header-img {
         align-self: auto !important;
-    }
+    }*/
 
     .page-header-logo-desktop {
         display: none;
@@ -1176,9 +1192,9 @@ footer:hover a {
     }
 
 
-    .body-container {
+    /*.body-container {
         padding-top: 0;
-    }
+    }*/
 
     .header-bar-search {
         display: none;
@@ -1194,6 +1210,19 @@ footer:hover a {
 }
 
 @media screen and (max-width: 760px) {
+
+    .page-header {
+        height: auto !important;
+    }
+
+    .page-header-text-title,
+    .page-header-text-wrapper-short {
+        max-width: 100%;
+    }
+
+    .page-header-text-wrapper {
+        display: none;
+    }
 
     .quiqqer-breadcrumb-title {
         display: none;
@@ -1242,6 +1271,14 @@ footer:hover a {
         float: left;
         padding-left: 0;
     }
+
+    .page-multible-left {
+        padding-right: 0;
+    }
+
+    .page-multible-right {
+        padding-left: 0;
+    }
 }
 
 /*********************************************************************************/
@@ -1255,6 +1292,11 @@ footer:hover a {
 /*********************************************************************************/
 /* pagination
 /*********************************************************************************/
+
+.quiqqer-sheets-desktop {
+    text-align: center;
+}
+
 
 .quiqqer-sheets-desktop a,
 .quiqqer-sheets-desktop span {
@@ -1534,25 +1576,35 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 /* extra breadcrumb for this template
 /*********************************************************************************/
 
+.quiqqer-breadcrumb {
+    font-size: 12px;
+}
 
-.breadcrumb-container.page-content {
+.template-breadcrumb ul {
+    clear: none;
+    list-style: none;
+    margin-bottom: 0;
+    width: auto;
+}
+
+.template-breadcrumb ul li {
+    width: auto;
+    clear: none;
+}
+
+.template-breadcrumb {
+    background-color: #fff;
     border-bottom: 1px solid #eee;
     color: #8a8a8a;
     padding-bottom: 14px;
     padding-top: 14px;
 }
 
-.breadcrumb-container .quiqqer-breadcrumb {
+.template-breadcrumb .quiqqer-breadcrumb {
     font-size: 10pt;
     font-weight: normal;
     letter-spacing: normal;
     word-spacing: 1pt;
-}
-
-.quiqqer-breadcrumb ul {
-    margin-bottom: 0;
-    margin-left: 4em;
-    width: auto;
 }
 
 .quiqqer-breadcrumb ul li {
@@ -1565,16 +1617,16 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 
 .template-breadcrumb .quiqqer-breadcrumb a {
     color: #8a8a8a;
-    padding: 0 10px;
+    padding-right: 20px;
 }
 
 .quiqqer-breadcrumb a:hover span:last-child {
     text-decoration: underline;
 }
 
-.b.quiqqer-breadcrumb li:first-child span:first-child {
+/*.quiqqer-breadcrumb li:first-child span:first-child {
     display: none;
-}
+}*/
 
 .quiqqer-breadcrumb span:first-child {
     margin-right: 6px;
@@ -1583,6 +1635,12 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 @media screen and (max-width: 1024px) {
     .quiqqer-breadcrumb ul {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .template-breadcrumb .quiqqer-breadcrumb a {
+        padding: 0 10px 0 0;
     }
 }
 
@@ -1627,7 +1685,6 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
     -o-transform: none;
     transform: none;
 }
-
 
 /*********************************************************************************/
 /* template extra link effects
@@ -1837,4 +1894,13 @@ a.template-button.template-button-custom {
 .grid-children-container {
     left: -20px;
     width: calc(100% + 40px);
+}
+
+
+/* portfolio / Referenzen
+ * extra wegen den festgesetzten 33%
+ **/
+section.quiqqer-portfolio-list {
+    width: calc(100% + 20px);
+    left: -10px;
 }
