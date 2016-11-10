@@ -112,7 +112,7 @@
             color: {$colorMain};
         }
 
-        .page-content a.qui-tags-tag:hover {
+        .tpl-businessPro-row a.qui-tags-tag:hover {
             border: 1px solid {$colorMain};
             color: {$colorMain};
         }
@@ -129,7 +129,7 @@
         input[type='button'],
         button,
         .button,
-        .page-content .button,
+        .tpl-businessPro-row .button,
         button:disabled,
         button:disabled:hover,
         a.template-button {
@@ -362,7 +362,7 @@
                     {assign var=promosliderClass value=PromosliderWallpaper2Content}
                 {/if}
                 {if $Brick->getSetting( 'brickFullWidth' )}
-                    <section class="prefix-suffix-full-width clear-fix page-content
+                    <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row
                                     headerSuffix-container {$promosliderClass}
                                     {cycle values="brick-even-suffix,brick-odd-suffix"}"
                     {if $Brick->getSetting('promosliderBackground')}
@@ -371,7 +371,7 @@
                         {$Brick->create()}
                     </section>
                 {else}
-                    <div class="prefix-suffix-nofull-width page-content
+                    <div class="prefix-suffix-nofull-width tpl-businessPro-row
                                 headerSuffix-container
                                 {cycle values="brick-even-suffix,brick-odd-suffix"}">
                         <div class="grid-container">
@@ -388,7 +388,7 @@
         </div>
 
         <!-- content -->
-        <div class="main-content-color-bg page-content {cycle values="" reset=true}">
+        <div class="main-content-color-bg  {cycle values="" reset=true}">
             <div class="grid-container main-content">
                 {$Template->getLayout()}
             </div>
@@ -403,7 +403,7 @@
                     {assign var=promosliderClass value=PromosliderWallpaper2Content}
                 {/if}
                 {if $Brick->getSetting( 'brickFullWidth' )}
-                    <section class="prefix-suffix-full-width clear-fix page-content
+                    <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row
                                     footerPrefix-container {$promosliderClass}
                                     {cycle values="brick-even-prefix,brick-odd-prefix"}"
                              {if $Brick->getSetting('promosliderBackground')}
@@ -413,7 +413,7 @@
                         {$Brick->create()}
                     </section>
                 {else}
-                    <div class="page-content prefix-suffix-nofull-width
+                    <div class="tpl-businessPro-row prefix-suffix-nofull-width
                                 footerPrefix-container
                                 {cycle values="brick-even-prefix,brick-odd-prefix"}">
                         <div class="grid-container">
