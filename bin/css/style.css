@@ -369,6 +369,16 @@ ul.alt {
     padding: 0;
 }
 
+
+/* brick even prefix suffix */
+
+.brick-even-prefix,
+.brick-odd-prefix,
+.brick-even-suffix,
+.brick-odd-suffix {
+    background: #ffffff;
+}
+
 /** page header
  * ========================================================== */
 
@@ -599,6 +609,11 @@ div.quiqqer-bricks-promoslider-wallpaper-prev {
     color: #ddd;
     opacity: 0.9;
     text-shadow: none;
+}
+
+/* Abstand oben / unten für Promoslider 2 Content */
+.prefix-suffix-full-width.page-content.PromosliderWallpaper2Content {
+    padding: 2em 0;
 }
 
 
@@ -1309,6 +1324,7 @@ footer:hover a {
     color: #5d5d5d;
     margin-right: 2px !important;
     padding: 0 15px;
+    float: none;
 }
 
 .quiqqer-sheets-desktop a:hover {

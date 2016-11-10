@@ -256,12 +256,6 @@
         .brick-odd-prefix {
             background: #e5e5e5;
         }
-
-        {else}
-        .brick-even-prefix,
-        .brick-odd-prefix {
-            background: #ffffff;
-        }
         {/if}
 
         {if $bgColorSwitcherSuffix == 'display'}
@@ -271,12 +265,6 @@
 
         .brick-odd-suffix {
             background: #e5e5e5;
-        }
-
-        {else}
-        .brick-even-suffix,
-        .brick-odd-suffix {
-            background: #ffffff;
         }
         {/if}
 
@@ -316,7 +304,6 @@
 
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}">
-<div class="main-body">
 
     <!-- menu -->
     <div class="header-bar">
@@ -366,33 +353,39 @@
             </div>
         </div>
         {/if}
-        {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
-        {foreach $headerSuffix as $Brick}
 
-            <!-- if full size (bricks settings) -->
-            {if $Brick->getSetting( 'brickFullWidth' )}
-                <section class="prefix-suffix-full-width clear-fix page-content
-                                {cycle values="brick-even-prefix,brick-odd-prefix"}"
-                {if $Brick->getSetting('promosliderBackground')}
-                    style="background-color: {$Brick->getSetting('promosliderBackground')};"
-                {/if}>
-                    {$Brick->create()}
-                </section>
-            {else}
-                <div class="prefix-suffix-nofull-width
-                 page-content {cycle values="brick-even-suffix,brick-odd-suffix"}">
-                    <div class="grid-container">
-                        <section>
-                            {if $Brick->getSetting( 'showBrickTitle' )}
-                            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
-                            {/if}
-                            {$Brick->create()}
-                        </section>
+        <div class="headerSuffix">
+            <!-- header suffix  -->
+            {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+            {foreach $headerSuffix as $Brick}
+                {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
+                    {assign var=promosliderClass value=PromosliderWallpaper2Content}
+                {/if}
+                {if $Brick->getSetting( 'brickFullWidth' )}
+                    <section class="prefix-suffix-full-width clear-fix page-content
+                                    headerSuffix-container {$promosliderClass}
+                                    {cycle values="brick-even-suffix,brick-odd-suffix"}"
+                    {if $Brick->getSetting('promosliderBackground')}
+                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
+                    {/if}>
+                        {$Brick->create()}
+                    </section>
+                {else}
+                    <div class="prefix-suffix-nofull-width page-content
+                                headerSuffix-container
+                                {cycle values="brick-even-suffix,brick-odd-suffix"}">
+                        <div class="grid-container">
+                            <section>
+                                {if $Brick->getSetting( 'showBrickTitle' )}
+                                <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                                {/if}
+                                {$Brick->create()}
+                            </section>
+                        </div>
                     </div>
-                </div>
-            {/if}
-
-        {/foreach}
+                {/if}
+            {/foreach}
+        </div>
 
         <!-- content -->
         <div class="main-content-color-bg page-content {cycle values="" reset=true}">
@@ -401,36 +394,40 @@
             </div>
         </div>
 
-        <!-- footer prefix-->
-        {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
-        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
-        {foreach $footerPrefix as $Brick}
+        <div class="prefixFooter">
+            <!-- footer prefix-->
+            {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
+            {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+            {foreach $footerPrefix as $Brick}
+                {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
+                    {assign var=promosliderClass value=PromosliderWallpaper2Content}
+                {/if}
+                {if $Brick->getSetting( 'brickFullWidth' )}
+                    <section class="prefix-suffix-full-width clear-fix page-content
+                                    footerPrefix-container {$promosliderClass}
+                                    {cycle values="brick-even-prefix,brick-odd-prefix"}"
+                             {if $Brick->getSetting('promosliderBackground')}
+                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
+                        {/if}>
 
-            <!-- if full size (bricks settings) -->
-            {if $Brick->getSetting( 'brickFullWidth' )}
-                <section class="prefix-suffix-full-width clear-fix page-content
-                                {cycle values="brick-even-prefix,brick-odd-prefix"}"
-                         {if $Brick->getSetting('promosliderBackground')}
-                    style="background-color: {$Brick->getSetting('promosliderBackground')};"
-                    {/if}>
-
-                    {$Brick->create()}
-                </section>
-            {else}
-                <div class="page-content prefix-suffix-nofull-width
-                {cycle values="brick-even-suffix,brick-odd-suffix"}">
-                    <div class="grid-container">
-                        <section>
-                            {if $Brick->getSetting( 'showBrickTitle' )}
-                            <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
-                            {/if}
-                            {$Brick->create()}
-                        </section>
+                        {$Brick->create()}
+                    </section>
+                {else}
+                    <div class="page-content prefix-suffix-nofull-width
+                                footerPrefix-container
+                                {cycle values="brick-even-prefix,brick-odd-prefix"}">
+                        <div class="grid-container">
+                            <section>
+                                {if $Brick->getSetting( 'showBrickTitle' )}
+                                <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                                {/if}
+                                {$Brick->create()}
+                            </section>
+                        </div>
                     </div>
-                </div>
-            {/if}
-        {/foreach}
-
+                {/if}
+            {/foreach}
+        </div>
         <!-- footer -->
         <footer class="page-footer clear-fix">
             <div class="page-footer-container grid-container">
@@ -460,7 +457,7 @@
             </div>
         </footer>
     </div>
-</div>
+
 
     <!-- [begin] js combine -->
     <script src="{$URL_OPT_DIR}bin/require.js"></script>
