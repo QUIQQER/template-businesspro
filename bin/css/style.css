@@ -800,13 +800,18 @@ a.header-bar-search-link:hover {
     padding-bottom: 1em;
 }
 
-.content-body hr {
+.content-body hr,
+.content-template hr {
     border: none;
     border-top: 1px solid #ccc;
     clear: both;
     float: left;
     margin: 2em 0 1em;
     width: 100%;
+}
+
+.content-template hr {
+    margin: 2em 0;
 }
 
 .content-body blockquote,
