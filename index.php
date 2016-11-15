@@ -5,9 +5,6 @@
  */
 QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
-QUI\Utils\Site::setRecursivAttribute($Site, 'layout');
-
-
 /**
  * Mega menu
  */

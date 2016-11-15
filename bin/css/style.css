@@ -785,9 +785,11 @@ a.header-bar-search-link:hover {
 .tpl-businessPro-row,
 .content-header,
 .content-body,
+.tpl-businessPro-row + .content-body,
 .content-template,
 .content-short {
-    padding: 2em 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .content-header + .content-short,
@@ -795,9 +797,12 @@ a.header-bar-search-link:hover {
 .content-header + .content-template,
 .content-short + .content-body,
 .content-short + .content-template,
-.content-body + .content-template {
+.content-template + .content-short
+/*.content-body + .content-template,*/
+/*.tpl-businessPro-row + .content-body */ {
     padding-top: 0;
 }
+
 
 
 /*.page-content-site-title {

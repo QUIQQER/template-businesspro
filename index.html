@@ -376,9 +376,10 @@
                                 {cycle values="brick-even-suffix,brick-odd-suffix"}">
                         <div class="grid-container">
                             <section>
-                                {if $Brick->getSetting( 'showBrickTitle' )}
-                                <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                                {if $Brick->getSetting('frontendTitle')}
+                                <h1 class="brick-title">{$Brick->getSetting('frontendTitle')}</h1>
                                 {/if}
+                                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
                                 {$Brick->create()}
                             </section>
                         </div>
@@ -418,9 +419,10 @@
                                 {cycle values="brick-even-prefix,brick-odd-prefix"}">
                         <div class="grid-container">
                             <section>
-                                {if $Brick->getSetting( 'showBrickTitle' )}
-                                <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+                                {if $Brick->getSetting('frontendTitle')}
+                                <h1 class="brick-title">{$Brick->getSetting('frontendTitle')}</h1>
                                 {/if}
+                                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
                                 {$Brick->create()}
                             </section>
                         </div>

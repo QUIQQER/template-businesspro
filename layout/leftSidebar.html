@@ -3,28 +3,15 @@
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
-
-<div class="page-multible-left grid-30 mobile-grid-100">
-    {if !empty( $leftSideBar )}
-    {foreach from=$leftSideBar item=Brick}
-    <div class="tpl-businessPro-row">
-        {assign var=brickTitle value=$Brick->setSetting('showTitle', true)}
-        {$Brick->create()}
-    </div>
-    {/foreach}
-    {else}
-        &nbsp
-    {/if}
-</div>
-
-<div class="page-multible-right grid-70 mobile-grid-100" role="main">
+<div class="page-multible-right grid-70 push-30 mobile-grid-100" role="main">
 
     {if !empty( $prefixContentBricks )}
     {foreach from=$prefixContentBricks item=Brick}
     <div class="tpl-businessPro-row">
-        {if $Brick->getSetting( 'showBrickTitle' )}
-        <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+        {if $Brick->getAttribute('frontendTitle')}
+            <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
         {/if}
+        {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
         {$Brick->create()}
     </div>
     {/foreach}
@@ -43,7 +30,6 @@
             {$Site->getAttribute('short')|nl2br}
         </div>
         {/if}
-    </div>
     {/if}
 
     {$Template->getBody()}
@@ -51,13 +37,30 @@
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
     <div class="tpl-businessPro-row">
-        {if $Brick->getSetting( 'showBrickTitle' )}
-        <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+        {if $Brick->getAttribute('frontendTitle')}
+            <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
         {/if}
+        {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
         {$Brick->create()}
     </div>
     {/foreach}
     {/if}
 
+</div>
+
+<div class="page-multible-left grid-30 pull-70 mobile-grid-100">
+    {if !empty( $leftSideBar )}
+    {foreach from=$leftSideBar item=Brick}
+    <div class="tpl-businessPro-row">
+        {if $Brick->getAttribute('frontendTitle') && $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'}
+            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
+        {/if}
+        {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+        {$Brick->create()}
+    </div>
+    {/foreach}
+    {else}
+    &nbsp
+    {/if}
 </div>
 
