@@ -9,7 +9,7 @@
     {foreach from=$prefixContentBricks item=Brick}
     <div class="tpl-businessPro-row">
         {if $Brick->getAttribute('frontendTitle')}
-        <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
+            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
         {/if}
         {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
         {$Brick->create()}
@@ -21,7 +21,7 @@
     {if !$Site->getAttribute('templateBusinessPro.showEmotion')}
 
         {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
-        <header class="content-template">
+        <header class="content-header">
             <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
         </header>
         {/if}
@@ -40,7 +40,7 @@
     {foreach from=$suffixContentBricks item=Brick}
     <div class="tpl-businessPro-row">
         {if $Brick->getAttribute('frontendTitle')}
-            <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
+            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
         {/if}
         {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
         {$Brick->create()}
@@ -53,10 +53,14 @@
     {if !empty( $rightSideBar)}
         {foreach from=$rightSideBar item=Brick}
         <div class="tpl-businessPro-row">
-            {if $Brick->getAttribute('frontendTitle')}
-                <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
+            {if $Brick->getAttribute('frontendTitle') &&
+                $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'
+            }
+            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
             {/if}
-            {assign var=showTitle value=$Brick->setSetting('showTitle', true)}
+            {if $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'}
+                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+            {/if}
             {$Brick->create()}
         </div>
         {/foreach}

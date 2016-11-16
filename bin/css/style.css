@@ -111,6 +111,10 @@ header {
     padding-bottom: 1.3em;
 }
 
+.content-header {
+    text-align: center;
+}
+
 ul,
 ol {
     padding-left: 30px;
@@ -432,6 +436,7 @@ h1.page-header-text-title {
 .page-header-text-wrapper {
     float: none;
     clear: both;
+    text-align: left;
 }
 
 .page-header-logo {
@@ -788,8 +793,8 @@ a.header-bar-search-link:hover {
 .tpl-businessPro-row + .content-body,
 .content-template,
 .content-short {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .content-header + .content-short,
@@ -803,7 +808,28 @@ a.header-bar-search-link:hover {
     padding-top: 0;
 }
 
+.control-content {
+    padding-bottom: 3em;
+}
 
+.control-header {
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.tpl-businessPro-row-noPadding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header.control-header {
+    text-align: center;
+}
+/*
+.page-multible-right header,
+.page-multible-left header {
+    padding-bottom: 1em;
+}*/
 
 /*.page-content-site-title {
     padding-bottom: 1em;
@@ -815,7 +841,7 @@ a.header-bar-search-link:hover {
     border-top: 1px solid #ccc;
     clear: both;
     float: left;
-    margin: 2em 0;
+    margin: 3em 0;
     width: 100%;
 }
 
@@ -850,7 +876,7 @@ h1, h2, h3, h4, h5 {
     color: #444;
     line-height: 1.15em;
     font-weight: 500;
-    padding-bottom: 0.8em;
+    padding-bottom: 1em;
 }
 
 header > h1,

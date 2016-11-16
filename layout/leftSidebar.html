@@ -3,6 +3,13 @@
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
+{*
+
+ACHTUNG!
+Das ist der LINKE Sidebar mit push- und pull- Klassen von Unsemantic.
+D.h. der Sidebar wird nach links gepullt, obwohl er nach dem Main-Content (HTML) kommt.
+
+*}
 <div class="page-multible-right grid-70 push-30 mobile-grid-100" role="main">
 
     {if !empty( $prefixContentBricks )}
@@ -38,7 +45,7 @@
     {foreach from=$suffixContentBricks item=Brick}
     <div class="tpl-businessPro-row">
         {if $Brick->getAttribute('frontendTitle')}
-            <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
+            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
         {/if}
         {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
         {$Brick->create()}
@@ -50,15 +57,19 @@
 
 <div class="page-multible-left grid-30 pull-70 mobile-grid-100">
     {if !empty( $leftSideBar )}
-    {foreach from=$leftSideBar item=Brick}
-    <div class="tpl-businessPro-row">
-        {if $Brick->getAttribute('frontendTitle') && $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'}
-            <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
-        {/if}
-        {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
-        {$Brick->create()}
-    </div>
-    {/foreach}
+        {foreach from=$leftSideBar item=Brick}
+        <div class="tpl-businessPro-row">
+            {if $Brick->getAttribute('frontendTitle') &&
+                $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'
+            }
+                <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
+            {/if}
+            {if $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'}
+                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+            {/if}
+            {$Brick->create()}
+        </div>
+        {/foreach}
     {else}
     &nbsp
     {/if}
