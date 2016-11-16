@@ -50,7 +50,7 @@
         .page-header-navigation li:hover,
         .header-bar-search:hover,
         .quiqqer-menu-megaMenu-list-item-menu.control-background,
-        .quiqqer-menu-megaMenu-list-item:hover {
+        .quiqqer-menu-megaMenu-list-item:hover, {
             background: {$Convert->colorBrightness($navBarMainColor, 0.9)};
         }
 
@@ -303,7 +303,7 @@
     </style>
 
 </head>
-<body class="{$bodyClass} page-{$Site->getId()} {$typeClass}">
+<body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
 
     <!-- menu -->
     <div class="header-bar">
@@ -457,8 +457,8 @@
                     </div>
 
                     <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-right">
-                        <a href="{url id=1}">
-                            {locale group="quiqqer/template-businesspro" var="copyright.link"}
+                        <a href="#body-top">
+                            <i class="fa fa-arrow-up toTop"></i>
                         </a>
                     </div>
                 </div>
