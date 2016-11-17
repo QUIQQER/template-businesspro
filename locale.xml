@@ -129,24 +129,33 @@
             <en><![CDATA[Show header picture]]></en>
             <pl><![CDATA[Pokaż obrazek nagłówka]]></pl>
         </locale>
+            <!-- Title & short -->
+        <locale name="templateBusinessPro.siteSettings.showTitle">
+            <de><![CDATA[Überschrift anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+            <pl><![CDATA[Wyświetlić tytuł]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.siteSettings.showShort">
+            <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
+            <en><![CDATA[Show short descriptions]]></en>
+            <pl><![CDATA[Wyświetlić opis strony]]></pl>
+        </locale>
 
 
         <locale name="package.title">
-            <de><![CDATA[QUIQQER - Template: QUI]]></de>
-            <en><![CDATA[QUIQQER - Template: QUI]]></en>
+            <de><![CDATA[QUIQQER - Template: Business Pro]]></de>
+            <en><![CDATA[QUIQQER - Template: Business Pro]]></en>
+            <pl><![CDATA[QUIQQER - Template: Business Pro]]></pl>
         </locale>
         <locale name="package.description">
-            <de><![CDATA[QUIQQER - Template: QUI]]></de>
-            <en><![CDATA[QUIQQER - Template: QUI]]></en>
+            <de><![CDATA[Template für aussagekräftige Internetseiten mit
+            vielen Einstellungsmöglichkeiten.]]></de>
+            <en><![CDATA[Advanced template with a great design and a lot of settings.]]></en>
+            <pl><![CDATA[Zaawansowany template z dopracowanym designem, który wyróżni Twoją stronę
+            internetową na tle innych. Duże pole do popisu dają rozmaite ustawienia,
+            dzięki czemu możesz dopasować wygląd Twojego serwisu do własnych potrzeb.]]></pl>
         </locale>
-        <locale name="bricks.StartpageIntro.title">
-            <de><![CDATA[Baustein: 3er Baustein Startseite mit Bildern, Texten & Links]]></de>
-            <en><![CDATA[]]></en>
-        </locale>
-        <locale name="bricks.Startpage2Box.title">
-            <de><![CDATA[Baustein: 2er Baustein auf der Startseite]]></de>
-            <en><![CDATA[]]></en>
-        </locale>
+
         <locale name="admin.layout.leftSidebar">
             <de><![CDATA[Linke Sidebar]]></de>
             <en><![CDATA[Left sidebar]]></en>
