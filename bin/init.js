@@ -18,4 +18,9 @@ window.addEvent("domready", function () {
         });
     });
 
+    document.getElements('[href=#top]').addEvent('click', function (event) {
+        event.stop();
+        new Fx.Scroll(window).toTop();
+    });
+
 });
