@@ -88,7 +88,8 @@ strong {
     font-weight: bold;
 }
 
-a {
+a,
+.fa {
     max-width: 100%;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -364,9 +365,9 @@ ul.alt {
     line-height: 1em;
 }
 
-.prefix-suffix-full-width.tpl-businessPro-row {
+/*.prefix-suffix-full-width.tpl-businessPro-row {
     padding: 0;
-}
+}*/
 
 /* brick even prefix suffix */
 
@@ -604,11 +605,6 @@ div.quiqqer-bricks-promoslider-wallpaper-prev {
     color: #ddd;
     opacity: 0.9;
     text-shadow: none;
-}
-
-/* Abstand oben / unten für Promoslider 2 Content */
-.prefix-suffix-full-width.tpl-businessPro-row.PromosliderWallpaper2Content {
-    padding: 2em 0;
 }
 
 /** page header navigation
@@ -1654,6 +1650,16 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .brick-image-picture-container {
     line-height: 0;
 }
+
+/*********************************************************************************/
+/* slider
+/*********************************************************************************/
+
+.quiqqer-bricks-children-slider .quiqqer-bricks-children-slider-prev,
+.quiqqer-bricks-children-slider .quiqqer-bricks-children-slider-next {
+    color: #ddd;
+}
+
 
 /*********************************************************************************/
 /* extra breadcrumb for this template

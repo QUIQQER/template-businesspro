@@ -358,17 +358,14 @@
             <!-- header suffix  -->
             {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
             {foreach $headerSuffix as $Brick}
-                {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
-                    {assign var=promosliderClass value=PromosliderWallpaper2Content}
-                {/if}
 
                 {assign var=noPadding value=""}
-                {if $Brick->getType('QUI\Bricks\Controls\SimpleGoogleMaps') == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+                {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
                     {assign var=noPadding value="-noPadding"}
                 {/if}
                 {if $Brick->getSetting( 'brickFullWidth' )}
                     <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    headerSuffix-container {$promosliderClass}
+                                    headerSuffix-container
                                     {cycle values="brick-even-suffix,brick-odd-suffix"}"
                     {if $Brick->getSetting('promosliderBackground')}
                         style="background-color: {$Brick->getSetting('promosliderBackground')};"
@@ -405,18 +402,15 @@
             {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
             {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
             {foreach $footerPrefix as $Brick}
-                {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
-                    {assign var=promosliderClass value=PromosliderWallpaper2Content}
-                {/if}
 
                 {assign var=noPadding value=""}
-                {if $Brick->getType('QUI\Bricks\Controls\SimpleGoogleMaps')  == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+                {if $Brick->getType()  == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
                     {assign var=noPadding value="-noPadding"}
                 {/if}
 
                 {if $Brick->getSetting( 'brickFullWidth' )}
                     <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    footerPrefix-container {$promosliderClass}
+                                    footerPrefix-container
                                     {cycle values="brick-even-prefix,brick-odd-prefix"}"
                              {if $Brick->getSetting('promosliderBackground')}
                         style="background-color: {$Brick->getSetting('promosliderBackground')};"
