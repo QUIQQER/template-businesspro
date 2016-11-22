@@ -1184,6 +1184,7 @@ footer:hover a {
 
 .page-footer ul li {
     line-height: 2em;
+    padding-left: 0;
 }
 
 .page-footer ul li a {
