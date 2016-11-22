@@ -361,8 +361,10 @@
                 {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
                     {assign var=promosliderClass value=PromosliderWallpaper2Content}
                 {/if}
+
+                {assign var=noPadding value=""}
                 {if $Brick->getType('QUI\Bricks\Controls\SimpleGoogleMaps')}
-                    {assign var=noPadding value=-noPadding}
+                    {assign var=noPadding value="-noPadding"}
                 {/if}
                 {if $Brick->getSetting( 'brickFullWidth' )}
                     <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
@@ -406,9 +408,12 @@
                 {if $Brick->getType('QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content')}
                     {assign var=promosliderClass value=PromosliderWallpaper2Content}
                 {/if}
+
+                {assign var=noPadding value=""}
                 {if $Brick->getType('QUI\Bricks\Controls\SimpleGoogleMaps')}
-                    {assign var=noPadding value=-noPadding}
+                    {assign var=noPadding value="-noPadding"}
                 {/if}
+
                 {if $Brick->getSetting( 'brickFullWidth' )}
                     <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
                                     footerPrefix-container {$promosliderClass}
