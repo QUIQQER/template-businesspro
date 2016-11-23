@@ -965,24 +965,6 @@ h4 {
 /* Nav style (in sidebar) navigation
 /*********************************************************************************/
 
-#quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-entry:hover {
-    background: none;
-    transition: all 0.2s;
-}
-
-i.quiqqer-fa-list-icon {
-    padding: 4px 0;
-    line-height: 1.5em;
-    margin: 0 6px 0 0;
-}
-
-i.quiqqer-fa-levels-icon {
-    padding: 4px 0;
-    line-height: 1.5em;
-    margin: 0 auto;
-    display: block;
-}
-
 .quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-entry {
     cursor: pointer;
     background: transparent;
@@ -996,70 +978,19 @@ h2.quiqqer-navigation-title-style {
     color: #5d5d5d;
 }
 
-/*.quiqqer-navigation-entry {
+.quiqqer-navigation-level-1 > li {
     border-bottom: 1px solid #ddd;
-}*/
-
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-level-1 > li {
-    border-bottom: 1px solid #ddd;
-}
-
-.quiqqer-sidebar-dropdown-navigation li.quiqqer-navigation-li {
-    margin-bottom: 0 !important;
-}
-
-li.quiqqer-navigation-li {
-    margin-left: 0;
-}
-
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-1,
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-2,
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-3,
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-4 {
-    padding-left: 0;
-    margin: 0 !important;
-    list-style: none;
-}
-
-.extra-style {
-    box-shadow: 0 1px 0 #ddd;
-}
-
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-2 .quiqqer-navigation-entry {
-    margin-left: 20px;
-    width: calc(100% - 20px);
-}
-
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-3 .quiqqer-navigation-entry {
-    margin-left: 40px;
-    width: calc(100% - 40px);
-}
-
-.quiqqer-sidebar-dropdown-navigation ul.quiqqer-navigation-level-4 .quiqqer-navigation-entry {
-    margin-left: 60px;
-    width: calc(100% - 60px);
-}
-
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-brick {
-    margin-left: 0;
-    padding-left: 1.5em;
 }
 
 .quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-level-1 a,
-.quiqqer-sidebar-dropdown-navigation a.quiqqer-navigation-home {
+.quiqqer-sidebar-dropdown-navigation a.quiqqer-navigation-firstpage {
     text-decoration: none;
     color: #5d5d5d;
 }
 
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-level-1 a:hover,
-.quiqqer-sidebar-dropdown-navigation a.quiqqer-navigation-home:hover {
-    background: none;
-    box-shadow: none;
-}
-
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation .fa {
+/*.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation .fa {
     line-height: 2.3em;
-}
+}*/
 
 .quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-active {
     font-weight: bold;
@@ -1070,18 +1001,6 @@ li.quiqqer-navigation-li {
     position: relative;
 }
 
-/*
-.quiqqer-first-li-bg {
-    background: #d9d9d9;
-}
-
-.active-bgcolor {
-    background: #eee;
-}*/
-
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
-
-}
 
 /** page footer
  * ========================================================== */
@@ -1497,35 +1416,20 @@ input[type='radio'] {
 
 .content-switcher .content-switcher-content {
     max-width: 580px; /* (page width : 2) */
-    padding-left: 50px;
-}
-
-.content-switcher-image {
-    background-position: left;
-    max-height: 500px;
-}
-
-.push-custom {
-    background-position: right;
 }
 
 .content-switcher .pull-custom {
-    left: -580px; /* -1x(page width : 2) */
-    padding-right: 50px;
-    padding-left: 0;
+    left: -580px; /* -1 x (page width : 2) */
 }
 
 @media screen and (max-width: 1160px) {
-    .content-switcher .pull-custom {
-        left: -50%;
-    }
 
-    .content-switcher-content.pull-50 {
-        padding-left: 20px; /* (standard padding of page elements x 2) */
+    .prefix-suffix-full-width .content-switcher-content.pull-50 {
+        padding-left: 20px;
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 
     .content-switcher .content-switcher-content {
         padding-left: 0;
@@ -1533,8 +1437,8 @@ input[type='radio'] {
     }
 
     .prefix-suffix-full-width .content-switcher .content-switcher-content {
-        padding-left: 20px !important; /* (standard padding of page elements x 2) */
-        padding-right: 20px !important; /* (standard padding of page elements x 2) */
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
 
