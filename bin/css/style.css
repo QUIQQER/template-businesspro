@@ -965,12 +965,6 @@ h4 {
 /* Nav style (in sidebar) navigation
 /*********************************************************************************/
 
-.quiqqer-sidebar-dropdown-navigation .quiqqer-navigation-entry {
-    cursor: pointer;
-    background: transparent;
-    transition: all 0.2s;
-}
-
 h2.quiqqer-navigation-title-style {
     margin-bottom: 0.5em;
     padding-left: 10px;
