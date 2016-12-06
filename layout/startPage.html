@@ -17,7 +17,7 @@
 
 
 {foreach from=$bricks item=Brick}
-<section class="startpage-section quiqqer-content">
+<section class="startpage-section tpl-businessPro-row">
     {if $Brick->getAttribute('frontendTitle')}
         <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
     {/if}
@@ -48,7 +48,7 @@
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
-<div class="quiqqer-content">
+<div class="tpl-businessPro-row">
     {if $Brick->getAttribute('frontendTitle')}
         <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
     {/if}
