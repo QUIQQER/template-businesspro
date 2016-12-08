@@ -3,14 +3,14 @@
     <bricks>
 
         <!-- for all bricks -->
-        <!--<brick control="*">
+        <brick control="*">
             <settings>
                 <setting name="brickFullWidth" type="checkbox">
                     <locale group="quiqqer/template-businesspro"
                             var="brickFullWidth"/>
                 </setting>
             </settings>
-        </brick>-->
+        </brick>
 
         <!-- promo slider wallpaper 2 content -->
         <brick control="\QUI\Bricks\Controls\Slider\PromosliderWallpaper2Content">
