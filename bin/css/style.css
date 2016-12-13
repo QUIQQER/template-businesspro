@@ -1179,7 +1179,7 @@ footer:hover a {
 
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 
     .page-header {
         height: auto !important;
@@ -1398,7 +1398,7 @@ input[type='radio'] {
     text-decoration: underline;
 }
 
-@media all and (max-width: 760px) {
+@media all and (max-width: 767px) {
     .qui-sitetypes-sitemap-block-category {
         width: 100%;
     }
