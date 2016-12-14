@@ -170,9 +170,9 @@ class Utils
          */
 
         $config += array(
-            'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
-            'BricksManager' => \QUI\Bricks\Manager::init(),
-            'showHeader'    => $showHeader,
+            'quiTplType'     => $Project->getConfig('templateBusinessPro.settings.standardType'),
+            'BricksManager'  => \QUI\Bricks\Manager::init(),
+            'showHeader'     => $showHeader,
             'showBreadcrumb' => $showBreadcrumb
         );
 
@@ -218,13 +218,23 @@ class Utils
             </div>'
         );
 
-        $MegaMenu->appendHTML(
-            '<div class="header-bar-search">
-                <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
-                    <i class="fa fa-search header-bar-search-icon"></i>
-                </a>    
-            </div>'
-        );
+        try {
+            QUI::getPackage('quiqqer/search');
+
+            $MegaMenu->appendHTML(
+                '<input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" />'
+            );
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::addNotice($Exception->getMessage());
+        }
+
+        /*<div class="header-bar-search">
+
+         </div>
+            <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
+                <i class="fa fa-search header-bar-search-icon"></i>
+            </a>
+        </div>*/
 
         $config += array(
             'MegaMenu' => $MegaMenu
