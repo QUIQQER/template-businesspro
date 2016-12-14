@@ -513,16 +513,21 @@ h1.page-header-text-title {
 /* mega menu
  * ========================================================== */
 
-.quiqqer-menu-megaMenu-list-item {
-    font-weight: bold;
-    padding: 0 10px !important;
-    text-transform: uppercase;
-    font-size: 0.9em;
+.quiqqer-menu-megaMenu {
+    display: flex;
 }
 
-.quiqqer-menu-megaMenu {
+.quiqqer-menu-megaMenu nav {
     width: 100%;
 }
+
+.quiqqer-menu-megaMenu-list-item {
+font-weight: bold;
+padding: 0 10px !important;
+text-transform: uppercase;
+font-size: 0.9em;
+}
+
 
 .quiqqer-menu-megaMenu .fa-angle-down {
     font-size: 1.2em;
@@ -722,6 +727,36 @@ li.page-header-navigation-sub-entry:hover {
     opacity: 1;
     display: block;
     top: 100%;
+}
+
+/** page header suggest search
+* ========================================================== */
+
+.header-bar-suggestSearch {
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+.header-bar-suggestSearch .fa {
+    color: #eee;
+}
+
+.header-bar-suggestSearch input[type="search"] {
+    margin: 0;
+    padding: 6px 10px;
+    color: #eee;
+    opacity: 0.7;
+}
+
+.header-bar-suggestSearch input[type="search"]:hover,
+.header-bar-suggestSearch input[type="search"]:focus {
+    background: rgba(255,255,255,0.1);
+    /*background: rgba(0,0,0,0.1);*/
+    outline: none;
+    opacity: 1;
 }
 
 /** page header search

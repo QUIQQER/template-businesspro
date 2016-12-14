@@ -222,7 +222,9 @@ class Utils
             QUI::getPackage('quiqqer/search');
 
             $MegaMenu->appendHTML(
-                '<input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" />'
+                '<div class="header-bar-suggestSearch">
+                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" />
+                </div>'
             );
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addNotice($Exception->getMessage());
