@@ -91,17 +91,6 @@
                         <defaultvalue>center</defaultvalue>
                     </conf>
 
-                    <!-- search -->
-                    <conf name="searchShow">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-                    <conf name="searchLink">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>
-
-
 
                     <!-- share -->
                     <!--<conf name="shareShow">
@@ -456,35 +445,6 @@
                                     />
                                 </option>
                             </select>-->
-                        </settings>
-
-
-                        <!-- search -->
-                        <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.settings.search">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.settings.search.title"
-                                />
-                            </title>
-
-                            <input conf="templateBusinessPro.settings.searchShow"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.searchShow.text"
-                                    />
-                                </text>
-                            </input>
-
-                            <input conf="templateBusinessPro.settings.searchLink"
-                                   type="text" class="project-site">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.searchLink.text"
-                                    />
-                                </text>
-                            </input>
                         </settings>
 
                         <!-- share -->

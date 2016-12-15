@@ -156,8 +156,6 @@ class Utils
             'bgColorSwitcherSuffix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherSuffix'),
             'navBarShadow'          => $Project->getConfig('templateBusinessPro.settings.navBarShadow'),
             'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
-            'searchShow'            => $Project->getConfig('templateBusinessPro.settings.searchShow'),
-            'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink'),
             'shareShow'             => $Project->getConfig('templateBusinessPro.settings.shareShow'),
             'shareFacebook'         => $Project->getConfig('templateBusinessPro.settings.shareFacebook'),
             'shareTwitter'          => $Project->getConfig('templateBusinessPro.settings.shareTwitter'),
@@ -209,7 +207,26 @@ class Utils
          * Mega menu
          */
 
-        $MegaMenu = $params['MegaMenu'];
+        $searchMobile = '';
+
+        $MegaMenu    = $params['MegaMenu'];
+        $searchSites = $Project->getSites(array(
+            'where' => array(
+                'type' => 'quiqqer/search:types/search'
+            ),
+            'limit' => 1
+        ));
+
+        if (count($searchSites)) {
+            $searchUrl = $searchSites[0]->getUrlRewritten();
+
+            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop" style="width: auto";>
+                    <a href="' . $searchUrl . '" 
+                    class="header-bar-search-link searchMobile"">
+                        <i class="fa fa-search header-bar-search-icon"></i>
+                    </a>
+                </div>';
+        }
 
         $MegaMenu->prependHTML(
             '<div class="header-bar-inner-logo">
@@ -222,9 +239,10 @@ class Utils
             QUI::getPackage('quiqqer/search');
 
             $MegaMenu->appendHTML(
-                '<div class="header-bar-suggestSearch">
+                '<div class="header-bar-suggestSearch hide-on-mobile">
                     <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" />
-                </div>'
+                </div>' .
+                $searchMobile
             );
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addNotice($Exception->getMessage());

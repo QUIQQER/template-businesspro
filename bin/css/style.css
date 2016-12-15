@@ -550,6 +550,31 @@ font-size: 0.9em;
     text-align: center;
 }
 
+/* mobile */
+
+.quiqqer-menu-megaMenu-mobile {
+    height: 100%;
+}
+
+.quiqqer-menu-megaMenu-mobile .fa,
+.quiqqer-menu-megaMenu-mobile .searchMobile {
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+.quiqqer-menu-megaMenu-mobile .fa {
+    font-size: 1.5em;
+}
+
+.quiqqer-menu-megaMenu-mobile .header-bar-search-icon {
+    font-size: 1.3em;
+    padding: 0 10px;
+}
+
+.quiqqer-menu-megaMenu-mobile span:last-child {
+    display: none;
+}
+
 /** promo slider dots
  * ========================================================== */
 
@@ -745,16 +770,20 @@ li.page-header-navigation-sub-entry:hover {
 }
 
 .header-bar-suggestSearch input[type="search"] {
+    background: rgba(255,255,255,0.5);
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #333;
+    line-height: 20px;
     margin: 0;
-    padding: 6px 10px;
-    color: #eee;
     opacity: 0.7;
+    padding: 6px 10px;
 }
 
 .header-bar-suggestSearch input[type="search"]:hover,
 .header-bar-suggestSearch input[type="search"]:focus {
-    background: rgba(255,255,255,0.1);
-    /*background: rgba(0,0,0,0.1);*/
+    /*background: rgba(255,255,255,0.1);*/
     outline: none;
     opacity: 1;
 }
@@ -762,7 +791,7 @@ li.page-header-navigation-sub-entry:hover {
 /** page header search
 * ========================================================== */
 
-.header-bar-search:before {
+/*.header-bar-search:before {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -789,7 +818,7 @@ a.header-bar-search-link:hover {
 
 .header-bar-search-icon {
     line-height: 1.4em;
-}
+}*/
 
 /** page header
  * ========================================================== */
