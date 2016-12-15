@@ -217,7 +217,11 @@ class Utils
             'limit' => 1
         ));
 
-        if (count($searchSites)) {
+        // In sich funktioniert das, aber
+        // wenn Such Button erschein und man auf "menu-burger" klickt
+        // funktioniert er nicht (menu wird nicht angezeigt). Daher erst auskommentiert
+        //ToDo Button Menü-Burger wieder funktionsfächig machen!
+        /*if (count($searchSites)) {
             $searchUrl = $searchSites[0]->getUrlRewritten();
 
             $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop" style="width: auto";>
@@ -226,7 +230,7 @@ class Utils
                         <i class="fa fa-search header-bar-search-icon"></i>
                     </a>
                 </div>';
-        }
+        }*/
 
         $MegaMenu->prependHTML(
             '<div class="header-bar-inner-logo">
@@ -247,14 +251,6 @@ class Utils
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addNotice($Exception->getMessage());
         }
-
-        /*<div class="header-bar-search">
-
-         </div>
-            <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
-                <i class="fa fa-search header-bar-search-icon"></i>
-            </a>
-        </div>*/
 
         $config += array(
             'MegaMenu' => $MegaMenu
