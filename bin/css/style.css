@@ -567,7 +567,7 @@ font-size: 0.9em;
 /* extra styling für mobile menu */
 div.slideout-menu {
     max-width: 100%;
-    z-index: 1;
+    z-index: 0;
 }
 
 /** promo slider dots
@@ -763,7 +763,7 @@ li.page-header-navigation-sub-entry:hover {
 .header-bar-suggestSearch input[type="search"] {
     background: rgba(255,255,255,0.5);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: none;
     color: #333;
     line-height: 20px;
@@ -1021,7 +1021,7 @@ p,
 
 
 /* hyphenate / word break */
-.page-header h1 {
+h1, h2, h3, h4, h5, h6 {
     -ms-word-break: break-all;
     word-break: break-all;
     word-break: break-word; /* Non standard for webkit */
