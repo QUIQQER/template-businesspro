@@ -217,14 +217,11 @@ class Utils
             'limit' => 1
         ));
 
-        // In sich funktioniert das, aber
-        // wenn Such Button erschein und man auf "menu-burger" klickt
-        // funktioniert er nicht (menu wird nicht angezeigt). Daher erst auskommentiert
-        //ToDo Button Menü-Burger wieder funktionsfächig machen!
         /*if (count($searchSites)) {
             $searchUrl = $searchSites[0]->getUrlRewritten();
 
-            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop" style="width: auto";>
+            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop" 
+                                  style="width: auto; font-size: 30px !important;">
                     <a href="' . $searchUrl . '" 
                     class="header-bar-search-link searchMobile"">
                         <i class="fa fa-search header-bar-search-icon"></i>
@@ -241,10 +238,12 @@ class Utils
 
         try {
             QUI::getPackage('quiqqer/search');
+            $Locale = QUI::getLocale();
 
             $MegaMenu->appendHTML(
                 '<div class="header-bar-suggestSearch hide-on-mobile">
-                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" />
+                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" 
+                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text'). '"/>
                 </div>' .
                 $searchMobile
             );
