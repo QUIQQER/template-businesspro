@@ -86,8 +86,10 @@ class Utils
          * nav bar colors
          */
 
-        $navBarMainColor = '#2d4d88';
-        $navBarFontColor = '#ffffff';
+        $navBarMainColor      = '#2d4d88';
+        $navBarFontColor      = '#ffffff';
+        $mobileFontColor      = '#fff';
+        $mobileMenuBackground = '#252122';
 
         if ($Project->getConfig('templateBusinessPro.settings.navBarMainColor')) {
             $navBarMainColor = $Project->getConfig('templateBusinessPro.settings.navBarMainColor');
@@ -95,6 +97,14 @@ class Utils
 
         if ($Project->getConfig('templateBusinessPro.settings.navBarFontColor')) {
             $navBarFontColor = $Project->getConfig('templateBusinessPro.settings.navBarFontColor');
+        }
+
+        if ($Project->getConfig('templateBusinessPro.settings.mobileFontColor')) {
+            $mobileFontColor = $Project->getConfig('templateBusinessPro.settings.mobileFontColor');
+        }
+
+        if ($Project->getConfig('templateBusinessPro.settings.mobileMenuBackground')) {
+            $mobileMenuBackground = $Project->getConfig('templateBusinessPro.settings.mobileMenuBackground');
         }
 
         /**
@@ -148,6 +158,8 @@ class Utils
             'colorMainContentFont'  => $colorMainContentFont,
             'navBarMainColor'       => $navBarMainColor,
             'navBarFontColor'       => $navBarFontColor,
+            'mobileFontColor'       => $mobileFontColor,
+            'mobileMenuBackground'  => $mobileMenuBackground,
             'navBarHeight'          => (int)$Project->getConfig('templateBusinessPro.settings.navBarHeight'),
             'pageMaxWidth'          => $Project->getConfig('templateBusinessPro.settings.pageMaxWidth'),
             'headerHeight'          => $Project->getConfig('templateBusinessPro.settings.headerHeight'),
@@ -220,9 +232,9 @@ class Utils
         /*if (count($searchSites)) {
             $searchUrl = $searchSites[0]->getUrlRewritten();
 
-            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop" 
+            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop"
                                   style="width: auto; font-size: 30px !important;">
-                    <a href="' . $searchUrl . '" 
+                    <a href="' . $searchUrl . '"
                     class="header-bar-search-link searchMobile"">
                         <i class="fa fa-search header-bar-search-icon"></i>
                     </a>
@@ -243,7 +255,7 @@ class Utils
             $MegaMenu->appendHTML(
                 '<div class="header-bar-suggestSearch hide-on-mobile">
                     <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text'). '"/>
+                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '"/>
                 </div>' .
                 $searchMobile
             );

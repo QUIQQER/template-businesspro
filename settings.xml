@@ -28,13 +28,18 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#2d4d88</defaultvalue>
                     </conf>
-                    <conf name="navBarHoverColor">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#4d6d97</defaultvalue>
-                    </conf>
                     <conf name="navBarFontColor">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+
+                    <conf name="mobileFontColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+                    <conf name="mobileMenuBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#252122</defaultvalue>
                     </conf>
                     <!--<conf name="navBarShadow">
                         <type><![CDATA[string]]></type>
@@ -90,25 +95,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>center</defaultvalue>
                     </conf>
-
-
-                    <!-- share -->
-                    <!--<conf name="shareShow">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-                    <conf name="shareFacebook">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>0</defaultvalue>
-                    </conf>
-                    <conf name="shareTwitter">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>
-                    <conf name="shareGoogle">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>-->
 
                     <!-- colors -->
                     <conf name="colorMain">
@@ -408,7 +394,7 @@
 
                             </select>
 
-                            <!-- nav bar colors -->
+                            <!-- nav bar / menu colors -->
                             <input conf="templateBusinessPro.settings.navBarMainColor"
                                    type="color">
                                 <text>
@@ -426,70 +412,25 @@
                                 </text>
                             </input>
 
-                            <!-- Menu shadow-->
-                            <!--<select conf="templateBusinessPro.settings.navBarShadow">
+                            <!-- mobile menu (mega menu) -->
+                            <input conf="templateBusinessPro.settings.mobileFontColor"
+                                   type="color">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.text"
+                                            var="templateBusinessPro.settings.mobileFontColor"
                                     />
                                 </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.mobileMenuBackground"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.mobileMenuBackground"
+                                    />
+                                </text>
+                            </input>
 
-                                <option value="hide">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.hide"
-                                    />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.display"
-                                    />
-                                </option>
-                            </select>-->
                         </settings>
-
-                        <!-- share -->
-                        <!--<settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.settings.share">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="settings.share.title"
-                                />
-                            </title>
-
-                            <input conf="templateBusinessPro.settings.shareShow"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareShow.text"
-                                    />
-                                </text>
-                            </input>
-
-                            <input conf="templateBusinessPro.settings.shareFacebook"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareFacebook.text"
-                                    />
-                                </text>
-                            </input>
-                            <input conf="templateBusinessPro.settings.shareTwitter"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareTwitter.text"
-                                    />
-                                </text>
-                            </input>
-                            <input conf="templateBusinessPro.settings.shareGoogle"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareGoogle.text"
-                                    />
-                                </text>
-                            </input>
-                        </settings>-->
 
                         <!-- Colors -->
                         <settings title="templateBusinessPro.settings"

@@ -419,6 +419,7 @@
             <en><![CDATA[scroll]]></en>
             <pl><![CDATA[przewijany]]></pl>
         </locale>
+
         <!-- Navbar colors -->
         <locale name="templateBusinessPro.settings.navBarMainColor.text">
             <de><![CDATA[Menü Hintergrundfarbe]]></de>
@@ -430,6 +431,18 @@
             <en><![CDATA[Nav font color]]></en>
             <pl><![CDATA[Kolor czcionki]]></pl>
         </locale>
+
+        <locale name="templateBusinessPro.settings.mobileFontColor">
+            <de><![CDATA[Mobile Menü Fontfarbe]]></de>
+            <en><![CDATA[Mobile Nav font color]]></en>
+            <pl><![CDATA[Kolor czcionki nawigacji (mobile)]]></pl>
+        </locale>
+        <locale name="templateBusinessPro.settings.mobileMenuBackground">
+            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
+            <en><![CDATA[Mobile nav background color]]></en>
+            <pl><![CDATA[Kolor tła nawigacji (mobile)]]]></pl>
+        </locale>
+
 
 
         <!-- Share -->

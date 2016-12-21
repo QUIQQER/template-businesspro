@@ -37,6 +37,7 @@ input, textarea, select,
 input[type="submit"] {
     background: rgba(255, 255, 255, 0.05);
     border: none;
+    /*border: 1px solid rgba(0,0,0,0.2);*/
     border-radius: 0;
     font-size: 12pt;
     line-height: 1.75em;
@@ -44,6 +45,11 @@ input[type="submit"] {
     padding: 10px 16px;
     margin: 6px 0;
     box-shadow: 0 0 0 2px #ddd;
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
 }
 
 textarea {
@@ -564,6 +570,16 @@ font-size: 0.9em;
     display: none;
 }
 
+/* hyphenate, word break */
+.left-menu-text {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word; /* Non standard for webkit */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
 /* extra styling für mobile menu */
 div.slideout-menu {
     max-width: 100%;
@@ -1020,7 +1036,7 @@ p,
 }
 
 
-/* hyphenate / word break */
+/* hyphenate, word break */
 h1, h2, h3, h4, h5, h6 {
     -ms-word-break: break-all;
     word-break: break-all;
@@ -1029,7 +1045,6 @@ h1, h2, h3, h4, h5, h6 {
     -moz-hyphens: auto;
     hyphens: auto;
 }
-
 
 /*********************************************************************************/
 /* Nav style (in sidebar) navigation
@@ -1374,6 +1389,7 @@ footer:hover a {
 }
 
 .qui-form legend {
+    float: none !important; /* komischer bug in chrome */
     background: none;
     margin-bottom: 10px;
     width: auto;
@@ -1685,14 +1701,6 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
 .quiqqer-breadcrumb a:hover span:last-child {
     text-decoration: underline;
 }
-
-/*.quiqqer-breadcrumb li:first-child span:first-child {
-    display: none;
-}*/
-
-/*.quiqqer-breadcrumb span:first-child {
-    margin-right: 6px;
-}*/
 
 @media screen and (max-width: 1024px) {
 
