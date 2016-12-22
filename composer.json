@@ -25,7 +25,8 @@
         "quiqqer\/menu": "1.*",
         "quiqqer\/unsemantic": "*@dev",
         "quiqqer\/utils": ">=1.7|dev-dev",
-        "quiqqer\/page-transition": "dev-master"
+        "quiqqer\/page-transition": "dev-master",
+        "quiqqer\/buttons": ">=1.0.0"
     },
 
     "autoload": {
