@@ -26,7 +26,8 @@
         "quiqqer\/unsemantic": "*@dev",
         "quiqqer\/utils": ">=1.7|dev-dev",
         "quiqqer\/page-transition": "dev-master",
-        "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev"
+        "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
+        "quiqqer\/buttons": ">=1.0.0"
       },
 
     "autoload": {
