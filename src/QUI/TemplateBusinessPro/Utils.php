@@ -241,10 +241,12 @@ class Utils
                 </div>';
         }*/
 
+        $alt = $Project->getMedia()->getLogoImage()->getAttribute('title');
+
         $MegaMenu->prependHTML(
             '<div class="header-bar-inner-logo">
                 <a href="' . URL_DIR . '" class="page-header-logo">
-                <img src="' . $Project->getMedia()->getLogo() . '"/></a>
+                <img src="' . $Project->getMedia()->getLogo() . '" alt="' . $alt . '"/></a>
             </div>'
         );
 
