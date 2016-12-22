@@ -935,7 +935,7 @@ header.control-header {
     clear: both;
     line-height: 1.5;
     margin: 0 0 10px 0;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 h1, h2, h3, h4, h5 {

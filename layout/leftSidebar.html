@@ -7,7 +7,7 @@
 
 ACHTUNG!
 Das ist der LINKE Sidebar mit push- und pull- Klassen von Unsemantic.
-D.h. der Sidebar wird nach links gepullt, obwohl er nach dem Main-Content (HTML) kommt.
+D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Main-Content kommt.
 
 *}
 <div class="page-multible-right grid-70 push-30 mobile-grid-100" role="main">
@@ -40,6 +40,12 @@ D.h. der Sidebar wird nach links gepullt, obwohl er nach dem Main-Content (HTML)
     {/if}
 
     {$Template->getBody()}
+
+    {if empty($Template->getBody()) ||
+        empty( $prefixContentBricks ||
+        empty( $suffixContentBricks ))}
+        &nbsp;
+    {/if}
 
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
