@@ -10,13 +10,6 @@
                             var="brickFullWidth"/>
                 </setting>
             </settings>
-
-            <settings>
-                <setting name="showBrickTitle">
-                    <locale group="quiqqer/template-businesspro"
-                            var="showBrickTitle"/>
-                </setting>
-            </settings>
         </brick>
 
         <!-- promo slider wallpaper 2 content -->

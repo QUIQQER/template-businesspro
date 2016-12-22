@@ -28,13 +28,18 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#2d4d88</defaultvalue>
                     </conf>
-                    <conf name="navBarHoverColor">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>#4d6d97</defaultvalue>
-                    </conf>
                     <conf name="navBarFontColor">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+
+                    <conf name="mobileFontColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#ffffff</defaultvalue>
+                    </conf>
+                    <conf name="mobileMenuBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#252122</defaultvalue>
                     </conf>
                     <!--<conf name="navBarShadow">
                         <type><![CDATA[string]]></type>
@@ -59,6 +64,24 @@
                         <defaultvalue>0</defaultvalue>
                     </conf>
 
+                    <!-- show breadcrumb -->
+                    <conf name="showBreadcrumbStartPage">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="showBreadcrumbNoSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="showBreadcrumbLeftSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="showBreadcrumbRightSidebar">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+
                     <!-- header img height and value  -->
                     <conf name="headerHeight">
                         <type><![CDATA[bool]]></type>
@@ -72,34 +95,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>center</defaultvalue>
                     </conf>
-
-                    <!-- search -->
-                    <conf name="searchShow">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-                    <conf name="searchLink">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>
-
-                    <!-- share -->
-                    <!--<conf name="shareShow">
-                        <type><![CDATA[bool]]></type>
-                        <defaultvalue>1</defaultvalue>
-                    </conf>
-                    <conf name="shareFacebook">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>0</defaultvalue>
-                    </conf>
-                    <conf name="shareTwitter">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>
-                    <conf name="shareGoogle">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue></defaultvalue>
-                    </conf>-->
 
                     <!-- colors -->
                     <conf name="colorMain">
@@ -303,6 +298,55 @@
                         </settings>
 
 
+                        <!-- breadrcumb -->
+                        <settings title="templateBusinessPro.settings"
+                                      name="templateBusinessPro.breadcrumb.settings">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="templateBusinessPro.breadcrumb.settings.title"
+                                />
+                            </title>
+
+                            <!-- no breadcrumb? -->
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="showBreadcrumb.text" />
+                            </text>
+                            <input conf="templateBusinessPro.settings.showBreadcrumbStartPage"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="showBreadcrumbStartPage.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.showBreadcrumbNoSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="showBreadcrumbNoSidebar.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.showBreadcrumbLeftSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="showBreadcrumbLeftSidebar.text"
+                                    />
+                                </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.showBreadcrumbRightSidebar"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="showBreadcrumbRightSidebar.text"
+                                    />
+                                </text>
+                            </input>
+                        </settings>
+
+
                         <!-- nav bar -->
                         <settings title="templateBusinessPro.settings"
                                   name="templateBusinessPro.settings.navBar">
@@ -350,7 +394,7 @@
 
                             </select>
 
-                            <!-- nav bar colors -->
+                            <!-- nav bar / menu colors -->
                             <input conf="templateBusinessPro.settings.navBarMainColor"
                                    type="color">
                                 <text>
@@ -368,99 +412,25 @@
                                 </text>
                             </input>
 
-                            <!-- Menu shadow-->
-                            <!--<select conf="templateBusinessPro.settings.navBarShadow">
+                            <!-- mobile menu (mega menu) -->
+                            <input conf="templateBusinessPro.settings.mobileFontColor"
+                                   type="color">
                                 <text>
                                     <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.text"
+                                            var="templateBusinessPro.settings.mobileFontColor"
                                     />
                                 </text>
+                            </input>
+                            <input conf="templateBusinessPro.settings.mobileMenuBackground"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.mobileMenuBackground"
+                                    />
+                                </text>
+                            </input>
 
-                                <option value="hide">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.hide"
-                                    />
-                                </option>
-                                <option value="display">
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.navBarShadow.display"
-                                    />
-                                </option>
-                            </select>-->
                         </settings>
-
-
-                        <!-- search -->
-                        <settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.settings.search">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.settings.search.title"
-                                />
-                            </title>
-
-                            <input conf="templateBusinessPro.settings.searchShow"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.searchShow.text"
-                                    />
-                                </text>
-                            </input>
-
-                            <input conf="templateBusinessPro.settings.searchLink"
-                                   type="text" class="project-site">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="templateBusinessPro.settings.searchLink.text"
-                                    />
-                                </text>
-                            </input>
-                        </settings>
-
-                        <!-- share -->
-                        <!--<settings title="templateBusinessPro.settings"
-                                  name="templateBusinessPro.settings.share">
-                            <title>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="settings.share.title"
-                                />
-                            </title>
-
-                            <input conf="templateBusinessPro.settings.shareShow"
-                                   type="checkbox">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareShow.text"
-                                    />
-                                </text>
-                            </input>
-
-                            <input conf="templateBusinessPro.settings.shareFacebook"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareFacebook.text"
-                                    />
-                                </text>
-                            </input>
-                            <input conf="templateBusinessPro.settings.shareTwitter"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareTwitter.text"
-                                    />
-                                </text>
-                            </input>
-                            <input conf="templateBusinessPro.settings.shareGoogle"
-                                   type="text">
-                                <text>
-                                    <locale group="quiqqer/template-businesspro"
-                                            var="settings.shareGoogle.text"
-                                    />
-                                </text>
-                            </input>
-                        </settings>-->
 
                         <!-- Colors -->
                         <settings title="templateBusinessPro.settings"

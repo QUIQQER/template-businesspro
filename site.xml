@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+    <!-- global attributes -->
+    <attributes>
+        <attribute>templateBusinessPro.showEmotion</attribute>
+        <attribute>templateBusinessPro.dontShowTitle</attribute>
+        <attribute>templateBusinessPro.dontShowShort</attribute>
+    </attributes>
+
+    <settings>
+        <category name="templateBusinessPro.siteSettings">
+            <settings>
+                <title>
+                    <locale group="quiqqer/template-businesspro"
+                            var="templateBusinessPro.siteSettings"/>
+                </title>
+
+                <input conf="templateBusinessPro.showEmotion" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/template-businesspro"
+                                var="templateBusinessPro.siteSettings.showEmotion"/>
+                    </text>
+                </input>
+                <input conf="templateBusinessPro.dontShowTitle" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/sitetypes" var="admin.types.titleAndShort.settings.title"/>
+                    </text>
+                </input>
+                <input conf="templateBusinessPro.dontShowShort" type="checkbox">
+                    <text>
+                        <locale group="quiqqer/sitetypes" var="admin.types.titleAndShort.settings.short"/>
+                    </text>
+                </input>
+            </settings>
+        </category>
+    </settings>
+
 
     <!-- layouts -->
     <layouts>

@@ -59,11 +59,37 @@ class Utils
         }
 
         /**
+         * no breadcrumb?
+         */
+
+        $showBreadcrumb = false;
+
+        switch ($Template->getLayoutType()) {
+            case 'layout/startPage':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbStartPage');
+                break;
+
+            case 'layout/noSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbNoSidebar');
+                break;
+
+            case 'layout/rightSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbRightSidebar');
+                break;
+
+            case 'layout/leftSidebar':
+                $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbLeftSidebar');
+                break;
+        }
+
+        /**
          * nav bar colors
          */
 
-        $navBarMainColor = '#2d4d88';
-        $navBarFontColor = '#ffffff';
+        $navBarMainColor      = '#2d4d88';
+        $navBarFontColor      = '#ffffff';
+        $mobileFontColor      = '#fff';
+        $mobileMenuBackground = '#252122';
 
         if ($Project->getConfig('templateBusinessPro.settings.navBarMainColor')) {
             $navBarMainColor = $Project->getConfig('templateBusinessPro.settings.navBarMainColor');
@@ -71,6 +97,14 @@ class Utils
 
         if ($Project->getConfig('templateBusinessPro.settings.navBarFontColor')) {
             $navBarFontColor = $Project->getConfig('templateBusinessPro.settings.navBarFontColor');
+        }
+
+        if ($Project->getConfig('templateBusinessPro.settings.mobileFontColor')) {
+            $mobileFontColor = $Project->getConfig('templateBusinessPro.settings.mobileFontColor');
+        }
+
+        if ($Project->getConfig('templateBusinessPro.settings.mobileMenuBackground')) {
+            $mobileMenuBackground = $Project->getConfig('templateBusinessPro.settings.mobileMenuBackground');
         }
 
         /**
@@ -124,6 +158,8 @@ class Utils
             'colorMainContentFont'  => $colorMainContentFont,
             'navBarMainColor'       => $navBarMainColor,
             'navBarFontColor'       => $navBarFontColor,
+            'mobileFontColor'       => $mobileFontColor,
+            'mobileMenuBackground'  => $mobileMenuBackground,
             'navBarHeight'          => (int)$Project->getConfig('templateBusinessPro.settings.navBarHeight'),
             'pageMaxWidth'          => $Project->getConfig('templateBusinessPro.settings.pageMaxWidth'),
             'headerHeight'          => $Project->getConfig('templateBusinessPro.settings.headerHeight'),
@@ -132,8 +168,6 @@ class Utils
             'bgColorSwitcherSuffix' => $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherSuffix'),
             'navBarShadow'          => $Project->getConfig('templateBusinessPro.settings.navBarShadow'),
             'headerImagePosition'   => $Project->getConfig('templateBusinessPro.settings.headerImagePosition'),
-            'searchShow'            => $Project->getConfig('templateBusinessPro.settings.searchShow'),
-            'searchLink'            => $Project->getConfig('templateBusinessPro.settings.searchLink'),
             'shareShow'             => $Project->getConfig('templateBusinessPro.settings.shareShow'),
             'shareFacebook'         => $Project->getConfig('templateBusinessPro.settings.shareFacebook'),
             'shareTwitter'          => $Project->getConfig('templateBusinessPro.settings.shareTwitter'),
@@ -146,9 +180,10 @@ class Utils
          */
 
         $config += array(
-            'quiTplType'    => $Project->getConfig('templateBusinessPro.settings.standardType'),
-            'BricksManager' => \QUI\Bricks\Manager::init(),
-            'showHeader'    => $showHeader
+            'quiTplType'     => $Project->getConfig('templateBusinessPro.settings.standardType'),
+            'BricksManager'  => \QUI\Bricks\Manager::init(),
+            'showHeader'     => $showHeader,
+            'showBreadcrumb' => $showBreadcrumb
         );
 
 
@@ -184,27 +219,59 @@ class Utils
          * Mega menu
          */
 
-        $MegaMenu = $params['MegaMenu'];
+        $searchMobile = '';
+
+        $MegaMenu    = $params['MegaMenu'];
+        $searchSites = $Project->getSites(array(
+            'where' => array(
+                'type' => 'quiqqer/search:types/search'
+            ),
+            'limit' => 1
+        ));
+
+        /*if (count($searchSites)) {
+            $searchUrl = $searchSites[0]->getUrlRewritten();
+
+            $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop"
+                                  style="width: auto; font-size: 30px !important;">
+                    <a href="' . $searchUrl . '"
+                    class="header-bar-search-link searchMobile"">
+                        <i class="fa fa-search header-bar-search-icon"></i>
+                    </a>
+                </div>';
+        }*/
+
+        $alt = $Project->getMedia()->getLogoImage()->getAttribute('title');
 
         $MegaMenu->prependHTML(
             '<div class="header-bar-inner-logo">
                 <a href="' . URL_DIR . '" class="page-header-logo">
-                <img src="' . $Project->getMedia()->getLogo() . '"/></a>
+                <img src="' . $Project->getMedia()->getLogo() . '" alt="' . $alt . '"/></a>
             </div>'
         );
 
-        $MegaMenu->appendHTML(
-            '<div class="header-bar-search">
-                <a href="' . $Project->getConfig('templateBusinessPro.settings.searchLink') . '" class="header-bar-search-link">
-                    <i class="fa fa-search header-bar-search-icon"></i>
-                </a>    
-            </div>'
-        );
+        try {
+            QUI::getPackage('quiqqer/search');
+            $Locale = QUI::getLocale();
+
+            $MegaMenu->appendHTML(
+                '<div class="header-bar-suggestSearch hide-on-mobile">
+                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" 
+                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '"/>
+                </div>' .
+                $searchMobile
+            );
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::addNotice($Exception->getMessage());
+        }
 
         $config += array(
             'MegaMenu' => $MegaMenu
         );
 
+        $config += array(
+            'Breadcrumb' => $params['Breadcrumb']
+        );
 
         QUI\Cache\Manager::set(
             'quiqqer/templateBusinessPro',

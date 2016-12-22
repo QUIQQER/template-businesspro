@@ -5,41 +5,43 @@
 
 {if !empty( $prefixContentBricks )}
 {foreach from=$prefixContentBricks item=Brick}
-<div class="page-content">
-    {if $Brick->getSetting( 'showBrickTitle' )}
-    <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+<div class="tpl-businessPro-row">
+    {if $Brick->getAttribute('frontednTitle')}
+        <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
     {/if}
+    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
     {$Brick->create()}
 </div>
 {/foreach}
 {/if}
 
-<div class="page-content">
-    {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle') ||
-    $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-    <div class="page-content-site-title">
-        {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowTitle')}
-        <header>
-            <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
-        </header>
-        {/if}
-        {if $Site->getAttribute('quiqqer.settings.sitetypes.dontShowShort')}
-        <div class="content-short" itemprop="description">
-            {$Site->getAttribute('short')|nl2br}
-        </div>
-        {/if}
+
+{if !$Site->getAttribute('templateBusinessPro.showEmotion')}
+
+    {if $Site->getAttribute('templateBusinessPro.dontShowTitle')}
+    <header class="content-header">
+        <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
+    </header>
+    {/if}
+
+    {if $Site->getAttribute('templateBusinessPro.dontShowShort')}
+    <div class="content-short" itemprop="description">
+        {$Site->getAttribute('short')|nl2br}
     </div>
     {/if}
 
-    {$Template->getBody()}
-</div>
+{/if}
+
+{$Template->getBody()}
+
 
 {if !empty( $suffixContentBricks )}
 {foreach from=$suffixContentBricks item=Brick}
-<div class="page-content">
-    {if $Brick->getSetting( 'showBrickTitle' )}
-    <h1 class="brick-title">{$Brick->getSetting( 'showBrickTitle' )}</h1>
+<div class="tpl-businessPro-row">
+    {if $Brick->getAttribute('frontendTitle')}
+        <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
     {/if}
+    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
     {$Brick->create()}
 </div>
 {/foreach}
