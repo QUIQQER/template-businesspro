@@ -1266,6 +1266,26 @@ footer:hover a {
 
 @media screen and (max-width: 767px) {
 
+    .tpl-businessPro-row,
+    .content-header,
+    .content-body,
+    .tpl-businessPro-row + .content-body,
+    .content-template,
+    .content-short {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2em;
+    }
+
+
+    .control-content {
+        padding-bottom: 1.2rem;
+    }
+
+    .control-header {
+        text-align: center;
+        padding-bottom: 1.2rem;
+    }
+
     .page-header {
         height: auto !important;
     }
