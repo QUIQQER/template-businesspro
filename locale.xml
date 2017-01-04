@@ -473,6 +473,19 @@
             <en><![CDATA[General]]></en>
         </locale>
 
+        <locale name="template.settings.mobileMenuBackground">
+            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
+            <en><![CDATA[Mobile nav background color]]></en>
+            <pl><![CDATA[Kolor tła nawigacji (mobile)]]]></pl>
+        </locale>
+        <locale name="template.settings.mobileMenuBackground.desc">
+            <de><![CDATA[Die Einstellung ist nur in mobiler Ansicht sichtbar. So kann man die unterschiedlichen
+                Ebenen farblich unterscheiden.]]></de>
+            <en><![CDATA[This setting works only for mobile.]]></en>
+            <pl><![CDATA[Efekt tego ustawienia jest widoczny przy przeglądaniu strony na urządzeniach przenośnych.
+                W ten sposób można odróżnić menu mobilne od nagłówka strony.]]></pl>
+        </locale>
+
         <locale name="templateBusinessPro.settings.footerColor.text">
             <de><![CDATA[Footer]]></de>
             <en><![CDATA[Footer]]></en>

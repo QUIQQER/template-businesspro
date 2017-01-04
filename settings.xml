@@ -428,6 +428,11 @@
                                             var="templateBusinessPro.settings.mobileMenuBackground"
                                     />
                                 </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.mobileMenuBackground.desc"
+                                    />
+                                </description>
                             </input>
 
                         </settings>
