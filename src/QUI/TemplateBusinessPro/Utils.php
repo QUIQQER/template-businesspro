@@ -229,21 +229,21 @@ class Utils
             'limit' => 1
         ));
 
-        /*if (count($searchSites)) {
+        if (count($searchSites)) {
             try {
                 $searchUrl = $searchSites[0]->getUrlRewritten();
 
-                $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile hide-on-desktop"
+                $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile-search hide-on-desktop"
                                   style="width: auto; font-size: 30px !important;">
                     <a href="' . $searchUrl . '"
-                    class="header-bar-search-link searchMobile"">
+                    class="header-bar-search-link searchMobile">
                         <i class="fa fa-search header-bar-search-icon"></i>
                     </a>
                 </div>';
             } catch (QUI\Exception $Exception) {
                 QUI\System\Log::addNotice($Exception->getMessage());
             }
-        }*/
+        }
 
         $alt = "";
         if ($Project->getMedia()->getLogoImage()) {

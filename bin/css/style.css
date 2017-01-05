@@ -558,6 +558,13 @@ font-size: 0.9em;
 
 /* mobile menu */
 
+.quiqqer-menu-megaMenu-mobile-search {
+    float: right;
+    display: block;
+    padding: 0 15px;
+    opacity: 0.9;
+}
+
 .quiqqer-menu-megaMenu-mobile {
     font-size: 36px !important;
 }
@@ -647,6 +654,25 @@ div.quiqqer-bricks-promoslider-wallpaper-prev {
     opacity: 0.9;
     text-shadow: none;
 }
+
+/** portfolio / referenzen
+ * ========================================================== */
+
+/* extra wegen den festgesetzten 33% */
+section.quiqqer-portfolio-list {
+    width: calc(100% + 20px);
+    left: -10px;
+}
+
+@media screen and (max-width: 767px) {
+
+    /*.quiqqer-porfolio-reference-windowShort .quiqqer-bricks-promoslider-wallpaper-image {
+        background-color: rgba(0,0,0,0.3);
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+    }*/
+}
+
 
 /** page header navigation
  * ========================================================== */
@@ -1992,12 +2018,4 @@ a.template-button:hover {
 .grid-children-container {
     left: -20px;
     width: calc(100% + 40px);
-}
-
-/* portfolio / Referenzen
- * extra wegen den festgesetzten 33%
- **/
-section.quiqqer-portfolio-list {
-    width: calc(100% + 20px);
-    left: -10px;
 }
