@@ -222,9 +222,18 @@ class Utils
         $searchMobile = '';
 
         $MegaMenu    = $params['MegaMenu'];
+
+        $types = array(
+            'quiqqer/sitetypes:types/search',
+            'quiqqer/search:types/search'
+        );
+
         $searchSites = $Project->getSites(array(
             'where' => array(
-                'type' => 'quiqqer/search:types/search'
+                'type' => array(
+                    'type' => 'IN',
+                    'value' => $types
+                )
             ),
             'limit' => 1
         ));
