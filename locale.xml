@@ -555,5 +555,26 @@
             <en><![CDATA[Link: slide right (grey)]]></en>
         </locale>
 
+        <!-- site settings -->
+
+        <locale name="siteSettings">
+            <de><![CDATA[Template Basic Company: Einstellungen]]></de>
+            <en><![CDATA[Template Basic Company: settings]]></en>
+        </locale>
+
+        <locale name="siteSettings.showEmotion">
+            <de><![CDATA[Header Bild anzeigen]]></de>
+            <en><![CDATA[Show header picture]]></en>
+            <pl><![CDATA[Pokaż obrazek nagłówka]]></pl>
+        </locale>
+        <locale name="siteSettings.showTitle">
+            <de><![CDATA[Titel anzeigen]]></de>
+            <en><![CDATA[Show title]]></en>
+        </locale>
+        <locale name="siteSettings.showShort">
+            <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
+            <en><![CDATA[Show short text]]></en>
+        </locale>
+
     </groups>
 </locales>

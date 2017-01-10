@@ -3,8 +3,8 @@
     <!-- global attributes -->
     <attributes>
         <attribute>templateBusinessPro.showEmotion</attribute>
-        <attribute>templateBusinessPro.dontShowTitle</attribute>
-        <attribute>templateBusinessPro.dontShowShort</attribute>
+        <attribute>templateBusinessPro.showTitle</attribute>
+        <attribute>templateBusinessPro.showShort</attribute>
     </attributes>
 
     <settings>
@@ -21,14 +21,14 @@
                                 var="templateBusinessPro.siteSettings.showEmotion"/>
                     </text>
                 </input>
-                <input conf="templateBusinessPro.dontShowTitle" type="checkbox">
+                <input conf="templateBusinessPro.showTitle" type="checkbox">
                     <text>
-                        <locale group="quiqqer/sitetypes" var="admin.types.titleAndShort.settings.title"/>
+                        <locale group="quiqqer/template-businesspro" var="siteSettings.showTitle"/>
                     </text>
                 </input>
-                <input conf="templateBusinessPro.dontShowShort" type="checkbox">
+                <input conf="templateBusinessPro.showShort" type="checkbox">
                     <text>
-                        <locale group="quiqqer/sitetypes" var="admin.types.titleAndShort.settings.short"/>
+                        <locale group="quiqqer/template-businesspro" var="siteSettings.showShort"/>
                     </text>
                 </input>
             </settings>
