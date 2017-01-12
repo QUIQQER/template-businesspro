@@ -291,7 +291,8 @@ footer a:hover {
  * background color prefix suffix switcher
  * Prefix
  */
-<?php if ($bgColorSwitcherPrefix == 'display') {; ?>
+<?php if ($bgColorSwitcherPrefix == 'display')
+{; ?>
 .brick-even-prefix {
     background: #f5f5f5;
 }
