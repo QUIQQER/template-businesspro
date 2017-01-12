@@ -41,10 +41,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#252122</defaultvalue>
                     </conf>
-                    <!--<conf name="navBarShadow">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>hide</defaultvalue>
-                    </conf>-->
 
                     <!-- show header -->
                     <conf name="showHeaderStartPage">
