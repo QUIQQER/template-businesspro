@@ -306,7 +306,8 @@ footer a:hover {
  * background color prefix suffix switcher
  * Suffix
  */
-<?php if ($bgColorSwitcherSuffix == 'display') {; ?>
+<?php if ($bgColorSwitcherSuffix == 'display')
+{; ?>
 .brick-even-suffix {
     background: #f5f5f5;
 }
@@ -317,7 +318,8 @@ footer a:hover {
 
 <?php }; ?>
 
-<?php if ($headerHeight) {; ?>
+<?php if ($headerHeight)
+{; ?>
 .page-header {
     display: flex;
     height: <?php echo $headerHeightValue; ?>px;
@@ -333,7 +335,8 @@ footer a:hover {
 /**
  * Menüposition
  */
-<?php  if ($navPos == 'fix') {; ?>
+<?php  if ($navPos == 'fix')
+{; ?>
 .header-bar {
     position: fixed !important;
 }
