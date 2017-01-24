@@ -384,6 +384,30 @@ ul.alt {
     background: #ffffff;
 }
 
+table {
+    max-width: 100%;
+}
+
+tr {
+    background: #eee;
+}
+
+tr:nth-child(2n+1) {
+    background: #f5f5f5;
+}
+
+tr:only-child {
+    background: #eee;
+}
+
+td {
+    padding: 6px;
+}
+
+thead {
+    font-weight: bold;
+}
+
 /** page header
  * ========================================================== */
 
