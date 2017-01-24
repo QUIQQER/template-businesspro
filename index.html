@@ -1,326 +1,47 @@
 <!doctype html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="{$Project->getAttribute('lang')}" itemscope
+      itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="{$Project->getAttribute('lang')}" itemscope
+      itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="{$Project->getAttribute('lang')}" itemscope
+      itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
     {pace}
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,300italic' rel='stylesheet'
+          type='text/css'>
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
     {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
 
     <!--[if (lt IE 9) & (!IEMobile)]>
-        <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/unsemantic/ie.css" />
+    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/unsemantic/ie.css"/>
     <![endif]-->
 
     <!-- [begin] css combine -->
-        {fontawesome}
-        {unsemantic}
-        <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css" />
+    {fontawesome}
+    {unsemantic}
+    <link href="{$URL_TPL_DIR}bin/css/style.css" rel="stylesheet" type="text/css"/>
 
-        {if $quiTplType && $quiTplType == 'rightSidebar'}
-            <link href="{$URL_TPL_DIR}bin/types/rightSidebar.css" rel="stylesheet" type="text/css" />
-        {/if}
+    {if $quiTplType && $quiTplType == 'rightSidebar'}
+    <link href="{$URL_TPL_DIR}bin/types/rightSidebar.css" rel="stylesheet" type="text/css"/>
+    {/if}
 
-        {if $quiTplType && $quiTplType == 'leftSidebar'}
-            <link href="{$URL_TPL_DIR}bin/types/leftSidebar.css" rel="stylesheet" type="text/css" />
-        {/if}
+    {if $quiTplType && $quiTplType == 'leftSidebar'}
+    <link href="{$URL_TPL_DIR}bin/types/leftSidebar.css" rel="stylesheet" type="text/css"/>
+    {/if}
     <!-- [end] css combine -->
 
     <style>
-
-        /**
-         * Farbeinstellungen
-         */
-
-        /* nav bar */
-        .header-bar,
-        .header-bar-inner-nav {
-            background: {$navBarMainColor};
-        }
-
-        /* mobile nav background */
-        .slideout-menu .page-menu {
-            background: {$mobileMenuBackground};
-        }
-
-        .slideout-menu .page-navigation-home,
-        .slideout-menu .left-menu-a,
-        .slideout-menu .page-menu-close {
-            color: {$mobileFontColor};
-        }
-
-
-        .page-header-navigation-sub-list,
-        .page-header-navigation li:hover,
-        .header-bar-search:hover,
-        .quiqqer-menu-megaMenu-list-item-menu.control-background,
-        .quiqqer-menu-megaMenu-list-item:hover, {
-            background: {$Convert->colorBrightness($navBarMainColor, 0.9)};
-        }
-
-        .header-bar,
-        .header-bar-inner a,
-        .header-bar-inner a:link,
-        .header-bar-inner a:active,
-        .header-bar-inner a:visited,
-        .header-bar-inner a:hover {
-            color: {$navBarFontColor};
-        }
-
-        /*.quiqqer-menu-megaMenu input::-webkit-input-placeholder {
-            color: {$navBarFontColor} !important;
-        }
-        .quiqqer-menu-megaMenu input:-moz-placeholder {
-            color: {$navBarFontColor} !important;
-        }
-        .quiqqer-menu-megaMenu input::-moz-placeholder {
-            color: {$navBarFontColor} !important;
-        }
-        .quiqqer-menu-megaMenu input::-ms-input-placeholder {
-            color: {$navBarFontColor} !important;
-        }
-        .quiqqer-menu-megaMenu input:-ms-input-placeholder {
-            color: {$navBarFontColor} !important;
-        }*/
-
-        .color-main {
-            color: {$colorMain};
-        }
-
-        .qui-sitetypes-sitemap-block-category .control-background {
-            background: {$colorMain};
-        }
-
-        .page-header-logo-img{
-            max-height: calc({$navBarHeight}px - 20px);
-        }
-
-        .header-bar,
-        .header-bar-2,
-        .header-bar-inner-nav,
-        .page-header-navigation-entry,
-        .header-bar-search,
-        .header-bar-search:before,
-        .page-header-navigation-entry:before,
-        .header-bar-inner-logo{
-            height: {$navBarHeight}px;
-        }
-
-        .header-bar-search,
-        .page-header-navigation-entry,
-        .fa-chevron-down-mobile,
-        .quiqqer-menu-megaMenu-list-item,
-        .hide-on-desktop .quiqqer-menu-megaMenu-mobile,
-        .header-bar-suggestSearch {
-            line-height: {$navBarHeight}px;
-        }
-
-        .quiqqer-fa-levels-icon:hover,
-        .quiqqer-navigation-level-1 a:hover,
-        a.quiqqer-navigation-home:hover {
-            color: {$colorMain};
-        }
-
-
-        .quiqqer-navigation-entry:hover .quiqqer-fa-list-icon {
-            color: {$colorMain};
-        }
-
-        .mainColor,
-        .mainColorHover:hover,
-        .template-breadcrumb .quiqqer-breadcrumb ul li:last-child a span:last-child {
-            color: {$colorMain};
-        }
-
-        .tpl-businessPro-row a.qui-tags-tag:hover {
-            border: 1px solid {$colorMain};
-            color: {$colorMain};
-        }
-
-
-        #page input[type='checkbox']:checked  + label::before,
-        #page input[type='radio']:checked  + label::before,
-        .pace .pace-progress {
-            background-color: {$colorMain};
-        }
-
-        input[type='submit'],
-        input[type='reset'],
-        input[type='button'],
-        button,
-        .button,
-        .tpl-businessPro-row .button,
-        button:disabled,
-        button:disabled:hover,
-        a.template-button {
-            background-color: {$colorMain};
-            color: {$buttonFontColor};
-            border: 2px solid {$colorMain};
-        }
-
-        a.template-button:hover {
-            background-color: {*$Convert->colorBrightness($colorMain, 0.7)*}
-        }
-
-        #page .button.special {
-            background: none !important;
-            color: {$colorMainContentFont};
-        }
-        #page .button.special:hover {
-            border: 3px solid {$colorMain};
-        }
-
-        body,
-        .mainFontColor {
-            color: {$colorMainContentFont} !important;
-        }
-
-        textarea:hover,
-        textarea:focus,
-        input:hover,
-        input:focus,
-        select:hover,
-        select:focus {
-            box-shadow: 0 0 0 2px {$colorMain};
-        }
-
-
-        .main-content-color-bg {
-            background-color: {$colorMainContentBg};
-        }
-
-        a,
-        a.link-simple-color,
-        a.slide-up-color {
-            color: {$colorMain};
-        }
-
-        a.link-slide-up-color::before {
-        background: {$colorMain};
-
-        }
-        .quiqqer-content a:hover:after {
-            color: {$colorMain};
-        }
-
-        input[type='submit']:hover,
-        input[type='reset']:hover,
-        input[type='button']:hover,
-        button:hover,
-        .button-active,
-        .button:active,
-        .button:hover {
-            /*background: none;
-            color: {$colorMain};*/
-        }
-
-        .page-footer button {
-            background: {$colorMain};
-            color: #ffffff;
-        }
-
-        .page-footer {
-            background: {$colorFooterBackground};
-            color: {$colorFooterFont} !important;
-        }
-
-        .page-footer h2,
-        .page-footer h3,
-        .page-footer h4 {
-            color: {$colorFooterFont};
-        }
-
-        footer a {
-            color: {$colorFooterLinks};
-        }
-
-        footer a:hover {
-            color: {$colorFooterLinks};
-        }
-
-        /* pagination */
-        .quiqqer-sheets-desktop a:hover {
-            border: 1px solid {$colorMain} !important;
-            background-color: {$colorMain};
-        }
-
-        .quiqqer-sheets-desktop-limits a:hover {
-            color: {$colorMain};
-        }
-
-        .control-background-active {
-            background: {$colorMain} !important;
-            color: #FFFFFF !important;
-        }
-
-        .control-background {
-            background: {$colorMain};
-        }
-
-        /**
-         * Menü schatten anzeigen
-         */
-
-        {if $navBarShadow == 'hide'}
-            .header-bar {
-                box-shadow: none !important;
-            }
-        {/if}
-
-
-        {if $bgColorSwitcherPrefix == 'display'}
-        .brick-even-prefix {
-            background: #f5f5f5;
-        }
-
-        .brick-odd-prefix {
-            background: #e5e5e5;
-        }
-        {/if}
-
-        {if $bgColorSwitcherSuffix == 'display'}
-        .brick-even-suffix {
-            background: #f5f5f5;
-        }
-
-        .brick-odd-suffix {
-            background: #e5e5e5;
-        }
-        {/if}
-
-        {if $headerHeight}
-        .page-header {
-            display: flex;
-            height: {$headerHeightValue}px;
-            overflow: hidden;
-        }
-
-        .header-img {
-            align-self: {$headerImagePosition};
-        }
-        {/if}
-
-        /**
-         * Position des Menüs
-         */
-
-        {if $navPos == 'fix'}
-        .header-bar {
-            position: fixed !important;
-        }
-
-        .body-container {
-            top: {$navBarHeight}px;
-        }
-
-        {/if}
 
         .prefix-suffix-nofull-width .quiqqer-bricks-promoslider-wallpaper .grid-container {
             padding-left: 0;
@@ -329,179 +50,181 @@
 
     </style>
 
+    {$settingsCSS}
+
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
 
-    <!-- menu -->
-    <div class="header-bar">
-        <div class="grid-container header-bar-inner">
-            <div class="header-bar-inner-nav" id="navigation">
+<!-- menu -->
+<div class="header-bar">
+    <div class="grid-container header-bar-inner">
+        <div class="header-bar-inner-nav" id="navigation">
 
-                {$MegaMenu->create()}
+            {$MegaMenu->create()}
 
-            </div>
         </div>
     </div>
+</div>
 
-    <!-- page -->
-    <div class="body-container">
-        <!-- header -->
-        {if $showHeader && $Site->getAttribute('templateBusinessPro.showEmotion')}
-        {strip}
-        <header class="page-header">
-            {if $Site->getAttribute('image_emotion')}
-                {image src=$Site->getAttribute('image_emotion') class="header-img"}
-            {/if}
-            <div class="page-header-container grid-container">
-                <h1 class="page-header-text-title">
-                    {$Site->getAttribute('title')}
-                </h1>
-
-                {if $Site->getAttribute('templateBusinessPro.dontShowShort')}
-                <div class="page-header-text-wrapper">
-                    <div class="page-header-text-wrapper-short">
-                        {$Site->getAttribute('short')}
-                    </div>
-                </div>
-                {/if}
-            </div>
-        </header>
-        {/strip}
+<!-- page -->
+<div class="body-container">
+    <!-- header -->
+    {if $showHeader && $Site->getAttribute('templateBusinessPro.showEmotion')}
+    {strip}
+    <header class="page-header">
+        {if $Site->getAttribute('image_emotion')}
+        {image src=$Site->getAttribute('image_emotion') class="header-img"}
         {/if}
+        <div class="page-header-container grid-container">
+            <h1 class="page-header-text-title">
+                {$Site->getAttribute('title')}
+            </h1>
 
-        <!-- header suffix -->
-        <!-- breadcrumb -->
-        {if $showBreadcrumb}
-        <div class="template-breadcrumb">
+            {if $Site->getAttribute('templateBusinessPro.showShort')}
+            <div class="page-header-text-wrapper">
+                <div class="page-header-text-wrapper-short">
+                    {$Site->getAttribute('short')}
+                </div>
+            </div>
+            {/if}
+        </div>
+    </header>
+    {/strip}
+    {/if}
+
+    <!-- header suffix -->
+    <!-- breadcrumb -->
+    {if $showBreadcrumb}
+    <div class="template-breadcrumb">
+        <div class="grid-container">
+            <section class="">
+                {$Breadcrumb->create()}
+            </section>
+        </div>
+    </div>
+    {/if}
+
+    <div class="headerSuffix">
+        <!-- header suffix  -->
+        {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+        {foreach $headerSuffix as $Brick}
+
+        {assign var=noPadding value=''}
+        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+        {assign var=noPadding value='-noPadding'}
+        {/if}
+        {if $Brick->getSetting( 'brickFullWidth' )}
+        <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
+                                    headerSuffix-container
+                                    {cycle values='brick-even-suffix,brick-odd-suffix'}"
+                 {if $Brick->getSetting('promosliderBackground')}
+            style="background-color: {$Brick->getSetting('promosliderBackground')};"
+            {/if}>
+            {$Brick->create()}
+        </section>
+        {else}
+        <div class="prefix-suffix-nofull-width tpl-businessPro-row
+                                headerSuffix-container
+                                {cycle values='brick-even-suffix,brick-odd-suffix'}">
             <div class="grid-container">
-                <section class="">
-                    {$Breadcrumb->create()}
+                <section>
+                    {if $Brick->getAttribute('frontendTitle')}
+                    <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
+                    {/if}
+                    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                    {$Brick->create()}
                 </section>
             </div>
         </div>
         {/if}
-
-        <div class="headerSuffix">
-            <!-- header suffix  -->
-            {assign var=headerSuffix value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
-            {foreach $headerSuffix as $Brick}
-
-                {assign var=noPadding value=""}
-                {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
-                    {assign var=noPadding value="-noPadding"}
-                {/if}
-                {if $Brick->getSetting( 'brickFullWidth' )}
-                    <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    headerSuffix-container
-                                    {cycle values="brick-even-suffix,brick-odd-suffix"}"
-                    {if $Brick->getSetting('promosliderBackground')}
-                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
-                    {/if}>
-                        {$Brick->create()}
-                    </section>
-                {else}
-                    <div class="prefix-suffix-nofull-width tpl-businessPro-row
-                                headerSuffix-container
-                                {cycle values="brick-even-suffix,brick-odd-suffix"}">
-                        <div class="grid-container">
-                            <section>
-                                {if $Brick->getAttribute('frontendTitle')}
-                                    <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
-                                {/if}
-                                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
-                                {$Brick->create()}
-                            </section>
-                        </div>
-                    </div>
-                {/if}
-            {/foreach}
-        </div>
-
-        <!-- content -->
-        <div class="main-content-color-bg  {cycle values="" reset=true}">
-            <div class="grid-container main-content">
-                {$Template->getLayout()}
-            </div>
-        </div>
-
-        <div class="prefixFooter">
-            <!-- footer prefix-->
-            {cycle assign=cy values="brick-even-suffix,brick-odd-suffix" reset=true}
-            {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
-            {foreach $footerPrefix as $Brick}
-
-                {assign var=noPadding value=""}
-                {if $Brick->getType()  == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
-                    {assign var=noPadding value="-noPadding"}
-                {/if}
-
-                {if $Brick->getSetting( 'brickFullWidth' )}
-                    <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    footerPrefix-container
-                                    {cycle values="brick-even-prefix,brick-odd-prefix"}"
-                             {if $Brick->getSetting('promosliderBackground')}
-                        style="background-color: {$Brick->getSetting('promosliderBackground')};"
-                        {/if}>
-
-                        {$Brick->create()}
-                    </section>
-                {else}
-                    <div class="tpl-businessPro-row prefix-suffix-nofull-width
-                                footerPrefix-container
-                                {cycle values="brick-even-prefix,brick-odd-prefix"}">
-                        <div class="grid-container">
-                            <section>
-                                {if $Brick->getAttribute('frontendTitle')}
-                                    <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
-                                {/if}
-                                {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
-                                {$Brick->create()}
-                            </section>
-                        </div>
-                    </div>
-                {/if}
-            {/foreach}
-        </div>
-        <!-- footer -->
-        <footer class="page-footer clear-fix">
-            <div class="page-footer-container grid-container">
-                {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
-                {if !empty($footer)}
-                <div class="grid-children">
-                    <div class="grid-children-container">
-                        {foreach from=$footer item=Brick}
-                            {if !$Brick->hasCSSClass('grid-*')}
-                                {$Brick->addCSSClass('grid-100')}
-                            {/if}
-                            {$Brick->addCSSClass('page-footer-brick clear-fix')}
-                            {$Brick->create()}
-                        {/foreach}
-                    </div>
-                </div>
-                {/if}
-            </div>
-
-            <div class="page-footer-copyright">
-                <div class="grid-container">
-                    <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-left">
-                        {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:"%Y"}
-                    </div>
-
-                    <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-right">
-                        <a href="#top" style="outline: none;">
-                            <i class="fa fa-arrow-up toTop"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {/foreach}
     </div>
 
+    <!-- content -->
+    <div class="main-content-color-bg  {cycle values='' reset=true}">
+        <div class="grid-container main-content">
+            {$Template->getLayout()}
+        </div>
+    </div>
 
-    <!-- [begin] js combine -->
-    <script src="{$URL_OPT_DIR}bin/require.js"></script>
-    <script src="{$URL_TPL_DIR}bin/init.js"></script>
-    <!-- [end] js combine -->
+    <div class="prefixFooter">
+        <!-- footer prefix-->
+        {cycle assign=cy values='brick-even-suffix,brick-odd-suffix' reset=true}
+        {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+        {foreach $footerPrefix as $Brick}
+
+        {assign var=noPadding value=''}
+        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
+        {assign var=noPadding value='-noPadding'}
+        {/if}
+
+        {if $Brick->getSetting( 'brickFullWidth' )}
+        <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
+                                    footerPrefix-container
+                                    {cycle values='brick-even-prefix,brick-odd-prefix'}"
+                 {if $Brick->getSetting('promosliderBackground')}
+            style="background-color: {$Brick->getSetting('promosliderBackground')};"
+            {/if}>
+
+            {$Brick->create()}
+        </section>
+        {else}
+        <div class="tpl-businessPro-row prefix-suffix-nofull-width
+                                footerPrefix-container
+                                {cycle values='brick-even-prefix,brick-odd-prefix'}">
+            <div class="grid-container">
+                <section>
+                    {if $Brick->getAttribute('frontendTitle')}
+                    <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
+                    {/if}
+                    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+                    {$Brick->create()}
+                </section>
+            </div>
+        </div>
+        {/if}
+        {/foreach}
+    </div>
+    <!-- footer -->
+    <footer class="page-footer clear-fix">
+        <div class="page-footer-container grid-container">
+            {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
+            {if !empty($footer)}
+            <div class="grid-children">
+                <div class="grid-children-container">
+                    {foreach from=$footer item=Brick}
+                    {if !$Brick->hasCSSClass('grid-*')}
+                    {$Brick->addCSSClass('grid-100')}
+                    {/if}
+                    {$Brick->addCSSClass('page-footer-brick clear-fix')}
+                    {$Brick->create()}
+                    {/foreach}
+                </div>
+            </div>
+            {/if}
+        </div>
+
+        <div class="page-footer-copyright">
+            <div class="grid-container">
+                <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-left">
+                    {locale group="quiqqer/template-businesspro" var="copyright.text" year=$smarty.now|date_format:'%Y'}
+                </div>
+
+                <div class="grid-50 mobile-grid-100 grid-parent page-footer-copyright-right">
+                    <a href="#top" style="outline: none;">
+                        <i class="fa fa-arrow-up toTop"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!-- [begin] js combine -->
+<script src="{$URL_OPT_DIR}bin/require.js"></script>
+<script src="{$URL_TPL_DIR}bin/init.js"></script>
+<!-- [end] js combine -->
 
 </body>
 </html>

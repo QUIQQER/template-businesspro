@@ -29,13 +29,13 @@
 <div role="main">
     {if !$Site->getAttribute('templateBusinessPro.showEmotion')}
 
-        {if $Site->getAttribute('templateBusinessPro.dontShowTitle')}
+        {if $Site->getAttribute('templateBusinessPro.showTitle')}
         <header class="content-header">
             <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
         </header>
         {/if}
 
-        {if $Site->getAttribute('templateBusinessPro.dontShowShort')}
+        {if $Site->getAttribute('templateBusinessPro.showShort')}
         <div class="content-short" itemprop="description">
             {$Site->getAttribute('short')|nl2br}
         </div>

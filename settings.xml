@@ -41,10 +41,6 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#252122</defaultvalue>
                     </conf>
-                    <!--<conf name="navBarShadow">
-                        <type><![CDATA[string]]></type>
-                        <defaultvalue>hide</defaultvalue>
-                    </conf>-->
 
                     <!-- show header -->
                     <conf name="showHeaderStartPage">
@@ -428,6 +424,11 @@
                                             var="templateBusinessPro.settings.mobileMenuBackground"
                                     />
                                 </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.mobileMenuBackground.desc"
+                                    />
+                                </description>
                             </input>
 
                         </settings>
