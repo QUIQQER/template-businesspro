@@ -256,7 +256,7 @@
         </locale>
         <!-- Background Color Switcher Suffix -->
         <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.text">
-            <de><![CDATA[Suffix Hintergrundfarbe wechesln]]></de>
+            <de><![CDATA[Suffix Hintergrundfarbe wechseln]]></de>
             <en><![CDATA[Swich background color]]></en>
         </locale>
         <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.description">

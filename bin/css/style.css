@@ -47,7 +47,7 @@ input[type="submit"] {
     box-shadow: 0 0 0 2px #ddd;
 }
 
-input,
+input[type="search"],
 textarea {
     -webkit-appearance: none;
 }
