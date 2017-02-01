@@ -209,7 +209,8 @@ input:hover,
 input:focus,
 select:hover,
 select:focus {
-    box-shadow: 0 0 0 2px <?php echo $colorMain; ?>;
+/*    box-shadow: 0 0 0 2px */<?php //echo $colorMain; ?>/*;*/
+    border-color: <?php echo $colorMain; ?>;
 }
 
 .main-content-color-bg {
@@ -238,10 +239,8 @@ button:hover,
 .button-active,
 .button:active,
 .button:hover {
-    /*background: none;
-    color:
-
-<?php echo $colorMain; ?>  ;*/
+    background: none;
+    color: <?php echo $colorMain; ?>;
 }
 
 .page-footer button {
