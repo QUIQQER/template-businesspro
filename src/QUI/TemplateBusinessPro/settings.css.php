@@ -1,8 +1,10 @@
 <?php
 
+$Convert = new \QUI\Utils\Convert();
+
 $navBarMainColor      = '#2d4d88';
 $navBarFontColor      = '#ffffff';
-$mobileFontColor      = '#fff';
+$mobileFontColor      = '#ffffff';
 $mobileMenuBackground = '#252122';
 
 if ($Project->getConfig('templateBusinessPro.settings.navBarMainColor')) {
@@ -20,6 +22,8 @@ if ($Project->getConfig('templateBusinessPro.settings.mobileFontColor')) {
 if ($Project->getConfig('templateBusinessPro.settings.mobileMenuBackground')) {
     $mobileMenuBackground = $Project->getConfig('templateBusinessPro.settings.mobileMenuBackground');
 }
+
+$navBarMainColorLighter = $Convert->colorBrightness($navBarMainColor, 0.9);
 
 /**
  * colors
@@ -61,7 +65,6 @@ if ($Project->getConfig('templateBusinessPro.settings.colorMainContentFont')) {
     $colorMainContentFont = $Project->getConfig('templateBusinessPro.settings.colorMainContentFont');
 }
 
-$Convert = new \QUI\Utils\Convert();
 $navBarHeight = (int)$Project->getConfig('templateBusinessPro.settings.navBarHeight');
 $headerHeight = $Project->getConfig('templateBusinessPro.settings.headerHeight');
 $headerHeightValue = (int)$Project->getConfig('templateBusinessPro.settings.headerHeightValue');
@@ -69,6 +72,7 @@ $bgColorSwitcherPrefix = $Project->getConfig('templateBusinessPro.settings.bgCol
 $bgColorSwitcherSuffix = $Project->getConfig('templateBusinessPro.settings.bgColorSwitcherSuffix');
 $headerImagePosition = $Project->getConfig('templateBusinessPro.settings.headerImagePosition');
 $navPos = $Project->getConfig('templateBusinessPro.settings.navPos');
+$colorMainButton = $Convert->colorBrightness($colorMain, 0.7);
 
 ob_start();
 
@@ -98,9 +102,11 @@ ob_start();
 .page-header-navigation li:hover,
 .header-bar-search:hover,
 .quiqqer-menu-megaMenu-list-item-menu.control-background,
-.quiqqer-menu-megaMenu-list-item:hover, {
-    background: <?php echo $Convert->colorBrightness($navBarMainColor, 0.9); ?>;
+.quiqqer-menu-megaMenu-list-item:hover,
+.page-27 {
+    background: <?php echo $navBarMainColorLighter; ?>;
 }
+
 
 .header-bar,
 .header-bar-inner a,
@@ -186,7 +192,7 @@ a.template-button {
 }
 
 a.template-button:hover {
-    background-color: <?php echo $Convert->colorBrightness($colorMain, 0.7); ?>;
+    background-color: <?php echo $colorMainButton; ?>;
 }
 
 #page .button.special {
@@ -209,7 +215,8 @@ input:hover,
 input:focus,
 select:hover,
 select:focus {
-    box-shadow: 0 0 0 2px <?php echo $colorMain; ?>;
+/*    box-shadow: 0 0 0 2px */<?php //echo $colorMain; ?>/*;*/
+    border-color: <?php echo $colorMain; ?>;
 }
 
 .main-content-color-bg {
@@ -238,10 +245,8 @@ button:hover,
 .button-active,
 .button:active,
 .button:hover {
-    /*background: none;
-    color:
-
-<?php echo $colorMain; ?>  ;*/
+    background: none;
+    color: <?php echo $colorMain; ?>;
 }
 
 .page-footer button {
