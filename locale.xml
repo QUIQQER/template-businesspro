@@ -307,7 +307,7 @@
         <locale name="templateBusinessPro.breadcrumb.settings.title">
             <de><![CDATA[Brotkrumennavigation Einstellungen (breadcrumb)]]></de>
             <en><![CDATA[Breadcrumb settings]]></en>
-            <pl><![CDATA[Nawigacja okruszkowa (breadcrumb)]]></pl>
+            <pl><![CDATA[Pokazać breadcrumb ("nawigacja okruszkowa")?]]></pl>
         </locale>
         <!-- show breadcrumb? -->
         <locale name="showBreadcrumb.text">
@@ -467,10 +467,7 @@
         <locale name="templateBusinessPro.settings.color.title">
             <de><![CDATA[Farbverwaltung]]></de>
             <en><![CDATA[Color management]]></en>
-        </locale>
-        <locale name="templateBusinessPro.settings.generalColor.text">
-            <de><![CDATA[Allgemeine]]></de>
-            <en><![CDATA[General]]></en>
+            <pl><![CDATA[Kolory]]></pl>
         </locale>
 
         <locale name="template.settings.mobileMenuBackground">

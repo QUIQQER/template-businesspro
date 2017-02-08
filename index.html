@@ -73,7 +73,8 @@
     {strip}
     <header class="page-header">
         {if $Site->getAttribute('image_emotion')}
-        {image src=$Site->getAttribute('image_emotion') class="header-img"}
+            {image src=$Site->getAttribute('image_emotion') class="header-img"
+            title=$Site->getAttribute('title')}
         {/if}
         <div class="page-header-container grid-container">
             <h1 class="page-header-text-title">

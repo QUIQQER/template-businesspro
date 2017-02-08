@@ -442,11 +442,6 @@
                                         />
                             </title>
 
-                            <text>
-                                <locale group="quiqqer/template-businesspro"
-                                        var="templateBusinessPro.settings.generalColor.text"
-                                />
-                            </text>
                             <input conf="templateBusinessPro.settings.colorMain"
                                    type="color">
                                 <text>
