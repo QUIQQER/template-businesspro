@@ -526,17 +526,10 @@ h1.page-header-text-title {
 
 .header-bar {
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
     position: relative;
-    z-index: 100;
+    z-index: 10;
     width: 100%;
-}
-
-.header-bar-2 {
-    padding: 1em 0;
-    position: relative;
-    z-index: 0;
-    opacity: 0;
 }
 
 .header-bar-inner {
@@ -627,8 +620,8 @@ h1.page-header-text-title {
 
 /* extra styling für mobile menu */
 div.slideout-menu {
-    max-width: 100%;
-    z-index: 0;
+    /*width: 100%;*/
+    /*z-index: 10;*/
 }
 
 /** promo slider dots
@@ -733,7 +726,7 @@ section.quiqqer-portfolio-list {
     display: inline-block;
     list-style-type: none;
     margin: 0;
-    padding: 0em 0.5em;
+    padding: 0 0.5em;
 }
 
 .page-header-navigation a {
@@ -1711,7 +1704,9 @@ a.quiqqer-tags-search-result-entry-link:hover h4,
     font-size: 10pt;
 }
 
-
+.quiqqer-breadcrumb a {
+    color: #8a8a8a;
+}
 
 /*********************************************************************************/
 /* infinite brick
