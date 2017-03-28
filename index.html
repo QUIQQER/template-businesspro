@@ -77,11 +77,14 @@
             title=$Site->getAttribute('title')}
         {/if}
         <div class="page-header-container grid-container">
+            {if $Site->getAttribute('templateBusinessPro.showTitle')}
             <h1 class="page-header-text-title">
                 {$Site->getAttribute('title')}
             </h1>
+            {/if}
 
-            {if $Site->getAttribute('templateBusinessPro.showShort')}
+            {if $Site->getAttribute('templateBusinessPro.showShort') &&
+                $Site->getAttribute('short')}
             <div class="page-header-text-wrapper">
                 <div class="page-header-text-wrapper-short">
                     {$Site->getAttribute('short')}
