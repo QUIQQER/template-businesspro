@@ -185,7 +185,10 @@ button,
 .tpl-businessPro-row .button,
 button:disabled,
 button:disabled:hover,
-a.template-button {
+a.template-button,
+button.qui-button-active,
+button.qui-button:active,
+button.qui-button:hover{
     background-color: <?php echo $colorMain; ?>;
     color: <?php echo $buttonFontColor; ?>;
     border: 2px solid <?php echo $colorMain; ?>;
