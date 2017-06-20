@@ -88,17 +88,17 @@ input[type='radio'] {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.2);
     font-size: 1em;
 }
 
 ::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.2);
     font-size: 1em;
 }
 
 :-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.2);
     font-size: 1em;
 }
 
