@@ -5,6 +5,13 @@
  */
 QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
+// Inhalts Verhalten
+if ($Site->getAttribute('templateBusinessPro.showTitle') ||
+    $Site->getAttribute('templateBusinessPro.showShort')
+) {
+    $Template->setAttribute('content-header', false);
+}
+
 /**
  * Mega menu
  */
