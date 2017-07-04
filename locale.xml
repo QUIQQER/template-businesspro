@@ -73,8 +73,8 @@
         </locale>
 
         <locale name="area.noSidebar.title">
-            <de><![CDATA[Inhalts-Zone (Keine Sidebar)]]></de>
-            <en><![CDATA[Content area (No Sidebar)]]></en>
+            <de><![CDATA[Inhalts-Zone]]></de>
+            <en><![CDATA[Content area]]></en>
         </locale>
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
