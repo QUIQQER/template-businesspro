@@ -530,6 +530,13 @@ h1.page-header-text-title {
     position: relative;
     z-index: 10;
     width: 100%;
+
+    /* fix jumping nav in chrome */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .header-bar-inner {

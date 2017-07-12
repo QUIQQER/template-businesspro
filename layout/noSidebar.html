@@ -1,5 +1,5 @@
 
-{assign var=bricks value=$BricksManager->getBricksByArea('noSidebar', $Site)}
+{assign var=noSidebarBricks value=$BricksManager->getBricksByArea('noSidebar', $Site)}
 {assign var=prefixContentBricks value=$BricksManager->getBricksByArea('prefixContentBricks', $Site)}
 {assign var=suffixContentBricks value=$BricksManager->getBricksByArea('suffixContentBricks', $Site)}
 
@@ -32,7 +32,21 @@
 
 {/if}
 
+
 {$Template->getBody()}
+
+
+{if !empty( $noSidebarBricks )}
+{foreach from=$noSidebarBricks item=Brick}
+<div class="tpl-businessPro-row">
+    {if $Brick->getAttribute('frontednTitle')}
+    <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
+    {/if}
+    {assign var=showTitle value=$Brick->setSetting('showTitle', false)}
+    {$Brick->create()}
+</div>
+{/foreach}
+{/if}
 
 
 {if !empty( $suffixContentBricks )}
