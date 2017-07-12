@@ -29,9 +29,9 @@
 
         <!-- areas -->
         <locale name="area.footer.title">
-            <de><![CDATA[Footer Bausteinzone]]></de>
-            <en><![CDATA[Footer brickarea]]></en>
-            <pl><![CDATA[Stopka]]></pl>
+            <de><![CDATA[Fußzeile der Seite (Footer)]]></de>
+            <en><![CDATA[Footer brick area]]></en>
+            <pl><![CDATA[Stopka strony]]></pl>
         </locale>
         <locale name="area.footer.description">
             <de><![CDATA[Bausteinzone des Footer]]></de>
@@ -69,53 +69,62 @@
         <locale name="area.sidebar.right.description">
             <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
             <en><![CDATA[Brickarea to the right of the content]]></en>
-            <en><![CDATA[Układ strony z kolumną po prawej stronie.]]></en>
+            <pl><![CDATA[Układ strony z kolumną po prawej stronie.]]></pl>
         </locale>
 
         <locale name="area.noSidebar.title">
             <de><![CDATA[Inhalts-Zone]]></de>
             <en><![CDATA[Content area]]></en>
+            <pl><![CDATA[Główna zawartość]]></pl>
         </locale>
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
             <en><![CDATA[Content area of no sidebar layout]]></en>
-            <en><![CDATA[Układ bez kolumn]]></en>
+            <pl><![CDATA[Główna zawartość układu bez kolumn]]></pl>
         </locale>
 
         <locale name="area.sidebar.prefix.content.title">
-            <de><![CDATA[Prefix Zone]]></de>
+            <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
             <en><![CDATA[Prefix area]]></en>
+            <pl><![CDATA[Prefix]]></pl>
         </locale>
         <locale name="area.sidebar.prefix.content.description">
             <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
-            <en><![CDATA[Brickarea before the content]]></en>
+            <en><![CDATA[Brick area before the content]]></en>
+            <pl><![CDATA[Miejsce na widgety przed główna zawartością]]></pl>
         </locale>
 
         <locale name="area.sidebar.suffix.content.title">
-            <de><![CDATA[Suffix Zone]]></de>
+            <de><![CDATA[Unterhalb des Inhaltes (Content Suffix)]]></de>
             <en><![CDATA[Suffix area]]></en>
+            <pl><![CDATA[Suffix]]></pl>
         </locale>
         <locale name="area.sidebar.suffix.content.description">
             <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
-            <en><![CDATA[Brickarea after the content]]></en>
+            <en><![CDATA[Brick area after the content]]></en>
+            <pl><![CDATA[Miejsce na widgety po głównej zawartości]]></pl>
         </locale>
 
         <locale name="area.headerSuffix.title">
-            <de><![CDATA[Header Suffix]]></de>
+            <de><![CDATA[Unterhalb des Kopfbereiches (Header Suffix)]]></de>
             <en><![CDATA[Header suffix]]></en>
+            <pl><![CDATA[Suffix nagłówka]]></pl>
         </locale>
         <locale name="area.headerSuffix.description">
             <de><![CDATA[Bausteinzone nach dem Header]]></de>
-            <en><![CDATA[Brickarea after the header]]></en>
+            <en><![CDATA[Brick area after the header]]></en>
+            <pl><![CDATA[Miejsce na widgety po nagłówku strony]]></pl>
         </locale>
 
         <locale name="area.footerPrefix.title">
-            <de><![CDATA[Footer Prefix]]></de>
+            <de><![CDATA[Oberhalb der Fußzeile (Footer Prefix)]]></de>
             <en><![CDATA[Footer Prefix]]></en>
+            <pl><![CDATA[Prefix stopki]]></pl>
         </locale>
         <locale name="area.footerPrefix.description">
             <de><![CDATA[Bausteinzone vor dem Footer]]></de>
-            <en><![CDATA[Brickarea before the footer]]></en>
+            <en><![CDATA[Brick area before the footer]]></en>
+            <pl><![CDATA[Miejsce na widgety przed stopka strony]]></pl>
         </locale>
 
         <!-- template site settings -->
@@ -191,7 +200,7 @@
         </locale>
         <locale name="copyright.text" html="true">
             <de><![CDATA[&copy; [year] - Template <em>Business Pro</em> umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER</a>]]></de>
-            <en><![CDATA[&copy; [year] - Theme <em>Business Pro</em> powerade by <a href="https://www.quiqqer.com">QUIQQER</a>]]></en>
+            <en><![CDATA[&copy; [year] - Theme <em>Business Pro</em> realized with <a href="https://www.quiqqer.com">QUIQQER</a>]]></en>
         </locale>
         <locale name="copyright.link" html="true">
             <de><![CDATA[Startseite]]></de>
