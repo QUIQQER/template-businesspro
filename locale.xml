@@ -42,7 +42,7 @@
         <locale name="area.startpageContent.title">
             <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
             <en><![CDATA[Content area (Landingpage)]]></en>
-            <pl><![CDATA[Główna zawartość strony (układ bez kolumn - strona główna)]]></pl>
+            <pl><![CDATA[Główna zawartość strony (strona główna)]]></pl>
         </locale>
         <locale name="area.startpageContent.description">
             <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
@@ -52,7 +52,7 @@
 
         <locale name="area.sidebar.left.title">
             <de><![CDATA[Linke Bausteinzone]]></de>
-            <en><![CDATA[Left brickarea]]></en>
+            <en><![CDATA[Left brick area]]></en>
             <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.left.description">
@@ -63,7 +63,7 @@
 
         <locale name="area.sidebar.right.title">
             <de><![CDATA[Rechte Bausteinzone]]></de>
-            <en><![CDATA[Right brickarea]]></en>
+            <en><![CDATA[Right brick area]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.right.description">
@@ -75,7 +75,7 @@
         <locale name="area.noSidebar.title">
             <de><![CDATA[Inhalts-Zone]]></de>
             <en><![CDATA[Content area]]></en>
-            <pl><![CDATA[Główna zawartość]]></pl>
+            <pl><![CDATA[Główna zawartość (bez kolumn)]]></pl>
         </locale>
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>

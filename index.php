@@ -94,9 +94,37 @@ $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig(array(
     'Template' => $Template
 ));
 
+
+/**
+ * body class
+ */
+$bodyClass = '';
+$startPage = false;
+
+switch ($Template->getLayoutType()) {
+    case 'layout/startPage':
+        $bodyClass = 'start-page';
+        $startPage = true;
+        break;
+
+    case 'layout/noSidebar':
+        $bodyClass = 'no-sidebar';
+        break;
+
+    case 'layout/rightSidebar':
+        $bodyClass = 'right-sidebar';
+        break;
+
+    case 'layout/leftSidebar':
+        $bodyClass = 'left-sidebar';
+        break;
+}
+
 $templateSettings['BricksManager'] = \QUI\Bricks\Manager::init();
 $templateSettings['Breadcrumb']    = $Breadcrumb;
 $templateSettings['MegaMenu']      = $MegaMenu;
+$templateSettings['bodyClass']     = $bodyClass;
+$templateSettings['startPage']     = $startPage;
 
 
 $Engine->assign($templateSettings);
