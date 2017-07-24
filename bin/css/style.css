@@ -866,7 +866,7 @@ li.page-header-navigation-sub-entry:hover {
 }
 
 .header-bar-suggestSearch-wrapper {
-    height: 70px;
+    height: 100%;
     background: transparent;
     width: 200px;
     position: absolute;
@@ -907,6 +907,7 @@ li.page-header-navigation-sub-entry:hover {
     top: 50%;
     line-height: 40px;
     -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
