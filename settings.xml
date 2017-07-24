@@ -43,7 +43,7 @@
                     </conf>
                     <conf name="search">
                         <type><![CDATA[string]]></type>
-                        <defaultvalue>showInput</defaultvalue>
+                        <defaultvalue>input</defaultvalue>
                     </conf>
 
                     <!-- show header -->
