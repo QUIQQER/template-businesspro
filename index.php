@@ -1,5 +1,7 @@
 <?php
 
+$Locale = QUI::getLocale();
+
 /**
  * Emotion
  */
@@ -19,38 +21,79 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
 ));
 
-$searchMobile = '';
+/**
+ * search
+ */
+$search = '';
+/* search setting is on? */
+if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
+    $types = array(
+        'quiqqer/sitetypes:types/search'
+    );
 
-$types = array(
-    'quiqqer/sitetypes:types/search',
-    'quiqqer/search:types/search'
-);
+    /* check if quiqqer search packet is installed */
+    if (QUI::getPackageManager()->isInstalled('quiqqer/search')) {
+        $types = array(
+            'quiqqer/sitetypes:types/search',
+            'quiqqer/search:types/search'
+        );
+    }
 
-$searchSites = $Project->getSites(array(
-    'where' => array(
-        'type' => array(
-            'type'  => 'IN',
-            'value' => $types
-        )
-    ),
-    'limit' => 1
-));
+    $searchSites = $Project->getSites(array(
+        'where' => array(
+            'type' => array(
+                'type'  => 'IN',
+                'value' => $types
+            )
+        ),
+        'limit' => 1
+    ));
 
-if (count($searchSites)) {
-    try {
-        $searchUrl = $searchSites[0]->getUrlRewritten();
+    if (count($searchSites)) {
+        try {
+            $searchUrl = $searchSites[0]->getUrlRewritten();
+            $searchHTML = '';
 
-        $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile-search hide-on-desktop"
+            switch ($Project->getConfig('templateBusinessPro.settings.search')) {
+                case 'input':
+                    $searchForm = '
+                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
+                        <input type="search" name="search" 
+                                class="only-input"
+                                data-qui="package/quiqqer/search/bin/controls/Suggest" 
+                                placeholder="' . $Locale->get('quiqqer/template-businesspro',
+                                'navbar.search.text') . '"/>
+                    </form>';
+                    break;
+                case 'inputAndIcon':
+                    $searchForm = '
+                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
+                        <div class="header-bar-suggestSearch-wrapper">
+                            <input type="search" name="search"
+                                    class="input-and-icon" 
+                                    data-qui="package/quiqqer/search/bin/controls/Suggest" 
+                                    placeholder="' . $Locale->get('quiqqer/template-businesspro',
+                            'navbar.search.text') . '"/>
+                        </div>
+                        <span class="fa fa-fw fa-search"></span>
+                    </form>';
+                    break;
+            }
+
+            $search = $searchForm .
+                '<div class="quiqqer-menu-megaMenu-mobile-search"
                                   style="width: auto; font-size: 30px !important;">
                     <a href="' . $searchUrl . '"
                     class="header-bar-search-link searchMobile">
                         <i class="fa fa-search header-bar-search-icon"></i>
                     </a>
                 </div>';
-    } catch (QUI\Exception $Exception) {
-        QUI\System\Log::addNotice($Exception->getMessage());
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::addNotice($Exception->getMessage());
+        }
     }
 }
+
 
 $alt = "";
 if ($Project->getMedia()->getLogoImage()) {
@@ -64,20 +107,7 @@ $MegaMenu->prependHTML(
             </div>'
 );
 
-try {
-    QUI::getPackage('quiqqer/search');
-//    $Locale = QUI::getLocale();
-
-    $MegaMenu->appendHTML(
-        '<div class="header-bar-suggestSearch hide-on-mobile">
-                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '"/>
-                </div>' .
-        $searchMobile
-    );
-} catch (QUI\Exception $Exception) {
-    QUI\System\Log::addNotice($Exception->getMessage());
-}
+$MegaMenu->appendHTML($search);
 
 
 /**

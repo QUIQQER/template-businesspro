@@ -598,7 +598,7 @@ h1.page-header-text-title {
 
 .quiqqer-menu-megaMenu-mobile-search {
     float: right;
-    display: block;
+    display: none;
     padding: 0 15px;
     opacity: 0.9;
 }
@@ -831,7 +831,7 @@ li.page-header-navigation-sub-entry:hover {
 /** page header suggest search
 * ========================================================== */
 
-.header-bar-suggestSearch {
+/*.header-bar-suggestSearch {
     float: right;
 }
 
@@ -853,8 +853,89 @@ li.page-header-navigation-sub-entry:hover {
 
 .header-bar-suggestSearch input[type="search"]:hover,
 .header-bar-suggestSearch input[type="search"]:focus {
-    /*background: rgba(255,255,255,0.1);*/
+    !*background: rgba(255,255,255,0.1);*!
     opacity: 1;
+}*/
+
+/** page header suggest search
+* ========================================================== */
+
+.header-bar-suggestSearch {
+    position: absolute;
+    right: 0;
+}
+
+.header-bar-suggestSearch-wrapper {
+    height: 70px;
+    background: transparent;
+    width: 200px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    transition: 0.3s all ease-in-out;
+}
+
+.header-bar-suggestSearch .fa {
+    background: rgba(255,255,255,0);
+    position: relative;
+    right: 0;
+    line-height: 40px;
+    top: 0;
+    width: 40px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+.header-bar-suggestSearch .fa:hover,
+.header-bar-suggestSearch.showSearch .fa {
+    background: rgba(0,0,0,0.1);
+}
+.header-bar-suggestSearch input[type="search"].input-and-icon {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    color: #333;
+    margin: 0;
+    padding: 0 10px;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    line-height: 40px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* setting: only input field */
+.header-bar-suggestSearch input[type="search"].only-input {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #333;
+    line-height: 20px;
+    margin: 0;
+    opacity: 0.6;
+    padding: 6px 10px;
+}
+
+input[type="search"].only-input:hover,
+input[type="search"].only-input:active,
+input[type="search"].only-input:focus {
+    opacity: 1;
+}
+
+.header-bar-suggestSearch.showSearch .header-bar-suggestSearch-wrapper {
+    right: 100%;
+    opacity: 1;
+    visibility: visible;
 }
 
 /** page header search

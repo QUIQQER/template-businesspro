@@ -3,12 +3,6 @@
     <groups name="quiqqer/template-businesspro" datatype="php,js">
 
         <!-- template bricks -->
-        <locale name="navbar.search.text">
-            <de><![CDATA[Suchen]]></de>
-            <en><![CDATA[Search]]></en>
-            <pl><![CDATA[Szukaj]]></pl>
-        </locale>
-
         <locale name="promosliderBackground">
             <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
             <en><![CDATA[Set the background color (only by full width)]]></en>
@@ -236,24 +230,6 @@
             <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
-        <!-- Menu shadow -->
-        <!--<locale name="templateBusinessPro.settings.navBarShadow.text">
-            <de><![CDATA[Menüschatten]]></de>
-            <en><![CDATA[Menu shadow]]></en>
-            <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navBarShadow.displaz">
-            <de><![CDATA[Schatten anzeigen]]></de>
-            <en><![CDATA[Display the shadow]]></en>
-            <pl><![CDATA[Pokaż]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navBarShadow.hide">
-            <de><![CDATA[Schatten verbergen]]></de>
-            <en><![CDATA[Hide the shadow]]></en>
-            <pl><![CDATA[Ukryj]]></pl>
-        </locale>-->
-
-
         <!-- Background Color Switcher Prefix -->
         <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
             <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
@@ -310,6 +286,36 @@
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
+
+
+        <!-- search setting -->
+        <locale name="navbar.search.text">
+            <de><![CDATA[Suchen]]></de>
+            <en><![CDATA[Search]]></en>
+            <pl><![CDATA[Szukaj]]></pl>
+        </locale>
+
+        <locale name="templateBusinessPro.settings.search.text">
+            <de><![CDATA[Suche in Navigation]]></de>
+            <en><![CDATA[Search]]></en>
+            <pl><![CDATA[Pole wyszukiwania]]></pl>
+        </locale>
+            <locale name="templateBusinessPro.settings.search.input">
+                <de><![CDATA[Inputfeld]]></de>
+                <en><![CDATA[Input field]]></en>
+                <pl><![CDATA[Pole wyszukiwania]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.inputAndIcon">
+                <de><![CDATA[Clickbare Icon]]></de>
+                <en><![CDATA[Search Icon]]></en>
+                <pl><![CDATA[Ikona do klkniecia]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.hide">
+                <de><![CDATA[Ausgeschaltet]]></de>
+                <en><![CDATA[Disabled]]></en>
+                <pl><![CDATA[Wyłączone]]></pl>
+            </locale>
+
 
 
         <!-- breadcrumb settings -->

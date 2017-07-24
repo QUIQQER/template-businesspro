@@ -41,6 +41,10 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#252122</defaultvalue>
                     </conf>
+                    <conf name="search">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>showInput</defaultvalue>
+                    </conf>
 
                     <!-- show header -->
                     <conf name="showHeaderStartPage">
@@ -388,6 +392,32 @@
                                 </option>
 
 
+                            </select>
+
+                            <!-- search -->
+                            <select conf="templateBusinessPro.settings.search">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.text"
+                                    />
+                                </text>
+
+
+                                <option value="input">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.input"
+                                    />
+                                </option>
+                                <option value="inputAndIcon">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.inputAndIcon"
+                                    />
+                                </option>
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.hide"
+                                    />
+                                </option>
                             </select>
 
                             <!-- nav bar / menu colors -->
