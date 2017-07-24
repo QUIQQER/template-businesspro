@@ -61,8 +61,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                         <input type="search" name="search" 
                                 class="only-input"
                                 data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                                placeholder="' . $Locale->get('quiqqer/template-businesspro',
-                                'navbar.search.text') . '"/>
+                                placeholder="'
+                                . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
+                                '"/>
                     </form>';
                     break;
                 case 'inputAndIcon':
@@ -72,8 +73,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                             <input type="search" name="search"
                                     class="input-and-icon" 
                                     data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                                    placeholder="' . $Locale->get('quiqqer/template-businesspro',
-                            'navbar.search.text') . '"/>
+                                    placeholder="'
+                                    . $Locale->get('quiqqer/template-businesspro','navbar.search.text') .
+                            '"/>
                         </div>
                         <span class="fa fa-fw fa-search"></span>
                     </form>';
