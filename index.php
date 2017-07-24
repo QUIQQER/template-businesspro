@@ -52,7 +52,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
     if (count($searchSites)) {
         try {
             $searchUrl = $searchSites[0]->getUrlRewritten();
-            $searchHTML = '';
+            $searchForm = '';
 
             switch ($Project->getConfig('templateBusinessPro.settings.search')) {
                 case 'input':
