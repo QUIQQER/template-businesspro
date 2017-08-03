@@ -607,7 +607,7 @@
                     </attributes>
                 </style>
 
-                <!-- Template Button Small -->
+                <!-- Template Button small -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
                             var="templateButton.small" />
@@ -623,7 +623,7 @@
                         <attribute name="class">template-button template-button-medium</attribute>
                     </attributes>
                 </style>
-                <!-- Template Button Big -->
+                <!-- Template Button big -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
                             var="templateButton.big" />

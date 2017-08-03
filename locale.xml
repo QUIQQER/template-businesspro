@@ -567,6 +567,22 @@
             <en><![CDATA[Link: slide right (grey)]]></en>
         </locale>
 
+        <locale name="templateButton.small">
+            <de><![CDATA[Button: klein]]></de>
+            <en><![CDATA[Button: small]]></en>
+            <pl><![CDATA[Button: mały]]></pl>
+        </locale>
+        <locale name="templateButton.medium">
+            <de><![CDATA[Button: normal]]></de>
+            <en><![CDATA[Button: medium]]></en>
+            <pl><![CDATA[Button: średni]]></pl>
+        </locale>
+        <locale name="templateButton.large">
+            <de><![CDATA[Button: groß]]></de>
+            <en><![CDATA[Button: large]]></en>
+            <pl><![CDATA[Button: duży]]></pl>
+        </locale>
+
         <!-- site settings -->
 
         <locale name="siteSettings">
