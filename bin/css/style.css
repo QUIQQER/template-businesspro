@@ -33,10 +33,22 @@ body {
     font-weight: 300;
 }
 
-input, textarea, select,
-input[type="submit"] {
+input, textarea, select {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    font-size: 12pt;
+    line-height: 1.75em;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    margin: 6px 0;
+    outline: none;
+    box-shadow: none;
+}
+
+input[type="submit"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 0;
     font-size: 12pt;
     line-height: 1.75em;
@@ -50,7 +62,6 @@ input[type="submit"] {
     -moz-appearance: none;
     appearance: none;
 }
-
 
 input:focus {
     background: rgba(0, 0, 0, 0.05);
@@ -616,22 +627,6 @@ h1.page-header-text-title {
     display: none;
 }
 
-/* hyphenate, word break */
-.left-menu-text {
-    -ms-word-break: break-all;
-    word-break: break-all;
-    word-break: break-word; /* Non standard for webkit */
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
-}
-
-/* extra styling für mobile menu */
-div.slideout-menu {
-    /*width: 100%;*/
-    /*z-index: 10;*/
-}
-
 /** promo slider dots
  * ========================================================== */
 
@@ -1182,9 +1177,13 @@ p,
 }
 
 /* hyphenate, word break */
+/* ANMERKUNG */
+/*word-break: break-all; mit Absicht ausgeshaltet. */
+/* -ms-word-break damit in IE 11 funktioniert. */
+/* Nur bei EDGE passt nicht. Wenn break-word Standard wird, */
+/* dann sollte alles passen */
 h1, h2, h3, h4, h5, h6 {
     -ms-word-break: break-all;
-    word-break: break-all;
     word-break: break-word; /* Non standard for webkit */
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -1712,6 +1711,80 @@ footer:hover a {
         margin-right: 0;
     }
 }
+
+/*********************************************************************************/
+/* search plugin - erweiterte Suche
+/*********************************************************************************/
+.quiqqer-search-searchinput {
+    overflow: hidden;
+}
+.quiqqer-search-searchinput form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+input.quiqqer-search-searchinput-input {
+    flex-grow: 3;
+    margin: 10px;
+    min-width: auto;
+}
+
+input.quiqqer-search-searchinput-submit,
+input.quiqqer-search-searchinput-submit:last-of-type {
+    flex-grow: 1;
+    order: 3;
+    margin: 10px;
+}
+
+div.qui-select {
+    border-width: 2px;
+}
+
+.qui-select.quiqqer-search-searchinput-searchfieldselect {
+    cursor: pointer;
+    flex-grow: 1;
+    order: 2;
+    padding: 0 16px;
+    margin: 10px;
+    height: auto;
+}
+
+.qui-select.quiqqer-search-searchinput-searchfieldselect  .text {
+    height: 50px;
+    line-height: 50px;
+}
+
+.qui-select.quiqqer-search-searchinput-searchfieldselect  .drop-icon {
+    height: 50px;
+}
+
+/*********************************************************************************/
+/* search site types - standard Suche
+/*********************************************************************************/
+
+.qui-search-result form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.qui-search-result .form-field-search {
+    flex-grow: 3;
+    margin: 10px;
+    min-width: auto;
+}
+
+.qui-search-result input[type="submit"] {
+    flex-grow: 1;
+    order: 3;
+    margin: 10px;
+}
+
 
 /*********************************************************************************/
 /* ChildrenList

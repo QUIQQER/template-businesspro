@@ -25,6 +25,7 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
  * search
  */
 $search = '';
+$dataQui = '';
 /* search setting is on? */
 if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
     $types = array(
@@ -37,6 +38,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
             'quiqqer/sitetypes:types/search',
             'quiqqer/search:types/search'
         );
+
+        // Suggest Search integrate
+        $dataQui = 'data-qui="package/quiqqer/search/bin/controls/Suggest"';
     }
 
     $searchSites = $Project->getSites(array(
@@ -59,9 +63,8 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     $searchForm = '
                     <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
                         <input type="search" name="search" 
-                                class="only-input"
-                                data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                                placeholder="'
+                                class="only-input"' . $dataQui .
+                                'placeholder="'
                                 . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
                                 '"/>
                     </form>';
@@ -71,9 +74,8 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
                         <div class="header-bar-suggestSearch-wrapper">
                             <input type="search" name="search"
-                                    class="input-and-icon" 
-                                    data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                                    placeholder="'
+                                    class="input-and-icon" ' . $dataQui .
+                                    'placeholder="'
                                     . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
                             '"/>
                         </div>
