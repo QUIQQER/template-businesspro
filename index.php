@@ -24,8 +24,10 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
 /**
  * search
  */
-$search = '';
-$dataQui = '';
+$search     = '';
+$dataQui    = '';
+$searchType = false;
+
 /* search setting is on? */
 if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
     $types = array(
@@ -55,31 +57,46 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
 
     if (count($searchSites)) {
         try {
-            $searchUrl = $searchSites[0]->getUrlRewritten();
+            $searchUrl  = $searchSites[0]->getUrlRewritten();
             $searchForm = '';
 
             switch ($Project->getConfig('templateBusinessPro.settings.search')) {
                 case 'input':
+                    $searchType = 'input';
                     $searchForm = '
                     <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
                         <input type="search" name="search" 
                                 class="only-input"' . $dataQui .
-                                'placeholder="'
-                                . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
-                                '"/>
+                        'placeholder="'
+                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
+                        '"/>
                     </form>';
                     break;
                 case 'inputAndIcon':
+                    $searchType = 'inputAndIcon';
                     $searchForm = '
                     <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
                         <div class="header-bar-suggestSearch-wrapper">
                             <input type="search" name="search"
                                     class="input-and-icon" ' . $dataQui .
-                                    'placeholder="'
-                                    . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
-                            '"/>
+                        'placeholder="'
+                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
+                        '"/>
                         </div>
                         <span class="fa fa-fw fa-search"></span>
+                    </form>';
+                    break;
+                case 'inputAndIconVisible':
+                    $searchType = 'inputAndIconVisible';
+                    $searchForm = '
+                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch 
+                        header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">
+                        <input type="search" name="search" 
+                                class="input-inputAndIconVisible"' . $dataQui .
+                        'placeholder="'
+                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
+                        '"/>
+                                <span class="fa fa-fw fa-search"></span>
                     </form>';
                     break;
             }
@@ -159,6 +176,7 @@ $templateSettings['Breadcrumb']    = $Breadcrumb;
 $templateSettings['MegaMenu']      = $MegaMenu;
 $templateSettings['bodyClass']     = $bodyClass;
 $templateSettings['startPage']     = $startPage;
+$templateSettings['searchType']    = $searchType;
 
 
 $Engine->assign($templateSettings);

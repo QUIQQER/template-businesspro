@@ -827,35 +827,6 @@ li.page-header-navigation-sub-entry:hover {
 /** page header suggest search
 * ========================================================== */
 
-/*.header-bar-suggestSearch {
-    float: right;
-}
-
-.header-bar-suggestSearch .fa {
-    color: #eee;
-}
-
-.header-bar-suggestSearch input[type="search"] {
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    color: #333;
-    line-height: 20px;
-    margin: 0;
-    opacity: 0.7;
-    padding: 6px 10px;
-}
-
-.header-bar-suggestSearch input[type="search"]:hover,
-.header-bar-suggestSearch input[type="search"]:focus {
-    !*background: rgba(255,255,255,0.1);*!
-    opacity: 1;
-}*/
-
-/** page header suggest search
-* ========================================================== */
-
 .header-bar-suggestSearch {
     position: absolute;
     right: 0;
@@ -910,6 +881,12 @@ li.page-header-navigation-sub-entry:hover {
     transform: translateY(-50%);
 }
 
+.header-bar-suggestSearch.showSearch .header-bar-suggestSearch-wrapper {
+    right: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
 /* setting: only input field */
 .header-bar-suggestSearch input[type="search"].only-input {
     background: rgba(255, 255, 255, 0.5);
@@ -929,10 +906,38 @@ input[type="search"].only-input:focus {
     opacity: 1;
 }
 
-.header-bar-suggestSearch.showSearch .header-bar-suggestSearch-wrapper {
-    right: 100%;
+/* setting: input field and icon visible */
+.header-bar-suggestSearch-inputAndIconVisible {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-inputAndIconVisible {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    box-shadow: none;
+    color: #333;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 10px;
+    float: left;
+}
+.input-inputAndIconVisible:active,
+.input-inputAndIconVisible:hover,
+.input-inputAndIconVisible:focus {
+    background: #fff;
     opacity: 1;
-    visibility: visible;
+}
+
+.header-bar-suggestSearch-inputAndIconVisible .fa {
+    float: right;
+    background: rgba(255,255,255,0.1);
+}
+
+.header-bar-suggestSearch-inputAndIconVisible .fa:hover,
+.header-bar-suggestSearch-inputAndIconVisible .fa:active,
+.header-bar-suggestSearch-inputAndIconVisible .fa:focus {
+    background: rgba(255,255,255,0.4);
 }
 
 /** page header search

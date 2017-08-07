@@ -301,14 +301,19 @@
             <pl><![CDATA[Pole wyszukiwania]]></pl>
         </locale>
             <locale name="templateBusinessPro.settings.search.input">
-                <de><![CDATA[Inputfeld]]></de>
+                <de><![CDATA[Eingabefeld]]></de>
                 <en><![CDATA[Input field]]></en>
                 <pl><![CDATA[Pole wyszukiwania]]></pl>
             </locale>
             <locale name="templateBusinessPro.settings.search.inputAndIcon">
                 <de><![CDATA[Clickbare Icon]]></de>
-                <en><![CDATA[Search Icon]]></en>
+                <en><![CDATA[Search icon]]></en>
                 <pl><![CDATA[Ikona do klkniecia]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.inputAndIconVisible">
+                <de><![CDATA[Eingabefeld mit Icon]]></de>
+                <en><![CDATA[Input field and icon]]></en>
+                <pl><![CDATA[Pole wprowadzania z ikoną]]></pl>
             </locale>
             <locale name="templateBusinessPro.settings.search.hide">
                 <de><![CDATA[Ausgeschaltet]]></de>
