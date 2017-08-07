@@ -35,12 +35,6 @@
 
     {$Template->getBody()}
 
-    {if empty($Template->getBody()) ||
-    empty( $prefixContentBricks ||
-    empty( $suffixContentBricks ))}
-        &nbsp;
-    {/if}
-
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
     <div class="tpl-businessPro-row">

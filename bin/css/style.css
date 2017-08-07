@@ -220,6 +220,7 @@ button,
 .tpl-businessPro-row .button {
     box-shadow: none;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
     outline: none;
     padding: 6px 16px;
     position: relative;
