@@ -899,6 +899,7 @@ li.page-header-navigation-sub-entry:hover {
     margin: 0;
     opacity: 0.6;
     padding: 6px 10px;
+    width: 200px;
 }
 
 input[type="search"].only-input:hover,
@@ -911,6 +912,7 @@ input[type="search"].only-input:focus {
 .header-bar-suggestSearch-inputAndIconVisible {
     top: 50%;
     transform: translateY(-50%);
+    width: 240px;
 }
 
 .input-inputAndIconVisible {
@@ -922,6 +924,7 @@ input[type="search"].only-input:focus {
     margin: 0;
     padding: 0 10px;
     float: left;
+    width: calc(100% - 40px);
 }
 .input-inputAndIconVisible:active,
 .input-inputAndIconVisible:hover,
