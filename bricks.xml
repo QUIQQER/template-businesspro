@@ -9,6 +9,10 @@
                     <locale group="quiqqer/template-businesspro"
                             var="brickFullWidth"/>
                 </setting>
+                <setting name="noPadding" type="checkbox">
+                    <locale group="quiqqer/template-businesspro"
+                            var="noPadding"/>
+                </setting>
             </settings>
         </brick>
 

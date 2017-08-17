@@ -20,6 +20,11 @@
             <en><![CDATA[Full width]]></en>
             <pl><![CDATA[Pełna szerokość]]></pl>
         </locale>
+        <locale name="noPadding">
+            <de><![CDATA[Kein Abstand von oben und unten]]></de>
+            <en><![CDATA[No space top and bottom]]></en>
+            <pl><![CDATA[Bez odstępów od góry i dołu]]></pl>
+        </locale>
 
         <!-- areas -->
         <locale name="area.footer.title">

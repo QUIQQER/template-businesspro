@@ -117,22 +117,23 @@
         {foreach $headerSuffix as $Brick}
 
         {assign var=noPadding value=''}
-        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
-        {assign var=noPadding value='-noPadding'}
+        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps' ||
+            $Brick->getSetting('noPadding')}
+            {assign var=noPadding value='-noPadding'}
         {/if}
         {if $Brick->getSetting( 'brickFullWidth' )}
         <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    headerSuffix-container
-                                    {cycle values='brick-even-suffix,brick-odd-suffix'}"
+                        headerSuffix-container {cycle values='brick-even-suffix,brick-odd-suffix'}
+                        brick-{$Brick->getAttribute('id')}-wrapper"
                  {if $Brick->getSetting('promosliderBackground')}
             style="background-color: {$Brick->getSetting('promosliderBackground')};"
             {/if}>
             {$Brick->create()}
         </section>
         {else}
-        <div class="prefix-suffix-nofull-width tpl-businessPro-row
-                                headerSuffix-container
-                                {cycle values='brick-even-suffix,brick-odd-suffix'}">
+        <div class="prefix-suffix-nofull-width tpl-businessPro-row{$noPadding} headerSuffix-container
+                    {cycle values='brick-even-suffix,brick-odd-suffix'}
+                    brick-{$Brick->getAttribute('id')}-wrapper">
             <div class="grid-container">
                 <section>
                     {if $Brick->getAttribute('frontendTitle')}
@@ -161,14 +162,15 @@
         {foreach $footerPrefix as $Brick}
 
         {assign var=noPadding value=''}
-        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps'}
-        {assign var=noPadding value='-noPadding'}
+        {if $Brick->getType() == 'QUI\Bricks\Controls\SimpleGoogleMaps' ||
+            $Brick->getSetting('noPadding')}
+            {assign var=noPadding value='-noPadding'}
         {/if}
 
         {if $Brick->getSetting( 'brickFullWidth' )}
         <section class="prefix-suffix-full-width clear-fix tpl-businessPro-row{$noPadding}
-                                    footerPrefix-container
-                                    {cycle values='brick-even-prefix,brick-odd-prefix'}"
+                        footerPrefix-container {cycle values='brick-even-prefix,brick-odd-prefix'}
+                        brick-{$Brick->getAttribute('id')}-wrapper"
                  {if $Brick->getSetting('promosliderBackground')}
             style="background-color: {$Brick->getSetting('promosliderBackground')};"
             {/if}>
@@ -176,9 +178,9 @@
             {$Brick->create()}
         </section>
         {else}
-        <div class="tpl-businessPro-row prefix-suffix-nofull-width
-                                footerPrefix-container
-                                {cycle values='brick-even-prefix,brick-odd-prefix'}">
+        <div class="prefix-suffix-nofull-width tpl-businessPro-row{$noPadding} footerPrefix-container
+                    {cycle values='brick-even-prefix,brick-odd-prefix'}
+                    brick-{$Brick->getAttribute('id')}-wrapper">
             <div class="grid-container">
                 <section>
                     {if $Brick->getAttribute('frontendTitle')}
