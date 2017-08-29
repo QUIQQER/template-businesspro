@@ -3,12 +3,6 @@
     <groups name="quiqqer/template-businesspro" datatype="php,js">
 
         <!-- template bricks -->
-        <locale name="navbar.search.text">
-            <de><![CDATA[Suchen]]></de>
-            <en><![CDATA[Search]]></en>
-            <pl><![CDATA[Szukaj]]></pl>
-        </locale>
-
         <locale name="promosliderBackground">
             <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
             <en><![CDATA[Set the background color (only by full width)]]></en>
@@ -26,6 +20,11 @@
             <en><![CDATA[Full width]]></en>
             <pl><![CDATA[Pełna szerokość]]></pl>
         </locale>
+        <locale name="noPadding">
+            <de><![CDATA[Kein Abstand von oben und unten]]></de>
+            <en><![CDATA[No space top and bottom]]></en>
+            <pl><![CDATA[Bez odstępów od góry i dołu]]></pl>
+        </locale>
 
         <!-- areas -->
         <locale name="area.footer.title">
@@ -42,7 +41,7 @@
         <locale name="area.startpageContent.title">
             <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
             <en><![CDATA[Content area (Landingpage)]]></en>
-            <pl><![CDATA[Główna zawartość strony (układ bez kolumn - strona główna)]]></pl>
+            <pl><![CDATA[Główna zawartość strony (strona główna)]]></pl>
         </locale>
         <locale name="area.startpageContent.description">
             <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
@@ -52,7 +51,7 @@
 
         <locale name="area.sidebar.left.title">
             <de><![CDATA[Linke Bausteinzone]]></de>
-            <en><![CDATA[Left brickarea]]></en>
+            <en><![CDATA[Left brick area]]></en>
             <pl><![CDATA[Układ z lewą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.left.description">
@@ -63,7 +62,7 @@
 
         <locale name="area.sidebar.right.title">
             <de><![CDATA[Rechte Bausteinzone]]></de>
-            <en><![CDATA[Right brickarea]]></en>
+            <en><![CDATA[Right brick area]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
         <locale name="area.sidebar.right.description">
@@ -75,7 +74,7 @@
         <locale name="area.noSidebar.title">
             <de><![CDATA[Inhalts-Zone]]></de>
             <en><![CDATA[Content area]]></en>
-            <pl><![CDATA[Główna zawartość]]></pl>
+            <pl><![CDATA[Główna zawartość (bez kolumn)]]></pl>
         </locale>
         <locale name="area.noSidebar.description">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
@@ -236,24 +235,6 @@
             <pl><![CDATA[Wyłącz]]></pl>
         </locale>
 
-        <!-- Menu shadow -->
-        <!--<locale name="templateBusinessPro.settings.navBarShadow.text">
-            <de><![CDATA[Menüschatten]]></de>
-            <en><![CDATA[Menu shadow]]></en>
-            <pl><![CDATA[Cień pod paskiem nawigacyjnym]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navBarShadow.displaz">
-            <de><![CDATA[Schatten anzeigen]]></de>
-            <en><![CDATA[Display the shadow]]></en>
-            <pl><![CDATA[Pokaż]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.settings.navBarShadow.hide">
-            <de><![CDATA[Schatten verbergen]]></de>
-            <en><![CDATA[Hide the shadow]]></en>
-            <pl><![CDATA[Ukryj]]></pl>
-        </locale>-->
-
-
         <!-- Background Color Switcher Prefix -->
         <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
             <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
@@ -310,6 +291,41 @@
             <en><![CDATA[Rright sidebar]]></en>
             <pl><![CDATA[Układ z prawą kolumną]]></pl>
         </locale>
+
+
+        <!-- search setting -->
+        <locale name="navbar.search.text">
+            <de><![CDATA[Suchen]]></de>
+            <en><![CDATA[Search]]></en>
+            <pl><![CDATA[Szukaj]]></pl>
+        </locale>
+
+        <locale name="templateBusinessPro.settings.search.text">
+            <de><![CDATA[Suche in Navigation]]></de>
+            <en><![CDATA[Search]]></en>
+            <pl><![CDATA[Pole wyszukiwania]]></pl>
+        </locale>
+            <locale name="templateBusinessPro.settings.search.input">
+                <de><![CDATA[Eingabefeld]]></de>
+                <en><![CDATA[Input field]]></en>
+                <pl><![CDATA[Pole wyszukiwania]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.inputAndIcon">
+                <de><![CDATA[Clickbare Icon]]></de>
+                <en><![CDATA[Search icon]]></en>
+                <pl><![CDATA[Ikona do klkniecia]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.inputAndIconVisible">
+                <de><![CDATA[Eingabefeld mit Icon]]></de>
+                <en><![CDATA[Input field and icon]]></en>
+                <pl><![CDATA[Pole wprowadzania z ikoną]]></pl>
+            </locale>
+            <locale name="templateBusinessPro.settings.search.hide">
+                <de><![CDATA[Ausgeschaltet]]></de>
+                <en><![CDATA[Disabled]]></en>
+                <pl><![CDATA[Wyłączone]]></pl>
+            </locale>
+
 
 
         <!-- breadcrumb settings -->
@@ -559,6 +575,22 @@
         <locale name="LinkSlideRightGrey">
             <de><![CDATA[Link: slide right (grey)]]></de>
             <en><![CDATA[Link: slide right (grey)]]></en>
+        </locale>
+
+        <locale name="templateButton.small">
+            <de><![CDATA[Button: klein]]></de>
+            <en><![CDATA[Button: small]]></en>
+            <pl><![CDATA[Button: mały]]></pl>
+        </locale>
+        <locale name="templateButton.medium">
+            <de><![CDATA[Button: normal]]></de>
+            <en><![CDATA[Button: medium]]></en>
+            <pl><![CDATA[Button: średni]]></pl>
+        </locale>
+        <locale name="templateButton.large">
+            <de><![CDATA[Button: groß]]></de>
+            <en><![CDATA[Button: large]]></en>
+            <pl><![CDATA[Button: duży]]></pl>
         </locale>
 
         <!-- site settings -->

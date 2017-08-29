@@ -41,6 +41,10 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#252122</defaultvalue>
                     </conf>
+                    <conf name="search">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>input</defaultvalue>
+                    </conf>
 
                     <!-- show header -->
                     <conf name="showHeaderStartPage">
@@ -390,6 +394,37 @@
 
                             </select>
 
+                            <!-- search -->
+                            <select conf="templateBusinessPro.settings.search">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.text"
+                                    />
+                                </text>
+
+
+                                <option value="input">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.input"
+                                    />
+                                </option>
+                                <option value="inputAndIcon">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.inputAndIcon"
+                                    />
+                                </option>
+                                <option value="inputAndIconVisible">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.inputAndIconVisible"
+                                    />
+                                </option>
+                                <option value="hide">
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="templateBusinessPro.settings.search.hide"
+                                    />
+                                </option>
+                            </select>
+
                             <!-- nav bar / menu colors -->
                             <input conf="templateBusinessPro.settings.navBarMainColor"
                                    type="color">
@@ -577,7 +612,7 @@
                     </attributes>
                 </style>
 
-                <!-- Template Button Small -->
+                <!-- Template Button small -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
                             var="templateButton.small" />
@@ -593,7 +628,7 @@
                         <attribute name="class">template-button template-button-medium</attribute>
                     </attributes>
                 </style>
-                <!-- Template Button Big -->
+                <!-- Template Button big -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
                             var="templateButton.big" />

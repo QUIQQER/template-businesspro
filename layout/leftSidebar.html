@@ -41,12 +41,6 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
 
     {$Template->getBody()}
 
-    {if empty($Template->getBody()) ||
-        empty( $prefixContentBricks ||
-        empty( $suffixContentBricks ))}
-        &nbsp;
-    {/if}
-
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
     <div class="tpl-businessPro-row">

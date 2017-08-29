@@ -196,7 +196,7 @@ button.qui-button:hover{
 }
 
 a.template-button:hover {
-    background-color: <?php echo $colorMainButton; ?>;
+    color: <?php echo $colorMain; ?>
 }
 
 #page .button.special {

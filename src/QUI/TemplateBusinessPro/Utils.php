@@ -47,31 +47,26 @@ class Utils
 
         $showHeader     = false;
         $showBreadcrumb = false;
-        $bodyClass      = '';
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
                 $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbStartPage');
-                $bodyClass      = 'startpage';
                 break;
 
             case 'layout/noSidebar':
                 $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderNoSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbNoSidebar');
-                $bodyClass      = 'left-sidebar';
                 break;
 
             case 'layout/rightSidebar':
                 $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbRightSidebar');
-                $bodyClass      = 'right-sidebar';
                 break;
 
             case 'layout/leftSidebar':
                 $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderLeftSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbLeftSidebar');
-                $bodyClass      = 'no-sidebar';
                 break;
         }
 
@@ -83,7 +78,6 @@ class Utils
             'showBreadcrumb' => $showBreadcrumb,
             'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
             'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
-            'bodyClass'      => $bodyClass
         );
 
         // set cache

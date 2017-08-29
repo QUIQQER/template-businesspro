@@ -1,5 +1,7 @@
 <?php
 
+$Locale = QUI::getLocale();
+
 /**
  * Emotion
  */
@@ -19,38 +21,87 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
 ));
 
-$searchMobile = '';
+/**
+ * search
+ */
+$search     = '';
+$dataQui    = '';
+$searchType = false;
 
-$types = array(
-    'quiqqer/sitetypes:types/search',
-    'quiqqer/search:types/search'
-);
+/* search setting is on? */
+if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
+    $types = array(
+        'quiqqer/sitetypes:types/search'
+    );
 
-$searchSites = $Project->getSites(array(
-    'where' => array(
-        'type' => array(
-            'type'  => 'IN',
-            'value' => $types
-        )
-    ),
-    'limit' => 1
-));
+    /* check if quiqqer search packet is installed */
+    if (QUI::getPackageManager()->isInstalled('quiqqer/search')) {
+        $types = array(
+            'quiqqer/sitetypes:types/search',
+            'quiqqer/search:types/search'
+        );
 
-if (count($searchSites)) {
-    try {
-        $searchUrl = $searchSites[0]->getUrlRewritten();
+        // Suggest Search integrate
+        $dataQui = 'data-qui="package/quiqqer/search/bin/controls/Suggest"';
+    }
 
-        $searchMobile = '<div class="quiqqer-menu-megaMenu-mobile-search hide-on-desktop"
-                                  style="width: auto; font-size: 30px !important;">
-                    <a href="' . $searchUrl . '"
-                    class="header-bar-search-link searchMobile">
-                        <i class="fa fa-search header-bar-search-icon"></i>
-                    </a>
-                </div>';
-    } catch (QUI\Exception $Exception) {
-        QUI\System\Log::addNotice($Exception->getMessage());
+    $searchSites = $Project->getSites(array(
+        'where' => array(
+            'type' => array(
+                'type'  => 'IN',
+                'value' => $types
+            )
+        ),
+        'limit' => 1
+    ));
+
+    if (count($searchSites)) {
+        try {
+            $searchUrl  = $searchSites[0]->getUrlRewritten();
+            $searchForm = '';
+
+            switch ($Project->getConfig('templateBusinessPro.settings.search')) {
+                case 'input':
+                    $searchType = 'input';
+
+                    $searchForm = '';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
+                    $searchForm .= '<input type="search" name="search" class="only-input"' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
+                    break;
+                case 'inputAndIcon':
+                    $searchType = 'inputAndIcon';
+
+                    $searchForm = '';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
+                    $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
+                    $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
+                    break;
+                case 'inputAndIconVisible':
+                    $searchType = 'inputAndIconVisible';
+
+                    $searchForm = '';
+                    $searchForm .= '<form action="' . $searchUrl . '" ';
+                    $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
+                    $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible"' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
+                    break;
+            }
+
+            $search = $searchForm;
+            $search .= '<div class="quiqqer-menu-megaMenu-mobile-search" style="width: auto; font-size: 30px !important;">';
+            $search .= '<a href="' . $searchUrl . '" class="header-bar-search-link searchMobile">';
+            $search .= '<span class="fa fa-search header-bar-search-icon"></span>';
+            $search .= '</a></div>';
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::addNotice($Exception->getMessage());
+        }
     }
 }
+
 
 $alt = "";
 if ($Project->getMedia()->getLogoImage()) {
@@ -64,20 +115,7 @@ $MegaMenu->prependHTML(
             </div>'
 );
 
-try {
-    QUI::getPackage('quiqqer/search');
-//    $Locale = QUI::getLocale();
-
-    $MegaMenu->appendHTML(
-        '<div class="header-bar-suggestSearch hide-on-mobile">
-                    <input type="search" data-qui="package/quiqqer/search/bin/controls/Suggest" 
-                    placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '"/>
-                </div>' .
-        $searchMobile
-    );
-} catch (QUI\Exception $Exception) {
-    QUI\System\Log::addNotice($Exception->getMessage());
-}
+$MegaMenu->appendHTML($search);
 
 
 /**
@@ -94,9 +132,38 @@ $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig(array(
     'Template' => $Template
 ));
 
+
+/**
+ * body class
+ */
+$bodyClass = '';
+$startPage = false;
+
+switch ($Template->getLayoutType()) {
+    case 'layout/startPage':
+        $bodyClass = 'start-page';
+        $startPage = true;
+        break;
+
+    case 'layout/noSidebar':
+        $bodyClass = 'no-sidebar';
+        break;
+
+    case 'layout/rightSidebar':
+        $bodyClass = 'right-sidebar';
+        break;
+
+    case 'layout/leftSidebar':
+        $bodyClass = 'left-sidebar';
+        break;
+}
+
 $templateSettings['BricksManager'] = \QUI\Bricks\Manager::init();
 $templateSettings['Breadcrumb']    = $Breadcrumb;
 $templateSettings['MegaMenu']      = $MegaMenu;
+$templateSettings['bodyClass']     = $bodyClass;
+$templateSettings['startPage']     = $startPage;
+$templateSettings['searchType']    = $searchType;
 
 
 $Engine->assign($templateSettings);
