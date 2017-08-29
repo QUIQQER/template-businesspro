@@ -96,7 +96,6 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
             $search .= '<a href="' . $searchUrl . '" class="header-bar-search-link searchMobile">';
             $search .= '<span class="fa fa-search header-bar-search-icon"></span>';
             $search .= '</a></div>';
-            
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addNotice($Exception->getMessage());
         }
