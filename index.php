@@ -63,52 +63,40 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
             switch ($Project->getConfig('templateBusinessPro.settings.search')) {
                 case 'input':
                     $searchType = 'input';
-                    $searchForm = '
-                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
-                        <input type="search" name="search" 
-                                class="only-input"' . $dataQui .
-                        'placeholder="'
-                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
-                        '"/>
-                    </form>';
+
+                    $searchForm = '';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
+                    $searchForm .= '<input type="search" name="search" class="only-input"' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
                     break;
                 case 'inputAndIcon':
                     $searchType = 'inputAndIcon';
-                    $searchForm = '
-                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">
-                        <div class="header-bar-suggestSearch-wrapper">
-                            <input type="search" name="search"
-                                    class="input-and-icon" ' . $dataQui .
-                        'placeholder="'
-                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
-                        '"/>
-                        </div>
-                        <span class="fa fa-fw fa-search"></span>
-                    </form>';
+
+                    $searchForm = '';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
+                    $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
+                    $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
                 case 'inputAndIconVisible':
                     $searchType = 'inputAndIconVisible';
-                    $searchForm = '
-                    <form  action="' . $searchUrl . '" class="header-bar-suggestSearch 
-                        header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">
-                        <input type="search" name="search" 
-                                class="input-inputAndIconVisible"' . $dataQui .
-                        'placeholder="'
-                        . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') .
-                        '"/>
-                                <span class="fa fa-fw fa-search"></span>
-                    </form>';
+
+                    $searchForm = '';
+                    $searchForm .= '<form action="' . $searchUrl . '" ';
+                    $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
+                    $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible"' . $dataQui . ' ';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
 
-            $search = $searchForm .
-                '<div class="quiqqer-menu-megaMenu-mobile-search"
-                                  style="width: auto; font-size: 30px !important;">
-                    <a href="' . $searchUrl . '"
-                    class="header-bar-search-link searchMobile">
-                        <i class="fa fa-search header-bar-search-icon"></i>
-                    </a>
-                </div>';
+            $search = $searchForm;
+            $search .= '<div class="quiqqer-menu-megaMenu-mobile-search" style="width: auto; font-size: 30px !important;">';
+            $search .= '<a href="' . $searchUrl . '" class="header-bar-search-link searchMobile">';
+            $search .= '<span class="fa fa-search header-bar-search-icon"></span>';
+            $search .= '</a></div>';
+            
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::addNotice($Exception->getMessage());
         }
