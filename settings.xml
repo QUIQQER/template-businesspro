@@ -125,6 +125,34 @@
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#333333</defaultvalue>
                     </conf>
+
+                    <!-- social -->
+                    <conf name="social.show.nav">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="social.show.footer">
+                        <type><![CDATA[bool]]></type>
+                        <defaultvalue>0</defaultvalue>
+                    </conf>
+                    <conf name="social.facebook">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="social.twitter">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="social.google">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="social.youtube">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="social.github">
+                        <type><![CDATA[string]]></type>
+                    </conf>
+                    <conf name="social.gitlab">
+                        <type><![CDATA[string]]></type>
+                    </conf>
                 </section>
             </config>
 
@@ -553,6 +581,103 @@
                                 </text>
                             </input>
 
+                        </settings>
+
+                        <!-- social icons -->
+                        <settings title="templateBusinessPro.settings"
+                                  name="templateBusinessPro.social.settings">
+                            <title>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="social.settings.title"
+                                />
+                            </title>
+
+                            <!-- show social on nav? -->
+                            <input conf="templateBusinessPro.settings.social.show.nav"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.show.nav"
+                                    />
+                                </text>
+                            </input>
+
+                            <!-- show social on the footer? -->
+                            <input conf="templateBusinessPro.settings.social.show.footer"
+                                   type="checkbox">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.show.footer"
+                                    />
+                                </text>
+                            </input>
+
+                            <text>
+                                <locale group="quiqqer/template-businesspro"
+                                        var="social.linksNote"
+                                />
+                            </text>
+
+                            <!-- facebook -->
+                            <input conf="templateBusinessPro.settings.social.facebook"
+                                   placeholder="https://www.facebook.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.facebook"
+                                    />
+                                </text>
+                            </input>
+                            <!-- twitter -->
+                            <input conf="templateBusinessPro.settings.social.twitter"
+                                   placeholder="https://www.twitter.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.twitter"
+                                    />
+                                </text>
+                            </input>
+                            <!-- google -->
+                            <input conf="templateBusinessPro.settings.social.google"
+                                   placeholder="https://www.google.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.google"
+                                    />
+                                </text>
+                            </input>
+                            <!-- youtube -->
+                            <input conf="templateBusinessPro.settings.social.youtube"
+                                   placeholder="https://www.youtube.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.youtube"
+                                    />
+                                </text>
+                            </input>
+                            <!-- github -->
+                            <input conf="templateBusinessPro.settings.social.github"
+                                   placeholder="https://www.github.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.github"
+                                    />
+                                </text>
+                            </input>
+                            <!-- gitlab -->
+                            <input conf="templateBusinessPro.settings.social.gitlab"
+                                   placeholder="https://www.gitlab.com"
+                                   type="text">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="social.gitlab"
+                                    />
+                                </text>
+                            </input>
                         </settings>
 
                     </category>

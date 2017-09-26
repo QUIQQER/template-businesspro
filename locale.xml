@@ -555,6 +555,58 @@
             <en><![CDATA[Sort]]></en>
         </locale>
 
+        <!-- social icons -->
+        <locale name="social.settings.title">
+            <de><![CDATA[Social Icons]]></de>
+            <en><![CDATA[Social icons]]></en>
+            <pl><![CDATA[Media spolecznosciowe (social icons)]]></pl>
+        </locale>
+        <locale name="social.show.nav">
+            <de><![CDATA[Anzeigen im Menü]]></de>
+            <en><![CDATA[Show in nav]]></en>
+            <pl><![CDATA[Wlacz w nawigacji]]></pl>
+        </locale>
+        <locale name="social.show.footer">
+            <de><![CDATA[Anzeigen im Footer]]></de>
+            <en><![CDATA[Show in footer]]></en>
+            <pl><![CDATA[Wlacz w stopce]]></pl>
+        </locale>
+        <locale name="social.linksNote" html="true">
+            <de><![CDATA[Bitte Links mit <strong>http:///</strong> oder <strong>https:///</strong> verwenden, z.B. https:///www.facebook.com]]></de>
+            <en><![CDATA[Please use only hyperlinks with <strong>http:///</strong> or <strong>https:///</strong>, e.g. https:///www.facebook.com]]></en>
+            <pl><![CDATA[Proszę używać linków z <strong>http:///</strong> albo <strong>https:///</strong>, na przyklad: https:///www.facebook.com]]></pl>
+        </locale>
+        <locale name="social.facebook">
+            <de><![CDATA[Facebook]]></de>
+            <en><![CDATA[Facebook]]></en>
+            <pl><![CDATA[Facebook]]></pl>
+        </locale>
+        <locale name="social.twitter">
+            <de><![CDATA[Twitter]]></de>
+            <en><![CDATA[Twitter]]></en>
+            <pl><![CDATA[Twitter]]></pl>
+        </locale>
+        <locale name="social.google">
+            <de><![CDATA[Google Plus]]></de>
+            <en><![CDATA[Google Plus]]></en>
+            <pl><![CDATA[Google Plus]]></pl>
+        </locale>
+        <locale name="social.youtube">
+            <de><![CDATA[YouTube]]></de>
+            <en><![CDATA[YouTube]]></en>
+            <pl><![CDATA[YouTube]]></pl>
+        </locale>
+        <locale name="social.github">
+            <de><![CDATA[GitHub]]></de>
+            <en><![CDATA[GitHub]]></en>
+            <pl><![CDATA[GitHub]]></pl>
+        </locale>
+        <locale name="social.gitlab">
+            <de><![CDATA[GitLab]]></de>
+            <en><![CDATA[GitLab]]></en>
+            <pl><![CDATA[GitLab]]></pl>
+        </locale>
+
         <!-- extra buttons -->
         <locale name="linkSimpleGrey">
             <de><![CDATA[Link: simple (grau)]]></de>
