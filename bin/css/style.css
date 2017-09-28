@@ -915,6 +915,8 @@ input[type="search"].only-input:focus {
     top: 50%;
     transform: translateY(-50%);
     width: 240px;
+    position: relative;
+    float: right;
 }
 
 .input-inputAndIconVisible {
@@ -945,38 +947,87 @@ input[type="search"].only-input:focus {
 .header-bar-suggestSearch-inputAndIconVisible .fa:focus {
     background: rgba(255,255,255,0.4);
 }
-
-/** page header search
+/** header (nav) bar social icon
 * ========================================================== */
 
-/*.header-bar-search:before {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+.slideout-panel {
+    background: #fff !important;
 }
 
-.header-bar-search {
-    white-space: nowrap;
-    overflow: hidden;
+.header-bar-social {
     float: right;
-    padding: 0 20px;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-a.header-bar-search-link {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    float: right;
+.header-bar-social.no-search {
+    margin-right: 0;
 }
 
-a.header-bar-search-link:hover {
-    background: none;
-    box-shadow: none;
+.header-bar-social.input,
+.header-bar-social.inputAndIconVisible {
+    margin-right: 10px;
 }
 
-.header-bar-search-icon {
-    line-height: 1.4em;
-}*/
+.header-bar-social .fa {
+    padding: 0 10px;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    top: 0 !important;
+}
+
+.header-bar-social .fa:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.close-social-share,
+.open-social-share {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    div.page-navigation {
+        padding-bottom: 60px;
+    }
+
+    .header-bar-social {
+        display: none;
+    }
+
+    .mobile-bar-social {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        z-index: 101;
+        max-width: 500px; /* width of the package/quiqqer/menu/bin/SlideOut */
+    }
+
+    .mobile-bar-social-title {
+        display: block;
+        margin: 10px 0 0;
+    }
+
+    .mobile-bar-social-container {
+        font-size: 20px;
+    }
+
+    .mobile-bar-social-container .fa {
+        line-height:50px;
+        width: 50px;
+        text-align: center;
+    }
+
+}
 
 /** page header
  * ========================================================== */

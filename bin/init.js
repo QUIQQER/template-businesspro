@@ -8,6 +8,32 @@ window.addEvent("domready", function ()
         new Fx.Scroll(window).toTop();
     });
 
+    require(['qui/QUI', 'utils/Controls'], function (QUI, Controls)
+    {
+        QUI.addEvent("onError", function (msg, url, linenumber)
+        {
+            console.error(msg);
+            console.error(url);
+            console.error('LineNo: ' + linenumber);
+        });
+
+        /**
+         * social share buttons
+         */
+        if (social) {
+            var SlideOutElm = document.getElement(
+                '[data-qui="package/quiqqer/menu/bin/SlideOut"]'
+            );
+
+            Controls.getControlByElement(SlideOutElm).then(function () {
+                new Element('div', {
+                    'class': 'mobile-bar-social hide-on-desktop',
+                    html   : socialHTML
+                }).inject(SlideOutElm);
+            });
+        }
+    });
+
     switch (searchType) {
         case 'inputAndIcon':
             navSearchInputAndIcon();

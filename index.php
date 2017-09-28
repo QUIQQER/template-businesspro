@@ -26,10 +26,13 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
  */
 $search     = '';
 $dataQui    = '';
+$noSearch   = 'no-search';
 $searchType = false;
 
 /* search setting is on? */
 if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
+    $noSearch = '';
+
     $types = array(
         'quiqqer/sitetypes:types/search'
     );
@@ -65,7 +68,8 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     $searchType = 'input';
 
                     $searchForm = '';
-                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile"';
+                    $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input"' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
                     break;
@@ -115,8 +119,72 @@ $MegaMenu->prependHTML(
             </div>'
 );
 
-$MegaMenu->appendHTML($search);
+// social
+$social          = false;
+$socialNav       = '';
+$socialFooter    = '';
+$socialMobileNav = '';
 
+if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
+    || $Project->getConfig('templateBusinessPro.settings.social.show.footer')
+) {
+    $social     = true;
+    $socialHTML = '';
+
+    // check which socials should be displayed
+    if ($Project->getConfig('templateBusinessPro.settings.social.facebook')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.facebook')
+            . '" target="_blank"><span class="fa fa-facebook"></span></a>';
+    }
+    if ($Project->getConfig('templateBusinessPro.settings.social.twitter')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.twitter')
+            . '" target="_blank"><span class="fa fa-twitter"></span></a>';
+    }
+    if ($Project->getConfig('templateBusinessPro.settings.social.google')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.google')
+            . '" target="_blank"><span class="fa fa-google-plus"></span></a>';
+    }
+    if ($Project->getConfig('templateBusinessPro.settings.social.youtube')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.youtube')
+            . '" target="_blank"><span class="fa fa-youtube-play"></span></a>';
+    }
+    if ($Project->getConfig('templateBusinessPro.settings.social.github')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.github')
+            . '" target="_blank"><span class="fa fa-github"></span></a>';
+    }
+    if ($Project->getConfig('templateBusinessPro.settings.social.gitlab')) {
+        $socialHTML .= '<a href="' .
+            $Project->getConfig('templateBusinessPro.settings.social.gitlab')
+            . '" target="_blank"><span class="fa fa-gitlab"></span></a>';
+    }
+
+    // prepare social for nav
+    if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')) {
+        $socialNav .= '<div class="header-bar-social hide-on-mobile ' . $noSearch . $searchType . '">';
+        $socialNav .= $socialHTML;
+        $socialNav .= '</div>';
+        
+        $socialMobileNav .= '<div class="mobile-bar-social-container">';
+        $socialMobileNav .= $socialHTML;
+        $socialMobileNav .= '</div>';
+    }
+
+    // prepare social for footer
+    if ($Project->getConfig('templateBusinessPro.settings.social.show.footer')) {
+        $socialFooter .= '<div class="footer-bar-social">';
+        $socialFooter .= $socialHTML;
+        $socialFooter .= '</div>';
+    }
+}
+
+$MegaMenu->appendHTML(
+    $search . $socialNav
+);
 
 /**
  * Breadcrumb
@@ -158,12 +226,14 @@ switch ($Template->getLayoutType()) {
         break;
 }
 
-$templateSettings['BricksManager'] = \QUI\Bricks\Manager::init();
-$templateSettings['Breadcrumb']    = $Breadcrumb;
-$templateSettings['MegaMenu']      = $MegaMenu;
-$templateSettings['bodyClass']     = $bodyClass;
-$templateSettings['startPage']     = $startPage;
-$templateSettings['searchType']    = $searchType;
+$templateSettings['BricksManager']   = \QUI\Bricks\Manager::init();
+$templateSettings['Breadcrumb']      = $Breadcrumb;
+$templateSettings['MegaMenu']        = $MegaMenu;
+$templateSettings['bodyClass']       = $bodyClass;
+$templateSettings['startPage']       = $startPage;
+$templateSettings['searchType']      = $searchType;
+$templateSettings['social']          = $social;
+$templateSettings['socialMobileNav'] = $socialMobileNav;
 
 
 $Engine->assign($templateSettings);
