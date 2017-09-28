@@ -353,6 +353,17 @@ footer a:hover {
 
 <?php }; ?>
 
+@media screen and (max-width: 767px) {
+    .mobile-bar-social {
+        background: <?php echo $Convert->colorBrightness($mobileMenuBackground, 0.9) ?>;
+    }
+
+    .mobile-bar-social-container a,
+    .mobile-bar-social-title {
+        color: <?php echo $mobileFontColor ?>;
+    }
+}
+
 <?php
 
 $settingsCSS = ob_get_contents();

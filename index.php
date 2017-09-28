@@ -26,7 +26,7 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
  */
 $search     = '';
 $dataQui    = '';
-$noSearch    = 'no-search';
+$noSearch   = 'no-search';
 $searchType = false;
 
 /* search setting is on? */
@@ -168,8 +168,7 @@ if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
         $socialNav .= '<div class="header-bar-social hide-on-mobile ' . $noSearch . $searchType . '">';
         $socialNav .= $socialHTML;
         $socialNav .= '</div>';
-
-        $socialMobileNav .= '<span class="mobile-bar-social-title">Social Media</span>';
+        
         $socialMobileNav .= '<div class="mobile-bar-social-container">';
         $socialMobileNav .= $socialHTML;
         $socialMobileNav .= '</div>';
@@ -227,12 +226,14 @@ switch ($Template->getLayoutType()) {
         break;
 }
 
-$templateSettings['BricksManager'] = \QUI\Bricks\Manager::init();
-$templateSettings['Breadcrumb']    = $Breadcrumb;
-$templateSettings['MegaMenu']      = $MegaMenu;
-$templateSettings['bodyClass']     = $bodyClass;
-$templateSettings['startPage']     = $startPage;
-$templateSettings['searchType']    = $searchType;
+$templateSettings['BricksManager']   = \QUI\Bricks\Manager::init();
+$templateSettings['Breadcrumb']      = $Breadcrumb;
+$templateSettings['MegaMenu']        = $MegaMenu;
+$templateSettings['bodyClass']       = $bodyClass;
+$templateSettings['startPage']       = $startPage;
+$templateSettings['searchType']      = $searchType;
+$templateSettings['social']          = $social;
+$templateSettings['socialMobileNav'] = $socialMobileNav;
 
 
 $Engine->assign($templateSettings);
