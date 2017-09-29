@@ -120,7 +120,7 @@ $MegaMenu->prependHTML(
 );
 
 // social
-$social          = false;
+$social          = 'false';
 $socialNav       = '';
 $socialFooter    = '';
 $socialMobileNav = '';
@@ -128,7 +128,7 @@ $socialMobileNav = '';
 if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
     || $Project->getConfig('templateBusinessPro.settings.social.show.footer')
 ) {
-    $social     = true;
+    $social     = 'true';
     $socialHTML = '';
 
     // check which socials should be displayed
