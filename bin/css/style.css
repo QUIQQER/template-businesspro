@@ -1114,8 +1114,7 @@ header.control-header {
     width: 100%;
 }
 
-.content-body blockquote,
-.content-body p,
+.content-body blockquote
 .content-body pre {
     clear: both;
     width: 100%;
