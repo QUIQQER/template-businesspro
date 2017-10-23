@@ -1122,22 +1122,12 @@ header.control-header {
 
 .content-body ol,
 .content-body ul {
-    clear: both;
     margin: 0 0 10px 0;
-}
-
-.content-body ol ol,
-.content-body ol ul,
-.content-body ul ul,
-.content-body ul ol {
-    clear: both;
 }
 
 .content-body li {
-    clear: both;
     line-height: 1.5;
     margin: 0 0 10px 0;
-    /*width: 100%;*/
 }
 
 h1, h2, h3, h4, h5 {
