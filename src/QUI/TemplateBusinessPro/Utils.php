@@ -82,7 +82,7 @@ class Utils
                 $showHeader = true;
                 break;
             case 'hide':
-            default :
+            default:
                 $showHeader = false;
         }
 
