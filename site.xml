@@ -15,17 +15,34 @@
                             var="templateBusinessPro.siteSettings"/>
                 </title>
 
-                <input conf="templateBusinessPro.showEmotion" type="checkbox">
+                <!-- show header -->
+                <select conf="templateBusinessPro.showEmotion">
                     <text>
                         <locale group="quiqqer/template-businesspro"
-                                var="templateBusinessPro.siteSettings.showEmotion"/>
+                                var="siteSettings.showEmotion"/>
                     </text>
-                </input>
+                    <option value="default">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.hide"/>
+                    </option>
+                </select>
+
+                <!-- show title -->
                 <input conf="templateBusinessPro.showTitle" type="checkbox">
                     <text>
                         <locale group="quiqqer/template-businesspro" var="siteSettings.showTitle"/>
                     </text>
                 </input>
+
+                <!-- show short desc -->
                 <input conf="templateBusinessPro.showShort" type="checkbox">
                     <text>
                         <locale group="quiqqer/template-businesspro" var="siteSettings.showShort"/>

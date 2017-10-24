@@ -1,38 +1,37 @@
 {
-    "name": "quiqqer\/template-businesspro",
-    "type": "quiqqer-template",
-    "description": "",
-    "version": "dev-dev",
-    "license": "",
-    "authors": [
-        {
-            "name": "Michael Danielczok",
-            "email": "support@pcsg.de",
-            "homepage": "http:\/\/www.pcsg.de",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "email": "support@pcsg.de",
-        "url": "http:\/\/www.pcsg.de"
-    },
-      "require": {
-        "php": ">=5.3",
-        "quiqqer\/quiqqer": "*@dev",
-        "quiqqer\/bricks": "*@dev",
-        "quiqqer\/fontawesome": "*@dev",
-        "quiqqer\/sitetypes": "*@dev",
-        "quiqqer\/menu": "1.*|dev-dev",
-        "quiqqer\/unsemantic": "*@dev",
-        "quiqqer\/utils": ">=1.7|dev-dev",
-        "quiqqer\/page-transition": "dev-master",
-        "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
-        "quiqqer\/buttons": ">=1.0.0|dev-master|dev-dev"
-      },
-
-    "autoload": {
-        "psr-4": {
-            "QUI\\TemplateBusinessPro\\": "src/QUI/TemplateBusinessPro"
-        }
+  "name": "quiqqer\/template-businesspro",
+  "type": "quiqqer-template",
+  "description": "Modern und responsive template to present your company in internet.",
+  "version": "dev-dev",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Michael Danielczok",
+      "email": "support@pcsg.de",
+      "homepage": "http:\/\/www.pcsg.de",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "email": "support@pcsg.de",
+    "url": "http:\/\/www.pcsg.de"
+  },
+  "require": {
+    "php": ">=5.3",
+    "quiqqer\/quiqqer": "*@dev",
+    "quiqqer\/bricks": "*@dev",
+    "quiqqer\/fontawesome": "*@dev",
+    "quiqqer\/sitetypes": "*@dev",
+    "quiqqer\/menu": "1.*|dev-dev",
+    "quiqqer\/unsemantic": "*@dev",
+    "quiqqer\/utils": ">=1.7|dev-dev",
+    "quiqqer\/page-transition": "dev-master",
+    "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
+    "quiqqer\/buttons": ">=1.0.0|dev-master|dev-dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "QUI\\TemplateBusinessPro\\": "src/QUI/TemplateBusinessPro"
+    }
+  }
 }

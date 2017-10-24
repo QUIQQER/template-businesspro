@@ -691,7 +691,18 @@
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/style.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/editor.css"/>
 
+
             <styles>
+
+                <style element="body">
+                    <!--<locale group="quiqqer/template-businesspro"
+                            var="linkSimpleGrey" />-->
+                    <attributes>
+                        <attribute name="class">huhuhuhuhuhu</attribute>
+                    </attributes>
+                </style>
+
+
                 <!-- link effect 1: simple (grey) -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"

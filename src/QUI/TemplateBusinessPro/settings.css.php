@@ -82,8 +82,7 @@ ob_start();
  */
 
 /* nav bar */
-.header-bar,
-.header-bar-inner-nav {
+.header-bar {
     background: <?php echo $navBarMainColor; ?>;
 }
 
