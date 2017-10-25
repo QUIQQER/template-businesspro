@@ -55,7 +55,8 @@
 
     <!-- layouts -->
     <layouts>
-        <layout type="layout/startPage">
+        <layout type="layout/startPage"
+                image="bin/layouts/startPage.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
             </title>
@@ -64,7 +65,8 @@
             </description>
         </layout>
 
-        <layout type="layout/noSidebar">
+        <layout type="layout/noSidebar"
+                image="bin/layouts/noSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.noSidebar" />
             </title>
@@ -73,7 +75,8 @@
             </description>
         </layout>
 
-        <layout type="layout/leftSidebar">
+        <layout type="layout/leftSidebar"
+                image="bin/layouts/leftSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.leftSidebar" />
             </title>
@@ -82,7 +85,8 @@
             </description>
         </layout>
 
-        <layout type="layout/rightSidebar">
+        <layout type="layout/rightSidebar"
+                image="bin/layouts/rightSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.rightSidebar" />
             </title>

@@ -212,6 +212,13 @@ button:hover,
     box-shadow: none;
 }
 
+
+.button {
+    display: inline-block;
+    background: #eee;
+    border: 2px solid #eee;
+}
+
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
@@ -239,6 +246,7 @@ button:hover,
 .button-active,
 .button:active,
 .button:hover {
+    background: none;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -1185,13 +1193,13 @@ p,
     text-decoration: none;
 }
 
-.content-body a {
+/*.content-body a {
     display: inline-block;
 }
 
 .content-body a img {
     display: block;
-}
+}*/
 
 /* icon toTop */
 .toTop {
@@ -2141,6 +2149,12 @@ a.link-slide-right-grey:focus::before {
 }
 
 /* Template Button */
+
+.template-button {
+    display: inline-block;
+    background: #eee;
+    border: 2px solid #eee;
+}
 
 a.template-button {
     padding: 0.8em 1.5em;

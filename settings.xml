@@ -694,15 +694,6 @@
 
             <styles>
 
-                <style element="body">
-                    <!--<locale group="quiqqer/template-businesspro"
-                            var="linkSimpleGrey" />-->
-                    <attributes>
-                        <attribute name="class">huhuhuhuhuhu</attribute>
-                    </attributes>
-                </style>
-
-
                 <!-- link effect 1: simple (grey) -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
