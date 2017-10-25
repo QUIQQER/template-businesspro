@@ -759,7 +759,7 @@
                 <!-- Template Button big -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
-                            var="templateButton.big" />
+                            var="templateButton.large" />
                     <attributes>
                         <attribute name="class">template-button template-button-big</attribute>
                     </attributes>
