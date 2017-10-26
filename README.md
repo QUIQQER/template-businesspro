@@ -1,4 +1,3 @@
-![QUIQQER Countries](bin/images/Readme.jpg)
 
 Business Pro
 ============
