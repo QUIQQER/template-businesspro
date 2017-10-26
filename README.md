@@ -16,8 +16,8 @@ Features
 
 - 4 layouts
 - Integrated QUIQQER breadcrumb
-- Search on the top navigation
-- Placeholder for your social in the navigation and footer (uses FontAwesome icons)
+- Search in the top navigation
+- Placeholder for your socials in the navigation and footer (with FontAwesome icons)
     - Facebook
     - Twitter
     - Google Plus
@@ -40,14 +40,14 @@ Contribute
 ----------
 
 - Issue Tracker: https://dev.quiqqer.com/quiqqer/template-businesspro/issues 
-- Source Code: https://dev.quiqqer.com/quiqqer/template-businesspro/tree/master
+- Source Code: https://dev.quiqqer.com/quiqqer/template-businesspro
 
 
 Support
 -------
 
 If you have found a bug or want to make improvements,
-Then you can write an e-mail to support@pcsg.de.
+then you can write an e-mail to support@pcsg.de.
 
 
 License
