@@ -1,14 +1,14 @@
 {
   "name": "quiqqer\/template-businesspro",
   "type": "quiqqer-template",
-  "description": "Modern und responsive template to present your company in internet.",
+  "description": "Modern and responsive template to present your company in internet.",
   "version": "dev-dev",
   "license": "GPL-3.0+",
   "authors": [
     {
       "name": "Michael Danielczok",
       "email": "support@pcsg.de",
-      "homepage": "http:\/\/www.pcsg.de",
+      "homepage": "https:\/\/www.pcsg.de",
       "role": "Developer"
     }
   ],

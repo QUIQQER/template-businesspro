@@ -1,6 +1,6 @@
 
-Business Pro
-============
+QUIQQER Business Pro
+====================
 
 This template allow you to create a modern und responsive website.
 Thanks to many settings you can simply adjust this template to yours needs.
