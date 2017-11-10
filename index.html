@@ -1,15 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7 ]>
-<html class="ie ie6" lang="{$Project->getAttribute('lang')}" itemscope
-      itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if IE 7 ]>
-<html class="ie ie7" lang="{$Project->getAttribute('lang')}" itemscope
-      itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="ie ie8" lang="{$Project->getAttribute('lang')}" itemscope
-      itemtype="http://schema.org/WebPage"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
+<html lang="{$Project->getAttribute('lang')}" itemscope itemtype="http://schema.org/WebPage">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
@@ -22,10 +12,6 @@
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
     {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
-
-    <!--[if (lt IE 9) & (!IEMobile)]>
-    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/unsemantic/ie.css"/>
-    <![endif]-->
 
     <!-- [begin] css combine -->
     {fontawesome}
@@ -76,7 +62,7 @@
 <!-- page -->
 <div class="body-container">
     <!-- header -->
-    {if $showHeader && $Site->getAttribute('templateBusinessPro.showEmotion')}
+    {if $showHeader}
     {strip}
     <header class="page-header">
         {if $Site->getAttribute('image_emotion')}

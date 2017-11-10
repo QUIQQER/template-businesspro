@@ -61,7 +61,6 @@ class Utils
 
             case 'layout/rightSidebar':
                 $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
-                $showPageTitle  = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbRightSidebar');
                 break;
 
@@ -74,7 +73,6 @@ class Utils
 
         $showPageTitle = $params['Site']->getAttribute('templateBusinessPro.showTitle');
         $showPageShort = $params['Site']->getAttribute('templateBusinessPro.showShort');
-
 
         /* site own show header */
         switch ($params['Site']->getAttribute('templateBusinessPro.showEmotion')) {
