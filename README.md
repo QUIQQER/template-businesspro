@@ -2,7 +2,7 @@
 QUIQQER Business Pro
 ====================
 
-This template allow you to create a modern und responsive website.
+This template allow you to create a modern and responsive website.
 Thanks to many settings you can simply adjust this template to yours needs.
 
 
@@ -14,10 +14,12 @@ Paketname:
 Features
 --------
 
-- 4 layouts
+- Responsive
 - Integrated QUIQQER breadcrumb
-- Search in the top navigation
-- Placeholder for your socials in the navigation and footer (with FontAwesome icons)
+- Page transition effects
+- Search icon / input in the top navigation
+- FontAwesome support
+- Placeholder for your socials in the navigation and footer
     - Facebook
     - Twitter
     - Google Plus
@@ -26,8 +28,8 @@ Features
     - GitLab
 - Color management
 - Header settings (show / hide, height, position, etc.)
-- Each site can define if header, title and short description should be displayed
-- Responsive
+- Each site can define if header, title and short description should be displayed (override the global setting)
+- Template settings cache
 
 
 Installation

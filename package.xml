@@ -10,6 +10,11 @@
 
         <image src="URL_OPT_DIR/quiqqer/template-businesspro/bin/img/Logo.jpg"/>
 
+        <preview>
+            <image src="URL_OPT_DIR/quiqqer/calendar/bin/images/preview/Template_BusinessPro.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/calendar/bin/images/preview/Template_BusinessPro_2.jpg"/>
+        </preview>
+
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
             <forum><![CDATA[https://community.quiqqer.com]]></forum>
