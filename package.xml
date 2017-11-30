@@ -8,7 +8,7 @@
             <locale group="quiqqer/template-businesspro" var="package.description"/>
         </description>
 
-        <image src="URL_OPT_DIR/quiqqer/template-businesspro/bin/img/Logo.jpg"/>
+        <image src="URL_OPT_DIR/quiqqer/template-businesspro/bin/img/Logo.png"/>
 
         <preview>
             <image src="URL_OPT_DIR/quiqqer/template-businesspro/bin/img/preview/Template_BusinessPro.jpg"/>
