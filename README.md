@@ -1,3 +1,5 @@
+![QUIQQER Calendar](bin/img/Readme.jpg)
+
 
 QUIQQER Business Pro
 ====================
