@@ -689,8 +689,11 @@
         <wysiwyg class="page-content">
             <css src="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic"/>
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/style.css"/>
+            <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/editor.css"/>
+
 
             <styles>
+
                 <!-- link effect 1: simple (grey) -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
@@ -756,7 +759,7 @@
                 <!-- Template Button big -->
                 <style element="a">
                     <locale group="quiqqer/template-businesspro"
-                            var="templateButton.big" />
+                            var="templateButton.large" />
                     <attributes>
                         <attribute name="class">template-button template-button-big</attribute>
                     </attributes>

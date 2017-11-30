@@ -82,8 +82,7 @@ ob_start();
  */
 
 /* nav bar */
-.header-bar,
-.header-bar-inner-nav {
+.header-bar {
     background: <?php echo $navBarMainColor; ?>;
 }
 
@@ -249,7 +248,6 @@ button:hover,
 .button-active,
 .button:active,
 .button:hover {
-    background: none;
     color: <?php echo $colorMain; ?>;
 }
 

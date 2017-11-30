@@ -126,39 +126,17 @@
             <pl><![CDATA[Miejsce na widgety przed stopka strony]]></pl>
         </locale>
 
-        <!-- template site settings -->
-        <locale name="templateBusinessPro.siteSettings">
-            <de><![CDATA[Template Business Pro: Einstellungen]]></de>
-            <en><![CDATA[Template Business Pro: settings]]></en>
-            <pl><![CDATA[Template Business Pro: ustawienia]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.siteSettings.showEmotion">
-            <de><![CDATA[Header Bild anzeigen]]></de>
-            <en><![CDATA[Show header picture]]></en>
-            <pl><![CDATA[Pokaż obrazek nagłówka]]></pl>
-        </locale>
-            <!-- Title & short -->
-        <locale name="templateBusinessPro.siteSettings.showTitle">
-            <de><![CDATA[Überschrift anzeigen]]></de>
-            <en><![CDATA[Show title]]></en>
-            <pl><![CDATA[Wyświetlić tytuł]]></pl>
-        </locale>
-        <locale name="templateBusinessPro.siteSettings.showShort">
-            <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
-            <en><![CDATA[Show short descriptions]]></en>
-            <pl><![CDATA[Wyświetlić opis strony]]></pl>
-        </locale>
 
 
         <locale name="package.title">
-            <de><![CDATA[QUIQQER - Template: Business Pro]]></de>
-            <en><![CDATA[QUIQQER - Template: Business Pro]]></en>
-            <pl><![CDATA[QUIQQER - Template: Business Pro]]></pl>
+            <de><![CDATA[Business Pro]]></de>
+            <en><![CDATA[Business Pro]]></en>
+            <pl><![CDATA[Business Pro]]></pl>
         </locale>
         <locale name="package.description">
             <de><![CDATA[Template für aussagekräftige Internetseiten mit
             vielen Einstellungsmöglichkeiten.]]></de>
-            <en><![CDATA[Advanced template with a great design and a lot of settings.]]></en>
+            <en><![CDATA[Advanced template with a modern design and settings.]]></en>
             <pl><![CDATA[Zaawansowany template z dopracowanym designem, który wyróżni Twoją stronę
             internetową na tle innych. Duże pole do popisu dają rozmaite ustawienia,
             dzięki czemu możesz dopasować wygląd Twojego serwisu do własnych potrzeb.]]></pl>
@@ -208,7 +186,7 @@
         <locale name="nav.button.close" html="true">
             <de><![CDATA[Menü schließen]]></de>
             <en><![CDATA[Close menu]]></en>
-            <pl><![CDATA[Schowaj menu]]></pl>
+            <pl><![CDATA[Zamknij menu]]></pl>
         </locale>
         
         <!-- settings -->
@@ -647,23 +625,43 @@
 
         <!-- site settings -->
 
-        <locale name="siteSettings">
-            <de><![CDATA[Template Basic Company: Einstellungen]]></de>
-            <en><![CDATA[Template Basic Company: settings]]></en>
+        <locale name="templateBusinessPro.siteSettings">
+            <de><![CDATA[Template Business Pro: Einstellungen]]></de>
+            <en><![CDATA[Template Business Pro: settings]]></en>
+            <pl><![CDATA[Template Business Pro: ustawienia]]></pl>
         </locale>
 
         <locale name="siteSettings.showEmotion">
-            <de><![CDATA[Header Bild anzeigen]]></de>
-            <en><![CDATA[Show header picture]]></en>
-            <pl><![CDATA[Pokaż obrazek nagłówka]]></pl>
+            <de><![CDATA[Header]]></de>
+            <en><![CDATA[Header]]></en>
+            <pl><![CDATA[Nagłówek]]></pl>
         </locale>
+            <locale name="siteSettings.showEmotion.default">
+                <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+                <en><![CDATA[Default template setting]]></en>
+                <pl><![CDATA[Zastosuj ustawienia szablonu (template)]]></pl>
+            </locale>
+            <locale name="siteSettings.showEmotion.show">
+                <de><![CDATA[Anzeigen]]></de>
+                <en><![CDATA[Show]]></en>
+                <pl><![CDATA[Pokaż]]></pl>
+            </locale>
+            <locale name="siteSettings.showEmotion.hide">
+                <de><![CDATA[Verstecken]]></de>
+                <en><![CDATA[Hide]]></en>
+                <pl><![CDATA[Ukryj]]></pl>
+            </locale>
+
+        <!-- Title & short -->
         <locale name="siteSettings.showTitle">
-            <de><![CDATA[Titel anzeigen]]></de>
+            <de><![CDATA[Überschrift anzeigen]]></de>
             <en><![CDATA[Show title]]></en>
+            <pl><![CDATA[Wyświetlić tytuł]]></pl>
         </locale>
         <locale name="siteSettings.showShort">
             <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
-            <en><![CDATA[Show short text]]></en>
+            <en><![CDATA[Show short descriptions]]></en>
+            <pl><![CDATA[Wyświetlić opis strony]]></pl>
         </locale>
 
     </groups>

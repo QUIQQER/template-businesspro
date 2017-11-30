@@ -70,6 +70,19 @@ class Utils
                 break;
         }
 
+
+        $showPageTitle = $params['Site']->getAttribute('templateBusinessPro.showTitle');
+        $showPageShort = $params['Site']->getAttribute('templateBusinessPro.showShort');
+
+        /* site own show header */
+        switch ($params['Site']->getAttribute('templateBusinessPro.showEmotion')) {
+            case 'show':
+                $showHeader = true;
+                break;
+            case 'hide':
+                $showHeader = false;
+        }
+
         $settingsCSS = include 'settings.css.php';
 
         $config += array(
@@ -78,6 +91,8 @@ class Utils
             'showBreadcrumb' => $showBreadcrumb,
             'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
             'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
+            'showPageTitle'  => $showPageTitle,
+            'showPageShort'  => $showPageShort
         );
 
         // set cache

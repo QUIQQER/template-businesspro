@@ -21,6 +21,7 @@ $MegaMenu = new QUI\Menu\MegaMenu(array(
     'showStart' => false
 ));
 
+
 /**
  * search
  */
@@ -68,9 +69,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     $searchType = 'input';
 
                     $searchForm = '';
-                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile"';
+                    $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" ';
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
-                    $searchForm .= '<input type="search" name="search" class="only-input"' . $dataQui . ' ';
+                    $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
                     break;
                 case 'inputAndIcon':
@@ -89,7 +90,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     $searchForm = '';
                     $searchForm .= '<form action="' . $searchUrl . '" ';
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
-                    $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible"' . $dataQui . ' ';
+                    $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
@@ -115,7 +116,7 @@ if ($Project->getMedia()->getLogoImage()) {
 $MegaMenu->prependHTML(
     '<div class="header-bar-inner-logo">
                 <a href="' . URL_DIR . '" class="page-header-logo">
-                <img src="' . $Project->getMedia()->getLogo() . '" alt="' . $alt . '"/></a>
+                <img src="' . $Project->getMedia()->getLogoImage()->getSizeCacheUrl(400, 300) . '" alt="' . $alt . '"/></a>
             </div>'
 );
 
@@ -168,7 +169,7 @@ if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
         $socialNav .= '<div class="header-bar-social hide-on-mobile ' . $noSearch . $searchType . '">';
         $socialNav .= $socialHTML;
         $socialNav .= '</div>';
-        
+
         $socialMobileNav .= '<div class="mobile-bar-social-container">';
         $socialMobileNav .= $socialHTML;
         $socialMobileNav .= '</div>';

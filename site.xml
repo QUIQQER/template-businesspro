@@ -15,17 +15,34 @@
                             var="templateBusinessPro.siteSettings"/>
                 </title>
 
-                <input conf="templateBusinessPro.showEmotion" type="checkbox">
+                <!-- show header -->
+                <select conf="templateBusinessPro.showEmotion">
                     <text>
                         <locale group="quiqqer/template-businesspro"
-                                var="templateBusinessPro.siteSettings.showEmotion"/>
+                                var="siteSettings.showEmotion"/>
                     </text>
-                </input>
+                    <option value="default">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.default"/>
+                    </option>
+                    <option value="show">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.show"/>
+                    </option>
+                    <option value="hide">
+                        <locale group="quiqqer/template-businesspro"
+                                var="siteSettings.showEmotion.hide"/>
+                    </option>
+                </select>
+
+                <!-- show title -->
                 <input conf="templateBusinessPro.showTitle" type="checkbox">
                     <text>
                         <locale group="quiqqer/template-businesspro" var="siteSettings.showTitle"/>
                     </text>
                 </input>
+
+                <!-- show short desc -->
                 <input conf="templateBusinessPro.showShort" type="checkbox">
                     <text>
                         <locale group="quiqqer/template-businesspro" var="siteSettings.showShort"/>
@@ -38,7 +55,8 @@
 
     <!-- layouts -->
     <layouts>
-        <layout type="layout/startPage">
+        <layout type="layout/startPage"
+                image="bin/layouts/startPage.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.startpage" />
             </title>
@@ -47,7 +65,8 @@
             </description>
         </layout>
 
-        <layout type="layout/noSidebar">
+        <layout type="layout/noSidebar"
+                image="bin/layouts/noSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.noSidebar" />
             </title>
@@ -56,7 +75,8 @@
             </description>
         </layout>
 
-        <layout type="layout/leftSidebar">
+        <layout type="layout/leftSidebar"
+                image="bin/layouts/leftSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.leftSidebar" />
             </title>
@@ -65,7 +85,8 @@
             </description>
         </layout>
 
-        <layout type="layout/rightSidebar">
+        <layout type="layout/rightSidebar"
+                image="bin/layouts/rightSidebar.png">
             <title>
                 <locale group="quiqqer/template-businesspro" var="admin.layout.rightSidebar" />
             </title>

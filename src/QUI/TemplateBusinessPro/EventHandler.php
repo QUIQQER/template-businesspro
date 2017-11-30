@@ -24,6 +24,21 @@ class EventHandler
         try {
             QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
         } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeException($Exception);
+        }
+    }
+
+    /**
+     * Clear system cache on site save
+     *
+     * @return void
+     */
+    public static function onSiteSave()
+    {
+        try {
+            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeException($Exception);
         }
     }
 }

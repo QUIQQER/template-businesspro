@@ -212,6 +212,13 @@ button:hover,
     box-shadow: none;
 }
 
+
+.button {
+    display: inline-block;
+    background: #eee;
+    border: 2px solid #eee;
+}
+
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
@@ -239,6 +246,7 @@ button:hover,
 .button-active,
 .button:active,
 .button:hover {
+    background: none;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -1114,8 +1122,7 @@ header.control-header {
     width: 100%;
 }
 
-.content-body blockquote,
-.content-body p,
+.content-body blockquote
 .content-body pre {
     clear: both;
     width: 100%;
@@ -1123,22 +1130,12 @@ header.control-header {
 
 .content-body ol,
 .content-body ul {
-    clear: both;
     margin: 0 0 10px 0;
-}
-
-.content-body ol ol,
-.content-body ol ul,
-.content-body ul ul,
-.content-body ul ol {
-    clear: both;
 }
 
 .content-body li {
-    clear: both;
     line-height: 1.5;
     margin: 0 0 10px 0;
-    /*width: 100%;*/
 }
 
 h1, h2, h3, h4, h5 {
@@ -1196,13 +1193,13 @@ p,
     text-decoration: none;
 }
 
-.content-body a {
+/*.content-body a {
     display: inline-block;
 }
 
 .content-body a img {
     display: block;
-}
+}*/
 
 /* icon toTop */
 .toTop {
@@ -2152,6 +2149,12 @@ a.link-slide-right-grey:focus::before {
 }
 
 /* Template Button */
+
+.template-button {
+    display: inline-block;
+    background: #eee;
+    border: 2px solid #eee;
+}
 
 a.template-button {
     padding: 0.8em 1.5em;

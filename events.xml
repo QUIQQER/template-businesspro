@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
     <event on="onProjectConfigSave" fire="\QUI\TemplateBusinessPro\EventHandler::onProjectConfigSave" />
+    <event on="onSiteSave" fire="\QUI\TemplateBusinessPro\EventHandler::onSiteSave"/>
 </events>
