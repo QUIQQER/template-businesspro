@@ -1,4 +1,4 @@
-![QUIQQER Calendar](bin/img/Readme.jpg)
+![QUIQQER Business Pro](bin/img/Readme.jpg)
 
 
 QUIQQER Business Pro
