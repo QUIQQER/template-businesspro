@@ -114,7 +114,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
 $alt     = "QUIQQER";
 $logoUrl = $Project->getMedia()->getPlaceholder();
 if ($Project->getMedia()->getLogoImage()) {
-    $Logo = $Project->getMedia()->getLogoImage();
+    $Logo    = $Project->getMedia()->getLogoImage();
     $alt     = $Logo->getAttribute('title');
     $logoUrl = $Logo->getSizeCacheUrl(400, 300);
 }
