@@ -158,7 +158,7 @@ a,
 a:hover {
     border-radius: 0;
     text-decoration: none;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 p a {
@@ -239,9 +239,9 @@ button,
     -o-transition: all 0.2s ease;
 }
 
-/*input[type='submit']:hover,
+input[type='submit']:hover,
 input[type='reset']:hover,
-input[type='button']:hover,*/
+input[type='button']:hover,
 button:hover,
 .button-active,
 .button:active,
@@ -696,7 +696,6 @@ span.quiqqer-bricks-promoslider-wallpaper-dot-active:after {
 div.quiqqer-bricks-promoslider-wallpaper-next,
 div.quiqqer-bricks-promoslider-wallpaper-prev {
     color: #ddd;
-    opacity: 0.9;
     text-shadow: none;
 }
 
@@ -1235,18 +1234,38 @@ p,
     transition: 1.1s all cubic-bezier(.21, 1.14, .27, .91);
 }
 
+/*************************/
 /* hyphenate, word break */
-/* ANMERKUNG */
-/*word-break: break-all; mit Absicht ausgeshaltet. */
-/* -ms-word-break damit in IE 11 funktioniert. */
-/* Nur bei EDGE passt nicht. Wenn break-word Standard wird, */
-/* dann sollte alles passen */
+/*************************/
 h1, h2, h3, h4, h5, h6 {
-    -ms-word-break: break-all;
-    word-break: break-word; /* Non standard for webkit */
-    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: break-word;
+    -ms-hyphens: auto;
     -moz-hyphens: auto;
+    -webkit-hyphens: auto;
     hyphens: auto;
+}
+
+.word-wrap,
+.word-break {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /*********************************************************************************/

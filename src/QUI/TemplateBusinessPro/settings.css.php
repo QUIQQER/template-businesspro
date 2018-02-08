@@ -101,8 +101,7 @@ ob_start();
 .page-header-navigation li:hover,
 .header-bar-search:hover,
 .quiqqer-menu-megaMenu-list-item-menu.control-background,
-.quiqqer-menu-megaMenu-list-item:hover,
-.page-27 {
+.quiqqer-menu-megaMenu-list-item:hover {
     background: <?php echo $navBarMainColorLighter; ?>;
 }
 
@@ -188,10 +187,14 @@ button:disabled:hover,
 a.template-button,
 button.qui-button-active,
 button.qui-button:active,
-button.qui-button:hover{
+button.qui-button:hover {
     background-color: <?php echo $colorMain; ?>;
     color: <?php echo $buttonFontColor; ?>;
     border: 2px solid <?php echo $colorMain; ?>;
+}
+
+.button:hover {
+    background: none;
 }
 
 a.template-button:hover {
