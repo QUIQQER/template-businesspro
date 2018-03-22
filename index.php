@@ -66,9 +66,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" /></form>';
+                        'quiqqer/template-businesspro',
+                        'navbar.search.text'
+                    ) . '" /></form>';
                     break;
 
                 case 'inputAndIcon':
@@ -79,9 +79,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
                     $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" />';
+                        'quiqqer/template-businesspro',
+                        'navbar.search.text'
+                    ) . '" />';
                     $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
 
@@ -93,9 +93,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
                     $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" />';
+                        'quiqqer/template-businesspro',
+                        'navbar.search.text'
+                    ) . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
