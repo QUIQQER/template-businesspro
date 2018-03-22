@@ -7,20 +7,12 @@ $Locale = QUI::getLocale();
  */
 QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
 
-// Inhalts Verhalten
+// Inhaltsverhalten
 if ($Site->getAttribute('templateBusinessPro.showTitle') ||
     $Site->getAttribute('templateBusinessPro.showShort')
 ) {
     $Template->setAttribute('content-header', false);
 }
-
-/**
- * Mega menu
- */
-$MegaMenu = new QUI\Menu\MegaMenu(array(
-    'showStart' => false
-));
-
 
 /**
  * search
@@ -30,8 +22,9 @@ $dataQui    = '';
 $noSearch   = 'no-search';
 $searchType = false;
 
-/* search setting is on? */
-if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
+/* search setting is on? template header allowed? */
+if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
+    && $Template->getAttribute('template-header')) {
     $noSearch = '';
 
     $types = array(
@@ -75,6 +68,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                     $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro',
                             'navbar.search.text') . '" /></form>';
                     break;
+
                 case 'inputAndIcon':
                     $searchType = 'inputAndIcon';
 
@@ -86,6 +80,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
                             'navbar.search.text') . '" />';
                     $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
+
                 case 'inputAndIconVisible':
                     $searchType = 'inputAndIconVisible';
 
@@ -110,30 +105,15 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide') {
     }
 }
 
-
-$alt     = "QUIQQER";
-$logoUrl = $Project->getMedia()->getPlaceholder();
-if ($Project->getMedia()->getLogoImage()) {
-    $Logo    = $Project->getMedia()->getLogoImage();
-    $alt     = $Logo->getAttribute('title');
-    $logoUrl = $Logo->getSizeCacheUrl(400, 300);
-}
-
-$MegaMenu->prependHTML(
-    '<div class="header-bar-inner-logo">
-                <a href="' . URL_DIR . '" class="page-header-logo">
-                <img src="' . $logoUrl . '" alt="' . $alt . '"/></a>
-            </div>'
-);
-
 // social
 $social          = 'false';
 $socialNav       = '';
 $socialFooter    = '';
 $socialMobileNav = '';
 
-if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
-    || $Project->getConfig('templateBusinessPro.settings.social.show.footer')
+if (($Project->getConfig('templateBusinessPro.settings.social.show.nav')
+        || $Project->getConfig('templateBusinessPro.settings.social.show.footer'))
+    && ($Template->getAttribute('template-footer') || $Template->getAttribute('template-header'))
 ) {
     $social     = 'true';
     $socialHTML = '';
@@ -171,7 +151,9 @@ if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
     }
 
     // prepare social for nav
-    if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')) {
+    if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
+        && $Template->getAttribute('template-header')) {
+
         $socialNav .= '<div class="header-bar-social hide-on-mobile ' . $noSearch . $searchType . '">';
         $socialNav .= $socialHTML;
         $socialNav .= '</div>';
@@ -182,16 +164,49 @@ if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
     }
 
     // prepare social for footer
-    if ($Project->getConfig('templateBusinessPro.settings.social.show.footer')) {
+    if ($Project->getConfig('templateBusinessPro.settings.social.show.footer')
+        && $Template->getAttribute('template-footer')) {
         $socialFooter .= '<div class="footer-bar-social">';
         $socialFooter .= $socialHTML;
         $socialFooter .= '</div>';
     }
 }
 
-$MegaMenu->appendHTML(
-    $search . $socialNav
-);
+
+/**
+ * Mega menu
+ */
+$MegaMenu = false;
+
+if ($Template->getAttribute('template-header')) {
+    /**
+     * Mega menu
+     */
+    $MegaMenu = new QUI\Menu\MegaMenu(array(
+        'showStart' => false
+    ));
+
+    $MegaMenu->appendHTML(
+        $search . $socialNav
+    );
+
+    /* Logo in menu */
+    $alt     = "QUIQQER";
+    $logoUrl = $Project->getMedia()->getPlaceholder();
+
+    if ($Project->getMedia()->getLogoImage()) {
+        $Logo    = $Project->getMedia()->getLogoImage();
+        $alt     = $Logo->getAttribute('title');
+        $logoUrl = $Logo->getSizeCacheUrl(400, 300);
+    }
+
+    $MegaMenu->prependHTML(
+        '<div class="header-bar-inner-logo">
+                <a href="' . URL_DIR . '" class="page-header-logo">
+                <img src="' . $logoUrl . '" alt="' . $alt . '"/></a>
+            </div>'
+    );
+}
 
 /**
  * Breadcrumb
@@ -233,7 +248,7 @@ switch ($Template->getLayoutType()) {
         break;
 }
 
-$templateSettings['BricksManager']   = \QUI\Bricks\Manager::init();
+$templateSettings['BricksManager']   = QUI\Bricks\Manager::init();
 $templateSettings['Breadcrumb']      = $Breadcrumb;
 $templateSettings['MegaMenu']        = $MegaMenu;
 $templateSettings['bodyClass']       = $bodyClass;
@@ -241,6 +256,5 @@ $templateSettings['startPage']       = $startPage;
 $templateSettings['searchType']      = $searchType;
 $templateSettings['social']          = $social;
 $templateSettings['socialMobileNav'] = $socialMobileNav;
-
 
 $Engine->assign($templateSettings);

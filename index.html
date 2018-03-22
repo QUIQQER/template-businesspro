@@ -49,6 +49,7 @@
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
 
 <!-- menu -->
+{if $Template->getAttribute('template-header')}
 <div class="header-bar">
     <div class="grid-container header-bar-inner">
         <div class="header-bar-inner-nav" id="navigation">
@@ -58,7 +59,7 @@
         </div>
     </div>
 </div>
-
+{/if}
 <!-- page -->
 <div class="body-container">
     <!-- header -->
@@ -182,7 +183,9 @@
         {/if}
         {/foreach}
     </div>
+
     <!-- footer -->
+    {if $Template->getAttribute('template-footer')}
     <footer class="page-footer clear-fix">
         <div class="page-footer-container grid-container">
             {assign var=footer value=$BricksManager->getBricksByArea('footer', $Site)}
@@ -190,11 +193,11 @@
             <div class="grid-children">
                 <div class="grid-children-container">
                     {foreach from=$footer item=Brick}
-                    {if !$Brick->hasCSSClass('grid-*')}
-                    {$Brick->addCSSClass('grid-100')}
-                    {/if}
-                    {$Brick->addCSSClass('page-footer-brick clear-fix')}
-                    {$Brick->create()}
+                        {if !$Brick->hasCSSClass('grid-*')}
+                            {$Brick->addCSSClass('grid-100')}
+                        {/if}
+                        {$Brick->addCSSClass('page-footer-brick clear-fix')}
+                        {$Brick->create()}
                     {/foreach}
                 </div>
             </div>
@@ -215,6 +218,7 @@
             </div>
         </div>
     </footer>
+    {/if}
 </div>
 
 
