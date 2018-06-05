@@ -6,9 +6,6 @@
     {pace}
     {$Template->getHeader()}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700' rel='stylesheet'
-          type='text/css'>
-
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
     {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
