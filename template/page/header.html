@@ -1,0 +1,26 @@
+{if $showHeader}
+{strip}
+<header class="page-header">
+    {if $Site->getAttribute('image_emotion')}
+        {image src=$Site->getAttribute('image_emotion') class="header-img"
+        title=$Site->getAttribute('title')}
+    {/if}
+    <div class="page-header-container grid-container">
+        {if $Site->getAttribute('templateBusinessPro.showTitle')}
+        <h1 class="page-header-text-title">
+            {$Site->getAttribute('title')}
+        </h1>
+        {/if}
+
+        {if $Site->getAttribute('templateBusinessPro.showShort') &&
+        $Site->getAttribute('short')}
+        <div class="page-header-text-wrapper">
+            <div class="page-header-text-wrapper-short">
+                {$Site->getAttribute('short')}
+            </div>
+        </div>
+        {/if}
+    </div>
+</header>
+{/strip}
+{/if}
