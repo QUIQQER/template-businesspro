@@ -27,7 +27,7 @@
         "quiqqer\/page-transition": "1.*|dev-master|dev-dev",
         "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
         "quiqqer\/buttons": ">=1.0.0|dev-master|dev-dev",
-        "quiqqer\\/smarty3": ">=1.10.0|dev-master|dev-dev"
+        "quiqqer\/smarty3": ">=1.10.0|dev-master|dev-dev"
     },
     "autoload": {
         "psr-4": {
