@@ -1,13 +1,9 @@
 {template_event name="quiqqer::template-businessPro::body::pageBegin" Template=$Template}
-
-<!-- page -->
 <div class="body-container">
     {fetch template="template/page/header.html" showHeader=$showHeader Site=$Site}
     {template_event name="quiqqer::template-businessPro::body::afterHeader" Template=$Template}
 
-    {if $showBreadcrumb}
-        {fetch template="template/page/breadcrumb.html" Breadcrumb=$Breadcrumb}
-    {/if}
+    {fetch template="template/page/breadcrumb.html" showBreadcrumb=$showBreadcrumb Breadcrumb=$Breadcrumb}
     {template_event name="quiqqer::template-businessPro::body::afterBreadcrumb" Template=$Template}
 
     <div class="headerSuffix">
@@ -55,7 +51,6 @@
     {template_event name="quiqqer::template-businessPro::body::afterMain" Template=$Template}
 
     <div class="prefixFooter">
-        <!-- footer prefix-->
         {cycle assign=cy values='brick-even-suffix,brick-odd-suffix' reset=true}
         {assign var=footerPrefix value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
         {foreach $footerPrefix as $Brick}
