@@ -222,6 +222,11 @@ ol {
     position: relative;
 }
 
+.small, small {
+    font-size: 80%;
+    line-height: 1.5em;
+}
+
 /** css class
  * ========================================================== */
 
@@ -507,11 +512,21 @@ thead {
     overflow: hidden;
 }
 
+.page-header picture {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 .header-img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     object-fit: cover;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .page-header-container {
