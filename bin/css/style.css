@@ -222,6 +222,11 @@ ol {
     position: relative;
 }
 
+.small, small {
+    font-size: 80%;
+    line-height: 1.5em;
+}
+
 /** css class
  * ========================================================== */
 
