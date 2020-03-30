@@ -1228,6 +1228,28 @@ h4 {
     font-size: 18px;
 }
 
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h1.brick-title {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
 p,
 .content-body p {
     margin-bottom: 1.3em;
