@@ -255,6 +255,9 @@ button:hover,
 .button-pink:hover,
 .content-button:hover {
     box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 
@@ -271,6 +274,9 @@ button,
 .button,
 .tpl-businessPro-row .button {
     box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     outline: none;
@@ -288,6 +294,7 @@ input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
 button:hover,
+button.qui-button:hover,
 .button-active,
 .button:active,
 .button:hover {
@@ -1829,23 +1836,6 @@ footer:hover a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.qui-button--no-icon {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.qui-button.qui-button--no-icon {
-    padding: 6px 16px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 20px;
-}
-
-.qui-button.qui-button--no-icon:hover {
-    color: inherit;
 }
 
 @media screen and (max-width: 767px) {

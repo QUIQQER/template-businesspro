@@ -187,14 +187,25 @@ button:disabled:hover,
 a.template-button,
 button.qui-button-active,
 button.qui-button:active,
-button.qui-button:hover {
+button.qui-button {
     background-color: <?php echo $colorMain; ?>;
     color: <?php echo $buttonFontColor; ?>;
     border: 2px solid <?php echo $colorMain; ?>;
 }
 
+button.qui-button:hover,
 .button:hover {
     background: none;
+}
+
+.qui-button-cancel.qui-button {
+    color: <?php echo $colorMainContentFont; ?>;
+    background-color: transparent;
+    border-color: <?php echo $colorMainContentFont; ?>;
+}
+
+.qui-button-cancel.qui-button:hover {
+    color: <?php echo $colorMainContentFont; ?>;
 }
 
 a.template-button:hover {
@@ -213,6 +224,11 @@ a.template-button:hover {
 body,
 .mainFontColor {
     color: <?php echo $colorMainContentFont; ?> !important;
+}
+
+.text-muted {
+    color: <?php echo $Convert->colorBrightness($colorMainContentFont, 0.65); ?> !important;
+
 }
 
 textarea:hover,
@@ -247,6 +263,7 @@ a.link-slide-up-color::before {
 input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
+button.qui-button:hover,
 button:hover,
 .button-active,
 .button:active,

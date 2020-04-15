@@ -5,7 +5,7 @@ $Locale = QUI::getLocale();
 /**
  * Emotion
  */
-QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
+QUI\Utils\Site::setRecursiveAttribute($Site, 'image_emotion');
 
 // Inhaltsverhalten
 if ($Site->getAttribute('templateBusinessPro.showTitle') ||
