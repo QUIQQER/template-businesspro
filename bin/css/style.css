@@ -290,6 +290,13 @@ button,
     -o-transition: all 0.2s ease;
 }
 
+button.qui-button {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
