@@ -290,6 +290,13 @@ button,
     -o-transition: all 0.2s ease;
 }
 
+button.qui-button {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
@@ -340,6 +347,79 @@ input:hover {
 
 .sidebox-button:hover {
     box-shadow: none;
+}
+
+/* button light */
+input[type="submit"].btn-light,
+input[type="button"].btn-light,
+input[type="reset"].btn-light,
+button.qui-button.btn-light,
+button.btn-light,
+.btn-light {
+    background: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #393f46;
+}
+
+input[type="submit"].btn-light:hover,
+input[type="submit"].btn-light:active,
+input[type="button"].btn-light:hover,
+input[type="button"].btn-light:active,
+input[type="reset"].btn-light:hover,
+input[type="reset"].btn-light:active,
+button.qui-button.btn-light:hover,
+button.qui-button.btn-light:active,
+.btn-light:hover,
+.btn-light:active {
+    background: #d5d5d5;
+    color: #393f46;
+    outline: none;
+}
+
+/* outline */
+input[type="submit"].btn-light.btn-outline,
+input[type="button"].btn-light.btn-outline,
+input[type="reset"].btn-light.btn-outline,
+button.btn-light.qui-button.btn-outline,
+button.btn-light.btn-outline,
+.btn-light.btn-outline,
+input[type="submit"].btn-light.btn-outline:disabled:hover, /* outline disabled */
+input[type="submit"].btn-light.btn-outline:disabled:active,
+input[type="button"].btn-light.btn-outline:disabled:hover,
+input[type="button"].btn-light.btn-outline:disabled:active,
+input[type="reset"].btn-light.btn-outline:disabled:hover,
+input[type="reset"].btn-light.btn-outline:disabled:active,
+button.qui-button.btn-light.btn-outline:disabled:hover,
+button.qui-button.btn-light.btn-outline:disabled:active,
+button.btn-light.btn-outline:disabled:hover,
+button.btn-light.btn-outline:disabled:active,
+.btn-light.btn-outline.btn-disabled:hover,
+.btn-light.btn-outline.btn-disabled:active {
+    color: #aaa;
+}
+
+input[type="submit"].btn-outline,
+input[type="button"].btn-outline,
+input[type="reset"].btn-outline,
+button.btn-outline,
+.btn-outline,
+.qui-button.btn-outline,
+a.qui-button.btn-outline,
+button.qui-button.btn-outline {
+    background-color: transparent;
+}
+
+input[type="submit"].btn-outline:hover,
+input[type="submit"].btn-outline:active,
+input[type="button"].btn-outline:hover,
+input[type="button"].btn-outline:active,
+input[type="reset"].btn-outline:hover,
+input[type="reset"].btn-outline:active,
+button.btn-outline:not(:disabled):hover,
+button.btn-outline:active,
+.btn-outline:hover,
+.btn-outline:active {
+    color: #fff;
 }
 
 code {
