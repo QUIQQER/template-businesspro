@@ -271,6 +271,7 @@ input[type='submit'],
 input[type='reset'],
 input[type='button'],
 button,
+.btn,
 .button,
 .tpl-businessPro-row .button {
     box-shadow: none;
