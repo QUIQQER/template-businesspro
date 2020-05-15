@@ -694,7 +694,7 @@ h1.page-header-text-title {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
     position: relative;
-    z-index: 10;
+    z-index: 1000;
     width: 100%;
 
     /* fix jumping nav in chrome */
