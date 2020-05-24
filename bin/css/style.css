@@ -170,7 +170,13 @@ fieldset.grid-50:last-child {
     padding-right: 0;
 }
 
+picture {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 img {
+    max-height: 100%;
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -656,6 +662,10 @@ h1.page-header-text-title {
     height: 100%;
 }
 
+.page-header-logo {
+    display: block;
+}
+
 .page-header-logo:hover,
 .page-header-textlogo-link:hover {
     background: none;
@@ -683,6 +693,12 @@ h1.page-header-text-title {
     margin: 0 1em 0 0;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.page-header-logo picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .page-header-logo > img {
