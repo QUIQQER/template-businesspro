@@ -610,17 +610,64 @@
         <locale name="templateButton.small">
             <de><![CDATA[Button: klein]]></de>
             <en><![CDATA[Button: small]]></en>
-            <pl><![CDATA[Button: mały]]></pl>
         </locale>
         <locale name="templateButton.medium">
             <de><![CDATA[Button: normal]]></de>
             <en><![CDATA[Button: medium]]></en>
-            <pl><![CDATA[Button: średni]]></pl>
         </locale>
         <locale name="templateButton.large">
             <de><![CDATA[Button: groß]]></de>
             <en><![CDATA[Button: large]]></en>
-            <pl><![CDATA[Button: duży]]></pl>
+        </locale>
+
+        <!-- QUIQQER bubbles -->
+        <locale name="bubble.grey.right">
+            <de><![CDATA[Textblase: rechts grau]]></de>
+            <en><![CDATA[Speech bubble: right grey]]></en>
+        </locale>
+        <locale name="bubble.grey.left">
+            <de><![CDATA[Textblase: links grau]]></de>
+            <en><![CDATA[Speech bubble: left grey]]></en>
+        </locale>
+        <locale name="bubble.turquoise.right">
+            <de><![CDATA[Textblase: rechts türkis]]></de>
+            <en><![CDATA[Speech bubble: right turquoise]]></en>
+        </locale>
+        <locale name="bubble.turquoise.left">
+            <de><![CDATA[Textblase: links türkis]]></de>
+            <en><![CDATA[Speech bubble: left turquoise]]></en>
+        </locale>
+        <locale name="bubble.green.right">
+            <de><![CDATA[Textblase: rechts grün]]></de>
+            <en><![CDATA[Speech bubble: right green]]></en>
+        </locale>
+        <locale name="bubble.green.left">
+            <de><![CDATA[Textblase: links grün]]></de>
+            <en><![CDATA[Speech bubble: left green]]></en>
+        </locale>
+        <locale name="bubble.red.right">
+            <de><![CDATA[Textblase: rechts rot]]></de>
+            <en><![CDATA[Speech bubble: right red]]></en>
+        </locale>
+        <locale name="bubble.red.left">
+            <de><![CDATA[Textblase: links rot]]></de>
+            <en><![CDATA[Speech bubble: left red]]></en>
+        </locale>
+        <locale name="bubble.blue.right">
+            <de><![CDATA[Textblase: rechts blau]]></de>
+            <en><![CDATA[Speech bubble: right blue]]></en>
+        </locale>
+        <locale name="bubble.blue.left">
+            <de><![CDATA[Textblase: links blau]]></de>
+            <en><![CDATA[Speech bubble: left blue]]></en>
+        </locale>
+        <locale name="bubble.orange.right">
+            <de><![CDATA[Textblase: rechts orange]]></de>
+            <en><![CDATA[Speech bubble: right orange]]></en>
+        </locale>
+        <locale name="bubble.orange.left">
+            <de><![CDATA[Textblase: links orange]]></de>
+            <en><![CDATA[Speech bubble: left orange]]></en>
         </locale>
 
         <!-- site settings -->
