@@ -691,7 +691,6 @@
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/style.css"/>
             <css src="URL_OPT_DIR/quiqqer/template-businesspro/bin/css/editor.css"/>
 
-
             <styles>
 
                 <!-- link effect 1: simple (grey) -->
@@ -762,6 +761,97 @@
                             var="templateButton.large" />
                     <attributes>
                         <attribute name="class">template-button template-button-big</attribute>
+                    </attributes>
+                </style>
+
+                <!-- QUIQQER bubbles -->
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.grey.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__grey quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.grey.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__grey quiqqer-bubble__icon-left</attribute>
+                    </attributes>
+                </style>
+
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.turquoise.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__turquoise quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.turquoise.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__turquoise quiqqer-bubble__icon-left</attribute>
+                    </attributes>
+                </style>
+
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.green.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__green quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.green.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__green quiqqer-bubble__icon-left</attribute>
+                    </attributes>
+                </style>
+
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.red.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__red quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.red.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__red quiqqer-bubble__icon-left</attribute>
+                    </attributes>
+                </style>
+
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.blue.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__blue quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.blue.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__blue quiqqer-bubble__icon-left</attribute>
+                    </attributes>
+                </style>
+
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.orange.right" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-right quiqqer-bubble__orange quiqqer-bubble__icon-right</attribute>
+                    </attributes>
+                </style>
+                <style element="p">
+                    <locale group="quiqqer/template-businesspro"
+                            var="bubble.orange.left" />
+                    <attributes>
+                        <attribute name="class">quiqqer-bubble quiqqer-bubble__bottom-left quiqqer-bubble__orange quiqqer-bubble__icon-left</attribute>
                     </attributes>
                 </style>
 

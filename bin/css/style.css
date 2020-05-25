@@ -2364,3 +2364,126 @@ a.template-button:hover {
     left: -20px;
     width: calc(100% + 40px);
 }
+
+/*******************/
+/* QUIQQER bubbles */
+/*******************/
+.quiqqer-bubble {
+    padding: 1.5rem 2rem;
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    font-weight: normal;
+    margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.quiqqer-bubble:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-style: solid;
+    z-index: -1;
+    border-width: 25px 0 25px 60px;
+    border-color: transparent transparent transparent currentColor;
+}
+
+.quiqqer-bubble__bottom-right:before {
+    bottom: -5px;
+    right: -15px;
+    transform: rotate(35deg);
+}
+
+.quiqqer-bubble__bottom-left:before {
+    bottom: -5px;
+    left: -15px;
+    transform: rotate(145deg);
+}
+
+/* icon */
+.quiqqer-bubble .fa {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2);
+    font-size: 0;
+    flex-shrink: 0;
+}
+
+.quiqqer-bubble .fa:before {
+    font-size: 1.5rem;
+}
+
+.quiqqer-bubble__icon-right {
+    text-align: right;
+}
+
+.quiqqer-bubble__icon-right .fa {
+    margin-left: 1rem;
+}
+
+.quiqqer-bubble__icon-left .fa {
+    margin-right: 1rem;
+}
+
+/* colors */
+.quiqqer-bubble__grey {
+    background: #eee;
+    color: inherit;
+}
+
+.quiqqer-bubble__grey:before {
+    color: #eee;
+}
+
+.quiqqer-bubble__turquoise {
+    background: #4bc7ce;
+    color: #fff;
+}
+
+.quiqqer-bubble__turquoise:before {
+    color: #4bc7ce;
+}
+
+.quiqqer-bubble__green {
+    background: #48c56a;
+    color: #fff;
+}
+
+.quiqqer-bubble__green:before {
+    color: #48c56a;
+}
+
+.quiqqer-bubble__red {
+    background: #ce4b4b;
+    color: #fff;
+}
+
+.quiqqer-bubble__red:before {
+    color: #ce4b4b;
+}
+
+.quiqqer-bubble__blue {
+    background: #4ba8ce;
+    color: #fff;
+}
+
+.quiqqer-bubble__blue:before {
+    color: #4ba8ce;
+}
+
+.quiqqer-bubble__orange {
+    background: #efbe2b;
+    color: inherit;
+}
+
+.quiqqer-bubble__orange:before {
+    color: #efbe2b;
+}
