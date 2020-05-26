@@ -68,7 +68,6 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
-
                     break;
 
                 case 'inputAndIcon':
