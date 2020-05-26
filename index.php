@@ -1,6 +1,8 @@
 <?php
 
 $Locale = QUI::getLocale();
+$lang   = $Project->getLang();
+
 
 /**
  * Emotion
@@ -27,30 +29,30 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
     && $Template->getAttribute('template-header')) {
     $noSearch = '';
 
-    $types = array(
+    $types = [
         'quiqqer/sitetypes:types/search'
-    );
+    ];
 
     /* check if quiqqer search packet is installed */
     if (QUI::getPackageManager()->isInstalled('quiqqer/search')) {
-        $types = array(
+        $types = [
             'quiqqer/sitetypes:types/search',
             'quiqqer/search:types/search'
-        );
+        ];
 
         // Suggest Search integrate
         $dataQui = 'data-qui="package/quiqqer/search/bin/controls/Suggest"';
     }
 
-    $searchSites = $Project->getSites(array(
-        'where' => array(
-            'type' => array(
+    $searchSites = $Project->getSites([
+        'where' => [
+            'type' => [
                 'type'  => 'IN',
                 'value' => $types
-            )
-        ),
+            ]
+        ],
         'limit' => 1
-    ));
+    ]);
 
     if (count($searchSites)) {
         try {
@@ -66,9 +68,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                        'quiqqer/template-businesspro',
-                        'navbar.search.text'
-                    ) . '" /></form>';
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" /></form>';
                     break;
 
                 case 'inputAndIcon':
@@ -79,9 +81,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
                     $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                        'quiqqer/template-businesspro',
-                        'navbar.search.text'
-                    ) . '" />';
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" />';
                     $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
 
@@ -93,9 +95,9 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
                     $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
                     $searchForm .= 'placeholder="' . $Locale->get(
-                        'quiqqer/template-businesspro',
-                        'navbar.search.text'
-                    ) . '" />';
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
@@ -187,28 +189,36 @@ if ($Template->getAttribute('template-header')) {
     /**
      * Mega menu
      */
-    $MegaMenu = new QUI\Menu\MegaMenu(array(
+    $MegaMenu = new QUI\Menu\MegaMenu([
         'showStart' => false
-    ));
+    ]);
 
     $MegaMenu->appendHTML(
         $search . $socialNav
     );
 
     /* Logo in menu */
-    $alt     = "QUIQQER";
-    $logoUrl = $Project->getMedia()->getPlaceholder();
+    $imgTitle = $Project->get(1)->getAttribute('title');
+    $imgAlt   = '';
+    $logoUrl  = $Project->getMedia()->getPlaceholder();
 
     if ($Project->getMedia()->getLogoImage()) {
-        $Logo    = $Project->getMedia()->getLogoImage();
-        $alt     = $Logo->getAttribute('title');
-        $logoUrl = $Logo->getSizeCacheUrl(400, 300);
+        $Logo        = $Project->getMedia()->getLogoImage();
+        $logoUrl     = $Logo->getSizeCacheUrl(400, 300);
+        $imgAltArray = json_decode($Logo->getAttribute('title'), true);
+
+        if (isset($imgTitleArray[$lang])) {
+            $imgAlt = $imgAltArray[$lang];
+        } else {
+            // alt attributes must be defined, otherwise the title comes from the image
+            $imgAlt = $imgTitle;
+        }
     }
 
     $MegaMenu->prependHTML(
         '<div class="header-bar-inner-logo">
                 <a href="' . URL_DIR . '" class="page-header-logo">
-                <img src="' . $logoUrl . '" alt="' . $alt . '"/></a>
+                <img src="' . $logoUrl . '" alt="' . $imgAlt . '" title="' . $imgTitle . '"/></a>
             </div>'
     );
 }
@@ -221,11 +231,11 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 /**
  * Template config
  */
-$templateSettings = QUI\TemplateBusinessPro\Utils::getConfig(array(
+$templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
     'Project'  => $Project,
     'Site'     => $Site,
     'Template' => $Template
-));
+]);
 
 
 /**
