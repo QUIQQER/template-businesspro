@@ -94,10 +94,8 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<form action="' . $searchUrl . '" ';
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
                     $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" />';
+                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro',
+                            'navbar.search.text') . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
