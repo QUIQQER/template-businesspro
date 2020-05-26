@@ -3,13 +3,12 @@
 $Locale = QUI::getLocale();
 $lang   = $Project->getLang();
 
-
 /**
  * Emotion
  */
 QUI\Utils\Site::setRecursiveAttribute($Site, 'image_emotion');
 
-// Inhaltsverhalten
+// Content behavior
 if ($Site->getAttribute('templateBusinessPro.showTitle') ||
     $Site->getAttribute('templateBusinessPro.showShort')
 ) {
@@ -227,7 +226,6 @@ $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
     'Site'     => $Site,
     'Template' => $Template
 ]);
-
 
 /**
  * body class
