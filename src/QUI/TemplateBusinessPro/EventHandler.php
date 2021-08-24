@@ -31,12 +31,17 @@ class EventHandler
     /**
      * Clear system cache on site save
      *
+     * @param $Site QUI\Projects\Site
      * @return void
+     * @throws QUI\Exception
      */
-    public static function onSiteSave()
+    public static function onSiteSave($Site)
     {
+        $Project = $Site->getProject();
+        $cacheName = md5($Site->getId() . $Project->getName() . $Project->getLang());
+
         try {
-            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
+            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro' . $cacheName);
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
         }
