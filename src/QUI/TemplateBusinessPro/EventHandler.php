@@ -21,11 +21,7 @@ class EventHandler
      */
     public static function onProjectConfigSave()
     {
-        try {
-            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
-        } catch (QUI\Exception $Exception) {
-            QUI\System\Log::writeException($Exception);
-        }
+        QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
     }
 
     /**
@@ -37,11 +33,11 @@ class EventHandler
      */
     public static function onSiteSave($Site)
     {
-        $Project = $Site->getProject();
-        $cacheName = md5($Site->getId() . $Project->getName() . $Project->getLang());
+        $Project   = $Site->getProject();
+        $cacheName = md5($Project->getName().$Project->getLang().$Site->getId());
 
         try {
-            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro' . $cacheName);
+            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro'.$cacheName);
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
         }
