@@ -11,10 +11,10 @@ use QUI;
 /**
  * Help Class for Template Business Pro
  *
- * @package QUI\TemplateBusinessPro
+ * @return array
  * @author www.pcsg.de (Michael Danielczok)
  *
- * @return array
+ * @package QUI\TemplateBusinessPro
  */
 class Utils
 {
@@ -24,14 +24,16 @@ class Utils
      */
     public static function getConfig($params)
     {
+        $cacheName = md5($params['Project']->getName().$params['Project']->getLang().$params['Site']->getId());
+
         try {
             return QUI\Cache\Manager::get(
-                'quiqqer/templateBusinessPro/' . $params['Site']->getId()
+                'quiqqer/templateBusinessPro/'.$cacheName
             );
         } catch (QUI\Exception $Exception) {
         }
 
-        $config = array();
+        $config = [];
 
         /* @var $Project QUI\Projects\Project */
         $Project  = $params['Project'];
@@ -85,19 +87,19 @@ class Utils
 
         $settingsCSS = include 'settings.css.php';
 
-        $config += array(
+        $config += [
             'quiTplType'     => $Project->getConfig('templateBusinessPro.settings.standardType'),
             'showHeader'     => $showHeader,
             'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '<style>' . $settingsCSS . '</style>',
-            'typeClass'      => 'type-' . str_replace(array('/', ':'), '-', $params['Site']->getAttribute('type')),
+            'settingsCSS'    => '<style>'.$settingsCSS.'</style>',
+            'typeClass'      => 'type-'.str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
             'showPageShort'  => $showPageShort
-        );
+        ];
 
         // set cache
         QUI\Cache\Manager::set(
-            'quiqqer/templateBusinessPro/' . $params['Site']->getId(),
+            'quiqqer/templateBusinessPro/'.$cacheName,
             $config
         );
 
