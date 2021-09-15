@@ -97,6 +97,9 @@
                     </conf>
 
                     <!-- colors -->
+                    <conf name="themeColor">
+                        <type><![CDATA[string]]></type>
+                    </conf>
                     <conf name="colorMain">
                         <type><![CDATA[string]]></type>
                         <defaultvalue>#2D4D88</defaultvalue>
@@ -504,6 +507,20 @@
                                         var="templateBusinessPro.settings.color.title"
                                         />
                             </title>
+
+                            <input conf="templateBusinessPro.settings.themeColor"
+                                   type="color">
+                                <text>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.themeColor.text"
+                                    />
+                                </text>
+                                <description>
+                                    <locale group="quiqqer/template-businesspro"
+                                            var="template.settings.themeColor.description"
+                                    />
+                                </description>
+                            </input>
 
                             <input conf="templateBusinessPro.settings.colorMain"
                                    type="color">

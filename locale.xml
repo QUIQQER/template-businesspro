@@ -507,6 +507,14 @@
             <de><![CDATA[Footer Link-Farbe]]></de>
             <en><![CDATA[Footer link color]]></en>
         </locale>
+        <locale name="template.settings.themeColor.text">
+            <de><![CDATA[Theme Farbe]]></de>
+            <en><![CDATA[Theme color]]></en>
+        </locale>
+        <locale name="template.settings.themeColor.description">
+            <de><![CDATA[Die Farbe wrid in einigen Browsern dazu verwendet das User Interfaces einzufärben. In vielen mobilen Browsern wird die Url-Leiste eingefärbt.]]></de>
+            <en><![CDATA[This setting indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface e.g. mobile browsers.]]></en>
+        </locale>
         <locale name="template.settings.colorMain.text">
             <de><![CDATA[Hauptfarbe]]></de>
             <en><![CDATA[Main color]]></en>
