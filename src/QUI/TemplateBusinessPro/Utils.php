@@ -85,6 +85,15 @@ class Utils
                 $showHeader = false;
         }
 
+        /**
+         * Theme color
+         */
+
+        $themeColor = false;
+        if ($Project->getConfig('templateBusinessPro.settings.themeColor')) {
+            $themeColor = $Project->getConfig('templateBusinessPro.settings.themeColor');
+        }
+
         $settingsCSS = include 'settings.css.php';
 
         $config += [
@@ -94,7 +103,8 @@ class Utils
             'settingsCSS'    => '<style>'.$settingsCSS.'</style>',
             'typeClass'      => 'type-'.str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
-            'showPageShort'  => $showPageShort
+            'showPageShort'  => $showPageShort,
+            'themeColor'     => $themeColor
         ];
 
         // set cache

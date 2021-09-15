@@ -227,6 +227,10 @@ $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
     'Template' => $Template
 ]);
 
+if ($templateSettings['themeColor']) {
+    $Template->extendHeader('<meta name="theme-color" content="' . $templateSettings['themeColor'] . '"/>');
+}
+
 /**
  * body class
  */
