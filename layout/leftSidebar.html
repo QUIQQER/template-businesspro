@@ -14,7 +14,7 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
 
     {if !empty( $prefixContentBricks )}
     {foreach from=$prefixContentBricks item=Brick}
-    <div class="tpl-businessPro-row">
+    <div class="tpl-businessPro-row brick-{$Brick->getAttribute('id')}-wrapper">
         {if $Brick->getAttribute('frontendTitle')}
             <h1 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h1>
         {/if}
@@ -48,7 +48,7 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
 
     {if !empty( $suffixContentBricks )}
     {foreach from=$suffixContentBricks item=Brick}
-    <div class="tpl-businessPro-row">
+    <div class="tpl-businessPro-row brick-{$Brick->getAttribute('id')}-wrapper">
         {if $Brick->getAttribute('frontendTitle')}
             <h2 class="brick-title">{$Brick->getAttribute('frontendTitle')}</h2>
         {/if}
@@ -63,7 +63,7 @@ D.h. der Sidebar wird nach links gepullt, obwohl er in der HTML Code nach dem Ma
 <div class="page-multible-left grid-30 pull-70 mobile-grid-100">
     {if !empty( $leftSideBar )}
         {foreach from=$leftSideBar item=Brick}
-        <div class="tpl-businessPro-row">
+        <div class="tpl-businessPro-row brick-{$Brick->getAttribute('id')}-wrapper">
             {if $Brick->getAttribute('frontendTitle') &&
                 $Brick->getType() != 'QUI\Bricks\Controls\Children\Listing'
             }
