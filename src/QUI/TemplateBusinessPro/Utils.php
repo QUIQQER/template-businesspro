@@ -100,7 +100,7 @@ class Utils
             'quiTplType'     => $Project->getConfig('templateBusinessPro.settings.standardType'),
             'showHeader'     => $showHeader,
             'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '<style>'.$settingsCSS.'</style>',
+            'settingsCSS'    => '<style data-no-cache="1">'.$settingsCSS.'</style>',
             'typeClass'      => 'type-'.str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
             'showPageShort'  => $showPageShort,
