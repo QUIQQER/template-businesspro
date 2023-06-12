@@ -22,7 +22,7 @@
         "quiqqer\/bricks": "*@dev",
         "quiqqer\/fontawesome": "*@dev",
         "quiqqer\/sitetypes": "*@dev",
-        "quiqqer\/menu": "1.*|dev-dev",
+        "quiqqer\/menu": "2.*|dev-dev",
         "quiqqer\/unsemantic": "*@dev",
         "quiqqer\/utils": ">=1.7|dev-master|dev-dev",
         "quiqqer\/page-transition": "1.*|dev-master|dev-dev",
