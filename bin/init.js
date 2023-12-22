@@ -21,12 +21,16 @@ window.addEvent("domready", function () {
                 '[data-qui="package/quiqqer/menu/bin/SlideOut"]'
             );
 
-            Controls.getControlByElement(SlideOutElm).then(function () {
-                new Element('div', {
-                    'class': 'mobile-bar-social hide-on-desktop',
-                    html   : socialHTML
-                }).inject(SlideOutElm);
-            });
+            if (SlideOutElm) {
+                Controls.getControlByElement(SlideOutElm).then(function () {
+                    new Element('div', {
+                        'class': 'mobile-bar-social hide-on-desktop',
+                        html   : socialHTML
+                    }).inject(SlideOutElm);
+                }).catch((err) => {
+                    console.error(err);
+                });
+            }
         }
     });
 
