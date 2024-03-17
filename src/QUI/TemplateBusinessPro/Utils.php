@@ -104,7 +104,8 @@ class Utils
             'typeClass'      => 'type-'.str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
             'showPageTitle'  => $showPageTitle,
             'showPageShort'  => $showPageShort,
-            'themeColor'     => $themeColor
+            'themeColor'     => $themeColor,
+            'useSlideOutMenu' => true, // for now is always true because quiqqer use currently only SlideOut nav
         ];
 
         // set cache
