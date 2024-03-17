@@ -17,15 +17,21 @@ window.addEvent("domready", function () {
          * social share buttons
          */
         if (social) {
-            var SlideOutElm = document.getElement(
+            let SlideOutElm = document.getElement(
                 '[data-qui="package/quiqqer/menu/bin/SlideOut"]'
             );
 
+            if (!SlideOutElm) {
+                SlideOutElm = document.getElement(
+                    '[data-qui="package/quiqqer/menu/bin/SlideoutAdvanced"]'
+                );
+            }
+
             if (SlideOutElm) {
-                Controls.getControlByElement(SlideOutElm).then(function () {
+                Controls.getControlByElement(SlideOutElm).then(function() {
                     new Element('div', {
                         'class': 'mobile-bar-social hide-on-desktop',
-                        html   : socialHTML
+                        html: socialHTML
                     }).inject(SlideOutElm);
                 }).catch((err) => {
                     console.error(err);
