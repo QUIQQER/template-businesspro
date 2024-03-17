@@ -789,6 +789,16 @@ h1.page-header-text-title {
 
 /* mobile menu */
 
+.megaMenu-hide-on-desktop {
+    display: flex;
+}
+
+.megaMenu-hide-on-desktop .quiqqer-menu-megaMenu-mobile {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
 .quiqqer-menu-megaMenu-mobile-search {
     float: right;
     display: none;
