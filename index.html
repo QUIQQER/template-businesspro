@@ -1,6 +1,7 @@
 <!doctype html>
 <html itemscope itemtype="{$Site->getAttribute('meta.itemscope')}" lang="{$Project->getLang()}">
 <head>
+    {template_event name="quiqqer::template::header::begin" Template=$Template}
     {template_event name="quiqqer::template-businessPro::header::begin" Template=$Template}
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
@@ -15,15 +16,22 @@
     </script>
 
     {fetch template="template/head/styles.html" Template=$Template}
+    {template_event name="quiqqer::template::header::afterCSSStyles" Template=$Template}
     {template_event name="quiqqer::template-businessPro::header::afterCSSStyles" Template=$Template}
 
     {$settingsCSS}
+    {template_event name="quiqqer::template::header::afterSettingsCSS" Template=$Template}
     {template_event name="quiqqer::template-businessPro::header::afterSettingsCSS" Template=$Template}
 
+    {template_event name="quiqqer::template::header::end" Template=$Template}
     {template_event name="quiqqer::template-businessPro::header::end" Template=$Template}
 </head>
 <body class="{$bodyClass} page-{$Site->getId()} {$typeClass}" id="body-top">
+{template_event name="quiqqer::template::body::begin" Template=$Template}
 {template_event name="quiqqer::template-businessPro::body::begin" Template=$Template}
+
+
+{template_event name="quiqqer::template::body::beforeMenu" Template=$Template}
 
 {* main navigation / menu *}
 {fetch template="template/menu.html"
@@ -32,6 +40,7 @@
     Template=$Template
 }
 
+{template_event name="quiqqer::template::body::afterMenu" Template=$Template}
 {template_event name="quiqqer::template-businessPro::body::afterMenu" Template=$Template}
 
 {fetch template="template/page.html"
@@ -47,6 +56,7 @@
 {fetch template="template/scripts.html" Template=$Template URL_OPT_DIR=$URL_OPT_DIR}
 
 {template_event name="quiqqer::template-businessPro::body::end" Template=$Template}
+{template_event name="quiqqer::template::body::end" Template=$Template}
 
 </body>
 </html>
