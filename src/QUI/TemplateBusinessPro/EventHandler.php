@@ -37,10 +37,6 @@ class EventHandler
         $Project = $Site->getProject();
         $cacheName = md5($Project->getName() . $Project->getLang() . $Site->getId());
 
-        try {
-            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro' . $cacheName);
-        } catch (QUI\Exception $Exception) {
-            QUI\System\Log::writeException($Exception);
-        }
+        QUI\Cache\Manager::clear('quiqqer/templateBusinessPro' . $cacheName);
     }
 }
