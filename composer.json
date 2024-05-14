@@ -1,5 +1,5 @@
 {
-    "name": "quiqqer\/template-businesspro",
+    "name": "quiqqer/template-businesspro",
     "type": "quiqqer-template",
     "description": "Modern and responsive template to present your company in internet.",
     "license": "GPL-3.0+",
@@ -7,29 +7,29 @@
         {
             "name": "Michael Danielczok",
             "email": "support@pcsg.de",
-            "homepage": "https:\/\/www.pcsg.de",
+            "homepage": "https://www.pcsg.de",
             "role": "Developer"
         }
     ],
     "support": {
         "email": "support@pcsg.de",
-        "url": "http:\/\/www.pcsg.de"
+        "url": "http://www.pcsg.de"
     },
     "require": {
-        "php": ">=5.3",
-        "quiqqer\/quiqqer": "*@dev",
-        "quiqqer\/bricks": "*@dev",
-        "quiqqer\/fontawesome": "*@dev",
-        "quiqqer\/sitetypes": "*@dev",
-        "quiqqer\/menu": "2.*|dev-dev",
-        "quiqqer\/unsemantic": "*@dev",
-        "quiqqer\/utils": ">=1.7|dev-master|dev-dev",
-        "quiqqer\/page-transition": "1.*|dev-master|dev-dev",
-        "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev"
+        "php": "^8",
+        "quiqqer/core": "^2",
+        "quiqqer/bricks": "^2",
+        "quiqqer/fontawesome": "^6",
+        "quiqqer/sitetypes": "^2",
+        "quiqqer/menu": "^3",
+        "quiqqer/unsemantic": "^2",
+        "quiqqer/utils": "^2",
+        "quiqqer/page-transition": "^2",
+        "quiqqer/pace": "^2"
     },
     "autoload": {
         "psr-4": {
-            "QUI\\TemplateBusinessPro\\": "src\/QUI\/TemplateBusinessPro"
+            "QUI\\TemplateBusinessPro\\": "src/QUI/TemplateBusinessPro"
         }
     }
 }

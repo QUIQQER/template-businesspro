@@ -22,7 +22,7 @@ class Utils
      * @param array $params
      * @return array
      */
-    public static function getConfig($params)
+    public static function getConfig(array $params): array
     {
         $cacheName = md5($params['Project']->getName() . $params['Project']->getLang() . $params['Site']->getId());
 
