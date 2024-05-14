@@ -56,6 +56,8 @@ if (
         'limit' => 1
     ]);
 
+    $lg = 'quiqqer/template-businesspro';
+
     if (count($searchSites)) {
         try {
             $searchUrl = $searchSites[0]->getUrlRewritten();
@@ -69,10 +71,8 @@ if (
                     $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" ';
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" /></form>';
+                    $searchForm .= 'placeholder="' . $Locale->get($lg, 'navbar.search.text') . '" />';
+                    $searchForm .= '</form>';
                     break;
 
                 case 'inputAndIcon':
@@ -82,10 +82,7 @@ if (
                     $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
                     $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
                     $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" />';
+                    $searchForm .= 'placeholder="' . $Locale->get($lg, 'navbar.search.text') . '" />';
                     $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
 
@@ -96,10 +93,7 @@ if (
                     $searchForm .= '<form action="' . $searchUrl . '" ';
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
                     $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get(
-                            'quiqqer/template-businesspro',
-                            'navbar.search.text'
-                        ) . '" />';
+                    $searchForm .= 'placeholder="' . $Locale->get($lg, 'navbar.search.text') . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
