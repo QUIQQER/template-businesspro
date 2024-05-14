@@ -19,7 +19,7 @@ class EventHandler
      *
      * @return void
      */
-    public static function onProjectConfigSave()
+    public static function onProjectConfigSave(): void
     {
         QUI\Cache\Manager::clear('quiqqer/templateBusinessPro');
     }
@@ -31,13 +31,13 @@ class EventHandler
      * @return void
      * @throws QUI\Exception
      */
-    public static function onSiteSave($Site)
+    public static function onSiteSave(QUI\Interfaces\Projects\Site $Site): void
     {
-        $Project   = $Site->getProject();
-        $cacheName = md5($Project->getName().$Project->getLang().$Site->getId());
+        $Project = $Site->getProject();
+        $cacheName = md5($Project->getName() . $Project->getLang() . $Site->getId());
 
         try {
-            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro'.$cacheName);
+            QUI\Cache\Manager::clear('quiqqer/templateBusinessPro' . $cacheName);
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
         }

@@ -1,7 +1,7 @@
 <?php
 
 $Locale = QUI::getLocale();
-$lang   = $Project->getLang();
+$lang = $Project->getLang();
 
 /**
  * Emotion
@@ -9,7 +9,8 @@ $lang   = $Project->getLang();
 QUI\Utils\Site::setRecursiveAttribute($Site, 'image_emotion');
 
 // Content behavior
-if ($Site->getAttribute('templateBusinessPro.showTitle') ||
+if (
+    $Site->getAttribute('templateBusinessPro.showTitle') ||
     $Site->getAttribute('templateBusinessPro.showShort')
 ) {
     $Template->setAttribute('content-header', false);
@@ -18,14 +19,16 @@ if ($Site->getAttribute('templateBusinessPro.showTitle') ||
 /**
  * search
  */
-$search     = '';
-$dataQui    = '';
-$noSearch   = 'no-search';
+$search = '';
+$dataQui = '';
+$noSearch = 'no-search';
 $searchType = false;
 
 /* search setting is on? template header allowed? */
-if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
-    && $Template->getAttribute('template-header')) {
+if (
+    $Project->getConfig('templateBusinessPro.settings.search') != 'hide'
+    && $Template->getAttribute('template-header')
+) {
     $noSearch = '';
 
     $types = [
@@ -46,7 +49,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
     $searchSites = $Project->getSites([
         'where' => [
             'type' => [
-                'type'  => 'IN',
+                'type' => 'IN',
                 'value' => $types
             ]
         ],
@@ -55,7 +58,7 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
 
     if (count($searchSites)) {
         try {
-            $searchUrl  = $searchSites[0]->getUrlRewritten();
+            $searchUrl = $searchSites[0]->getUrlRewritten();
             $searchForm = '';
 
             switch ($Project->getConfig('templateBusinessPro.settings.search')) {
@@ -66,7 +69,10 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" ';
                     $searchForm .= 'method="get" style="position: relative; right: auto; float: right;">';
                     $searchForm .= '<input type="search" name="search" class="only-input" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" /></form>';
+                    $searchForm .= 'placeholder="' . $Locale->get(
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" /></form>';
                     break;
 
                 case 'inputAndIcon':
@@ -76,7 +82,10 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<form  action="' . $searchUrl . '" class="header-bar-suggestSearch hide-on-mobile" method="get">';
                     $searchForm .= '<div class="header-bar-suggestSearch-wrapper">';
                     $searchForm .= '<input type="search" name="search" class="input-and-icon" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= 'placeholder="' . $Locale->get(
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" />';
                     $searchForm .= '</div><span class="fa fa-fw fa-search"></span></form>';
                     break;
 
@@ -87,7 +96,10 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
                     $searchForm .= '<form action="' . $searchUrl . '" ';
                     $searchForm .= 'class="header-bar-suggestSearch header-bar-suggestSearch-inputAndIconVisible hide-on-mobile" method="get">';
                     $searchForm .= '<input type="search" name="search" class="input-inputAndIconVisible" ' . $dataQui . ' ';
-                    $searchForm .= 'placeholder="' . $Locale->get('quiqqer/template-businesspro', 'navbar.search.text') . '" />';
+                    $searchForm .= 'placeholder="' . $Locale->get(
+                            'quiqqer/template-businesspro',
+                            'navbar.search.text'
+                        ) . '" />';
                     $searchForm .= '<span class="fa fa-fw fa-search"></span></form>';
                     break;
             }
@@ -104,16 +116,17 @@ if ($Project->getConfig('templateBusinessPro.settings.search') != 'hide'
 }
 
 // social
-$social          = 'false';
-$socialNav       = '';
-$socialFooter    = '';
+$social = 'false';
+$socialNav = '';
+$socialFooter = '';
 $socialMobileNav = '';
 
-if (($Project->getConfig('templateBusinessPro.settings.social.show.nav')
+if (
+    ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
         || $Project->getConfig('templateBusinessPro.settings.social.show.footer'))
     && ($Template->getAttribute('template-footer') || $Template->getAttribute('template-header'))
 ) {
-    $social     = 'true';
+    $social = 'true';
     $socialHTML = '';
 
     // check which socials should be displayed
@@ -149,8 +162,10 @@ if (($Project->getConfig('templateBusinessPro.settings.social.show.nav')
     }
 
     // prepare social for nav
-    if ($Project->getConfig('templateBusinessPro.settings.social.show.nav')
-        && $Template->getAttribute('template-header')) {
+    if (
+        $Project->getConfig('templateBusinessPro.settings.social.show.nav')
+        && $Template->getAttribute('template-header')
+    ) {
         $socialNav .= '<div class="header-bar-social hide-on-mobile ' . $noSearch . $searchType . '">';
         $socialNav .= $socialHTML;
         $socialNav .= '</div>';
@@ -161,8 +176,10 @@ if (($Project->getConfig('templateBusinessPro.settings.social.show.nav')
     }
 
     // prepare social for footer
-    if ($Project->getConfig('templateBusinessPro.settings.social.show.footer')
-        && $Template->getAttribute('template-footer')) {
+    if (
+        $Project->getConfig('templateBusinessPro.settings.social.show.footer')
+        && $Template->getAttribute('template-footer')
+    ) {
         $socialFooter .= '<div class="footer-bar-social">';
         $socialFooter .= $socialHTML;
         $socialFooter .= '</div>';
@@ -189,12 +206,12 @@ if ($Template->getAttribute('template-header')) {
 
     /* Logo in menu */
     $imgTitle = $Project->get(1)->getAttribute('title');
-    $imgAlt   = '';
-    $logoUrl  = $Project->getMedia()->getPlaceholder();
+    $imgAlt = '';
+    $logoUrl = $Project->getMedia()->getPlaceholder();
 
     if ($Project->getMedia()->getLogoImage()) {
-        $Logo        = $Project->getMedia()->getLogoImage();
-        $logoUrl     = $Logo->getSizeCacheUrl(400, 300);
+        $Logo = $Project->getMedia()->getLogoImage();
+        $logoUrl = $Logo->getSizeCacheUrl(400, 300);
         $imgAltArray = json_decode($Logo->getAttribute('title'), true);
 
         if (isset($imgTitleArray[$lang])) {
@@ -222,8 +239,8 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
  * Template config
  */
 $templateSettings = QUI\TemplateBusinessPro\Utils::getConfig([
-    'Project'  => $Project,
-    'Site'     => $Site,
+    'Project' => $Project,
+    'Site' => $Site,
     'Template' => $Template
 ]);
 
@@ -256,13 +273,13 @@ switch ($Template->getLayoutType()) {
         break;
 }
 
-$templateSettings['BricksManager']   = QUI\Bricks\Manager::init();
-$templateSettings['Breadcrumb']      = $Breadcrumb;
-$templateSettings['MegaMenu']        = $MegaMenu;
-$templateSettings['bodyClass']       = $bodyClass;
-$templateSettings['startPage']       = $startPage;
-$templateSettings['searchType']      = $searchType;
-$templateSettings['social']          = $social;
+$templateSettings['BricksManager'] = QUI\Bricks\Manager::init();
+$templateSettings['Breadcrumb'] = $Breadcrumb;
+$templateSettings['MegaMenu'] = $MegaMenu;
+$templateSettings['bodyClass'] = $bodyClass;
+$templateSettings['startPage'] = $startPage;
+$templateSettings['searchType'] = $searchType;
+$templateSettings['social'] = $social;
 $templateSettings['socialMobileNav'] = $socialMobileNav;
 
 $Engine->assign($templateSettings);
