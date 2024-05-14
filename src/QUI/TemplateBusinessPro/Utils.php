@@ -24,11 +24,11 @@ class Utils
      */
     public static function getConfig($params)
     {
-        $cacheName = md5($params['Project']->getName().$params['Project']->getLang().$params['Site']->getId());
+        $cacheName = md5($params['Project']->getName() . $params['Project']->getLang() . $params['Site']->getId());
 
         try {
             return QUI\Cache\Manager::get(
-                'quiqqer/templateBusinessPro/'.$cacheName
+                'quiqqer/templateBusinessPro/' . $cacheName
             );
         } catch (QUI\Exception $Exception) {
         }
@@ -36,7 +36,7 @@ class Utils
         $config = [];
 
         /* @var $Project QUI\Projects\Project */
-        $Project  = $params['Project'];
+        $Project = $params['Project'];
         $Template = $params['Template'];
 
         /**
@@ -47,27 +47,27 @@ class Utils
          * own site type
          */
 
-        $showHeader     = false;
+        $showHeader = false;
         $showBreadcrumb = false;
 
         switch ($Template->getLayoutType()) {
             case 'layout/startPage':
-                $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
+                $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderStartPage');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbStartPage');
                 break;
 
             case 'layout/noSidebar':
-                $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderNoSidebar');
+                $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderNoSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbNoSidebar');
                 break;
 
             case 'layout/rightSidebar':
-                $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
+                $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderRightSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbRightSidebar');
                 break;
 
             case 'layout/leftSidebar':
-                $showHeader     = $Project->getConfig('templateBusinessPro.settings.showHeaderLeftSidebar');
+                $showHeader = $Project->getConfig('templateBusinessPro.settings.showHeaderLeftSidebar');
                 $showBreadcrumb = $Project->getConfig('templateBusinessPro.settings.showBreadcrumbLeftSidebar');
                 break;
         }
@@ -97,19 +97,20 @@ class Utils
         $settingsCSS = include 'settings.css.php';
 
         $config += [
-            'quiTplType'     => $Project->getConfig('templateBusinessPro.settings.standardType'),
-            'showHeader'     => $showHeader,
+            'quiTplType' => $Project->getConfig('templateBusinessPro.settings.standardType'),
+            'showHeader' => $showHeader,
             'showBreadcrumb' => $showBreadcrumb,
-            'settingsCSS'    => '<style data-no-cache="1">'.$settingsCSS.'</style>',
-            'typeClass'      => 'type-'.str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
-            'showPageTitle'  => $showPageTitle,
-            'showPageShort'  => $showPageShort,
-            'themeColor'     => $themeColor
+            'settingsCSS' => '<style data-no-cache="1">' . $settingsCSS . '</style>',
+            'typeClass' => 'type-' . str_replace(['/', ':'], '-', $params['Site']->getAttribute('type')),
+            'showPageTitle' => $showPageTitle,
+            'showPageShort' => $showPageShort,
+            'themeColor' => $themeColor,
+            'useSlideOutMenu' => true, // for now is always true because quiqqer use currently only SlideOut nav
         ];
 
         // set cache
         QUI\Cache\Manager::set(
-            'quiqqer/templateBusinessPro/'.$cacheName,
+            'quiqqer/templateBusinessPro/' . $cacheName,
             $config
         );
 
