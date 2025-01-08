@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Variable \\$Project might not be defined\\.$#"
+			count: 29
+			path: src/QUI/TemplateBusinessPro/settings.css.php
