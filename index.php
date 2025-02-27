@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * template file
+ *
+ * @var QUI\Projects\Project $Project
+ * @var QUI\Projects\Site $Site
+ * @var QUI\Interfaces\Template\EngineInterface $Engine
+ * @var QUI\Template $Template
+ **/
+
+
 $Locale = QUI::getLocale();
 $lang = $Project->getLang();
 
