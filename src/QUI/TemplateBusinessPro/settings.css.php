@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @var QUI\Projects\Project $Project
+ **/
+
 $Convert = new \QUI\Utils\Convert();
 
 $navBarMainColor      = '#2d4d88';
@@ -237,7 +241,6 @@ input:hover,
 input:focus,
 select:hover,
 select:focus {
-/*    box-shadow: 0 0 0 2px */<?php //echo $colorMain; ?>/*;*/
     border-color: <?php echo $colorMain; ?>;
 }
 
