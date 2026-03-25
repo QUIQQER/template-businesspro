@@ -176,8 +176,8 @@
             <en><![CDATA[Continue Reading]]></en>
         </locale>
         <locale name="copyright.text" html="true">
-            <de><![CDATA[&copy; [year] - Template <em>Business Pro</em> umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER</a>]]></de>
-            <en><![CDATA[&copy; [year] - Theme <em>Business Pro</em> realized with <a href="https://www.quiqqer.com">QUIQQER</a>]]></en>
+            <de><![CDATA[&copy; [year] - umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER - Template Business Pro</a>]]></de>
+            <en><![CDATA[&copy; [year] - built with <a href="https://www.quiqqer.com">QUIQQER - Template Business Pro</a>]]></en>
         </locale>
         <locale name="copyright.link" html="true">
             <de><![CDATA[Startseite]]></de>
