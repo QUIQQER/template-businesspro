@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<locales>
+    <groups name="quiqqer/template-businesspro" datatype="php,js">
+        <!-- template bricks -->
+        <locale name="promosliderBackground">
+            <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
+        </locale>
+        <locale name="showBrickTitle">
+            <de><![CDATA[Baustein Titel]]></de>
+        </locale>
+        <locale name="brickFullWidth">
+            <de><![CDATA[Volle Breite]]></de>
+        </locale>
+        <locale name="noPadding">
+            <de><![CDATA[Kein Abstand von oben und unten]]></de>
+        </locale>
+        <!-- areas -->
+        <locale name="area.footer.title">
+            <de><![CDATA[Fußzeile der Seite (Footer)]]></de>
+        </locale>
+        <locale name="area.footer.description">
+            <de><![CDATA[Bausteinzone des Footer]]></de>
+        </locale>
+        <locale name="area.startpageContent.title">
+            <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
+        </locale>
+        <locale name="area.startpageContent.description">
+            <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
+        </locale>
+        <locale name="area.sidebar.left.title">
+            <de><![CDATA[Linke Bausteinzone]]></de>
+        </locale>
+        <locale name="area.sidebar.left.description">
+            <de><![CDATA[Bausteinzone links neben dem Inhalt]]></de>
+        </locale>
+        <locale name="area.sidebar.right.title">
+            <de><![CDATA[Rechte Bausteinzone]]></de>
+        </locale>
+        <locale name="area.sidebar.right.description">
+            <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
+        </locale>
+        <locale name="area.noSidebar.title">
+            <de><![CDATA[Inhalts-Zone]]></de>
+        </locale>
+        <locale name="area.noSidebar.description">
+            <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
+        </locale>
+        <locale name="area.sidebar.prefix.content.title">
+            <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
+        </locale>
+        <locale name="area.sidebar.prefix.content.description">
+            <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
+        </locale>
+        <locale name="area.sidebar.suffix.content.title">
+            <de><![CDATA[Unterhalb des Inhaltes (Content Suffix)]]></de>
+        </locale>
+        <locale name="area.sidebar.suffix.content.description">
+            <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
+        </locale>
+        <locale name="area.headerSuffix.title">
+            <de><![CDATA[Unterhalb des Kopfbereiches (Header Suffix)]]></de>
+        </locale>
+        <locale name="area.headerSuffix.description">
+            <de><![CDATA[Bausteinzone nach dem Header]]></de>
+        </locale>
+        <locale name="area.footerPrefix.title">
+            <de><![CDATA[Oberhalb der Fußzeile (Footer Prefix)]]></de>
+        </locale>
+        <locale name="area.footerPrefix.description">
+            <de><![CDATA[Bausteinzone vor dem Footer]]></de>
+        </locale>
+        <locale name="package.title">
+            <de><![CDATA[Business Pro]]></de>
+        </locale>
+        <locale name="package.description">
+            <de><![CDATA[Template für aussagekräftige Internetseiten mit
+            vielen Einstellungsmöglichkeiten.]]></de>
+        </locale>
+        <locale name="admin.layout.leftSidebar">
+            <de><![CDATA[Linke Sidebar]]></de>
+        </locale>
+        <locale name="admin.layout.startpage">
+            <de><![CDATA[Landingpage (Startpage)]]></de>
+        </locale>
+        <locale name="admin.layout.rightSidebar">
+            <de><![CDATA[Rechte Sidebar]]></de>
+        </locale>
+        <locale name="admin.layout.noSidebar">
+            <de><![CDATA[Keine Sidebar]]></de>
+        </locale>
+        <locale name="admin.layout.leftSidebar.description">
+            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
+        </locale>
+        <locale name="bricks.Startpage3Box.title">
+            <de><![CDATA[Baustein: 3er Baustein auf der Startseite]]></de>
+        </locale>
+        <locale name="admin.layout.startpage.description">
+            <de><![CDATA[Standardmäßig Layout der Startseite ]]></de>
+        </locale>
+        <locale name="continue.reading">
+            <de><![CDATA[weiterlesen]]></de>
+        </locale>
+        <locale name="copyright.text" html="true">
+            <de><![CDATA[&copy; [year] - umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER - Template Business Pro</a>]]></de>
+        </locale>
+        <locale name="copyright.link" html="true">
+            <de><![CDATA[Startseite]]></de>
+        </locale>
+        <locale name="nav.button.close" html="true">
+            <de><![CDATA[Menü schließen]]></de>
+        </locale>
+        <!-- settings -->
+        <locale name="templateBusinessPro.settings.menu.title">
+            <de><![CDATA[Template Einstellungen: Business Pro]]></de>
+        </locale>
+        <!-- Background Color Switcher-->
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.title">
+            <de><![CDATA[Prefix / Suffix Hintegrundfarbe wechseln]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.display">
+            <de><![CDATA[Aktivieren]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcher.hide">
+            <de><![CDATA[Deaktivieren]]></de>
+        </locale>
+        <!-- Background Color Switcher Prefix -->
+        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.text">
+            <de><![CDATA[Prefix Hintergrundfarbe wechseln]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcherPrefix.description">
+            <de><![CDATA[(...)]]></de>
+        </locale>
+        <!-- Background Color Switcher Suffix -->
+        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.text">
+            <de><![CDATA[Suffix Hintergrundfarbe wechseln]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.bgColorSwitcherSuffix.description">
+            <de><![CDATA[(...)]]></de>
+        </locale>
+        <!-- header settings -->
+        <locale name="templateBusinessPro.header.settings.title">
+            <de><![CDATA[Header Einstellungen]]></de>
+        </locale>
+        <!-- show header? -->
+        <locale name="showHeader.text">
+            <de><![CDATA[Header anzeigen?]]></de>
+        </locale>
+        <locale name="showHeaderStartPage.text">
+            <de><![CDATA[Startpage]]></de>
+        </locale>
+        <locale name="showHeaderNoSidebar.text">
+            <de><![CDATA[Kein Sidebar]]></de>
+        </locale>
+        <locale name="showHeaderLeftSidebar.text">
+            <de><![CDATA[Linke Sidebar]]></de>
+        </locale>
+        <locale name="showHeaderRightSidebar.text">
+            <de><![CDATA[Rechte Sidebar]]></de>
+        </locale>
+        <!-- search setting -->
+        <locale name="navbar.search.text">
+            <de><![CDATA[Suchen]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.search.text">
+            <de><![CDATA[Suche in Navigation]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.search.input">
+            <de><![CDATA[Eingabefeld]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.search.inputAndIcon">
+            <de><![CDATA[Clickbare Icon]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.search.inputAndIconVisible">
+            <de><![CDATA[Eingabefeld mit Icon]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.search.hide">
+            <de><![CDATA[Ausgeschaltet]]></de>
+        </locale>
+        <!-- breadcrumb settings -->
+        <locale name="templateBusinessPro.breadcrumb.settings.title">
+            <de><![CDATA[Brotkrumennavigation Einstellungen (breadcrumb)]]></de>
+        </locale>
+        <!-- show breadcrumb? -->
+        <locale name="showBreadcrumb.text">
+            <de><![CDATA[Brotkrumennavigation anzeigen?]]></de>
+        </locale>
+        <locale name="showBreadcrumbStartPage.text">
+            <de><![CDATA[Startpage]]></de>
+        </locale>
+        <locale name="showBreadcrumbNoSidebar.text">
+            <de><![CDATA[Kein Sidebar]]></de>
+        </locale>
+        <locale name="showBreadcrumbLeftSidebar.text">
+            <de><![CDATA[Linke Sidebar]]></de>
+        </locale>
+        <locale name="showBreadcrumbRightSidebar.text">
+            <de><![CDATA[Rechte Sidebar]]></de>
+        </locale>
+        <!-- Header Größe-->
+        <locale name="templateBusinessPro.header.settings.height.text">
+            <de><![CDATA[Höhe des Headerbildes einstellen]]></de>
+        </locale>
+        <locale name="templateBusinessPro.header.settings.height.enable.text">
+            <de><![CDATA[Feste Höhe des Headers]]></de>
+        </locale>
+        <locale name="templateBusinessPro.header.settings.height.value.text">
+            <de><![CDATA[Höhe (in Pixel)]]></de>
+        </locale>
+        <!-- Position des Bildes im Header-->
+        <locale name="templateBusinessPro.settings.headerImagePosition.text">
+            <de><![CDATA[Position des Bildes wählen:]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.headerImagePosition.start">
+            <de><![CDATA[Oben]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.headerImagePosition.center">
+            <de><![CDATA[Mitte]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.headerImagePosition.end">
+            <de><![CDATA[Unten]]></de>
+        </locale>
+        <!-- Navbar settings -->
+        <locale name="templateBusinessPro.settings.navBar.title">
+            <de><![CDATA[Navigationsbar Einstellungen]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBar.Height.text">
+            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBar.Height.text">
+            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
+        </locale>
+        <!-- Menüposition -->
+        <locale name="templateBusinessPro.settings.navPos.text">
+            <de><![CDATA[Menüposition]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.description">
+            <de><![CDATA[Wählen Sie, ob die Navigation mitgescrollt werden, oder sich immer
+                             an gleicher Stelle auf der Seite befinden soll.]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.fix">
+            <de><![CDATA[fix]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navPos.scroll">
+            <de><![CDATA[scrollbar]]></de>
+        </locale>
+        <!-- Navbar colors -->
+        <locale name="templateBusinessPro.settings.navBarMainColor.text">
+            <de><![CDATA[Menü Hintergrundfarbe]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.navBarFontColor.text">
+            <de><![CDATA[Menü Schriftfarbe]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.mobileFontColor">
+            <de><![CDATA[Mobile Menü Fontfarbe]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.mobileMenuBackground">
+            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
+        </locale>
+        <!-- Share -->
+        <locale name="templateBusinessPro.settings.search.title">
+            <de><![CDATA[Suchen-Button]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.searchShow.text">
+            <de><![CDATA[Suche in Navigationsmenü anzeigen]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.searchLink.text">
+            <de><![CDATA[Suchseite]]></de>
+        </locale>
+        <!-- Colors -->
+        <locale name="templateBusinessPro.settings.color.title">
+            <de><![CDATA[Farbverwaltung]]></de>
+        </locale>
+        <locale name="template.settings.mobileMenuBackground">
+            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
+        </locale>
+        <locale name="template.settings.mobileMenuBackground.desc">
+            <de><![CDATA[Die Einstellung ist nur in mobiler Ansicht sichtbar. So kann man die unterschiedlichen
+                Ebenen farblich unterscheiden.]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.footerColor.text">
+            <de><![CDATA[Footer]]></de>
+        </locale>
+        <locale name="templateBusinessPro.settings.contentColor.text">
+            <de><![CDATA[Inhalt]]></de>
+        </locale>
+        <locale name="template.settings.colorFooterBackground.text" html="true">
+            <de><![CDATA[Footer Hintegrundfarbe]]></de>
+        </locale>
+        <locale name="template.settings.colorFooterFont.text">
+            <de><![CDATA[Footer Schriftfarbe]]></de>
+        </locale>
+        <locale name="template.settings.colorFooterLinks.text">
+            <de><![CDATA[Footer Link-Farbe]]></de>
+        </locale>
+        <locale name="template.settings.themeColor.text">
+            <de><![CDATA[Theme Farbe]]></de>
+        </locale>
+        <locale name="template.settings.themeColor.description">
+            <de><![CDATA[Die Farbe wrid in einigen Browsern dazu verwendet das User Interfaces einzufärben. In vielen mobilen Browsern wird die Url-Leiste eingefärbt.]]></de>
+        </locale>
+        <locale name="template.settings.colorMain.text">
+            <de><![CDATA[Hauptfarbe]]></de>
+        </locale>
+        <locale name="template.settings.buttonFontColor.text">
+            <de><![CDATA[Schriftfarbe von Buttons]]></de>
+        </locale>
+        <locale name="template.settings.colorMain.description">
+            <de><![CDATA[Farbeinstellung für Links, Linksefekte, anklickbaren Schaltflächen, usw.]]></de>
+        </locale>
+        <locale name="template.settings.colorMainContentBackground.text">
+            <de><![CDATA[Hintergrundfarbe des Seiteninhaltes]]></de>
+        </locale>
+        <locale name="template.settings.colorMainContentFont.text">
+            <de><![CDATA[Seiteninhalt Fontfarbe]]></de>
+        </locale>
+        <locale name="brick.control.setting.order">
+            <de><![CDATA[Sortierung]]></de>
+        </locale>
+        <!-- social icons -->
+        <locale name="social.settings.title">
+            <de><![CDATA[Social Icons]]></de>
+        </locale>
+        <locale name="social.show.nav">
+            <de><![CDATA[Anzeigen im Menü]]></de>
+        </locale>
+        <locale name="social.show.footer">
+            <de><![CDATA[Anzeigen im Footer]]></de>
+        </locale>
+        <locale name="social.linksNote" html="true">
+            <de><![CDATA[Bitte Links mit <strong>http:///</strong> oder <strong>https:///</strong> verwenden, z.B. https:///www.facebook.com]]></de>
+        </locale>
+        <locale name="social.facebook">
+            <de><![CDATA[Facebook]]></de>
+        </locale>
+        <locale name="social.twitter">
+            <de><![CDATA[Twitter]]></de>
+        </locale>
+        <locale name="social.google">
+            <de><![CDATA[Google Plus]]></de>
+        </locale>
+        <locale name="social.youtube">
+            <de><![CDATA[YouTube]]></de>
+        </locale>
+        <locale name="social.github">
+            <de><![CDATA[GitHub]]></de>
+        </locale>
+        <locale name="social.gitlab">
+            <de><![CDATA[GitLab]]></de>
+        </locale>
+        <!-- extra buttons -->
+        <locale name="linkSimpleGrey">
+            <de><![CDATA[Link: simple (grau)]]></de>
+        </locale>
+        <locale name="linkSimpleColor">
+            <de><![CDATA[Link: simple (color)]]></de>
+        </locale>
+        <locale name="LinkSlideUpGrey">
+            <de><![CDATA[Link: slide up (grau)]]></de>
+        </locale>
+        <locale name="LinkSlideUpColor">
+            <de><![CDATA[Link: slide up (color)]]></de>
+        </locale>
+        <locale name="LinkSlideRightGrey">
+            <de><![CDATA[Link: slide right (grey)]]></de>
+        </locale>
+        <locale name="templateButton.small">
+            <de><![CDATA[Button: klein]]></de>
+        </locale>
+        <locale name="templateButton.medium">
+            <de><![CDATA[Button: normal]]></de>
+        </locale>
+        <locale name="templateButton.large">
+            <de><![CDATA[Button: groß]]></de>
+        </locale>
+        <!-- QUIQQER bubbles -->
+        <locale name="bubble.grey.right">
+            <de><![CDATA[Textblase: rechts grau]]></de>
+        </locale>
+        <locale name="bubble.grey.left">
+            <de><![CDATA[Textblase: links grau]]></de>
+        </locale>
+        <locale name="bubble.turquoise.right">
+            <de><![CDATA[Textblase: rechts türkis]]></de>
+        </locale>
+        <locale name="bubble.turquoise.left">
+            <de><![CDATA[Textblase: links türkis]]></de>
+        </locale>
+        <locale name="bubble.green.right">
+            <de><![CDATA[Textblase: rechts grün]]></de>
+        </locale>
+        <locale name="bubble.green.left">
+            <de><![CDATA[Textblase: links grün]]></de>
+        </locale>
+        <locale name="bubble.red.right">
+            <de><![CDATA[Textblase: rechts rot]]></de>
+        </locale>
+        <locale name="bubble.red.left">
+            <de><![CDATA[Textblase: links rot]]></de>
+        </locale>
+        <locale name="bubble.blue.right">
+            <de><![CDATA[Textblase: rechts blau]]></de>
+        </locale>
+        <locale name="bubble.blue.left">
+            <de><![CDATA[Textblase: links blau]]></de>
+        </locale>
+        <locale name="bubble.orange.right">
+            <de><![CDATA[Textblase: rechts orange]]></de>
+        </locale>
+        <locale name="bubble.orange.left">
+            <de><![CDATA[Textblase: links orange]]></de>
+        </locale>
+        <!-- site settings -->
+        <locale name="templateBusinessPro.siteSettings">
+            <de><![CDATA[Template Business Pro: Einstellungen]]></de>
+        </locale>
+        <locale name="siteSettings.showEmotion">
+            <de><![CDATA[Header]]></de>
+        </locale>
+        <locale name="siteSettings.showEmotion.default">
+            <de><![CDATA[Standard Template-Einstellung übernehmen]]></de>
+        </locale>
+        <locale name="siteSettings.showEmotion.show">
+            <de><![CDATA[Anzeigen]]></de>
+        </locale>
+        <locale name="siteSettings.showEmotion.hide">
+            <de><![CDATA[Verstecken]]></de>
+        </locale>
+        <!-- Title & short -->
+        <locale name="siteSettings.showTitle">
+            <de><![CDATA[Überschrift anzeigen]]></de>
+        </locale>
+        <locale name="siteSettings.showShort">
+            <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
+        </locale>
+    </groups>
+</locales>
