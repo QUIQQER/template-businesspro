@@ -8,6 +8,15 @@
             <locale group="quiqqer/template-businesspro" var="package.description"/>
         </description>
 
+        <capabilities schemaVersion="1">
+            <capability id="presentation.business-website">
+                <title>Business website presentation</title>
+                <description>
+                    Presents responsive business websites with configurable branding, navigation, search, headers, breadcrumbs, content layouts, sidebars and brick areas.
+                </description>
+            </capability>
+        </capabilities>
+
         <image src="URL_OPT_DIR/quiqqer/template-businesspro/bin/img/Logo.png"/>
 
         <preview>
