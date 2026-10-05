@@ -53,7 +53,7 @@ if (
         ];
 
         // Suggest Search integrate
-        $dataQui = 'data-qui="package/quiqqer/search/bin/controls/Suggest"';
+        $dataQui = 'data-qui="package/quiqqer/search/bin/controls/SuggestLazy"';
     }
 
     $searchSites = $Project->getSites([
