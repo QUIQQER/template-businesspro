@@ -26,6 +26,9 @@
         "quiqqer/utils": "^2",
         "quiqqer/pace": "^2"
     },
+    "conflict": {
+        "quiqqer/search": "<2.1"
+    },
     "autoload": {
         "psr-4": {
             "QUI\\TemplateBusinessPro\\": "src/QUI/TemplateBusinessPro"
