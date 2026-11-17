@@ -1,81 +1,76 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<quiqqer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://www.quiqqer.com/docs/schemas/2.x/locale.xsd">
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
-        <!-- template bricks -->
-        <locale name="promosliderBackground">
+        <locale name="promosliderBackground" context="administration">
             <de><![CDATA[Hintergrundfarbe auswählen (nur bei voller Breite)]]></de>
         </locale>
-        <locale name="showBrickTitle">
-            <de><![CDATA[Baustein Titel]]></de>
-        </locale>
-        <locale name="brickFullWidth">
+        <locale name="brickFullWidth" context="administration">
             <de><![CDATA[Volle Breite]]></de>
         </locale>
-        <locale name="noPadding">
+        <locale name="noPadding" context="administration">
             <de><![CDATA[Kein Abstand von oben und unten]]></de>
         </locale>
-        <!-- areas -->
-        <locale name="area.footer.title">
+        <locale name="area.footer.title" context="administration">
             <de><![CDATA[Fußzeile der Seite (Footer)]]></de>
         </locale>
-        <locale name="area.footer.description">
+        <locale name="area.footer.description" context="administration">
             <de><![CDATA[Bausteinzone des Footer]]></de>
         </locale>
-        <locale name="area.startpageContent.title">
-            <de><![CDATA[Inhalts-Zone (Landingpage)]]></de>
-        </locale>
-        <locale name="area.startpageContent.description">
-            <de><![CDATA[Bausteinzone eines Landingpage Layouts]]></de>
-        </locale>
-        <locale name="area.sidebar.left.title">
+        <locale name="area.sidebar.left.title" context="administration">
             <de><![CDATA[Linke Bausteinzone]]></de>
         </locale>
-        <locale name="area.sidebar.left.description">
+        <locale name="area.sidebar.left.description" context="administration">
             <de><![CDATA[Bausteinzone links neben dem Inhalt]]></de>
         </locale>
-        <locale name="area.sidebar.right.title">
+        <locale name="area.sidebar.right.title" context="administration">
             <de><![CDATA[Rechte Bausteinzone]]></de>
         </locale>
-        <locale name="area.sidebar.right.description">
+        <locale name="area.sidebar.right.description" context="administration">
             <de><![CDATA[Bausteinzone rechts neben dem Inhalt]]></de>
         </locale>
-        <locale name="area.noSidebar.title">
+        <locale name="area.noSidebar.title" context="administration">
             <de><![CDATA[Inhalts-Zone]]></de>
         </locale>
-        <locale name="area.noSidebar.description">
+        <locale name="area.noSidebar.description" context="administration">
             <de><![CDATA[Inhaltszone eines Keine-Sidebar-Layouts]]></de>
         </locale>
-        <locale name="area.sidebar.prefix.content.title">
+        <locale name="area.sidebar.prefix.content.title" context="administration">
             <de><![CDATA[Oberhalb vom Inhalt (Content Prefix)]]></de>
         </locale>
-        <locale name="area.sidebar.prefix.content.description">
+        <locale name="area.sidebar.prefix.content.description" context="administration">
             <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
         </locale>
-        <locale name="area.sidebar.suffix.content.title">
+        <locale name="area.sidebar.suffix.content.title" context="administration">
             <de><![CDATA[Unterhalb des Inhaltes (Content Suffix)]]></de>
         </locale>
-        <locale name="area.sidebar.suffix.content.description">
+        <locale name="area.sidebar.suffix.content.description" context="administration">
             <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
         </locale>
-        <locale name="area.headerSuffix.title">
+        <locale name="area.headerSuffix.title" context="administration">
             <de><![CDATA[Unterhalb des Kopfbereiches (Header Suffix)]]></de>
         </locale>
-        <locale name="area.headerSuffix.description">
+        <locale name="area.headerSuffix.description" context="administration">
             <de><![CDATA[Bausteinzone nach dem Header]]></de>
         </locale>
-        <locale name="area.footerPrefix.title">
+        <locale name="area.footerPrefix.title" context="administration">
             <de><![CDATA[Oberhalb der Fußzeile (Footer Prefix)]]></de>
         </locale>
-        <locale name="area.footerPrefix.description">
+        <locale name="area.footerPrefix.description" context="administration">
             <de><![CDATA[Bausteinzone vor dem Footer]]></de>
         </locale>
-        <locale name="package.title">
+        <locale name="package.title" context="administration">
             <de><![CDATA[Business Pro]]></de>
         </locale>
-        <locale name="package.description">
+        <locale name="package.description" context="administration">
             <de><![CDATA[Template für aussagekräftige Internetseiten mit
             vielen Einstellungsmöglichkeiten.]]></de>
         </locale>
+    </groups>
+    <groups name="quiqqer/template-businesspro" datatype="php">
+        <!-- template bricks -->
+        <!-- areas -->
         <locale name="admin.layout.leftSidebar">
             <de><![CDATA[Linke Sidebar]]></de>
         </locale>
@@ -88,26 +83,8 @@
         <locale name="admin.layout.noSidebar">
             <de><![CDATA[Keine Sidebar]]></de>
         </locale>
-        <locale name="admin.layout.leftSidebar.description">
-            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
-        </locale>
-        <locale name="bricks.Startpage3Box.title">
-            <de><![CDATA[Baustein: 3er Baustein auf der Startseite]]></de>
-        </locale>
-        <locale name="admin.layout.startpage.description">
-            <de><![CDATA[Standardmäßig Layout der Startseite ]]></de>
-        </locale>
-        <locale name="continue.reading">
-            <de><![CDATA[weiterlesen]]></de>
-        </locale>
         <locale name="copyright.text" html="true">
             <de><![CDATA[&copy; [year] - umgesetzt mit <a href="https://www.quiqqer.de">QUIQQER - Template Business Pro</a>]]></de>
-        </locale>
-        <locale name="copyright.link" html="true">
-            <de><![CDATA[Startseite]]></de>
-        </locale>
-        <locale name="nav.button.close" html="true">
-            <de><![CDATA[Menü schließen]]></de>
         </locale>
         <!-- settings -->
         <locale name="templateBusinessPro.settings.menu.title">
@@ -226,9 +203,6 @@
         <locale name="templateBusinessPro.settings.navBar.Height.text">
             <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
         </locale>
-        <locale name="templateBusinessPro.settings.navBar.Height.text">
-            <de><![CDATA[Navigationsbar Höhe (in Pixel)]]></de>
-        </locale>
         <!-- Menüposition -->
         <locale name="templateBusinessPro.settings.navPos.text">
             <de><![CDATA[Menüposition]]></de>
@@ -257,21 +231,9 @@
             <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
         </locale>
         <!-- Share -->
-        <locale name="templateBusinessPro.settings.search.title">
-            <de><![CDATA[Suchen-Button]]></de>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchShow.text">
-            <de><![CDATA[Suche in Navigationsmenü anzeigen]]></de>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchLink.text">
-            <de><![CDATA[Suchseite]]></de>
-        </locale>
         <!-- Colors -->
         <locale name="templateBusinessPro.settings.color.title">
             <de><![CDATA[Farbverwaltung]]></de>
-        </locale>
-        <locale name="template.settings.mobileMenuBackground">
-            <de><![CDATA[Mobile Menü Hintergrundfarbe]]></de>
         </locale>
         <locale name="template.settings.mobileMenuBackground.desc">
             <de><![CDATA[Die Einstellung ist nur in mobiler Ansicht sichtbar. So kann man die unterschiedlichen
@@ -312,9 +274,6 @@
         </locale>
         <locale name="template.settings.colorMainContentFont.text">
             <de><![CDATA[Seiteninhalt Fontfarbe]]></de>
-        </locale>
-        <locale name="brick.control.setting.order">
-            <de><![CDATA[Sortierung]]></de>
         </locale>
         <!-- social icons -->
         <locale name="social.settings.title">
@@ -432,5 +391,18 @@
         <locale name="siteSettings.showShort">
             <de><![CDATA[Kurzbeschreibung anzeigen]]></de>
         </locale>
+        <locale name="admin.layout.leftSidebar.desc">
+            <de><![CDATA[Standardmäßig Sidebar auf der linken Seite]]></de>
+        </locale>
+        <locale name="admin.layout.startpage.desc">
+            <de><![CDATA[Standardmäßig Layout der Startseite ]]></de>
+        </locale>
+        <locale name="admin.layout.noSidebar.desc">
+            <de><![CDATA[Standardmäßig Layout ohne Sidebar]]></de>
+        </locale>
+        <locale name="admin.layout.rightSidebar.desc">
+            <de><![CDATA[Standardmäßig Sidebar auf der rechten Seite]]></de>
+        </locale>
     </groups>
 </locales>
+</quiqqer>
