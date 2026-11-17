@@ -1,80 +1,75 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<quiqqer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://www.quiqqer.com/docs/schemas/2.x/locale.xsd">
 <locales>
     <groups name="quiqqer/template-businesspro" datatype="php,js">
-        <!-- template bricks -->
-        <locale name="promosliderBackground">
+        <locale name="promosliderBackground" context="administration">
             <fr><![CDATA[Choisir la couleur de fond (uniquement en pleine largeur)]]></fr>
         </locale>
-        <locale name="showBrickTitle">
-            <fr><![CDATA[Titre du bloc]]></fr>
-        </locale>
-        <locale name="brickFullWidth">
+        <locale name="brickFullWidth" context="administration">
             <fr><![CDATA[Pleine largeur]]></fr>
         </locale>
-        <locale name="noPadding">
+        <locale name="noPadding" context="administration">
             <fr><![CDATA[Sans espacement en haut ni en bas]]></fr>
         </locale>
-        <!-- areas -->
-        <locale name="area.footer.title">
+        <locale name="area.footer.title" context="administration">
             <fr><![CDATA[Zone de blocs du pied de page]]></fr>
         </locale>
-        <locale name="area.footer.description">
+        <locale name="area.footer.description" context="administration">
             <fr><![CDATA[Zone de blocs située dans le pied de page]]></fr>
         </locale>
-        <locale name="area.startpageContent.title">
-            <fr><![CDATA[Zone de contenu (page de destination)]]></fr>
-        </locale>
-        <locale name="area.startpageContent.description">
-            <fr><![CDATA[Zone de blocs de la mise en page de destination]]></fr>
-        </locale>
-        <locale name="area.sidebar.left.title">
+        <locale name="area.sidebar.left.title" context="administration">
             <fr><![CDATA[Zone de blocs à gauche]]></fr>
         </locale>
-        <locale name="area.sidebar.left.description">
+        <locale name="area.sidebar.left.description" context="administration">
             <fr><![CDATA[Zone de blocs à gauche du contenu]]></fr>
         </locale>
-        <locale name="area.sidebar.right.title">
+        <locale name="area.sidebar.right.title" context="administration">
             <fr><![CDATA[Zone de blocs à droite]]></fr>
         </locale>
-        <locale name="area.sidebar.right.description">
+        <locale name="area.sidebar.right.description" context="administration">
             <fr><![CDATA[Zone de blocs à droite du contenu]]></fr>
         </locale>
-        <locale name="area.noSidebar.title">
+        <locale name="area.noSidebar.title" context="administration">
             <fr><![CDATA[Zone de contenu]]></fr>
         </locale>
-        <locale name="area.noSidebar.description">
+        <locale name="area.noSidebar.description" context="administration">
             <fr><![CDATA[Zone de contenu de la mise en page sans barre latérale]]></fr>
         </locale>
-        <locale name="area.sidebar.prefix.content.title">
+        <locale name="area.sidebar.prefix.content.title" context="administration">
             <fr><![CDATA[Zone au-dessus du contenu]]></fr>
         </locale>
-        <locale name="area.sidebar.prefix.content.description">
+        <locale name="area.sidebar.prefix.content.description" context="administration">
             <fr><![CDATA[Zone de blocs avant le contenu]]></fr>
         </locale>
-        <locale name="area.sidebar.suffix.content.title">
+        <locale name="area.sidebar.suffix.content.title" context="administration">
             <fr><![CDATA[Zone sous le contenu]]></fr>
         </locale>
-        <locale name="area.sidebar.suffix.content.description">
+        <locale name="area.sidebar.suffix.content.description" context="administration">
             <fr><![CDATA[Zone de blocs après le contenu]]></fr>
         </locale>
-        <locale name="area.headerSuffix.title">
+        <locale name="area.headerSuffix.title" context="administration">
             <fr><![CDATA[Zone sous l’en-tête]]></fr>
         </locale>
-        <locale name="area.headerSuffix.description">
+        <locale name="area.headerSuffix.description" context="administration">
             <fr><![CDATA[Zone de blocs après l’en-tête]]></fr>
         </locale>
-        <locale name="area.footerPrefix.title">
+        <locale name="area.footerPrefix.title" context="administration">
             <fr><![CDATA[Zone au-dessus du pied de page]]></fr>
         </locale>
-        <locale name="area.footerPrefix.description">
+        <locale name="area.footerPrefix.description" context="administration">
             <fr><![CDATA[Zone de blocs avant le pied de page]]></fr>
         </locale>
-        <locale name="package.title">
+        <locale name="package.title" context="administration">
             <fr><![CDATA[Business Pro]]></fr>
         </locale>
-        <locale name="package.description">
+        <locale name="package.description" context="administration">
             <fr><![CDATA[Modèle au design moderne pour des sites professionnels, avec de nombreuses options de configuration.]]></fr>
         </locale>
+    </groups>
+    <groups name="quiqqer/template-businesspro" datatype="php">
+        <!-- template bricks -->
+        <!-- areas -->
         <locale name="admin.layout.leftSidebar">
             <fr><![CDATA[Barre latérale gauche]]></fr>
         </locale>
@@ -87,26 +82,8 @@
         <locale name="admin.layout.noSidebar">
             <fr><![CDATA[Sans barre latérale]]></fr>
         </locale>
-        <locale name="admin.layout.leftSidebar.description">
-            <fr><![CDATA[Barre latérale à gauche par défaut]]></fr>
-        </locale>
-        <locale name="bricks.Startpage3Box.title">
-            <fr><![CDATA[Bloc à trois colonnes sur la page d’accueil]]></fr>
-        </locale>
-        <locale name="admin.layout.startpage.description">
-            <fr><![CDATA[Mise en page par défaut de la page d’accueil]]></fr>
-        </locale>
-        <locale name="continue.reading">
-            <fr><![CDATA[Lire la suite]]></fr>
-        </locale>
         <locale name="copyright.text" html="true">
             <fr><![CDATA[&copy; [year] - réalisé avec <a href="https://www.quiqqer.com">QUIQQER - Template Business Pro</a>]]></fr>
-        </locale>
-        <locale name="copyright.link" html="true">
-            <fr><![CDATA[Accueil]]></fr>
-        </locale>
-        <locale name="nav.button.close" html="true">
-            <fr><![CDATA[Fermer le menu]]></fr>
         </locale>
         <!-- settings -->
         <locale name="templateBusinessPro.settings.menu.title">
@@ -225,9 +202,6 @@
         <locale name="templateBusinessPro.settings.navBar.Height.text">
             <fr><![CDATA[Hauteur de la barre de navigation (en pixels)]]></fr>
         </locale>
-        <locale name="templateBusinessPro.settings.navBar.Height.text">
-            <fr><![CDATA[Hauteur de la barre de navigation (en pixels)]]></fr>
-        </locale>
         <!-- Menüposition -->
         <locale name="templateBusinessPro.settings.navPos.text">
             <fr><![CDATA[Position du menu]]></fr>
@@ -255,21 +229,9 @@
             <fr><![CDATA[Couleur de fond du menu mobile]]></fr>
         </locale>
         <!-- Share -->
-        <locale name="templateBusinessPro.settings.search.title">
-            <fr><![CDATA[Bouton de recherche]]></fr>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchShow.text">
-            <fr><![CDATA[Afficher la recherche dans la barre de navigation]]></fr>
-        </locale>
-        <locale name="templateBusinessPro.settings.searchLink.text">
-            <fr><![CDATA[Page de recherche]]></fr>
-        </locale>
         <!-- Colors -->
         <locale name="templateBusinessPro.settings.color.title">
             <fr><![CDATA[Gestion des couleurs]]></fr>
-        </locale>
-        <locale name="template.settings.mobileMenuBackground">
-            <fr><![CDATA[Couleur de fond du menu mobile]]></fr>
         </locale>
         <locale name="template.settings.mobileMenuBackground.desc">
             <fr><![CDATA[Ce réglage s’applique uniquement à l’affichage mobile et permet de distinguer les différentes zones par leur couleur.]]></fr>
@@ -309,9 +271,6 @@
         </locale>
         <locale name="template.settings.colorMainContentFont.text">
             <fr><![CDATA[Couleur du texte du contenu]]></fr>
-        </locale>
-        <locale name="brick.control.setting.order">
-            <fr><![CDATA[Ordre de tri]]></fr>
         </locale>
         <!-- social icons -->
         <locale name="social.settings.title">
@@ -429,5 +388,18 @@
         <locale name="siteSettings.showShort">
             <fr><![CDATA[Afficher la description courte]]></fr>
         </locale>
+        <locale name="admin.layout.leftSidebar.desc">
+            <fr><![CDATA[Barre latérale à gauche par défaut]]></fr>
+        </locale>
+        <locale name="admin.layout.startpage.desc">
+            <fr><![CDATA[Mise en page par défaut de la page d’accueil]]></fr>
+        </locale>
+        <locale name="admin.layout.noSidebar.desc">
+            <fr><![CDATA[Mise en page par défaut sans barre latérale]]></fr>
+        </locale>
+        <locale name="admin.layout.rightSidebar.desc">
+            <fr><![CDATA[Mise en page par défaut avec barre latérale à droite]]></fr>
+        </locale>
     </groups>
 </locales>
+</quiqqer>
